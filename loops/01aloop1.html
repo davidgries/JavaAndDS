@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/onecolumntemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University 
+	naming conventions.
+-->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CS2110: loop invariants</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+<link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
+<!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+.colorRed {
+		color:firebrick;
+	font-style: oblique;
+	font-weight:500;
+}
+</style>
+<script type="text/javascript" src="../js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='../menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="onecolumn">
+
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a>
+</div>
+
+<hr />
+<div ID="header1">
+	<table>
+		<tr>
+			<td>
+				<img src="../images/cucs.gif" width="335"  alt=""/>
+			</td>
+			<td>
+				<span ID="title">
+					<br>
+    JavaHyperText and Data Structures
+  </span>
+    
+    <div ID="instructor"><br>
+      David Gries, with help from many</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	
+
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+
+<li><a href='../definitions.html'><span>Java<br />
+HyperText</span></a></li>
+	
+	<li><a href='../JavaStyle.html'><span>Style<br />
+Guide</span></a></li>
+
+<li class='has-sub '><a href='../eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
+     <ul>
+         <li><a href='../eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='../eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='../eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='../eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='../eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='../eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='../eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='../eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+</ul>
+</li>
+
+<li class='has-sub '><a href='../apiString/01APIString.html'><span>API &<br /> 
+    strings</span></a>
+      <ul>
+         <li><a href='../apiString/01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='../apiString/01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='../apiString/01APIString.html#string'><span>3. Class String</span></a></li>
+</ul>
+</li>
+	
+	<li class='has-sub '><a href='../explainJava/explainJava.html'><span>Explain<br />
+constructs</span></a>
+      <ul>
+         <li><a href='../explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='../explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='../explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         
+         <li><a href='../explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+</ul>
+</li>
+   
+
+<li class='has-sub '><a href='../exceptions/EX1.html'><span>Exceptions</span></a>
+      <ul>
+         <li><a href='../exceptions/EX1.html'><span>1. Output of thrown exceptions</span></a></li>
+         <li><a href='../exceptions/EX2.html'><span>2. Throwable objects</span></a></li>
+         <li><a href='../exceptions/EX3.html'><span>3. Try-stmt/propagation</span></a></li>
+         <li><a href='../exceptions/EX4.html'><span>4. Throw-statement</span></a></li>
+         <li><a href='../exceptions/EX5.html'><span>5. Throws-clause</span></a></li>
+         <li><a href='../exceptions/EX6.html'><span>6. Hints</span></a></li>
+</ul>
+</li>
+
+<li><a href='../abstractInterface/01ai.html'><span>Abstract classes<br />
+interfaces</span></a></li>
+
+<li><a href='../iteratorIterable/iterator.html'><span>Iterator &<br />
+ Iterable</span></a></li>
+
+
+</ul>
+</div>
+
+	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+	
+	<li><a href='../programCorrectness/programCorrectness.html'><span>Program<br />
+correctness</span></a></li>
+
+   <li class='has-sub '><a href='01aloop1.html'><span>Loop<br />
+invariants</span></a>
+      <ul>
+         <li><a href='01aloop1.html'><span>1. Introduction</span></a></li>
+         <li><a href='20aloop.html'><span>2. Developing loops</span></a></li>
+         <li><a href='30aloop.html'><span>3. Finding an invariant</span></a></li>
+</ul>
+</li>
+	
+<li><a href='../stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
+
+
+<li><a href='../hashing/01hashing.html'><span>Hashing</span></a></li> 
+
+
+
+<li><a href='../dfs/dfs01.html'><span>DFS<br />
+BFS</span></a></li>
+
+
+<li><a href='../shortestPath/shortestPath.html'><span>Shortest<br />
+ path</span></a></li>
+
+</ul>
+</div>
+
+<hr />
+
+
+
+
+<!-- The content div contains the main content of the page -->
+<!-- InstanceBeginEditable name="content" -->
+<div id="content">
+<div align="right"><a href="20aloop.html">2. Practice on developing parts of loops</a></div>
+  <div id="main">
+  
+<h2 class="colorRed">Introduction: Developing and understanding loops</h2>
+
+<p > We introduce a methodology for understanding and also developing loops. It is based on the ideas of program correctness presented earlier. In fact, we present a systematic way to prove while-loops and for-loops correct. This methodology is practical, and we will use it to study several searching and sorting algorithms. Even later, we use the methodology to present algorithms, like finding the shortest path in a graph &mdash;used by google maps and many other apps to find a route to drive from one place to another. Without the methodology, presenting, understanding and implementing such algorithms is much harder.</P>
+<h3>Why learn about loop invariants and loop correctness?</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/mIBKO5P_4dQ?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>Alex Fusco tells you why this material is important. He shows you an algorithm that you can't understand without this material, and discusses an important engineering principle. (4 minutes) Read it here: <a href="01loopwhy.pdf">why study loops?.pdf</a></P>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>The loop invariant and four loopy questions</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/UrBCMjCNLTw?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>Using a flow chart for a loop, Alex Fusco explains what a loop invariant is. He introduces four questions about loops whose answers determine whether a loop is correct or not. (4.5 minutes) Read it here: <a href="02looploopyq.pdf">the loop invariant.pdf</a></p>
+<p>&nbsp;</p>
+<p>Here's an annotated while loop, with initialization:</p>
+<blockquote><p>// {Q}<br />
+  init<br />
+  // invariant: P<br />
+  while (B) S<br />
+  // {R}</p>
+</blockquote>
+
+<p>Here are the four loopy questions. We suggest that you memorize them:</p>
+<ul>
+  <li>1. How does it start: Is {Q} init {P} true?</li>
+  <li>2. How does it end: Is P &amp;&amp; !B =&gt; R true?</li>
+  <li>3. Does the repetend make progress toward termination?</li>
+  <li>4. Does the repetend maintain P: Is {P &amp;&amp; B} S {P} true?</li>
+</ul>
+
+
+<h3>Answering the four loopy questions</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/z65Wv0T5WEU?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>The previous video discussed the four loopy questions, using a particular loop. Annika Lutan investigates the four loopy questions for this loop in detail, showing that all four questions can be answered &quot;yes&quot;, thus proving that the loop (with initialization) is correct.. (5.2 minutes) Read it here: <a href="03loopexample1.pdf">example1.pdf</a></p>
+
+
+
+<p>&nbsp;</p>
+<h3>Developing a loop using the four loopy questions</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/T3HqmkdKqsM?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a> Annika Lutan shows you second example to show how a loop can be developed using the four loopy questions. This is far more important than just using them to check a given loop. Mastering this material will allow you to &quot;know&quot; many algorithms important algorithms, not because you memorize code but because you can develop them whenever you want, using the methodology. These algoriths become <em>memorable</em>. (5.6 minutes) Read it here: <a href="04loopexample2.pdf">example2.pdf</a></p></div></div>
+<!-- InstanceEndEditable --></div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2017 David Gries</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+         width : '70%',
+         height : '70%'
+     });
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>

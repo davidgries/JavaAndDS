@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/onecolumntemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University 
+	naming conventions.
+-->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Exceptions: the throwable object</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+<link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+.colorRed {
+		color:firebrick;
+	font-style: oblique;
+	font-weight:500;
+}
+</style>
+<script type="text/javascript" src="../js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='../menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="onecolumn">
+
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a>
+</div>
+
+<hr />
+<div ID="header1">
+	<table>
+		<tr>
+			<td>
+				<img src="../images/cucs.gif" width="335"  alt=""/>
+			</td>
+			<td>
+				<span ID="title">
+					<br>
+    JavaHyperText and Data Structures
+  </span>
+    
+    <div ID="instructor"><br>
+      David Gries, with help from many</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	
+
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+
+<li><a href='../definitions.html'><span>Java<br />
+HyperText</span></a></li>
+	
+	<li><a href='../JavaStyle.html'><span>Style<br />
+Guide</span></a></li>
+
+<li class='has-sub '><a href='../eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
+     <ul>
+         <li><a href='../eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='../eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='../eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='../eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='../eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='../eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='../eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='../eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+</ul>
+</li>
+
+<li class='has-sub '><a href='../apiString/01APIString.html'><span>API &<br /> 
+    strings</span></a>
+      <ul>
+         <li><a href='../apiString/01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='../apiString/01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='../apiString/01APIString.html#string'><span>3. Class String</span></a></li>
+</ul>
+</li>
+	
+	<li class='has-sub '><a href='../explainJava/explainJava.html'><span>Explain<br />
+constructs</span></a>
+      <ul>
+         <li><a href='../explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='../explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='../explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         
+         <li><a href='../explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+</ul>
+</li>
+   
+
+<li class='has-sub '><a href='EX1.html'><span>Exceptions</span></a>
+      <ul>
+         <li><a href='EX1.html'><span>1. Output of thrown exceptions</span></a></li>
+         <li><a href='EX2.html'><span>2. Throwable objects</span></a></li>
+         <li><a href='EX3.html'><span>3. Try-stmt/propagation</span></a></li>
+         <li><a href='EX4.html'><span>4. Throw-statement</span></a></li>
+         <li><a href='EX5.html'><span>5. Throws-clause</span></a></li>
+         <li><a href='EX6.html'><span>6. Hints</span></a></li>
+</ul>
+</li>
+
+<li><a href='../abstractInterface/01ai.html'><span>Abstract classes<br />
+interfaces</span></a></li>
+
+<li><a href='../iteratorIterable/iterator.html'><span>Iterator &<br />
+ Iterable</span></a></li>
+
+
+</ul>
+</div>
+
+	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+	
+	<li><a href='../programCorrectness/programCorrectness.html'><span>Program<br />
+correctness</span></a></li>
+
+   <li class='has-sub '><a href='../loops/01aloop1.html'><span>Loop<br />
+invariants</span></a>
+      <ul>
+         <li><a href='../loops/01aloop1.html'><span>1. Introduction</span></a></li>
+         <li><a href='../loops/20aloop.html'><span>2. Developing loops</span></a></li>
+         <li><a href='../loops/30aloop.html'><span>3. Finding an invariant</span></a></li>
+</ul>
+</li>
+	
+<li><a href='../stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
+
+
+<li><a href='../hashing/01hashing.html'><span>Hashing</span></a></li> 
+
+
+
+<li><a href='../dfs/dfs01.html'><span>DFS<br />
+BFS</span></a></li>
+
+
+<li><a href='../shortestPath/shortestPath.html'><span>Shortest<br />
+ path</span></a></li>
+
+</ul>
+</div>
+
+<hr />
+
+
+
+
+<!-- The content div contains the main content of the page -->
+<!-- InstanceBeginEditable name="content" -->
+<div id="content">
+  <div id="main">
+  <div align="right"> <a href="EX1.html">1. Output of thrown objects</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="EX3.html">3. Catching and propagating thrown objects</a></div>
+
+
+<h2 class="colorRed">2. The throwable object</h2>
+
+<P>
+The code that &quot;handles&quot; an 
+exception may be far removed from the place where the exception occurred. A 
+language must have a mechanism for identifying the exception. It also 
+needs a mechanism for &quot;throwing&quot; the exception to a
+place where it will be caught and &quot;handled&quot;. Java does this using the concept of a <DFN>throwable object</DFN>. 
+</P>
+
+<p>A <DFN>throwable object</DFN> is an instance of class 
+<span class="java">Throwable</span> (or one of its
+subclasses). <span class="java">Exception</span> and <span class="java">Error</span> are two subclasses of 
+class <java><span class="java">Throwable</span></java>, and each has many subclasses itself.</p>
+
+<p>From now on, we use the term <DFN>exception</DFN> for an object that has been 
+thrown.</p>
+
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/FsGtMqP4xmM?rel=0"><IMG SRC=../imagesActivity/throwableObject.jpg  hspace="5" align="left"></a>Click the icon to the left to learn in a 3.2 minute video what a throwable object is in Java. Java uses the concept of a class and its subclasses 
+in many different ways! Here is a <a href="02throwableObjects.pdf">pdf file of the script</a> (modified).</p>
+
+<p>
+<p>
+<hr>
+<h3><b><DFN>Exception</DFN PROPER=1>s in Java</b>
+</h3>
+<P>
+   
+  Java has over 125 predefined <java>exceptions</java>.
+   Here are some subclasses of <span class="java">RuntimeException</span> (see below):
+<ul>
+<li><span class="java">ArithmeticException</span>. Sometimes division by 0. </li>
+
+<li><span class="java">ArrayIndexOutOfBoundsException</span>. In something 
+like b[i], i was not a legal value.</li>
+
+<li><span class="java">ArrayStoreException</span>. An attempt to assign a value of the wrong 
+type to an array variable.</li>
+
+<li><span class="java">NullPointerException</span>. The equivalent of null.var or null.m(...) was attempted.</li>
+</ul>
+<hr>
+<h3><DFN>Error</DFN PROPER=1>s in Java
+</h3>
+<P>
+  An instance of class <span class="java">Error</span> is a throwable object that a program is not 
+  expected to handle; instead, it should cause immediate termination of the program. A 
+  program CAN handle it, but it is advisable not to. The reason is that the error that 
+  caused the object to be thrown was so severe that one doesn't know what further 
+  execution of the program may do. </P>
+
+<p>Java has about 25 predefined <java>Error</java>s. Three of them are listed in the hierarchy below.    </p>
+<h3>exception hierarchy
+</h3>
+<P>
+Here's the basic exception hierarchy, with subclassing shown by indentation.</P>
+<blockquote>
+  <P><span class="java">Throwable</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="java">Error</span> (don't try to catch these)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="java">OutOfMemoryError</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="java">IllegalAccessError</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="java">StackOverflowError</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="java">&nbsp;Exception</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="java">IOException</span><br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="java">RuntimeException</span><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See the four listed above</P>
+</blockquote>
+<p>&copy;This material is from the CD ProgramLive by David Gries and Paul Gries</p>
+    
+    </div>
+</div>
+<!-- InstanceEndEditable --></div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2017 David Gries</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+         width : '70%',
+         height : '70%'
+     });
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>

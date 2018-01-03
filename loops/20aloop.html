@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/onecolumntemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University 
+	naming conventions.
+-->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CS2110: loop invariants</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+<link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
+<!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+.colorRed {
+		color:firebrick;
+	font-style: oblique;
+	font-weight:500;
+}
+</style>
+<script type="text/javascript" src="../js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='../menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="onecolumn">
+
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a>
+</div>
+
+<hr />
+<div ID="header1">
+	<table>
+		<tr>
+			<td>
+				<img src="../images/cucs.gif" width="335"  alt=""/>
+			</td>
+			<td>
+				<span ID="title">
+					<br>
+    JavaHyperText and Data Structures
+  </span>
+    
+    <div ID="instructor"><br>
+      David Gries, with help from many</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	
+
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+
+<li><a href='../definitions.html'><span>Java<br />
+HyperText</span></a></li>
+	
+	<li><a href='../JavaStyle.html'><span>Style<br />
+Guide</span></a></li>
+
+<li class='has-sub '><a href='../eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
+     <ul>
+         <li><a href='../eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='../eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='../eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='../eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='../eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='../eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='../eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='../eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+</ul>
+</li>
+
+<li class='has-sub '><a href='../apiString/01APIString.html'><span>API &<br /> 
+    strings</span></a>
+      <ul>
+         <li><a href='../apiString/01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='../apiString/01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='../apiString/01APIString.html#string'><span>3. Class String</span></a></li>
+</ul>
+</li>
+	
+	<li class='has-sub '><a href='../explainJava/explainJava.html'><span>Explain<br />
+constructs</span></a>
+      <ul>
+         <li><a href='../explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='../explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='../explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         
+         <li><a href='../explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+</ul>
+</li>
+   
+
+<li class='has-sub '><a href='../exceptions/EX1.html'><span>Exceptions</span></a>
+      <ul>
+         <li><a href='../exceptions/EX1.html'><span>1. Output of thrown exceptions</span></a></li>
+         <li><a href='../exceptions/EX2.html'><span>2. Throwable objects</span></a></li>
+         <li><a href='../exceptions/EX3.html'><span>3. Try-stmt/propagation</span></a></li>
+         <li><a href='../exceptions/EX4.html'><span>4. Throw-statement</span></a></li>
+         <li><a href='../exceptions/EX5.html'><span>5. Throws-clause</span></a></li>
+         <li><a href='../exceptions/EX6.html'><span>6. Hints</span></a></li>
+</ul>
+</li>
+
+<li><a href='../abstractInterface/01ai.html'><span>Abstract classes<br />
+interfaces</span></a></li>
+
+<li><a href='../iteratorIterable/iterator.html'><span>Iterator &<br />
+ Iterable</span></a></li>
+
+
+</ul>
+</div>
+
+	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+	
+	<li><a href='../programCorrectness/programCorrectness.html'><span>Program<br />
+correctness</span></a></li>
+
+   <li class='has-sub '><a href='01aloop1.html'><span>Loop<br />
+invariants</span></a>
+      <ul>
+         <li><a href='01aloop1.html'><span>1. Introduction</span></a></li>
+         <li><a href='20aloop.html'><span>2. Developing loops</span></a></li>
+         <li><a href='30aloop.html'><span>3. Finding an invariant</span></a></li>
+</ul>
+</li>
+	
+<li><a href='../stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
+
+
+<li><a href='../hashing/01hashing.html'><span>Hashing</span></a></li> 
+
+
+
+<li><a href='../dfs/dfs01.html'><span>DFS<br />
+BFS</span></a></li>
+
+
+<li><a href='../shortestPath/shortestPath.html'><span>Shortest<br />
+ path</span></a></li>
+
+</ul>
+</div>
+
+<hr />
+
+
+
+
+<!-- The content div contains the main content of the page -->
+<!-- InstanceBeginEditable name="content" -->
+<div id="content">
+  <div align="right"><a href="01aloop1.html">1.Introduction</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="30aloop.html">3. Finding loop invariants</a></div> 
+  <div id="main">
+  
+<h2 class="colorRed">2. Practice on developing parts of  loops</h2>
+
+<p > This material may seem foreign at first, difficult, confusing. That's because it goes against the way you have been thinking about programming ever since you started to program. That's ok.</P>
+<p >The way to change how you think about loops to use the new methodology is to practice. On this web page, we present examples and exercises that give you such practice. First, we deal with the first loopy question. Then the second loopy question. Finally, the third and fourth loopy questions together. Giving examples and exercises dealing with one loopy question at a time will let you focus on that loopy question, in a way that you can't when you are thinking about a whole loop.</P>
+<p >Our focus here is on the <em>development</em> of the parts of a loop.</P>
+<h3>First loopy question: Does it start right?</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/pnp603_AXo0?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>The first loopy question is: Does it start right: Is {Q} init {P} true? Alex Fusco gives some examples and some exercises. The exercises are short! Do them! (5 minutes) Read it here: <a href="21practiceQ1.pdf">DoesItStartRight?.pdf</a></P>
+
+
+<p>&nbsp;</p>
+<h3></h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/vGpmNo_U_9E?rel=0"><img src="../imagesActivity/WhiteFill.png"  width="100"  align="left" hspace="5" /></a>In this short video, Annika Lutan video deals with  the first loopy question when assertions are give as array diagrams. The exercises are short! Do them!(3.25 minutes) Read it here: <a href="22practiceQ1.pdf">Does it start right?.pdf</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Second loopy question: Does it end right?</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/7opIp1JnlgA?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>The second loopy question is: Does it end right: Is P &amp;&amp; !B =&gt; R true? Here's the neat thing about using the method to determine when a loop should stop: You don't have to count how many iterations the loop should make and use that count as the stopping value. So, you can expect to make fewer &quot;off by one&quot; errors. Annika Lutan gives you some examples and some exercises. The exercises are short! Do them! (3.5 minutes) Read it here: <a href="23practiceQ2.pdf">Does it end right?.pdf</a></p>
+<h3></h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/WYOLTM4yiMM?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>Alex Fusco shows you how to answer the second loopy question when assertions are given by array diagrams. The exercises are short! Do them! (3 minutes) Read it here: <a href="24practiceQ2.pdf">Does it end right?.pdf</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Third and fourth loopy questions: Does the repetend do what it is supposed to do?</h3>
+<p>We work with the third and fourth loopy question together, because they are related. Together, the must endure that the repetend makes progress toward termination and keeps the invariant true.</p>
+<p>In order to answer whether the repetend makes progress toard termination, we need to know what that means. Generallly, this can be indicated by some expression whose value must get closer to 0, and when te loop terminates, that expression's value wil be 0. We'll make this clear in our examples.</p>
+<p>Another point. The first question when dealing with the repetend must be: How does it make progress toward termination. If instead we used the question about keeping the invariant true, we would answer: &quot;don't do anything&quot;, because the invariant is already true when the repetend starts. </p>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/2HC0JHYw8Nk?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>The third and fourth loop questions are:<br />
+  Does the repetend make progress toward termination?<br />
+  Does the repetend keep P true: Is {Q &amp;&amp; B} S {P} true?</p>
+<p> Alex Fusco shows you how to handle these two questions together, because they often have to be answered together. (4.25 minutes) Read it here: <a href="25practiceQ34.pdf">Is the repetend right?.pdf<br />
+</a><em><strong>Note: video has a typo in Exercise 2. </strong></em><strong>P: v = minimum of b[k..n]</strong><em><strong> should be </strong></em><strong>P: v = minimum of b[0..k]</strong><em><strong>. It's correct in the script.</strong></em></p>
+
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/DKmE_QkYkt4?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>Annika Lutan shows you how to answer  the third and fourth loopy questions when assertions are given by array diagrams.Do the exercises! (3.5 minutes) Read it here: <a href="26practiceQ34.pdf">Is the repetend right?.pdf</a></p>
+
+
+<p>&nbsp;</p>
+  </div>
+</div>
+<!-- InstanceEndEditable --></div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2017 David Gries</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+         width : '70%',
+         height : '70%'
+     });
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>

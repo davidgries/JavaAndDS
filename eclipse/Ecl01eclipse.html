@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/onecolumntemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University 
+	naming conventions.
+-->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<meta charset="UTF-8">
+<title>Eclipse</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+<link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
+<!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+.colorRed {
+		color:firebrick;
+	font-style: oblique;
+	font-weight:500;
+}
+</style>
+<script type="text/javascript" src="../js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='../menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="onecolumn">
+
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a>
+</div>
+
+<hr />
+<div ID="header1">
+	<table>
+		<tr>
+			<td>
+				<img src="../images/cucs.gif" width="335"  alt=""/>
+			</td>
+			<td>
+				<span ID="title">
+					<br>
+    JavaHyperText and Data Structures
+  </span>
+    
+    <div ID="instructor"><br>
+      David Gries, with help from many</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	
+
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+
+<li><a href='../definitions.html'><span>Java<br />
+HyperText</span></a></li>
+	
+	<li><a href='../JavaStyle.html'><span>Style<br />
+Guide</span></a></li>
+
+<li class='has-sub '><a href='Ecl01eclipse.html'><span>Eclipse</span></a>
+     <ul>
+         <li><a href='Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+</ul>
+</li>
+
+<li class='has-sub '><a href='../apiString/01APIString.html'><span>API &<br /> 
+    strings</span></a>
+      <ul>
+         <li><a href='../apiString/01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='../apiString/01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='../apiString/01APIString.html#string'><span>3. Class String</span></a></li>
+</ul>
+</li>
+	
+	<li class='has-sub '><a href='../explainJava/explainJava.html'><span>Explain<br />
+constructs</span></a>
+      <ul>
+         <li><a href='../explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='../explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='../explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         
+         <li><a href='../explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+</ul>
+</li>
+   
+
+<li class='has-sub '><a href='../exceptions/EX1.html'><span>Exceptions</span></a>
+      <ul>
+         <li><a href='../exceptions/EX1.html'><span>1. Output of thrown exceptions</span></a></li>
+         <li><a href='../exceptions/EX2.html'><span>2. Throwable objects</span></a></li>
+         <li><a href='../exceptions/EX3.html'><span>3. Try-stmt/propagation</span></a></li>
+         <li><a href='../exceptions/EX4.html'><span>4. Throw-statement</span></a></li>
+         <li><a href='../exceptions/EX5.html'><span>5. Throws-clause</span></a></li>
+         <li><a href='../exceptions/EX6.html'><span>6. Hints</span></a></li>
+</ul>
+</li>
+
+<li><a href='../abstractInterface/01ai.html'><span>Abstract classes<br />
+interfaces</span></a></li>
+
+<li><a href='../iteratorIterable/iterator.html'><span>Iterator &<br />
+ Iterable</span></a></li>
+
+
+</ul>
+</div>
+
+	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+	
+	<li><a href='../programCorrectness/programCorrectness.html'><span>Program<br />
+correctness</span></a></li>
+
+   <li class='has-sub '><a href='../loops/01aloop1.html'><span>Loop<br />
+invariants</span></a>
+      <ul>
+         <li><a href='../loops/01aloop1.html'><span>1. Introduction</span></a></li>
+         <li><a href='../loops/20aloop.html'><span>2. Developing loops</span></a></li>
+         <li><a href='../loops/30aloop.html'><span>3. Finding an invariant</span></a></li>
+</ul>
+</li>
+	
+<li><a href='../stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
+
+
+<li><a href='../hashing/01hashing.html'><span>Hashing</span></a></li> 
+
+
+
+<li><a href='../dfs/dfs01.html'><span>DFS<br />
+BFS</span></a></li>
+
+
+<li><a href='../shortestPath/shortestPath.html'><span>Shortest<br />
+ path</span></a></li>
+
+</ul>
+</div>
+
+<hr />
+
+
+
+
+<!-- The content div contains the main content of the page -->
+<!-- InstanceBeginEditable name="content" -->
+<div id="content">
+  <div id="main">
+
+<h2 class="colorRed">1. Introduction to Eclipse</h2>
+
+<p > We use application Eclipse  to edit, test, and run Java programs. It is called an IDE (Integrated Development Environment. In this little module, we introduce you to the basics of Eclipse. You will not completely understand  the Java code we write; just concentrate on how we are using Eclipse. Besides showing you how to use the IDE in a basic fashion, we give instructions on how to set various preferences, e.g. ensuring that line numbers appear in the editing pane.</P>
+<h3>The Eclipse workspace</h3>
+
+<p>A <em>project</em> is a program that you are writing in Eclipse. Eclipse keeps projects in a <em>workspace</em>. The workspace is just a folder/directory somewhere on your harddrive where Eclipse keeps information about your projects. When you install Eclipse, you can tell Eclipse where to put the workspace. Put it where you can get at it if you have to. On a MAC, you might put it in your user directory in a folder called Eclipse or Workspace. On a Windows machine, you could put it in C:\workspace. Eclipse keeps a file or two in the workspace that contains not only the projects but information about them (called metadata). Don't mess with that file.</p>
+<p>For each assignment in this course,  create a new project within the workspace. Keep things well organized. When you insert a .java file into a project within the workspace, you either <em>copy</em> the file or <em>link</em> to it. For this course, we suggest that you always <em>copy</em> the file into the workspace.</p>
+
+<h3> Basic terminology.</h3>
+
+<p >1. A Java <em>class</em> is a description of <em>objects</em>, which can contain methods (functions, procedures) to be called. You will learn about  Java classes beginning in lecture 2 of CS2110.</P>
+<p >2. A <em>package</em> is a collection of classes. If you are writing them, they will be in a directory or folder on your hard drive.</P>
+<p >3. An Eclipse <em>project</em> is a program that you are writing using Eclipse. It consists of a bunch of classes. Every time you want to start a new program, say for a new assignment, you create a new project for it. We can also say that the project contains a Java <em>program</em>.</P>
+<p >4. A Java <em>application</em> is a Java program (collection of classes) that has a certain method, <em>main</em>, that can be called to run the program.</P>
+<h3><a name="createProject" id="createProject"></a>Creating a project and a class and running it.</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/k5LvMn6wVg4?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>This video introduces you to the Eclipse window. It shows you how to (1) create a project, (2) create a class (within the project) that is an &quot;application&quot;, and (3) run that application. (5:45 minutes) Read it here: <a href="Eclipse01Intro.pdf">eclipseIntro.pdf</a></P>
+<p><br />
+  <br />
+</P>
+<h3>About &quot;hello&quot; in 5 languages</h3>
+<p>The previous video printed &quot;hello&quot; in the 5 most popular languages, in order of popularity. They are given below, with their meanings. One reason for showing you this is to show that characters from just about all languages can be used in Java, not just the roman letters and numerals to which we are accustomed.</p>
+<p>Chinese: 你好&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ni hao   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a respectful hello<br />
+  Spanish: hola<br />
+  English: &nbsp;hello<br />
+  Hindi:   &nbsp;&nbsp;&nbsp;&nbsp;नमस्ते &nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; namaste  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I bow to you; the divine within me bows to the divine within you<br />
+  Arabic:&nbsp;&nbsp;  السلام علي
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;as-salam alaykom&nbsp;&nbsp;&nbsp;&nbsp;peace be upon you</p>
+<p>See this webpage: <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers">en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers</a></p>
+<h3>2. Line numbers and other formatting preferences</h3>
+<p><a href="Ecl02LineNos.html">Read this page</a> to see how to change settings so that line numbers appear<a href="Ecl03stack.pdf"></a> in the editing pane. It shows a few  other things too.</p>
+<h3>3. Reset the Eclipse window layout</h3>
+<p><a href="Ecl03layoutBad.html">Read this page</a> to see how to reset the Eclipse layout when it gets messed up.</p>
+<h3>4. Syntax help</h3>
+<p>The Eclipse editor can help with typing, e.g. adding a semicolon where necessary, and inserting a closing parentheses &quot;)&quot; when you type an opening one &quot;(&quot;. <a href="Ecl04syntaxHelp.html">Read this page</a> to see how to set your preferences to enable this help. </p>
+<h3><a name="twoFiles" id="twoFiles"></a>5. See two Java files open at the same time</h3>
+
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/Ka_FM-iycn0?rel=0"><img src="../imagesActivity/WhiteFill.png" alt="link to video to show side-by-side editing panes"  width="100"  align="left" hspace="5" /></a>This video, in under 1 minute, shows you how to have two files open in the editing pane at the same time. This is useful when one has calls to methods in the other. Here's an example. One class is being developed and tested; the other is a testing class that is being developed to test the first class. (52 seconds). Read it here: <a href="Eclipse02EditPanes.pdf">twoEditingPanes.pdf</a></p>
+<p>&nbsp;</p>
+<h3>6. TODO comments</h3>
+<p>Multiline comments that start with TODO play a special role in Eclipse. <a href="Ecl05TODO.html">Read this page</a> to learn more.</p>
+<h3>7. JUnit testing</h3>
+<p><a href="Ecl06JUnitTesting.html">Read this page</a> to learn about JUnit testing in Eclipse. It shows you the basics of JUnit testing.  You can also learn  how to ensure that all your expected tests were actually carried out. Some students <em>think</em> they ran certain tests but didn't, and their programs contain errors because of this, so this is important.</p>
+	<h3>8. Assert statement. Ensuring that it is executed</h3>
+<p><a href="Ecl10Assert.html">Read this page</a> to learn about the assert statement, which we use to check various things, like Preconditions of methods. In Java, the default is that the assert statement is <em>not</em> exeuted. This page shows you how to change that setting.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<p>&nbsp;</p>
+  </div>
+</div>
+<!-- InstanceEndEditable --></div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2017 David Gries</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+         width : '70%',
+         height : '70%'
+     });
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,1826 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/onecolumntemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University 
+	naming conventions.
+-->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>JavaHyperText</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+<link rel="stylesheet" type="text/css" media="screen" href="styles/screen.css" />
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+</style>
+<style media="screen" type="text/css">
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color: #DDD;
+    color: #555;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    color: #000;
+}
+.linker {
+    color: #0000EE;
+    text-decoration: underline;
+}
+
+.linker:visited {
+    color: #551A8B;
+}
+
+.linker:hover {
+    cursor: pointer;
+}
+</style>
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- InstanceEndEditable -->
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+.colorRed {
+		color:firebrick;
+	font-style: oblique;
+	font-weight:500;
+}
+</style>
+<script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="onecolumn">
+
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a>
+</div>
+
+<hr />
+<div ID="header1">
+	<table>
+		<tr>
+			<td>
+				<img src="images/cucs.gif" width="335"  alt=""/>
+			</td>
+			<td>
+				<span ID="title">
+					<br>
+    JavaHyperText and Data Structures
+  </span>
+    
+    <div ID="instructor"><br>
+      David Gries, with help from many</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	
+
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+
+<li><a href='definitions.html'><span>Java<br />
+HyperText</span></a></li>
+	
+	<li><a href='JavaStyle.html'><span>Style<br />
+Guide</span></a></li>
+
+<li class='has-sub '><a href='eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
+     <ul>
+         <li><a href='eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+</ul>
+</li>
+
+<li class='has-sub '><a href='apiString/01APIString.html'><span>API &<br /> 
+    strings</span></a>
+      <ul>
+         <li><a href='apiString/01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='apiString/01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='apiString/01APIString.html#string'><span>3. Class String</span></a></li>
+</ul>
+</li>
+	
+	<li class='has-sub '><a href='explainJava/explainJava.html'><span>Explain<br />
+constructs</span></a>
+      <ul>
+         <li><a href='explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         
+         <li><a href='explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+</ul>
+</li>
+   
+
+<li class='has-sub '><a href='exceptions/EX1.html'><span>Exceptions</span></a>
+      <ul>
+         <li><a href='exceptions/EX1.html'><span>1. Output of thrown exceptions</span></a></li>
+         <li><a href='exceptions/EX2.html'><span>2. Throwable objects</span></a></li>
+         <li><a href='exceptions/EX3.html'><span>3. Try-stmt/propagation</span></a></li>
+         <li><a href='exceptions/EX4.html'><span>4. Throw-statement</span></a></li>
+         <li><a href='exceptions/EX5.html'><span>5. Throws-clause</span></a></li>
+         <li><a href='exceptions/EX6.html'><span>6. Hints</span></a></li>
+</ul>
+</li>
+
+<li><a href='abstractInterface/01ai.html'><span>Abstract classes<br />
+interfaces</span></a></li>
+
+<li><a href='iteratorIterable/iterator.html'><span>Iterator &<br />
+ Iterable</span></a></li>
+
+
+</ul>
+</div>
+
+	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+	
+	<li><a href='programCorrectness/programCorrectness.html'><span>Program<br />
+correctness</span></a></li>
+
+   <li class='has-sub '><a href='loops/01aloop1.html'><span>Loop<br />
+invariants</span></a>
+      <ul>
+         <li><a href='loops/01aloop1.html'><span>1. Introduction</span></a></li>
+         <li><a href='loops/20aloop.html'><span>2. Developing loops</span></a></li>
+         <li><a href='loops/30aloop.html'><span>3. Finding an invariant</span></a></li>
+</ul>
+</li>
+	
+<li><a href='stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
+
+
+<li><a href='hashing/01hashing.html'><span>Hashing</span></a></li> 
+
+
+
+<li><a href='dfs/dfs01.html'><span>DFS<br />
+BFS</span></a></li>
+
+
+<li><a href='shortestPath/shortestPath.html'><span>Shortest<br />
+ path</span></a></li>
+
+</ul>
+</div>
+
+<hr />
+
+
+
+
+<!-- The content div contains the main content of the page -->
+<!-- InstanceBeginEditable name="content" -->
+<dl>
+    <div id="content">
+      <div id="main">
+        <h2 class="colorRed">JavaHyperText</h2>
+        <p>This webpage contains most definitions of Java concepts and constructs. Use it as your main resource for information on Java! We call it a HyperText because: (1) it is a text, an online text, and (2) it is indeed <em>hypertext</em>, that is, it is an electronic document with each  entry containing appropriate links to other entries. Hopefuly, this hypertext format will let you find what you want with just 1 or 2 clicks. See this <a href="files/hypertext.pdf">pdf file</a> for a bit of history of the word <em>hypertext</em>.</p>
+        <p>Many of the explanations are given in pdf files. They are never more than two pages long, and most are one page. This should make it easy to read about and digest any topic.</p>
+        <p>Type a word into the Search field below and only entries that have that word in it will be displayed!<!-- search division -->        </p>
+        <p>In addition, the links in the navigation bars above take you to webpages with vidoes/tutorials on many aspects of Java and data structures.</p>
+        <div class="searchBar">
+          <!--<form method="post">-->
+          <!--<input type="text" placeholder="Search for Definitions" name="s" id="inputSearch" maxlength="255">-->
+          <div>Search:</div>
+          <input type="text" class="search" placeholder="By definition name">
+          <!--</form>-->
+        </div>
+        
+        <div class = "display">
+          <dt>%</dt>
+          <dd><a class = "linker" title="#remainder">remainder</a> operation</dd>
+        </div>
+        <div class = "display">
+          <dt>/</dt>
+          <dd><a class = "linker" title="#escape">escape</a> character</dd>
+        </div>
+        <div class = "display">
+          <dt>+=&nbsp; -=&nbsp; *=&nbsp;  /=&nbsp;  %=&nbsp;   (compound assignment operators)</dt>
+          <dd>See this one-page <a href="files/assignmentComp.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>++ &nbsp;&nbsp;-- (increment and decrement operators)</dt>
+          <dd>See this one-page <a href="files/decIncOperators.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>&lt;&gt;</dt>
+          <dd>See <a class = "linker" title="#diamond">diamond &lt;&gt;</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>@Override</dt>
+          <dd>Annotation that is placed on a method that is supposed to override a method in a superclass or interface. It's a good idea to use it, for it tells you there is an error if the method doesn't actually override another method, perhaps because of a typo.</dd>
+        </div>
+        <div class = "display">
+          <dt>absolute path, a in file system</dt>
+          <dd>See <a class = "linker" title="#IO">I/O</a> (first entry).</dd>
+        </div>
+        <div class = "display">
+          <dt>abstract class</dt>
+          <dd>A class that is declared with modifier <span class="javakeyword">abstract</span>.
+          The main feature is that the class cannot be instantiated ---if class C is abstract, the expression new C(...) is syntactically illegal.<br>
+          The first video <a href="abstractInterface/01ai.html">on this page</a> is a 3.5-minute tutorial that  explains abstract classes and methods. </dd>
+        </div>
+        <div class = "display">
+          <dt>abstract method</dt>
+          <dd>A method declared with modifier <span class="javakeyword">abstract</span> in
+          an abstract class. Its body is replaced by a "<span class="java">;</span>".
+          Its main feature is that  any non-abstract
+          subclass must overridde.<br>
+          The first video <a href="abstractInterface/01ai.html">on this page</a> is a 3.5-minute tutorial that  explains abstract classes and methods.</dd>
+        </div>
+        <div class = "display">
+          <dt><a title = "@suppressWarning" name="accessmodifier" id="accessmodifier"></a>access modifier</dt>
+          <dd>Java has four levels of access to components. In order of accessibility,
+          they are: <span class="javakeyword">public</span>, <span class="javakeyword">protected</span>,
+          <span class="italixs">package</span> (no modifier), and <span class="javakeyword">private</span>.
+          The table below shows the access to components of a class depending on the access modifier on that component. For example, a component that is protected can be referenced from within the class, from other classes in the same package, and from a subclass.</dd>
+          <table border="2" align="center">
+            <tbody><tr>
+              <th scope="col">modifier</th>
+              <th scope="col">class</th>
+              <th scope="col">package</th>
+              <th scope="col">subclass</th>
+              <th scope="col">world</th>
+            </tr>
+            <tr>
+              <th scope="row"><strong>public</strong></th>
+              <td>Y</td>
+              <td>Y</td>
+              <td>Y</td>
+              <td>Y</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>protected</strong></th>
+              <td>Y</td>
+              <td>Y</td>
+              <td>Y</td>
+              <td>N</td>
+            </tr>
+            <tr>
+              <th scope="row" nowrap="">no modifier</th>
+              <td>Y</td>
+              <td>Y</td>
+              <td>N</td>
+              <td>N</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>private</strong></th>
+              <td>Y</td>
+              <td>N</td>
+              <td>N</td>
+              <td>N</td>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class = "display">
+          <dt>actual parameter</dt>
+          <dd>A term used for <a class = "linker" title="#argument">argument</a> (of a method call).
+          The term should never be used because it is confusing, especially
+          because the adjective "actual" tends to be omitted and then it is just <a class = "linker" title="#parameter">parameter</a>,
+          which is even more confusing.</dd>
+        </div>
+
+        <div class = "display">
+          <dt>annotation</dt>
+        <dd>Something like @Override. See this<a href="files/annotation.pdf"> one-page pdf file</a>.<br />
+        Annotations in a JUnit 4 testing class: See this <a href="files/JUnitAnnotations.pdf">pdf file</a>. </dd>
+        </div>
+
+        <div class = "display">
+          <dt>anonymous class</dt>
+          <dd>This <a href="files/anonymousClass.pdf">two-page pdf file</a> explains what an anonymous class is an how to insantiate it.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="API" id="API"></a>API</dt>
+          <dd>Application Programmer Interface. A set of tools (in Java, packages of classes and interfaces) for building "application software". <em>You</em> are building application software when you write a Java program.</dd>
+          <p>The specification of the API for Java version 1.9 appears here: <a href="https://docs.oracle.com/javase/9/docs/api/index.html?overview-summary.html" target="_blank">docs.oracle.com/javase/9/docs/api/index.html?overview-summary.html</a>. Visit this site often to learn about some class (like String, or JFrame) and its methods.</p>
+        </div>
+        <div class = "display">
+          <dt><a name="apparentclass" id="apparentclass"></a>apparent class</dt>
+          <dd>We don't use this terminology. When you see it, ignore it. It is not needed.</dd>
+        </div>
+        <div class = "display">
+          <dt>applet</dt>
+          <dd>An applet is a Java program that contains a subclass of
+          java.awt.Applet or javax.swing.JApplet. It can appear on web pages.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="application" id="application"></a>application</dt>
+          <dd>A Java application is a program that has a class that contains a
+          static procedure defined like this:<br>
+          <br>
+          <span class="java">&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="javakeyword">public static void</span><span class="java"> main(String[] pars) {...}</span><br>
+          <br>
+          An application can be executed without using an IDE. One creates a jar-file that contains all the classes of the program and uses it as a stand-alone program<span class="italixs"></span>.<br>
+          </dd>
+        </div>
+		  
+		  <div class = "display">
+          <dt>application programmer interface</dt>
+          <dd>See <a class = "linker" title="#API">API</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="argument" id="argument"></a>argument</dt>
+          <dd>An expression that occurs within the parentheses of a method call.
+          The following call has two arguments: <span class="java">x+y</span> and <span class="java">y+w</span>:<br>
+          <br>
+          <span class="java">&nbsp;&nbsp;&nbsp;&nbsp;min(x+y, y+w)</span><br>
+          <br>
+          The number of arguments must equal the number of parameters of the
+          method that is being called, and the type of each argument must be
+          the same as or narrower than the type of the corresponding parameter.</dd>
+        </div>
+        <div class = "display">
+          <dt>argument, type argument</dt>
+          <dd>See <a class = "linker" title="#typeArg">type argument</a></dd>
+        </div>
+        <div class = "display">
+          <dt>argument, variable number of, in a call</dt>
+          <dt></dt>
+          <dd>See this <a href="files/variableArguments.pdf">pdf file</a> to see how to allow a variable number of arguments in a call</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="array" id="array"></a>array</dt>
+          <dd>This  <a href="files/arrays.pdf">pdf-file</a> explains how arrays are used and implemented in Java.<br>
+          This  <a href="files/raggedArrays.pdf">pdf-file</a> explains how to create ragged/jagged multidimensional arrays, in which each row
+          can have a different number of elements.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="assert" id="assert"></a>assert statement</dt>
+          <dd>The assert statement has the form &nbsp;&nbsp;&nbsp;&nbsp;<strong>assert</strong> &lt;boolean-expression&gt; ; <br>
+          To execute it, evaluate the &lt;boolean-expression&gt;; if true, do nothing more; if false, throw an AssertionError, which will generally cause the program to abort.<br />
+          </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="assertion" id="assertion"></a>assertion</dt>
+          <dd>A true-false statement about the variables in a program that is placed
+          as a comment at a particular place in the program to indicate that
+          the true-false statement is true at that place. See also <a title = "#precondition" class = "linker">precondition</a>            and <a title = "#postcondition" class = "linker">postcondition</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>assignment statement</dt>
+          <p>The assignment statement has the form&nbsp; &nbsp; &lt;variable&gt; = &nbsp; &nbsp;&lt;expression&gt; ;<br>
+            To be syntactically correct, the
+            type of the expression must be the same as or <a title="#narrowertype" class = "linker">narrower</a> than the type of the variable. To execute the assignment statement, evaluate the &lt;expression&gt; and store its value in the &lt;variable&gt;. For more information see the 2.5-minute video on this <a href="explainJava/01presentingAlgorithmsA.html">webpage</a>.<br>
+            <br>
+            See this <a href="files/assignmentComp.pdf">pdf file</a> for the compound assignment operators +=&nbsp; -=&nbsp; *=&nbsp;  /=&nbsp;  %=. </p>
+        </div>
+        <div class = "display">
+          <dt>autoboxing, auto-unboxing, autowrapping</dt>
+          <dd>In certain situations, like the declaration-assignment&nbsp; Integer d= 5; &nbsp;the integer 5 will automatically be wrapped in a new object of type Integer. This is called <em>autoboxing</em>, although <em>autowrapping</em> would have been more appropriate. Similarly, in the declaration-statement&nbsp; int k= d; &nbsp;the integer in d will be auto-unboxed so that it can be stored in k. Autoboxing and auto-unboxing can take place between each primitive type and its wrapper class. Read the pdf file at entry <a class = "linker" title="#wrapperclass">wrapper class</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="binary" id="binary"></a>binary operator</dt>
+          <dd>An operator with two operands. Examples are addition and multiplication, 5 + 2 and 6 * 8. See also <a class = "linker" title="#ternary">ternary operator</a> and <a class = "linker" title="#unary">unary operator</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>block</dt>
+          <dd>A sequence of statements, local variable declarations, and local class declarations enclosed in braces { }.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="boolean" id="boolean"></a>boolean</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are <span class="javakeyword">true</span>            and <span class="javakeyword">false</span>. See this <a href="files/boolean.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>Boolean, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#boolean">boolean</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="bottomup" id="bottomup"></a>bottom-up rule</dt>
+          <dd>This is also called the <em>overriding rule</em>. When looking for a method
+          in an object that is appropriate for a method call, start from the bottom of the object and look upward. This rule ensures
+          that an overriding method will be called (if present) rather than
+          an inherited one.</dd>
+        </div>
+        <div class = "display">
+          <dt>bounded buffer</dt>
+          <dd>A place to store items that may be put in and taken out at different rates by different threads. See <a class = "linker" title="#Threads">Threads</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>bounded wildcard</dt>
+          <dd>See <a class = "linker" title="#generics">generics</a>. </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="break" id="break"></a>break statement</dt>
+          <dd>See this <a href="files/break.pdf">pdf file</a>. The break statement is used most often to terminate execution of a <a class = "linker" title="#switch">switch statement</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="byte" id="boolean2"></a>byte</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are integers
+          in the range –2^8 .. 2^8 – 1. See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>Byte, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#byte">byte</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="cast" id="cast"></a>cast</dt>
+          <dd>A cast converts a value from one type to another.
+          Example: the cast <span class="java">(<strong>double</strong>)(5+6)</span> converts the value of the expression 5+6 to <span class="javakeyword">double</span> format. <br>
+          This <a href="files/char.pdf">pdf file</a> explains casting between types <strong>char</strong> and <strong>int</strong>.<br>
+          This <a href="files/primitiveNumberTypes.pdf">pdf file</a> explains casting among the number types <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, and <strong>double</strong>. <br>
+          This <a href="files/castingAbout.pdf">pdf file</a> explains casting with classes, called <em>class casts</em>.<br>
+          This <a href="abstractInterface/01ai.html">webpage</a> contains a 3.75-minute video on casting with interfaces.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="catenate" id="catenate"></a>catenate, catenation</dt>
+          <dd>To link together, to place side by side. Suppose b and c are of type String. Then operation b + c denotes <a href="files/catenate.pdf">catenation</a>. Its resulting value is a new String that contains the characters of b followed by the characters of c.</dd>
+          <p>If only one of b and c are of type String, then b + c still denotes catenation, and the non-String operand is changed into its String representation before the catenation is done. If the non-String operand is of some class-type, its toString method is called to obtain its String representation.<br>
+            <br>
+          The simplest way to get a String representation of <em>any</em> expression is to catenate it with the empty String. For example, "" + (68 + 2) evaluates to a String that contains "70".</p>
+        </div>
+        <div class = "display">
+          <dt><a name="char" id="char"></a>char</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are single characters, like <span class="java">'h'</span>. This  <a href="files/char.pdf">pdf file</a> explains type <strong>char</strong> and the unicode representation of characters.</dd>
+        </div>
+        <div class = "display">
+          <dt>Character, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#char">char</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="checkedException" id="checkedException"></a>checked exception</dt>
+          <dd>Java "checks" all throwable objects except those of class Error and RuntimException. A checked exception has to be handled in one of two ways: (1) catch it in a catch-block or (2) put a throws-clause &nbsp; <strong>throws</strong> &lt;class-name&gt; &nbsp;&nbsp;on the method header in which the exception is thrown. The video on <a href="exceptions/EX5.html">this webpage</a> explains it.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Class" id="Class"></a>class</dt>
+          <dd> A class definition defines the format of <a class = "linker" title="#Object">objects</a> (or
+          instances or folders) of the class —it defines the <a class = "linker" title="#Method">methods</a> and <a class = "linker" title="#Field">fields</a>        that
+          go in each <a class = "linker" title="#Object">object</a> of the class. This <a href="files/object.pdf">pdf file</a> explains how we draw an object of a class.<br>
+          <br>
+          The class definition also defines the <a class = "linker" title="#Static">static</a> variables
+          (class variables) and <a class = "linker" title="#Static">static</a> methods (class methods).<br><br>
+          A class can be used as a <a class = "linker" title="#Type">type</a>. If <span class="java">C</span> is
+          (the name of) a class, then <span class="java">C v;</span> declares a variable <span class="java">v</span> that contains either
+          <span class="javakeyword">null</span> or the name of (or pointer to) an object of class <span class="java">C</span>.</dd>
+        </div>
+        <div class = "display">
+          <dt>class, apparent</dt>
+          <dd>We don't use this terminology. If you see it being used, ignore it.</dd>
+        </div>
+        <div class = "display">
+          <dt>class as a type</dt>
+          <dd>A class name can be used as a type. Its values are the names of (pointers to) objects
+          of that class (and also <strong>null</strong>). For example, the declaration
+          <span class="java">JFrame j</span> indicates that variable <span class="java">j</span> can
+          contain values that are the names of (pointers to) objects of class <span class="java">JFrame</span>.</dd><dt>class container</dt>
+          <dd> In order to provide an easy-to-understand introduction to classes
+          and objects, at runtime, we view a class as a container that contains the objects of the class and the static components of the class.  See this one-page <a href="files/static.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>class, generic</dt>
+          <dd>See <a class = "linker" title="#generics">generics</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="classinvariant" id="classinvariant"></a>class invariant</dt>
+          <dd>The collection of meanings and constraints on the fields of a class
+          that describe the valid states of all instances of the class before
+          and after each method is called. The class invariant should appear
+          as comments on the declarations of the fields.<br>
+          <br>
+          A constructor should
+          truthify the class invariant. Each method body can assume that the
+          class invariant is true and should terminate with the class invariant
+          true.</dd>
+        </div>
+        <div class = "display">
+          <dt>class method</dt>
+          <dd>See <a class = "linker" title="#staticmethod">static method</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>class, nested</dt>
+          <dd>See <a class = "linker" title="#nestedClass">nested class</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>class, real</dt>
+          <dd>See <a class = "linker" title="#realclass">real class</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>class, static</dt>
+          <dd>See <a class = "linker" title="#nestedClass">nested  class</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="classtype" id="classtype"></a>class type</dt>
+          <dd>A type that is the name of a class or interface. Its values are the names of (pointers to) objects
+          of that class, and <strong>null</strong>.<br>
+          Also called <em>reference type</em> because a value of the type is a pointer or reference to an object.</dd>
+        </div>
+        <div class = "display">
+          <dt>class variable</dt>
+          <dd>Same as a <a class = "linker" title="#staticvariable">static variable</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="compiler" id="compiler"></a>compiler</dt>
+          <dd>A (Java) compiler is a program that checks the syntax of a program, and, if the program is syntactically correct, translates it into (the Java virtual) machine language, so that it can be run, or executed. This is called <em>compiling</em> the program, and it happens at <em>compiletime</em>. The Eclipse IDE calls the compiler often as you are editing a program, and it happens so fast that you don't notice it.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="referencerule" id="referencerule"></a>compile-time reference rule</dt>
+          <dd>This rule  determines whether a component reference like p.v or p.m(...) is syntactically correct. See this <a href="files/compiletimeReferenceRule.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>component</dt>
+          <dd>A component of a class is a variable, method, or inner class that is declared in
+          the class or is <a class = "linker" title="#inheritance">inherited</a> from the superclass.</dd>
+        </div>
+        <div class = "display">
+          <dt>compound assignment operator</dt>
+          <dd>See <a href="files/assignmentComp.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>concatenate, concatenation</dt>
+          <dd><a href="files/catenate.pdf">Same as</a> <a class = "linker" title="#catenate"><strong>catenate</strong></a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>concurrency</dt>
+          <dd>Concurrency refers to having more than one thread of execution in a program, allowing different parts of a program to execute in parallel. See <a class = "linker" title="#Threads">Threads</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="conditional" id="conditional"></a>conditional expression</dt>
+          <dd>An expression of the form &lt;boolean-expression&gt; ? &lt;expression-1&gt; : &lt;expression-2&gt;. It is a ternary operator: it has three operands. To evaluate it, evaluate the &lt;boolean-expression&gt;; if it is true, use the value of &lt;expression-1&gt; as the value of the conditional expression; otherwise, use the value of &lt;expression-2&gt; as the value of the conditional expression. Here are examples:</dd>
+          <blockquote><p>5 &lt; 4 ? 1+6 : 3&nbsp;&nbsp;&nbsp;&nbsp;evaluates to 3 since the boolean-expression is false<br>
+          5 &gt; 4 ? 1+6 : 3&nbsp;&nbsp;&nbsp;&nbsp;evaluates to 7 since the boolean-expression is true</p>
+        </blockquote>
+        </div>
+		  <div class = "display">
+          <dt><a name="constant" id="constant"></a>constant</dt>
+			  <dd>In Java, a variable whose value cannot be changed is called a <em>constant</em>. To declare
+			  such a variable, use keyword <a class = "linker" title="#final">final</a>, as in this example:<br><br>
+			  public static final double PI= 3.1415926535897932384626433832795; </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="constantExp" id="constantExp"></a>constant expression</dt>
+          <dd>An expression of a primitive type or type String that can be evaluated at compile-time and replaced by its value.
+          If two or more such String expressions have the same value, only one String object is created for all of them. See this <a href="files/constantExpressions.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>constant time</dt>
+          <dd>An operation or method takes constant time if the time it takes to carry it out does not depend on the size of its operands. For a more detailed explanation, with examples, see this <a href="files/constantTime.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="constructor" id="constructor"></a>constructor</dt>
+          <dd>A method that is declared with the basic form: </dd>
+          <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="italixs">access modifier</span>&gt; &lt;<span class="italixs">class-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">parameter-declarations</span>&gt;<span class="java"> )
+          { </span>...<span class="java"> }</span><br><br>
+          The purpose of a constructor is to initialize the fields
+          of a new object of class &lt;class-name&gt; so that the <a class = "linker" title="#classinvariant">class invariant</a> is true when the object is created. See this <a href="files/constructors.pdf">pdf file</a> for:<br>
+          (1) Rule: initialize superclass fields before subclass fields.<br>
+          (2)
+          Syntactic rule:  a constructor that you write must start with a call on another constructor; what call is inserted if it is not present.<br>
+          (3) How to call another constructor using <strong>super</strong> or <strong>this</strong>.<br>
+          (4)
+          What constructor is inserted if a class does not have a constructor.<br>
+          </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="constructorcall" id="constructorcall"></a>constructor call</dt>
+          <dd>A call of a <a class = "linker" title="#constructor">constructor</a>. The purpose of a constructor call is to initialize fields of a newly created object so that the class invariant is true. There are three
+          ways to call a constructor —the last two ways may appear only as
+          the first statement of a constructor body:<br>
+          <br>
+          1. In a <a class = "linker" title="#newexpression">new-expression</a>. It has the form &lt;class-name&gt; ( &lt;arguments&gt; )<br>
+          2. As a call of another constructor in the same class: <span class="javakeyword">this</span><span class="java">(</span>&lt;<span class="italixs">arguments</span>&gt;<span class="java">);</span>.<br>
+          3. As a call of a constructor of the superclass: <span class="javakeyword">super</span><span class="java">(</span>&lt;<span class="italixs">arguments</span>&gt;<span class="java">);</span>.</dd>
+        </div>
+        <div class = "display">
+          <dt>constructor call, default</dt>
+          <dd>If (and only if) the first statement of the body of a constructor is not a constructor call, this one is inserted: <span class="javakeyword">super</span><span class="java">();</span></dd>
+        </div>
+        <div class = "display">
+          <dt>constructor, default</dt>
+          <dd>If (and only if) a class definition does not contain a constructor, this one is inserted:<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeyword">public </span>&lt;<span class="italixs">class-name</span>&gt;<span class="java">()
+          {</span><span class="java">}</span><br>
+          </dd>
+        </div>
+        <div class = "display">
+          <dt>container, for a class</dt>
+          <dd>Conceptually, we think of all the objects of a class together with its static components being housed in a container, a box. This conceptual view, along with the inside-out rule, helps explain the concept of "static" and how the declaration corresponding to a variable reference is found. This view may give the feeling that all objects and static components reside in contiguous places in memory, but that is <em>not</em> the case. Just think of the container as a conceptual aid, not an implementation device. See this <a class = "linker" title="files/static.pdf">pdf file</a> for an example<a href="files/static.pdf"></a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>continue statement</dt>
+          <dd>Execution of the statement "continue;" terminates execution of the loop body in which it occurs. See this <a href="files/continue.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>core</dt>
+          <dd>A component on a chip that contains a "processing unit", which can execute sequences of instructions. See <a href="files/threads1.pdf">pdf file</a>.</dd>
+        </div>
+		  <div class = "display">
+          <dt>creators, observers, mutators</dt>
+          <dd><a href="files/mutator.pdf">This pdf file</a> introduces an alternative to the conventional <em>getter/setter</em> terminology.</dd>
+        </div>
+        <div class = "display">
+          <dt>CPU</dt>
+          <dd>Central Processing Unit. See <a href="files/threads1.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>critical section</dt>
+          <dd>A segment of code that has to be executed as an atomic action —with no other processing accessing or changing the variables it uses while that segment is being executed. See <a href="files/syncIntro.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>daemon thread</dt>
+          <dd>See <a href="files/ThreadsDaemon.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>deadlock</dt>
+          <dd>Deadlock occurs when a group of processes (or threads) can't make progress because they need a resource that another process in the group has locked. See <a href="files/deadlock.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>debugging</dt>
+          <dd>The process of looking for and fixing an error once it has been determined that there is an error.</dd>
+        </div>
+        <div class = "display">
+          <dt>default values</dt>
+          <dd>Fields (both static and non-static) have default values (if they
+          are not initialized), as follows: numeric-type fields: <span class="java">0</span>; boolean
+          fields: <span class="javakeyword">false</span>; char fields: <span class="java">'\u0000'</span>; and class-type fields: <span class="javakeyword">null</span>.
+          Local variables do not have initial default values and must be assigned before referenced.</dd>
+        </div>
+        <div class = "display">
+          <dt>deprecate</dt>
+          <dd>To <span class="italixs">deprecate</span> means to lessen in value.
+          Some classes and methods within classes in the Java API package have
+          been deprecated because they have been superceded by newer ones that
+          do a better job. You can still use the deprecated entities, but it
+          is better if you don't.</dd>
+        </div>
+        <div class = "display">
+          <dt>descriptor, of a method</dt>
+          <dd>The <a class = "linker" title="#methodsignature">method signature</a> plus the return type.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="diamond" id="diamond"></a>diamond &lt;&gt;</dt>
+          <dd>An abbreviation in a new-expression like new ArrayList&lt;&gt;(). See this <a href="files/genericBasic.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="doLoop" id="doLoop"></a>do-loop (do-statement)</dt>
+          <dd>See this <a href="files/do-loop.pdf">pdf file</a> for an explanation of the do-loop.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="double" id="boolean7"></a>double</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are written in <a class = "linker" title="#scientific">scientific notation</a>, e.g. 3.46E–4. Each value occupies 64 bits. See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>Double, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#double">double</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>dynamic type</dt>
+          <dd>We don't use this terminology. If you see it being used, ignore it.</dd>
+        </div>
+        <div class = "display">
+          <dt>enhanced for statement</dt>
+          <dd>Java's formal terminology for a foreach loop. See <a class = "linker" title="#foreach">foreach loop.</a></dd>
+        </div>
+        <div class = "display">
+          <dt>enums, or enumeration types</dt>
+          <dd>An enum class provides constants (static final variables), like Coin.PENNY and Coin.NICKEL.<br>
+          
+          This two-page <a href="files/enums.pdf">pdf file</a> gives you the basics.<br>
+          This two-page <a href="files/AdvancedEnums.pdf">pdf file</a> shows you how to add fields and methods to an enum class.
+			  </dd>
+        </div>
+        <div class = "display">
+          <dt>equals</dt>
+          <dd>The call b.equals(c) on function equals in class Object returns true iff b == c is true. But equals should sometimes be overridden in a class to define what equality means for that class. This <a href="files/equals.pdf">pdf file</a> tells you how to do it, and here are some .java files to demo with: <a href="files/equals.zip">equalsDemo.zip</a></dd>
+        </div>
+        <div class = "display">
+          <dt>Error, class</dt>
+          <dd>A subclass of class Throwable; its objects and those of its subclasses should not be caught and processed, as opposed to those of class Exception, which may be caught and processed. See
+          the 3.2-minute video on throwable objects <a href="exceptions/EX2.html">here</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="escape" id="boolean8"></a>escape character</dt>
+          <dd>The escape character \ is used to write characters that cannot appear directly in a String. Here are examples; there are others:</dd>
+          <blockquote>
+            <p><span class="java">\n</span> —new-line character<br>
+            <span class="java">\\</span> —backslash character<br>
+            <span class="java">\"</span> —double quote character<br>
+            <span class="java">\'</span> —single quote character (you can use ' in a String, but as a character, write '\''<br>
+          </p>
+          </blockquote>
+        </div>
+        <div class = "display">
+          <dt>Exception, checked</dt>
+          <dd>See <a class = "linker" title="#checkedException">checked exception</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>Exception, class</dt>
+          <dd>A subclass of class Throwable; its objects and those of its subclasses may be caught and processed, as opposed to those of class Error, which shouldn't be caught. See
+          the 3.2-minute video on throwable objects <a href="exceptions/EX2.html">here</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>exception handling</dt>
+          <dd>When
+          something like a division by 0 happens, or any exception is "thrown", the flow of control of a program is altered. This important topic of exception handling is covered in tutorials <a href="exceptions/EX1.html">here</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="expression" id="expression"></a>expression</dt>
+          <dd>In Java, each expression has a type, which depends on the type of its operations and operands. Evaluation of the expression yields a value of that type.<br>
+          For information on increment/decrement expressions ++ and --, see this <a href="files/decIncOperators.pdf">pdf file</a>.<br>
+          Look here for <a class = "linker" title="#constantExp">constant expressions</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>extends clause</dt>
+          <dd>A clause, <span class="javakeyword">extends</span><span class="java"> C</span>,
+          put on a class definition to indicate that the defined class is a
+          <a class = "linker" title="#subclass">subclass</a> of class <span class="java">C</span> and
+          that <span class="java">C</span> is a <a class = "linker" title="#superclass">superclass</a> of the defined class.
+          The subclass <a class = "linker" title="#inheritance">inherits</a> all components defined in and inherited by the superclass.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Field" id="Field"></a>field</dt>
+          <dd> A <a class = "linker" title="#Variable">variable</a> belonging to a <a class = "linker" title="#Class">class</a> (<a class = "linker" title="#Static">static</a> field)
+          or <a class = "linker" title="#instance">instance</a> (<a class = "linker" title="#Instance">non-static</a> field).</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="final" id="final"></a>final</dt>
+          <dd>A variable declared with keyword <strong>final</strong> cannot be assigned after its initial assignment. For example, the following declaration of PI in class Math includes keyword <strong>final</strong> so that PI cannot be changed:</dd>
+          <blockquote><p>public static final&nbsp;double PI= 3.141592653589793;
+          </p></blockquote>
+          <p>A class that is declared with keyword <strong>final</strong> cannot be
+          extended ---cannot have a subclass.</p>
+        </div>
+        <div class = "display">
+          <dt><a name="float" id="boolean6"></a>float</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are written in <a class = "linker" title="#scientific">scientific notation</a>, e.g. 3.46E–4. Each value occupies 32 bits. See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>Float, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#float">float</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>folder</dt>
+          <dd>Same as <a class = "linker" title="#Object">object</a> or instance.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="foreach" id="foreach"></a>foreach loop</dt>
+          <dd>See this <a href="files/foreach.pdf">pdf file</a> for an explanation of the foreach loop.<br>
+          You can enable the use of the foreach statement on your own collection class by implementing interfaces Iterator and Iterable. This tutorial shows you how in
+          less than 15 minutes of video: <a href="iteratorIterable/iterator.html">webpage</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="forLoop" id="forLoop"></a>for-loop</dt>
+          <dd>See this <a href="files/for-loop.pdf">pdf file</a> for an explanation of the for-loop.</dd>
+        </div>
+        <div class = "display">
+          <dt>formal parameter</dt>
+          <dd>We use the term <a class = "linker" title="#parameter">parameter</a> (of a method)
+          instead of <span class="italixs">formal
+            parameter</span>            and <a class = "linker" title="#argument">argument</a> (of
+            a method call) instead of <span class="italixs">actual parameter</span>.
+            The terms <span class="italixs">formal parameter</span> and <span class="italixs">actual
+          parameter</span> should
+          never be used because they are confusing, especially because the
+          adjectives tend to be forgotten and then there is no difference in
+          the terms.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="frameforcall" id="frameforcall"></a>frame for a call</dt>
+          <dd>When a method is called, a frame is created for the call. This frame
+          contains<br>
+          <br>
+          (1) the name of the method,<br>
+          (2) a program counter, which
+          indicates which statement to execute next,<br>
+          (3)
+          a scope box, which contains the name of the class or object in which
+          the method resides,<br>
+          (4) the parameters of the method, and<br>
+          (5) the local variables of the method.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Function" id="Function"></a>function</dt>
+          <dd>A <a class = "linker" title="#Method">method</a> that is declared with the basic form: </dd>
+          <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="italixs">access modifier</span>&gt; &lt;return-type&gt; &lt;<span class="italixs">function-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">parameter-declarations</span>&gt;<span class="java"> )
+          { </span>...<span class="java"> }</span></dd>
+          <dd>Execution of the body of the function must terminate by  executing a <a class = "linker" title="#returnstatement">return statement</a>, giving an expression whose value is to be returned. A call on a function is an expression (and thus
+          yields a value).</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="functioncall" id="functioncall"></a>function call</dt>
+          <dd>A function call is an expression, so it can be placed wherever an
+          expression (of the appropriate type) can be placed. Its form is one
+          of:<br>
+          <br>
+          1.
+          for a static function: &lt;<span class="italixs">class-name</span>&gt;<span class="java"> . </span>&lt;<span class="italixs">function-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">arguments</span>&gt;<span class="java"> )</span><br>
+          2. for a non-static function: &lt;<span class="italixs">expression</span>&gt;<span class="java"> . </span>&lt;<span class="italixs">function-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">arguments</span>&gt;<span class="java"> )</span><br>
+          <br>
+          where the &lt;<span class="italixs">expression</span>&gt; evaluates
+          to the name of an object that contains the function to be called. Both "&lt;<span class="italixs">class-name</span>&gt;<span class="java">."</span> and "&lt;<span class="italixs">expression</span>&gt;<span class="java">."</span> can
+          be omitted if the call appears in a place in which the function can
+          be called without them.</dd>
+        </div>
+        <div class = "display">
+          <dt>generic class</dt>
+          <dd>See <a class = "linker" title="#generics">generics</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="genericMethod" id="genericMethod"></a>generic method</dt>
+          <dd>See <a href="files/genericMethod.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="generics" id="generics"></a>generics</dt>
+          <dd>History of generics in Java and what <em>generics</em> means: <a href="files/generic1.pdf">pdf file</a>.<br>
+          Introduction to generic classes: <a href="files/genericBasic.pdf">pdf file</a>.<br>
+          Introduction to generic methods: <a href="files/genericMethod.pdf">pdf file</a>. <br>
+          Why ArrayList&lt;Integer&gt; is not a subclass of ArrayList&lt;Object&gt;: <a href="files/genericSub.pdf">pdf file</a>.<br>
+          Introduction to wildcards: <a href="files/genericWildcard.pdf">pdf file</a>.<br>
+          Introduction to bounded wildcards: <a href="files/genericWildBounded1.pdf">pdf file</a>. <br>
+          Examples of upper-bounded types:<a href="files/genericUpperBd.pdf"> pdf file</a>.<br>
+          Examples of lower-bounded types: <a href="files/genericLowerBd.pdf">pdf file</a>.<br>
+          Multiple upper bounds: <a href="files/genericUpperBdS.pdf">pdf file</a>.<br>
+          Restrictions on the use of generic types: <a href="files/genericRestrictions.pdf">pdf file</a>.<br>
+          Discussion of <a class = "linker" title="#rawType">raw types</a>. </dd>
+        </div>
+        <div class = "display">
+          <dt>getClass</dt>
+          <dd>ob.getClass() == C.class is true iff ob was created using a new-expression new C(...).<br>
+          See this <a href="files/instanceof.pdf">pdf file</a> for a full explanation.<br />
+          See this <a href="files/instanceofGetclass.pdf">pdf file</a> for an example where instanceof and not getClass() should be used. </dd>
+        </div>
+        <div class = "display">
+          <dt>getter method</dt>
+          <dd>A non-static function whose purpose is to retrieve a value from the
+          object in which the method appears —the value is usually in a field
+          of the object. If the field to be retrieved is named <span class="java">xab</span>,
+          by convention, the name of the getter method is <span class="java">getXab</span>. But the convention need not be followed, and we often don't.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="methodheader" id="methodheader"></a>header, of a method</dt>
+          <dd>The part of a declaration of a method that gives the <a class = "linker" title="#accessmodifier">access
+          modifiers</a>,
+          prefixes like <span class="javakeyword">static</span>, the return
+          type or <span class="javakeyword">void</span>, the method name, and
+          the parameter declarations delimited by parentheses. Thus, it is
+          the complete method declaration except for the method body.</dd>
+        </div>
+        <div class = "display">
+          <dt>hiding fields and static components</dt>
+          <dd>Fields are <em>not</em> overridden but are hidden. This is explained in this <a href="files/fieldHiding.pdf">pdf file</a>.<br>
+          Static components are <em>not</em> overridden but are hidden. This is explained in this <a href="files/staticHide.pdf">pdf file</a>. </dd>
+        </div>
+        <div class = "display">
+          <dt>hypertext</dt>
+          <dd>Text with links in it to other parts of the text, graphics, tables, images, etc. See this <a href="files/hypertext.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="hoareTriple" id="hoareTriple"></a>Hoare triple</dt>
+          <dd>Something of the form {Q} S {R} where Q and R are assertions and S is a statement It has the meaning: Execution of S in a state in which Q is true is guaranteed to terminate, and when it does, R is true.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="if" id="if"></a>if-statement, if-else statement</dt>
+          <dd>See this <a href="files/if-statement.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="immutable" id="immutable"></a>immutable</dt>
+          <dd>Unchangeable. Objects of class String and the <a
+          class = "linker" title="#wrapperclass">wrapper classes</a> are immutable;
+              the values that they wrap cannot be changed.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="implementsclause" id="implementsclause"></a>implements clause</dt>
+          <dd>The implements clause, <span class="javakeyword">implements </span>&lt;<span class="italixs">interface-name</span>&gt;,
+          on a class indicates that the class overrides all abstract methods
+          declared in the <a class = "linker" title="#interface">interface</a>. As of the latest Java version, the class need not override methods that have defaults.</dd>
+        </div>
+        <div class = "display">
+          <dt>import statement</dt>
+          <dd>The import statement has one of the forms:<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeyword">import </span>&lt;<span class="italixs">path</span>&gt;<span class="java">.</span>&lt;<span class="italixs">class-name</span>&gt;<span class="java">;
+        // </span>import a particular class<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="javakeyword">import </span>&lt;<span class="italixs">path</span>&gt;<span class="java">.*</span><span class="java">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// </span>import
+        all classes in the package<br>
+        <br>
+        where the &lt;<span class="italixs">path</span>&gt; is a path of the
+        API package (e.g. <span class="java">javax.swing</span>) or a
+        path to a directory on your hard drive that represents a package of classes.
+        It is placed as the first statement of a file that contains a class definition
+        in order to indicate that the class may refer to the classes in the directory
+        given by the &lt;<span class="italixs">path</span>&gt;.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="infix" id="infix"></a>infix operator</dt>
+          <dd>An operator that is written between its two operands. E.g. +, as in 5 + 6. See also <a class = "linker" title="#prefix">prefix operator</a> and <a class = "linker" title="#postfix">postfix operator</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="inheritance" id="inheritance"></a>inheritance</dt>
+          <dd>A subclass inherits all the instance fields and methods available
+          in its superclass. This means that each instance of the subclass
+          contains not only the instance fields and methods defined in it but
+          also the instance fields and methods defined in an inherited by the superclass.</dd>
+            <p>The Java spec uses "inheritance" slightly differently: private fields are not inherited. However, the private fields DO appear in each object of the subclass, so we think the Java use of "inherited" is wrong and will continue to say that ALL components are inherited.</p>
+            <p>Here's an analogy. Suppose a 16-year-old son's parent's die. He inherits their money. But the money is put in a Trust, and, he cannot touch the money until he is 18. That's like saying the private field appears in each object of the subclass but it is private.</p>
+        </div>
+        <div class = "display">
+          <dt><a name="innerClass" id="innerClass"></a>inner class</dt>
+          <dd>A non-static class that is declared within another class.<br>
+          This <a href="files/nestedClasses.pdf">pdf file</a> explains why nested classes are useful.<br>
+          Study this example of the use of a static nested class before reading the next example: <a href="files/StaticNestedClass.pdf">pdf file</a>.<br>
+          Here is a simple but realistic example of the use of an inner class: <a href="files/innerClass.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="IO" id="IO"></a>IO Input-output</dt>
+          <dd>(0) Java files and data to demo most of what appears here:<a href="files/iodemo.zip"> iodemo.zip</a><br />
+            (1)
+          A bit about the Java IO packages; intro to paths of files and directories: <a href="files/io1.pdf">pdf file</a>.<br />
+          (2) Interface Path and classes Files and Paths: <a href="files/io2paths.pdf">pdf file</a>.<br />
+          (3) Read a text file using a BufferedReader: <a href="files/io3readFile.pdf">pdf file</a>.<br />
+          (4) Write a text file using a BufferedWriter and a PrintWriter: <a href="files/io4writeFile.pdf">pdf file</a>.<br />
+          (5) Read a webpage —class URL:<a href="files/io5readWebpage.pdf"> pdf file</a>.<br />
+          (6) Use a JFileChooser to obtain a Path: <a href="files/io6JFileChooser.pdf">pdf file</a>. </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="insideOut" id="insideOut"></a>inside-out rule</dt>
+          <dd>A rule, used in most programming languages, that indicates how to determine
+          what a reference to a variable or a method means (which declaration it refers to). It is explained in this <a href="files/insideOutRule.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Instance" id="Instance"></a>instance</dt>
+          <dd> An instance of a <a class = "linker" title="#Class">class</a> is an <a class = "linker" title="#Object">object</a> or
+          manila folder of a class;
+          <span class="italixs">instance</span>, <span class="italixs">object</span>,
+          and <span class="italixs">manila
+          folder</span> are synonyms.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="instancemethod" id="instancemethod"></a>instance method</dt>
+          <dd>A <a class = "linker" title="#Method">method</a> that is defined without modifier <span class="javakeyword">static</span> in
+          a class. A copy of the method resides in each instance of the class.</dd>
+        </div>
+        <div class = "display">
+          <dt>instanceof</dt>
+          <dd>Operation &lt;<span class="italixs">object</span>&gt;<span class="javakeyword"> instanceof </span>&lt;<span class="italixs">class-name</span>&gt; yields true
+          iff the object  has a partition named &lt;<span class="italixs">class-name</span>&gt;.<br />
+          See this <a href="files/instanceof.pdf">pdf file</a> for a full explanation.</dd>
+          <dd>See this <a href="files/instanceofGetclass.pdf">pdf file</a> for an example where instanceof is needed.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="instancevariable" id="instancevariable"></a>instance variable</dt>
+          <dd>A <a class = "linker" title="#Variable">variable</a> that is defined without modifier <span class="javakeyword">static</span> in
+          a class. Also called a <span class="italixs">field</span>. A copy
+          of the variable resides in each object of the class.</dd>
+        </div>
+        <div class = "display">
+          <dt>instantiate</dt>
+          <dd>To create an instance of. So, evaluation of a <a class = "linker" title="#newexpression">new-expression</a> <span class="javakeyword">new</span><span class="java"> C(...)</span>            instantiates
+          class <span class="java">C</span>, producing a new instance, or object, of the class. </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="int" id="typeInt"></a>int</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are integers
+          in the range –2^31 .. 2^31 – 1, together with its operations +, -, *, *, and % (remainder).<br>
+          See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation.      </dd>
+        </div>
+        <div class = "display">
+          <dt>Integer, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#int">int</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>integral types</dt>
+          <dd>The Java <a class = "linker" title="#PrimitiveType">primitive types</a> whose values
+          are integers: <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>,
+          and <a class = "linker" title="#char">char</a>.<br>
+          See this <a href="files/char.pdf">pdf file</a> for an explanation of <strong>char</strong>. <br>
+          See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation of <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, and <strong>long</strong>.      </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="interface" id="interface"></a>interface</dt>
+          <dd>An interface provides a way to ensure syntactically (at compiletime)
+          that a class implements certain methods. The interface defines the
+          methods abstractly (without bodies), and the class definition then
+          includes an <a class = "linker" title="#implementsclause">implements clause</a> to
+          indicate that it will define the methods.<br>
+          The second video <a href="abstractInterface/01ai.html">on this page</a> is a 2.4-minute tutorial that explains interfaces.</dd>
+        </div>
+        <div class = "display">
+          <dt>jagged array</dt>
+          <dd>See <a class = "linker" title="#raggedarray">ragged array</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>javadoc</dt>
+          <dd>An application that extracts appropriately written specifications from a a Java project. See this <a href="files/javadoc.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="JUnit" id="JUnit"></a>JUnit testing</dt>
+          <dd>JUnit is a framework for writing repeatable tests ---so you can repeat them whenever you want.
+          See the website <a href="http://junit.org/">junit.org/</a>. We use version JUnit5.<br>
+          <a href="eclipse/Ecl06JUnitTesting.html">
+          See this page</a> to learn how to write a JUnit testing class in Eclipse, for example, to test the methods in a class.<br>
+          <a href="eclipse/Eclipse09CheckAsserts.pdf">This pdf file</a> explains how to test whether an assert statement is correct.<br />
+          <a href="files/testingThrow.pdf">This pdf file</a> explains ow to test whether a method call throws a particular exception.<br />
+      JUnit 5 annotations: <a href="files/JUnitAnnotations.pdf">pdf file</a>. </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="label" id="label"></a>label, labeled statement</dt>
+          <dd>See this <a href="files/labeled-statement.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="literal" id="interface2"></a>literal</dt>
+          <dd>A Java denotation of a value. Here are examples of literals:  354, 3.56F, true, 'c', and "peace".<br>
+          See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for literals of the number types (like <strong>int</strong> and <strong>float</strong>).<br>
+          See this <a href="files/char.pdf">pdf file</a> for literals of type <strong>char</strong></dd>
+        </div>
+        <div class = "display">
+          <dt><a name="localvariable" id="localvariable"></a>local variable</dt>
+          <dd>A <a class = "linker" title="#Variable">variable</a> that is declared within the body
+          of a method. It does not have a default value and must be assigned before it can be referenced. The scope of a local variable is from its declaration to the end of the block in which it is declared.<br>
+          <br>
+          Principle: Place a local variable as close to its first use as possible. Do <em>not</em> simply declare all local variables at the beginning of a method. FOLLOW THIS PRINCIPLE.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="long" id="long"></a>long</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are integers
+          in the range –2^63 .. 2^63 – 1. See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>Long, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#long">long</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="loops" id="loops"></a>loops</dt>
+          <dd>Java has four different kinds of loop. Here are one-page pdf files that explain each of them:<br>
+          <a href="files/for-loop.pdf">for-loop</a>, <a href="files/while-loop.pdf">while-loop</a>, <a href="files/do-loop.pdf">do-loop</a>, <a href="files/foreach.pdf">foreach loop</a>.<br>
+          You can enable the use of the foreach statement on your own collection class by implementing interfaces Iterator and Iterable. This tutorial shows you how in
+          less than 15 minutes of video: <a href="iteratorIterable/iterator.html">webpage</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>lower-bounded type or wildcard</dt>
+          <dd>See <a class = "linker" title="#generics">generics</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>manila folder</dt>
+          <dd> Same as <a class = "linker" title="#Object">object</a> or instance.</dd>
+        </div>
+        <div class = "display">
+          <dt>Math, class</dt>
+          <dd>Class <span class="java">Math</span>, in package <span class="java">java.lang</span>, contains a bunch of mathematical
+          functions —e.g. <span class="java">sin(...)</span>, <span class="java">tan(...)</span>, <span class="java">ceil(...)</span>— as well as the constants
+          <span class="java">PI</span> and <span class="java">E</span>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Method" id="Method"></a>method</dt>
+          <dd>A set of instructions to be carried out. A method is analogous
+          to a recipe in a cookbook. Java has three kinds of method: <a class = "linker" title="#Function">function</a>,
+          <a class = "linker" title="#procedure">procedure</a>, and <a class = "linker" title="#constructor">constructor</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>method body</dt>
+          <dd>A method consists of a method header followed by the method body,
+          which has the form: <span class="java">{ </span>&lt;<span class="italixs">sequence
+          of statements/declarations</span>&gt;<span class="java"> }</span>.
+          When the method is called, its body is executed.</dd>
+        </div>
+        <div class = "display">
+          <dt>method call</dt>
+          <dd>An expression or statement that ends up executing the method body.
+          See <a class = "linker" title="#functioncall">function call</a>, <a class = "linker" title="#procedurecall">procedure
+        call</a>, and
+        <a class = "linker" title="#constructorcall">constructor call</a>. It is important
+        to understand how a method call is executed. Its execution is performed in the four steps shown below. For a more detailed explanation, see <a href="explainJava/03methodCalls.html">this tutorial</a>.<br>
+        <br>
+        1. Push a frame for the call onto the call stack;<br>
+        2. Assign argument values to the parameters;<br>
+        3. Execute the method body;<br>
+        4. Pop the frame for the call from the call stack (and, if a function, put the function
+        value onto the call stack).</dd>
+        </div>
+        <div class = "display">
+          <dt>method descriptor</dt>
+          <dd>The <a class = "linker" title="#methodsignature">method signature</a> plus the return type.</dd>
+        </div>
+        <div class = "display">
+          <dt>method, generic</dt>
+          <dd>See <a class = "linker" title="#genericMethod">generic method</a>.<br>
+          </dd>
+        </div>
+        <div class = "display">
+          <dt>method header</dt>
+          <dd>See <a class = "linker" title="#methodheader">header, of a method</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>method name</dt>
+          <dd>The name of the method, defined in the <a class = "linker" title="#methodheader">method
+          header</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>method main</dt>
+          <dd>A Java program becomes an <a class = "linker" title="#application">application</a> when
+          a static procedure main is defined that has one parameter, of type
+          <span class="java">String[]</span>. The application can be started
+          without having to have an IDE around. To start execution, this method
+          main is called. </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="methodsignature" id="methodsignature"></a>method signature</dt>
+          <dd>The method name together with the types of its parameters. For example,
+          one method in class Math has signature min(int, int). For a <a class = "linker" title="#genericMethod">generic method</a>, the signature includes the type parameter, with names in the type parameter  replaced by some canonical names. For example,<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;        the signature of method &lt;T, E&gt; m1(T p, E q) {...} &nbsp;&nbsp;&nbsp;would be &lt;T1, T2&gt; m1(T1, T2)<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the signature of method &lt;E1, E2&gt; m2(E1 x, E2) {...} would be &lt;T1, T2&gt; m2(T1, T2)<br>
+          <br>
+          so they are the same except for the name of the method.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="methodspec" id="methodspec"></a>method specification</dt>
+          <dd>The specification of a method defines what the method does. It is
+          used to understand how to write calls on the method. It must be clear,
+          precise, and thorough, and it should mention all parameters, saying
+          what they are used for. It is a contract between the programmer who
+          wrote the method and users of the method. It may be given in terms
+          of a <a class = "linker" title="#precondition">precondition</a>            and <a class = "linker" title="#postcondition">postcondition</a>.
+          The reference gives details on specs for the different kinds of methods:</dd>
+        </div>
+        <div class = "display">
+          <dt>methods allowing a variable number of arguments in a call</dt>
+          <dd>See this <a href="files/variableArguments.pdf">pdf file</a> to see how to allow a variable number of arguments in a call.</dd>
+        </div>
+        <div class = "display">
+          <dt>mutable</dt>
+          <dd>An object is mutable if (some of) its fields can be changed.
+          See <a class = "linker" title="#immutable">immutable</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="narrowertype" id="narrowertype"></a>narrower type</dt>
+          <dd>Below, each line gives a series of types, beginning with the narrowest
+          type and proceeding to the widest type:<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;<span class="javakeyword">byte</span> --&gt; <span class="javakeyword">short</span> --&gt; <span class="javakeyword">int</span> --&gt; <span class="javakeyword">long</span> --&gt; <span class="javakeyword">float</span> --&gt; <span class="javakeyword">double</span><br>
+          &nbsp;&nbsp;&nbsp;<span class="javakeyword">char</span> --&gt; <span class="javakeyword">int</span> --&gt; <span class="javakeyword">long</span> --&gt; <span class="javakeyword">float</span> --&gt; <span class="javakeyword">double</span><br>
+          &nbsp;&nbsp;&nbsp;subclass --&gt; superclass<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;<br>
+          See <a class = "linker" title="#cast">cast</a> to find complete information on casting.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="nestedClass" id="nestedClass"></a>nested class</dt>
+          <dd>A class that is declared within another class.<br>
+          This <a href="files/nestedClasses.pdf">pdf file</a> explains why nested classes are useful.<br>
+          Here is a simple but realistic example of the use of a static nested class: <a href="files/StaticNestedClass.pdf">pdf file</a>.<br>
+          Here is a simple but realistic example of the use of an inner class: <a href="files/innerClass.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="newexpression" id="newexpression"></a>new-expression</dt>
+          <dd>The new expression has the form&nbsp; <span class="javakeyword">new </span>&lt;constructor-call&gt;<span class="java"></span>. Evaluation of the new-expression creates a new object and has as its value the name of (pointer to) the created object. See a full, detailed explanation of it in a 2-minute video on this <a href="explainJava/explainJava.html">webpage</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>non-static nested class</dt>
+          <dd>See <a class = "linker" title="#innerClass">inner class</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>non-static method</dt>
+          <dd>Same as <a class = "linker" title="#instancemethod">instance method</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>non-static variable</dt>
+          <dd>See <a class = "linker" title="#instancevariable">instance variable</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>null</dt>
+          <dd>A value that means "the absence of an object name". If a reference
+          like <span class="javakeyword">null</span><span class="java">.b</span> or a method call like <span class="javakeyword">null</span><span class="java">.m(...)</span> is attempted at runtime,
+          a "null pointer exception" happens.</dd>
+        </div>
+        <div class = "display">
+          <dt>number types</dt>
+          <dd>The Java <a title="#PrimitiveType" class = "linker">primitive types</a> <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>, <a class = "linker" title="#char">char</a>, <a class = "linker" title="#float">float</a>, and <a class = "linker" title="#double">double</a>.<br>
+          See this <a href="files/char.pdf">pdf file</a> for an explanation of <strong>char</strong>. <br>
+          See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation of <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, and <strong>double</strong>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Object" id="Object"></a>object</dt>
+          <dd> An instance of a <a class = "linker" title="#Class">class</a>, also called a folder. Each object of a class contains the <a class = "linker" title="#Instance">non-static</a> <a class = "linker" title="#Field">fields</a> and <a class = "linker" title="#Method">methods</a> defined
+          in and inherited by the class. See <a class = "linker" title="#Class">class</a>. This <a href="files/object.pdf">pdf file</a> explains how we draw objects.</dd>
+        </div>
+        <div class = "display">
+          <dt>Object, class</dt>
+          <dd>The superest class of them all: any class that does not explicitly
+          extend another class automatically extends class Object. This <a href="files/object.pdf">pdf file</a>  explains how we draw objects.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="ObjectType" id="ObjectType"></a>object type</dt>
+          <dd> Same as <a class = "linker" title="#classtype">class type</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>operator precedences</dt>
+          <dd>See <a class = "linker" title="#precedences">precedence of operators</a></dd>
+        </div>
+        <div class = "display">
+          <dt>overload</dt>
+          <dd>A method name is overloaded if there are two methods with the same
+          name but different <a class = "linker" title="#methodsignature">signatures</a>. For example, class <span class="java">Math</span> contains static functions with signatures <span class="java">min(</span><span class="javakeyword">int</span><span class="java">, </span><span class="javakeyword">int</span><span class="java">)</span> and <span class="java">min(</span><span class="javakeyword">double</span><span class="java">, </span><span class="javakeyword">double</span><span class="java">)</span>.</dd>
+        </div>
+        <div class = "display">
+          <dt>override</dt>
+          <dd>A method that is <a class = "linker" title="#inheritance">inherited</a> from the superclass can be overridden
+          by redeclaring it in the subclass. The <a class = "linker" title="#bottomup">bottom-up
+          rule</a> (or <em>overriding rule</em>) ensures that
+          the overriding method will be called, rather than the inherited one.</dd>
+            <p>Fields are <em>not</em> overridden but are hidden. This is explained in this one-page <a href="files/fieldHiding.pdf">pdf file</a>.<br>
+            Static components are <em>not</em> overridden but are hidden. This is explained in this one-page <a href="files/staticHide.pdf">pdf file</a>. </p>
+        </div>
+        <div class = "display">
+          <dt>package</dt>
+          <dd>A package consists of the classes that are contained in a specific
+          directory on your hard drive (or the API packages, like javax.swing
+          and java.lang). <br><br>
+			 The default <a class = "linker" title="#accessmodifier">access modifier</a> ---used when
+			  no access modifier is present in a declaration. A variable or
+          method that is declared without a modifier can be referenced in any class
+			  declared within this package.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="parameter" id="parameter"></a>parameter</dt>
+          <dd>A <a class = "linker" title="#Variable">variable</a> that is declared within the parentheses
+          of the <a class = "linker" title="#methodheader">header
+          of a method</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>parameter declaration</dt>
+          <dd>A parameter declaration occurs within the parentheses of the <a class = "linker" title="#methodheader">header
+            of a method</a>. It has the form &lt;<span class="italixs">type</span>&gt; &lt;<span class="italixs">variable-name</span>&gt;.</dd>
+        </div>
+        <div class = "display">
+          <dt>parameter, type parameter</dt>
+          <dd>See <a class = "linker" title="#typePar">type parameter</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="partition" id="partition">partition, of an object</dt>
+          <dd>A place within an object for the components declared in a particular class. See this <a href="files/object.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>path, in file system</dt>
+          <dd>See <a class = "linker" title="#IO">I/O</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="postcondition" id="postcondition"></a>postcondition</dt>
+          <dd>An <a class = "linker" title="#assertion">assertion</a> placed (as a comment) after a statement in a program to indicate what is to
+          true at that place during execution.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="postfix" id="postfix"></a>postfix operator</dt>
+          <dd>An operator that is written after its operand. E.g .factorial is a postfix operator: 7 ! . Also, ++ and -- can be used as postfix operators (see this<a href="files/decIncOperators.pdf"> pdf file</a>) See also<a class = "linker" title="#infix"> infix operator</a> and <a class = "linker" title="#prefix&#10;      ">prefix operator</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="precedences" id="precedences"></a>precedence of operators</dt>
+          <dd>Standard mathematics gives precedence to multiplication * over addition +, so that the expression 2 + 3 * 5 is evaluated as if it were parenthesized like this: 2 + (3 * 5). Here is the Java precedence table: <a href="files/Java_Operator_Precedence_Table.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="precondition" id="precondition"></a>precondition</dt>
+          <dd>(1) A constraint on the parameters of a method. It is up to the user to ensure that method calls satisfy the precondition. If a call does not,  the method can do whatever it wants.<br />
+            As a convention, we generally write a precondition in a specification as &quot;Precondition: ...&quot; to make it as clear as possible.<br>
+          (2)
+          An <a class = "linker" title="#assertion">assertion</a> placed (as a comment) before a statement in a program to indicate what is
+          true at that place during execution.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="prefix" id="prefix"></a>prefix operator</dt>
+          <dd>An operator that is written before its operand. E.g. unary minus is a prefix operator: - (4 + 2). Also, ++ and -- can be used a prefix operators (see this<a href="files/decIncOperators.pdf"> pdf file</a>). See also<a class = "linker" title="#infix"> infix operator</a> and <a class = "linker" title="#postfix">postfix operator</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="PrimitiveType" id="PrimitiveType"></a>primitive type</dt>
+          <dd> A <a class = "linker" title="#Type">type</a> that is fully integrated into Java, i.e.
+          one that is not defined by a <a class = "linker" title="#Class">class</a> definition.<br>
+          See this <a href="files/char.pdf">pdf file</a> for an explanation of primitive type <a class = "linker" title="#char">char</a>.<br>
+          See this<a href="files/primitiveNumberTypes.pdf"> pdf file</a> for an explanation of the other primitive number types: <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>, <a class = "linker" title="#float">float</a>, and <a class = "linker" title="#double">double</a>. <br>
+          See this <a href="files/boolean.pdf">pdf file</a> for an explanation of type boolean. </dd>
+        </div>
+        <div class = "display">
+          <dt>private</dt>
+          <dd>An <a class = "linker" title="#accessmodifier">access modifier</a>. A variable or
+          method that is declared with this modifier can be referenced only
+          within the class in which the declaration occurs.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="procedure" id="procedure"></a>procedure</dt>
+          <dd>A <a class = "linker" title="#Method">method</a> that is declared with the basic form: </dd>
+          <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="italixs">access modifier</span>&gt; <span class="javakeyword">void</span> &lt;<span class="italixs">function-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">parameter-declarations</span>&gt;<span class="java"> )
+          { </span>...<span class="java"> }</span></dd>
+          <dd>A call of a procedure is a statement.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="procedurecall" id="procedurecall"></a>procedure call</dt>
+          <dd>A procedure call is a statement. Its form is one
+          of:<br>
+          <br>
+          1. for a static procedure: &lt;<span class="italixs">class-name</span>&gt;<span class="java"> . </span>&lt;<span class="italixs">function-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">arguments</span>&gt;<span class="java"> )
+        ;</span><br>
+        2. for a non-static procedure: &lt;<span class="italixs">expression</span>&gt;<span class="java"> . </span>&lt;<span class="italixs">function-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">arguments</span>&gt;<span class="java"> )</span> ;<br>
+        <br>
+        where the &lt;<span class="italixs">expression</span>&gt; evaluates to the name
+        of an object that contains the procedure to be called. Both "&lt;<span class="italixs">class-name</span>&gt;<span class="java">."</span> and "&lt;<span class="italixs">expression</span>&gt;<span class="java">."</span> can
+        be omitted if the call appears in a place in which the procedure can be called
+        without them.</dd>
+        </div>
+        <div class = "display">
+          <dt>processing unit</dt>
+          <dd>A component on a chip in your computer that can execute a sequence of instructions. See <a href="files/threads1.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>programming assignments</dt>
+          <dd>This <a href="files/assignmentDiscipline.pdf">pdf file</a> talks about the process of doing a programming assignment. Please take it seriously.</dd>
+        </div>
+        <div class = "display">
+          <dt>promoting a value</dt>
+          <dd>Same as <a class = "linker" title="#cast">casting</a> it to a wider type, done automatically
+          in Java when necessary. See <a class = "linker" title="#narrowertype">narrower type</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>protected</dt>
+          <dd>An <a class = "linker" title="#accessmodifier">access modifier</a>; the variable or method that is declared <strong>protected</strong> can be referenced from within the class, from other classes in the same package, and from a subclass.</dd>
+        </div>
+        <div class = "display">
+          <dt>public</dt>
+          <dd>An <a class = "linker" title="#accessmodifier">access modifier</a>: the variable or
+          method that is declared with this modifier can be referenced everywhere.</dd>
+        </div>
+        <div class = "display">
+          <dt>race condition</dt>
+          <dd>A race condition occurs when two or more processes executing in parallel access shared data in a way that<br>
+          results in unexpected (and wrong) results. See this <a href="files/raceCondition.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="raggedarray" id="raggedarray"></a>ragged array</dt>
+          <dd>This <a href="files/raggedArrays.pdf">pdf-file</a> explains how to create ragged/jagged multidimensional arrays, in which each row
+          can have a different number of element <a href="files/raggedArrays.pdf"></a>.<br>
+          But if you are not familiar with arrays in Java, read this first: <a href="files/arrays.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="rawType" id="rawType"></a>raw type</dt>
+          <dd>For a generic class like ArrayList&lt;E&gt;, the raw type is simply ArrayList while ArrayList&lt;String&gt; is a generic type. This <a href="files/rawType.pdf">pdf file</a> defines and discusses raw types.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="realclass" id="realclass"></a>real class</dt>
+          <dd>We don't use this terminology. If you see it anywhere, just ignore what you are reading (e.g. an old prelim question).</dd>
+        </div>
+        <div class = "display">
+          <dt> read a file</dt>
+          <dd>See <a class = "linker" title="#IO">I/O</a>.</dd>
+        </div>
+		  
+		  <div class = "display">
+          <dt> refactor</dt>
+          <dd>To refactor a program means to modify it without changing its behavior/correctness with an eye to improving it in some way.<br />
+              <a href="files/refactor.pdf">1. This pdf file</a> introduces the Eclipse refactor tool and shows how to use it to change a name (i.e. an identifier).<br />
+              <a href="files/refactorAddLocal.pdf">2. This pdf file</a> shows how to <em>extract </em> a local variable: highlight an expression whose value is to be assigned to the new local variable.<br />
+              <a href="files/refactorMethod.pdf">2. This pdf file</a> shows how to <em>extract</em> a method and <em>inline</em> a method call.<br />
+              <a href="files/refactorSelectionSort.pdf">3. This pdf file</a> refactors a version of selectionSort, using both extracting a method and inlining a method call.</dd>
+        </div>
+		  
+		  <div class = "display">
+          <dt> reference</dt>
+			  <dd><em>Reference</em> is another word for <em>pointer</em>. A class variable, like jf defined as<br><br>
+				  &nbsp;&nbsp;&nbsp; public JFrame jf;<br><br>
+			  contains either null or a pointer to, i.e. a reference to, an object of class JFrame.</dd>
+        </div>
+        
+        <div class = "display">
+          <dt> reference rule</dt>
+          <dd>The compile-time reference rule determines whether a component reference like p.v or p.m(...) is syntactically correct. See this <a href="files/compiletimeReferenceRule.pdf">pdf file</a>.</dd>
+        </div>
+        
+        <div class = "display">
+          <dt>reference type</dt>
+          <dd>See <a class = "linker" title="#classtype">class type</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>reflection</dt>
+          <dd>Reflection is the ability of a computer program to examine, introspect, and modify its own structure and behavior at runtime. Here is an intro to the topic: <a href="files/reflection.pdf">pdf file</a> &nbsp;&nbsp;&nbsp;<a href="files/reflectionDemo.zip">demoCode.zip</a></dd>
+        </div>
+        <div class = "display">
+          <dt>relative path, a in file system</dt>
+          <dd>See <a class = "linker" title="#IO">I/O</a> (first entry).</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="remainder" id="remainder"></a>remainder %</dt>
+          <dd>For <span class="java">c</span> and <span class="java">d</span> of type int, the expression <span class="java">c % d</span> gives the remainder whern c is divided by d.</dd>
+        </div>
+        <div class = "display">
+          <dt>repetend</dt>
+          <dd><em>repetend</em> means &quot;the thing to be repeated&quot;, so it is the body of a loop. In the 1990s, an 11-year old was reading Gries's <em>Science of Programming</em> and emailed Gries some questions, using that word, which Gries didn't know at the time.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="returnstatement" id="returnstatement"></a>return statement</dt>
+          <dd>In a <a class = "linker" title="#procedure">procedure</a>, a return statement has the form</dd>
+          <dd class="divsetoff">
+          <span class="javakeyword">return</span><span class="java">;</span>        </dd>
+          <dd class="divnormal">
+          In a <a class = "linker" title="#Function">function</a>, a return statement has the form</dd>
+          <dd class="divsetoff"><span class="javakeyword">return</span><span class="java"> &lt;</span><span class="italixs">expression</span><span class="java">&gt;;</span> </dd>
+          <dd>
+          Execution of the return statement terminates execution of the method body in which it occurs and, in the case of a function, returns the value of the <span class="java">&lt;</span><span class="italixs">expression</span><span class="java">&gt;</span> as the value of the function call.</dd>
+        </div>
+        <div class = "display">
+          <dt>Runnable</dt>
+          <dd>The interface that declares method run(), which is called to start a thread of execuion. See <a href="files/threadsCreate.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>runtime</dt>
+          <dd>The time when a program is being executed, or run, as opposed to compiletime, when the program is being <a class = "linker" title="#compiler">compiled</a>.</dd>
+        </div>
+		  
+    <div class = "display">
+	    <dt><a name="scientific" id="scientific"></a>scientific notation</dt>
+        <dd>The notation used to write numbers when the exponent is too small or large for the number to be written in
+			  decimal form. In Java, one used 'e' or 'E' to indicate the exponent. For example, 500 and 0.5 can be written in scientific notation
+			  as 5E2 and 5E-1, respecitively. See <a class = "linker" title="#float">float</a> and <a class = "linker" title="#double">double</a>.
+	    See  <a href="https://en.wikipedia.org/wiki/Scientific_notation" target="_blank">en.wikipedia.org/wiki/Scientific_notation</a> for a full explanation.</dd>
+        </div>
+		  
+		  
+        <div class = "display">
+          <dt>scope</dt>
+          <dd>The scope of a variable is the set of statements in which it can
+          be referenced. For a parameter, it is the body of the method in which
+          the parameter is declared. For a local variable, it is from its declaration
+          to the end of the block in which it is declared.</dd>
+        </div>
+        <div class = "display">
+          <dt>scope box</dt>
+          <dd>A box within the <a class = "linker" title="#frameforcall">frame for a method call</a> that
+          contains the name of the class (for a static method) or object (for
+          an instance method) in which the method resides.</dd>
+        </div>
+        <div class = "display">
+          <dt>semantics</dt>
+          <dd><a class = "linker" title="#syntax">Syntax</a> has to do with grammatical correctness, semantics with meaning. We cannot talk about the semantics of a part of a sentence of a language that is not syntactically correct. The semantics of a Java expression or statement defines how it is evaluated or executed. For example, the semantics of  the if-statement statement <span class="java"><strong>if</strong> ( &lt;boolean-expression&gt; ) &lt;statement&gt;</span> is: first, evaluate the <span class="java">&lt;boolean-expression&gt;</span>; then, if it is true, execute the <span class="java">&lt;statement&gt;</span>.</dd>
+        </div>
+        <div class = "display">
+          <dt>setter method</dt>
+          <dd>A non-static procedure whose purpose is to store a value in a field
+          of the object in which the method resides. By convention, if the field is named <span class="java">xab</span> the name of the setter procedure is <span class="java">setXab</span>. But you don't have to follow the convention.</dd>
+        </div>
+        <div class = "display">
+          <dt>shadowing a variable</dt>
+          <dd>shadowing refers to declaring two variables with the same name with overlapping scopes. Given a reference to such a variable, the <a class = "linker" title="#insideOut">inside-out rule</a> indicates to which of the declarations the reference refers. For example, suppose a class has a field x and a method m within the class has a parameter x. That parameter, shodows field x ---every reference to x within the method refers to the parameter.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="short" id="boolean3"></a>short</dt>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are integers
+          in the range –2^15 .. 2^15 – 1. See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>short-circuit evaluation</dt>
+          <dd>This refers to the evaluation of boolean operators &amp;&amp; and ||. As soon as the value of a boolean expression is known, evaluation stops. See this<a href="files/boolean.pdf"> pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>Short, class</dt>
+          <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#byte">short</a>.</dd>
+        </div>
+		  <div class = "display">
+          <dt>side effect</dt>
+          <dd>A side effect occurs when evaluation of an expression changes a variable. As <a href="files/sideEffects.pdf">this pdf file</a> explains, side effects can be really confusing and should not be used ---except for <i>benevolent</i> ones.</dd>
+        </div>
+        <div class = "display">
+          <dt>signature</dt>
+          <dd>See <a class = "linker" title="#methodsignature">method signature</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>specification, of a class</dt>
+          <dd>A description of what a class is for. Generally speaking, it indicates
+          what an instance of the class represents. </dd>
+        </div>
+        <div class = "display">
+          <dt>specification, of a method</dt>
+          <dd>See <a class = "linker" title="#methodspec">method specification</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>statement-comment</dt>
+          <dd>A comment that is a specification of the following lines of code. See this one-page <a href="files/statementComment.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Static" id="Static"></a>static</dt>
+          <dd> See <a class = "linker" title="#staticmethod">static method</a> and <a class = "linker" title="#staticvariable">static
+          variable</a>. See this <a href="files/static.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt>static field</dt>
+          <dd>Same as <a class = "linker" title="#staticvariable">static variable</a>. See this <a href="files/static.pdf">pdf file</a> for an explanation.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="staticmethod" id="staticmethod"></a>static method</dt>
+          <dd>A method that is declared with attribute <span class="javakeyword">static</span>.
+          There is only one copy of the method. See this <a href="files/static.pdf">pdf file</a> for an explanation of static.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="staticNestedClass" id="staticNestedClass"></a>static nested class</dt>
+          <dd>A static class that is declared within another class.<br>
+          This <a href="files/nestedClasses.pdf">pdf file</a> explains why nested classes are useful.<br>
+          Here is a simple but realistic example of the use of a static nested class: <a href="files/StaticNestedClass.pdf">pdf file</a>. </dd>
+        </div>
+        <div class = "display">
+          <dt>static type</dt>
+          <dd>We don't use this terminology. If you see it being used, ignore it.    </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="staticvariable" id="staticvariable"></a>static variable</dt>
+          <dd>A variable declared in a class definition with attribute <span class="javakeyword">static</span>.
+          There is only one copy of the variable. It is created when execution
+          of the program starts. See this  <a href="files/static.pdf">pdf file</a> for an explanation of static.</dd>
+        </div>
+        <div class = "display">
+          <dt>String, class</dt>
+          <dd>The values of class <span class="java">String</span> are objects
+          that contain sequences of characters.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="studyHabits" id="studyHabits"></a>study/work habits</dt>
+          <dd>Learning to program as well as a programmng language is much like learning a musical instrument. It requires frequent pratice to gain a skill.<br>
+          This <a href="files/basicLearningMethods.pdf">pdf file</a> talks about how to study in this course. Please take it seriously.<br>
+          This <a href="files/assignmentDiscipline.pdf">pdf file</a> talks about the process of completing a programming assignment. Please take it seriously. </dd>
+        </div>
+        <div class = "display">
+          <dt><a name="subclass" id="subclass"></a>subclass</dt>
+          <dd>Class <span class="java">SC</span> is a subclass of class <span class="java">C</span>,
+          and <span class="java">C</span> is the superclass of <span class="java">SC</span>,
+          if the definition of class <span class="java">SC</span> has an extends
+          clause <span class="java">extends C</span>. This means that every instance of class <span class="java">SC</span> <a class = "linker" title="#inheritance">inherits</a> all
+          the components of class <span class="java">C</span>.</dd>
+        </div>
+        <div class = "display">
+          <dt>super</dt>
+          <dd>A keyword that is used in two ways.<br>
+          <br>
+          (1) <strong>super</strong>.m(...) calls method m within the object in which it appears. To determine which version of m is called, use the bottom-up (overriding) rule, but start looking in the <a class = "linker" title="#partition">partition</a> <em>above</em> the one in which the method call appears.<br>
+          <br>
+          (2) <strong>super</strong>(...); can appear as the first statement in a constructor; it calls a constructor of the superclass ---which one is called depends on the types of the arguments within the parentheses..</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="superclass" id="superclass"></a>superclass</dt>
+          <dd>See <a class = "linker" title="#subclass">subclass</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="switch" id="switch"></a>switch statement</dt>
+          <dd>See this <a href="files/switch.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>synchronized statements and methods</dt>
+          <dd>See this <a href="files/syncIntro.pdf">pdf file</a>. See also <a class = "linker" title="#Threads">Threads</a>.</dd>
+        </div>
+		  <div class = "display">
+          <dt>syntactic rule</dt>
+          <dd>A rule that applies to the syntax of a program. See <a class = "linker" title="#syntax">syntax</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>syntactic sugar</dt>
+          <dd>(In a programming language) syntax that is designed to make something easier to read or write. For example, a foreach loop like "for (C c : list) {...}" is syntactic sugar for a more complicated loop; this syntactic sugar is converted to the more complicated loop before the program is compiled. Another example is an <a class = "linker" title="#enums">enum class</a>, which is an abbreviation for a more complicated-looking class.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="syntax" id="syntax"></a>syntax</dt>
+          <dd>The arrangement of words and phrases to create well-formed sentences in a language, or the set of rules that describe well-formed sentences. In Java, the syntax of the assignment statement is</dd>
+          <dd><blockquote>&lt;variable&gt; = &nbsp;&nbsp;&lt;expression&gt; ;</blockquote></dd>
+          <dd>where (1) the &lt;variable&gt; must be declared beforehand and (2) the type of the &lt;expression&gt; must be the same as or narrower than the type of the &lt;variable&gt;. That's all part of the syntax, and a program will not be <a class = "linker" title="#compiler">compiled</a> if the rules are not followed.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="ternary" id="ternary"></a>ternary operator</dt>
+          <dd>An operator with three operands. One example in Java is the <a class = "linker" title="#conditional">conditional expression</a>. See also <a class = "linker" title="#unary">unary operator</a> and <a class = "linker" title="#binary">binary operator</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>testing</dt>
+          <dd>Testing is the process of running a program to find errors in it. See this <a href="files/testing.pdf">pdf file</a>.<br>
+          See <a class = "linker" title="#JUnit">JUnit testing</a> to find out how to write and run repeatable testing procedures.</dd>
+        </div>
+        <div class = "display">
+          <dt>this</dt>
+          <dd>A keyword that is used in two ways.</dd>
+          <p>(1) <strong>this</strong> is an expression; it evaluates to the name of (pointer to) the object in which it appears. For example, <strong>this</strong>.x is a reference to a field x of the object.</p>
+          <p> (2) "<strong>this</strong>(...);" can appear as the first statement in a constructor; it calls another constructor in this class ---which one is called depends on the types of the arguments within the parentheses.   </p>
+        </div>
+        <div class = "display">
+          <dt><a name="Threads" id="Threads"></a>Threads</dt>
+          <dd>Cores and processing units, processes and threads: <a href="files/threads1.pdf">pdf file 1</a>.<br>
+          Learn about race conditions (<a href="files/raceCondition.pdf">pdf file 2</a>) and deadlock (<a href="files/deadlock.pdf">pdf file 3</a>).<br>
+          Creating and starting threads. <a href="files/threadsCreate.pdf">pdf file 4</a>.<br>
+          Some methods of class Thread. <a href="files/ThreadMethods.pdf">pdf file 5</a>.<br>
+          Intro to synchronized statements and methods. <a href="files/syncIntro.pdf">pdf file 6</a>.<br>
+          Intro to wait(), notify(), and notifyAll(). <a href="files/waitAndNotify.pdf">pdf file 7</a>.<br>
+          Implementing a bounded queue in an array and a bounded buffer. <a href="files/boundedBuffer.pdf">pdf file 8</a>. <br>
+          Java classes that provide for concurrency. <a href="files/javasynclasses.pdf">pdf file 9</a>. <br>
+          Warning: Synchronize <em>all</em> accesses to an object. <a href="files/syncWarning.pdf">pdf file 10</a>.<br>
+          Warning: Do not use notify() unless you know what you are doing. <a href="files/notifyNotifyAll.pdf">pdf file 11</a>.<br>
+          What's a daemon thread? <a href="files/ThreadsDaemon.pdf">pdf file 12</a>. </dd>
+        </div>
+        <div class = "display">
+          <dt>Throwable, class</dt>
+          <dd>The superclass of all classes whose objects can be thrown in a throw-statement.<br>
+          Watch a 3.2-minute video on throwable objects <a href="exceptions/EX2.html">here</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>throws-clause</dt>
+          <dd>A clause of the form &nbsp;<strong>throws&nbsp;</strong>&lt;class-name&gt; that may have to be included in a method header if the method may throw a <a class = "linker" title="#checkedException">checked exception</a>. This <a href="exceptions/EX5.html">webpage</a> contains a video that explains.</dd>
+        </div>
+        <div class = "display">
+          <dt>throw-statement</dt>
+          <dd>The throw-statement has the form&nbsp; <strong>throw</strong>
+          &lt;throwable-object&gt; ;<br>
+          Watch a 3.2-minute video on throwable objects <a href="exceptions/EX2.html">here</a>.<br>
+          Watch a 5-minute video on interpreting the output of an uncaught thrown object <a href="exceptions/EX1.html">here</a>.<br>
+          Watch a video on the throw-statement and a video on catching and throwing the exception further <a href="exceptions/EX4.html">here</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>toString function</dt>
+          <dd>A Java convention is to write an instance function toString() that
+          yields a description of the object in which it resides. Function toString() is defined in Object, the superest class of them all. That function returns the name of the object (e.g. C@fdee).</dd>
+          <dd>Example. In a class Point with two fields contain the x- and y coordinates of a point in the plane, calling p.tostring() where object p contains x-value 5 and y-value 4 could return "(5, 4)".</dd>
+        </div>
+        <div class = "display">
+          <dt>try-statement</dt>
+          <dd>Here is the syntax of the try-statement:<br>
+          <blockquote>try &lt;statement&gt;<br>
+            catch (&lt;class-name1 e1&gt;) &lt;catch-statement1&gt;<br>
+            ...<br>
+            catch &lt;class-namen en&gt;) &lt;catch-statementn&gt;<br>
+          </blockquote><br>
+          where
+          each of the &lt;class-names&gt; is a throwable class. There can also be a "finally clause", which we don't discuss. The try-statement is explained, with videos, <a href="exceptions/EX3.html">here</a> and also in this <a href="exceptions/03tryStatement.pdf">pdf flle</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="twosComp" id="twosComp"></a>two's complement notation</dt>
+          <dd>A way of representing an integer as a sequence of bits. Used in most computers today. See this explanation: <a href="files/twosComplement.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Type" id="Type"></a>type</dt>
+          <dd> A set of values together with operations on them. E.g.the integers, together with operations +, -, *, /.<br>
+          Java has <a class = "linker" title="#PrimitiveType">primitive types</a> and <a class = "linker" title="#classtype">class types</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="typeArg" id="typeArg"></a>type argument</dt>
+          <dd>The type given within &lt;&gt; of a generic variable declaration or new-expression, e.g. new ArrayList&lt;Integer&gt;(). See <a href="files/genericBasic.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="typePar" id="typePar"></a>type parameter</dt>
+          <dd>The name given within &lt;&gt; of a generic class or method declaration, e.g. public class Wrapper&lt;V&gt; {...}.  See <a href="files/genericBasic.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>type, raw</dt>
+          <dd>See <a class = "linker" title="#rawType">raw type</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>type safety</dt>
+          <dd>See this <a href="files/strongWeakType.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>type, strong versus weak typing</dt>
+          <dd>See this <a href="files/strongWeakType.pdf">pdf file</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="unary" id="Type"></a>unary operator</dt>
+          <dd>An operator with one operand. In the following examples, unary minus and factorial each have one operand:<br>
+          <span class="java">- (6+2)</span>, <span class="java">6!</span> . Unary prefix operators have highest precedence and are evaluated from right to left. E.g. <span class="java">- +  - 8 + 5</span> is evaluated as <span class="java">(-(+(- 8))) + 5</span>. See also <a class = "linker" title="#ternary">ternary operator</a> and <a class = "linker" title="#binary">binary operator</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>unicode</dt>
+          <dd>This <a href="files/char.pdf">pdf file</a> explains type <strong>char</strong> and the unicode representation of characters.</dd>
+        </div>
+        <div class = "display">
+          <dt>upper-bounded type or wildcard</dt>
+          <dd>See <a class = "linker" title="#generics">generics</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="Variable" id="Variable"></a>variable</dt>
+          <dd>A name with an associated value. Sometimes viewed as a named box
+          with the value in the box. In  Java, a variable has a <a class = "linker" title="#Type">type</a>,
+          which defines the set of values that the box can contain. In Java,
+          there are four kinds of variable: <a class = "linker" title="#parameter">parameter</a>, <a class = "linker" title="#localvariable">local
+          variable</a>, <a class = "linker" title="#instancevariable">instance variable</a>            (or
+          field), and class variable (or <a class = "linker" title="#staticvariable">static
+          variable</a>).</dd>
+        </div>
+        <div class = "display">
+          <dt>variable declaration</dt>
+          <dd>The basic form of a variable declaration is &lt;<span class="italixs">type</span>&gt;
+          &lt;<span class="italixs">variable-name</span>&gt;.
+          Depending on the kind of variable being declared, there may be modifiers.
+          See <a class = "linker" title="#parameter">parameter</a>, <a class = "linker" title="#localvariable">local
+          variable</a>, <a class = "linker" title="#instancevariable">instance variable</a>,
+          and <a class = "linker" title="#staticvariable">static variable</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>void</dt>
+          <dd>A java keyword used to indicate that a method is a procedure and does not return a result. See <a class = "linker" title="#procedure">procedure</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="whileLoop" id="whileLoop"></a>while-loop (while-statement)</dt>
+          <dd>See this <a href="files/while-loop.pdf">pdf file</a> for an explanation of the while-loop.</dd>
+        </div>
+        <div class = "display">
+          <dt>wider type</dt>
+          <dd>See <a class = "linker" title="#narrowertype">narrower type</a>.
+          </dd>
+        </div>
+        <div class = "display">
+          <dt>wildcard</dt>
+          <dd>The character ? used in generic classes and methods. See <a class = "linker" title="#generics">generics</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>work habits.</dt>
+          <dd>See <a class = "linker" title="#studyHabits">study/work habits</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>workspace</dt>
+          <dd>The directory where Eclipse maintains information about your Java projects. Read a little bit about workspaces in the first few paragraphs <a href="eclipse/Ecl01eclipse.html">here</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt>wraparound</dt>
+          <dd>This refers to the following. The largest value of type int is 2147483647. If you add 1 to it by evaluating 2147483647+1, the number <em>overflows</em> and you get the <em>smallest</em> value of type int: -2147483648. To see the reason for this, study <a class = "linker" title="#twosComp">two's complement notation</a>.</dd>
+        </div>
+        <div class = "display">
+          <dt><a name="wrapperclass" id="wrapperclass"></a>wrapper class</dt>
+          <dd>Each of the <a class = "linker" title="#PrimitiveType">primitive types</a> of Java
+          has an associated <span class="italixs">wrapper
+          class</span>.
+          For example, the wrapper class for type <span class="javakeyword">int</span> is <span class="java">Integer</span>.
+          Each object of the wrapper class contains, or wraps, one value
+          of the primitive type, thus allowing a primitive type value to be
+          viewed as an object. Wrapper class objects are <a class = "linker" title="#immutable">immutable</a>, unchangeable. In addition, the wrapper class provides functions
+          for manipulating values of the primitive type and may also include a few constants. Read <a href="files/wrapperClasses.pdf">wrappers.pdf</a></dd>
+        </div>
+        <div class = "display">
+          <dt> write a file</dt>
+          <dd>See <a class = "linker" title="#IO">I/O</a>.</dd>
+        </div>
+        <!-- InstanceEndEditable --></div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2017 David Gries</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+         width : '70%',
+         height : '70%'
+     });
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>

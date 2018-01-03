@@ -1,0 +1,758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html><!-- InstanceBegin template="/Templates/templateNew.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CS 2110: OO Programming and Data Structures</title>
+<!-- InstanceEndEditable -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+
+<style type="text/css">
+.bad {color:#ff0000;font-size:11pt;font-family:Courier New; font-weight: bold}
+.code {white-space: pre; font-family:monospace}
+.good {color:#38761d;font-size:11pt;font-family:Courier New; font-weight: bold}
+</style>
+<!-- InstanceEndEditable -->
+</head>
+<body>
+
+<div ID="navbar">
+<ul>
+	<li><a ID="selected" href='index.html'>Home</a></li>
+	<li><a href='courseinfo.html'>Course info</a></li>
+	<li><a href='officehours.html'>Consullt/office hrs</a></li><li><a href='lecturenotes.html'>Lecture notes</a></li>
+	<li><a href='assignments.html'>Assignments</a></li>
+	<li><a href='exams.html'>Exams</a></li>
+	<li><a href='online/index.html'>Tutorials</a></li>
+	<li><a href='resources.html'>Resources</a></li>
+	<li><a href='links.html'>Links</a></li>
+	<li><a href='faq.html'>FAQ</a></li>
+</ul>
+</div>
+
+<div ID="header">
+  <br>
+  <span ID="title">
+    CS 2110:
+  </span>
+    <span ID="subtitle">
+      OO Programming and Data Structures 
+    </span>
+    <div ID="instructor">Professors: David Gries, Adrian Sampson, Eleanor Birrell. Fall 2017</div>
+</div>
+<!-- InstanceBeginEditable name="EditRegion3" -->
+<div class="main">
+  <h1>CS 2110 Code Style Guidelines</h1>
+  <p>A goal of CS2110 is for you to learn to write programs that are not only correct but also understandable. These guidelines should help you toward that goal. They will give you a good basis for developing a style of your own as you become a more experienced programmer. This handout includes guidelines for Java constructs that will be covered later in the semester. Skim these sections nowand read them more carefully later, when the topics are discussed. </p>
+  <p>Some of these guidelines are standard Java
+    practice, while others are intended to develop good coding
+    habits. When in doubt, choose the
+    alternative that makes the code most obviously correct:</p>
+  <blockquote>
+    <p>"There
+      are two ways of constructing a software design. One way is to
+      make it so simple that there are obviously no deficiencies. The other way is to make it so complicated that there are no
+      obvious deficiencies." - C.A.R. Hoare. </p>
+    <table width="521" border="0">
+      <tr>
+        <td width="515"><a href="#Naming">1. Naming conventions</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp; <a href="#CamelCase">1.1 Camelcase</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#NameClass">1.2 Class and interface names</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#NameMethod">1.3 Method names</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#NameVariable">1.4 Variable names</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#NamePackage">1.5 Package names</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Format">2. Format conventions</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Indentation">2.1 Indentation and braces { and }</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#AlwaysBraces">2.2 Always use braces for contol structures</a></td>
+      </tr>
+      <tr>
+        <td><a href="#Comments">3. Documentation</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#commentkinds">3.1 Kinds of comments in Java, including Javadoc comments</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#overcomment">3.2 Don't over-comment</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#classinvariant">3.3 Class invariant</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#methodspecs">3.4 Method specifications</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#prepost">3.4.1 Preconditions and postconditions</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#classspecs">3.5 Class specifications</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#statementComments">3.6 Statement-comments</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#assertions">3.7 Assertions and the assert statement</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#loopInvariant">3.8 Loop invariants</a></td>
+      </tr>
+      <tr>
+        <td><a href="#codeOrganization">4. Code organization</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#fielddecs">4.1 Field and class variable declarations go at the beginning of a class</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#shortmethods">4.2 Keep methods short</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#useStateComs">4.3 Use statement-comments to organize a method</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#returns">4.4 Use returns to simplify method structure</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#shorterinIf">4.5 Put the shorter of the then-part and else-part first</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#locals">4.6 Declare local variables as close as possible to their first use</a></td>
+      </tr>
+      <tr>
+        <td><a href="#accessModifiers">5. Public/private access modifiers</a></td>
+      </tr>
+      <tr>
+        <td><a href="#mutatoretc">6. Creators/observers/mutators</a></td>
+      </tr>
+      <tr>
+        <td><a href="#sideEffects">7. Side effects</a></td>
+      </tr>
+      <tr>
+        <td><a href="#codeToInterface">8. Code to interfaces instead of implementations</a></td>
+      </tr>
+      <tr>
+        <td><a href="#deprecated">9. Avoid deprecated patterns</a></td>
+      </tr>
+      <tr>
+        <td><a href="#newFeatures">10. Use features from later versions of Java</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#generics">10.1 Type Parameters</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#forLoop">10.2 Java 1.5 for-loop syntax</a></td>
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#avoidindexing">10.3 Avoid integer indexing</a></td>
+      </tr>
+    </table>
+  </blockquote>
+  <a name="Naming"></a>
+  <p>&nbsp;</p>
+  <div class="section">1. Naming Conventions</div>
+  <p>We adhere to
+    Java's naming conventions. These may seem arbitrary and
+    bizarre if you're not used to them. Nonetheless,
+    conforming to aesthetic standards of coding is something
+    you'll need to do in just about any software
+    development workplace, so it's good practice.</p>
+  <a name="CamelCase"></a>
+  <div class="subsection">1.1 CamelCase</div>
+  <p>Java class, field, method, and
+    variable names are written in <em>CamelCase</em>: Words are smashed
+    together and the first letter of each word is capitalized. No word separato, like the underscore _, is used.</p>
+  <div class="codegries">thisIsAnExample</div>
+  <p>There is one exception to
+    CamelCase: constants. Constants are in all-caps
+    with words separated by underscores. Constants should
+    also have the keyword final, and they are usually static:</p>
+  <div class="codegries">public static final double SPEED_OF_LIGHT= 299792458; // in m/s </div>
+  <a name="NameClass"></a>
+  <div class="subsection">1.2 Class and interface names</div>
+  <p>Class and
+    interface names are generally noun or noun phrases and begin with a capital letter:</p>
+  <div class="codegries">interface AqueousHabitat { ... } <br>
+    class FishBowl implements AqueousHabitat { ... }</div>
+  <a name="NameMethod"></a>
+  <div class="subsection">1.3 Method names</div>
+  <p>Method names generally begin with a lowercase letter. A call on a procedure is a statement to do something, so a procedure name is generally  a verb phrase that is acommand to do something.</p>
+  <div class="codegries">public void setTitle(String t) { ... }</div>
+  <p>A function call yields a value, so a function name is generally a noun phrase that describes the value</p>
+  <div class="codegries">public double areaOfTriangle(int b, int c, int d) { ... }</div>
+  <p>However, a convention in Java is that a function that yields the value of a field (say title) is the name of the field preceded by &quot;get&quot;. People are of two inds on this; not everyone thinks it's a good idea. The name &quot;title&quot; could also be used.</p>
+  <div class="codegries">public String getTitle() { ... }</div>
+  <p>The name of a boolean function is often a verb phrase starting with &quot;is&quot;, thus describing what the value means:</p>
+  <div class="codegries">public boolean isEquilateralTriangle(int b, int c, int d) { ... }</div>
+  <a name="NameVariable"></a>
+  <div class="subsection">1.4 Variable names</div>
+  <p>Variable names generally start with a lowercase letter.</p>
+  <p class="codegries">Variable names should give the
+    reader some hint about what the variable is used for. A well-chosen name, which gives a hint at the meaning of the variable, helps document a program, making it easier to understand. On the other hand, using the names of your friends or flowers that you like as variable names just annoys and makes the program harder to udderstand. Don't do that.  Also, refrain from using vague names like <em>counter</em> or <em>var</em> or <em>data</em>; instead think about what the variable really is for and use a more concrete name.</p>
+  <p class="codegries">There is a tension between writing long descriptive names and very short names. A long name may make it easy to remember what the variable is for, but its length may make the whole program seem long and complicated. It may be difficult to see what a very short name means, but it makes the program short. For example, consider these two statements, which look so different only because of the length of the variable name:</p>
+  <div class="codegries">hypotenuseOfTriangle= 6 * (2 + hypotenuseOfTriangle) + 7 / hypotenuseOfTriangle <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- hypotenuseOfTriangle;<br>
+    <br>
+    x= 6 * (2 + x) + 7 / x - x; </div>
+  <p> A name can rarely be used to give a complete,
+    precise definition of the entity it names, and a complete definition should
+    always be given where the entity is defined.</p>
+  <p>Here is a compromise. We tend to use shorter names for parameters and local variables and longer names fields and static variables. We  explain why.</p>
+  <p><strong>Parameter names</strong>. The specification of a method will name all parameters and give their meanings. The body of a method is usually fairly short ---at most 30-50 lines. Therefore, when reading the method body, the meanings of parameters are available without any scrolling. So parameter names may be short --even one letter long.</p>
+  <div class="codegries">/** Return &quot;lengths b, c, and d are the sides of an equilateral triangle&quot;<br>
+    public boolean isEquilateralTriangle(int b, int c, int d) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return b == c &amp;&amp; c == d;<br>
+    } </div>
+  <p><strong>Local variable names</strong>. A local variable is a variable that is declared in a method body. Its declaration should be placed as close to its first use as possible. The scope of a local variable is usually short, and its meaning is often obvious either from a comment on its declaration or from the short code in which it is used. Therefore, names of local variables may be short.</p>
+  <p><strong>Fields and class (i.e. static) variables</strong>. The declarations of field and class variables may be far from their uses --perhaps hundreds of lines away. Further, the meaning of fields and class variables are typically given as comments by the declarations, far from where the variables are used. Therefore, the names of field and class variables should be longer and as mnemonic as possible, giving the reader a good idea what the meaning are. </p>
+  <a name="NamePackage"></a>
+  <div class="subsection">1.5 Package names</div>
+  <p>Package names are usually <em>all</em> lowercase and consist of nouns. </p>
+  <a name="Format"></a>
+  <p>&nbsp;</p>
+  <div class="section">2. Format conventions</div>
+  <p>Use a formatting convention consistenly within a class. For example, the position of open braces &quot;{&quot; should be the same throughout the program.</p>
+  <p>Put only one statement on a line (although there may be exceptional cases where more than one is better). Don't pack everything together, making a program hard to read. </p>
+  <p>Make sure that all lines can be read without the need for horizontal scrolling. A mximum of 80 characters per line is recommended.</p>
+  <a name="Indentation"></a>
+  <div class="subsection">2.1. Indentation and braces { }</div>
+  <p>Indentation is used to make the structure of a program clear. The basic rule is:</p>
+  <blockquote>
+    <p><span class="reddish">Substatements of a statement or declaration should be indented</span>.</p>
+  </blockquote>
+  <p>For example, the declarations in a class, the body of a method, and the if-part and then-part of a conditional statement, should be indented. We prefer indentation of 4 spaces, not 2. In Eclipse, you can set the amount to indent using menu item <span class="reddish">Preferences -&gt; Java -&gt; Code Style -&gt; Formatter</span>.</p>
+  <p>Eclipse makes it easy to indent a whole class conistently. Just select all lines (<span class="reddish">control-A</span> or <span class="reddish">command-A</span>) and press <span class="reddish">control-i </span>or <span class="reddish">ommand-i</span>.</p>
+  <p>We prefer putting an opening curly brace &quot;{&quot; at the end of a line, and not on a line by itself, as shown below. The closing brace &quot;}&quot; appears on its own line, indented as shown below.</p>
+  <div class="codegries"> if (x &lt; y)        {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x &lt; y) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;x= y;       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= y;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;y= 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= 0; <br>
+    }                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+    else {                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(or)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= 0;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;x= 0; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= y/2;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;y= y/2;          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    } </div>
+  <p>A second oft-used convention is to put the opening brace on a line by itself, as shown below. This has a disadvantage. A scarce resource is the number of lines that one can see on the monitor at one time, and this convention wastes that resource.</p>
+  <div class="codegries"> if (x &lt; y)        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x &lt; y)<br>
+    {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;x= y;       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= y;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;y= 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= 0; <br>
+    }                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(or)     &nbsp;&nbsp;else<br>
+    {                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;x= 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= 0;<br>
+    &nbsp;&nbsp;&nbsp; y= y/2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= y/2;<br>
+    }
+    &nbsp;&nbsp;&nbsp;          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+  </div>
+  <p>If you are used to using the second convention, we suggest that you use the first convention for the remainder of the course. After that, you can choose either style for the rest of your life; you will be making an informed decision, based on experience with both.</p>
+  <a name="AlwaysBraces"></a>
+  <div class="subsection">2.2 Always use braces for control flow structures</div>
+  <p>The following is just begging for a bug:</p>
+  <div class="codegries">if (flag)
+    validate();</div>
+  <p>Can you spot the bug here?</p>
+  <div class="codegries">if (flag)
+    validate();
+    update(); </div>
+  <p>Always use braces:</p>
+  <div class="codegries">if (flag) { <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;validate(); <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;update(); <br>
+    }</div>
+  <p>(This applies to other
+    structures as well, like if-else statements for-loops, and while-loops)</p>
+  <p>Put a
+    space between the keyword and the following parenthesis, to differentiate
+    control structures from method calls:</p>
+  <div class="codegries"><span class="good">// &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Good</span> if (username == null) {
+    ...
+    } <br>
+    <span class="bad">// Less Good</span> if(username == null) {
+    ...
+    }<br>
+  </div>
+  <a name="Comments"></a>
+  <p>&nbsp;</p>
+  <div class="section">3. Documentation</div>
+  <p class="section">There are two reasons for documenting a program well.</p>
+  <p>First, you, the programmer, need all the help you can get while writing and debugging the program. This means that documentation should be written <em>during</em> the coding/debuging process; it should not be put off until the program is considered finished. The tendency is to wait until the end, and then document. That just means you will make more errors, take more time programming, and end up with more bugs in your program. Get in the habit of documenting a field when you declare it and specifying a method <em>before</em> you write a body. If you decide to change what a method is supposed to do, change its specification first!</p>
+  <p>You document a program well so that others have an easier time understanding it. A professional programmer is well regarded if their code is easy to maintain by others. A grader of your assignment will be more likely to feel good about you when grading if your program is well documented. So, document your program well.</p>
+  <p><em>The Elements of Style</em>, a famous little book on writing style by Cornell Professors W. Strunk, Jr., and E.B. White, contains several rules that are useful for programming as well as writing. Among them are:</p>
+  <blockquote>
+    <p> Omit needless words.<br>
+      Use the active voice.</p>
+  </blockquote>
+  <p>Follow these rules when writing specifications of methods. For example, don't write the specification ``This function searches list x for a value y and ...'' or ``Function isIn searches list x for a value y ...''. Such specifications are too wordy and are not commands but descriptions. Instead, say the following.</p>
+  <div class="codegries">/** Return &quot;y is in list x&quot; */ <br>
+    boolean isIn(int y, List x) </div>
+  <a name="commentkinds"></a>
+  <div class="subsection">3.1. Kinds of comments in Java, including Javadoc comments</div>
+  <p>Java has three kinds of comments. Comments that start with &quot;//&quot; are one-line comments: the comment ends at the end of the line. Comments that start with &quot;/*&quot; must end with &quot;*/&quot;, but they may span many lines.</p>
+  <p>A Javadoc comment starts with &quot;/**&quot; (and therefore end with &quot;*/&quot;. Javadoc stands for &quot;Java documentation&quot;. These comments have a special place in Java and also in Eclipse, when dealing with a Java program. Suppose a method is written like this:</p>
+  <div class="codegries">/** Add e as this Butterfly's father. Precondition: ... */<br>
+    public void addFather(Butterfly e) { ... }</div>
+  <p>If you now hover the mouse over a call of this function, e.g.</p>
+  <div class="codegries">but.addFather(dad);</div>
+  <p>a pop-up window opens with the specification of the method in it! So you get to see preciely what the function call will do and what preconditions is has. Do you see how writing specifications during programming can help you?</p>
+  <p>Secondly, at any time, in Eclipse you cn use menu titem Project -&gt; Generate Javadoc to extract from the program all properly written and placed javadoc comments into a bunch of webpages that document the class. Those pages are what other will use when using your pgoram ---they will not look at the source program.</p>
+  <a name="overcomment"></a>
+  <div class="subsection">3.2 Don't over-comment</div>
+  <p>Some people have a tendency to put a &quot;//&quot; comment on almost every line. This is generally just noise, making it harder to read the program. Don't do it. Refrain from commmenting lines like this:</p>
+  <div class="codegries">i= i+1; // add one to i</div>
+  <p>Assume that the reader has experience with Java and understand basic statements. Generally speaking, the only kinds of comments needed are those that are mentioned in this section 3 on comments.</p>
+  <a name="classinvariant"></a>
+  <div class="subsection">3.3 Class invariant</div>
+  <p>The class invariant is the collection of meanings of and constraints on fields of a class. The class invariant is generally placed in comments on each individual field declaration or placed as a single comment before the fields. Since most fields are private, the user does not know about them and there is no need to use a Javadoc comment for them. Here are examples. Note the appearance of constraints, when necessary, and note howone comment may describe the meaning of two fields.</p>
+  <div class="codegries">private int hr; //The hour of the day, in 0..23<br>
+    <br>
+    private double[] temps; // temps[0..numRecorded-1] are the recorded temperatures<br>
+    private int  numRecorded; // number of temperatures recorded</div>
+  <p>The purpose of a constructor is to initialize all fields so that the clas invariant is true. Then, when writing a method, you can assume that the class invariant is true when the method is called and write the method body so that it terminates with the class invariant true. Looking often at the class invariant can help prevent mistakes caused by forgetting just what a field means or what its constraints are.</p>
+  <a name="methodspecs" id="methodspecs"></a>
+  <div class="subsection">3.4 Method specifications</div>
+  <p>Every method should be preceded by a blank line and then a Javadoc specification that describes what the method does, along with preconditions ---constraints on the arguments of a call. In order to do this properly, the specification must mention each parameter, indicating what it is for.</p>
+  <p>Java has certain conventions for describing the parameters and result of a method. For example, one can write thiis within a Javadoc specification to describe parameter b and the result</p>
+  <div class="codegries">@param b one of the sides of the triangle<br>
+    @return The area of the triangle</div>
+  <p>One can certainly use these. However, we have found that a specification can be written more compactly and clearly without using those, and we do not require them. The main guideline is to write the specification as a command to do something, naming all parameters in that command. Examples are given below.</p>
+  <p>Procedure specifications are generally best written as commands to do something, e.g.</p>
+  <div class="codegries">/** Print the sum of a and b. */<br>
+    public static printSum(int a, int b) { ... } </div>
+  <p>Function specifications are generally written to indicate what to return, e.g.:</p>
+  <div class="codegries"> /** Return area of triangle whose side lengths are a, b, and c<br>
+    public static double area(double a, double b, double c) { ... } </div>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or
+  <div class="codegries">/** = area of triangle whose side lengths are a, b, and c<br>
+    public static double area(double a, double b, double c) { ... }</div>
+  <p>The purpose of a constructor is to initialize all fields so that the class invariant is true. We favor writing a constructor specification as illustrated by the following:</p>
+  <div class="codegries">/** Constructor: an instance with hour-of-day h and minute-of-the-hour m.<br>
+    Precondition: h in 0..23 and m in 0..59.<br>
+    public Time(int h, int m) { ... } </div>
+  <p><a name="prepost" id="prepost"></a></p>
+  <div class="subsection">3.4.1. Preconditions and postconditions</div>
+  <p> A precondition is an assertion --a true-false statement-- about the parameters of a method that must be satisfied if the method is to do its job properly. It is <em>not</em> the responsibility of the method to check that the precondition is true. It <em>is</em> the responsibiity of the programmer who writes a call on the method to ensure that the argumnents of the call satisfy the precondition. The following example shows how we write preconditions:</p>
+  <div class="codegries">/** Return the index of the rightmost occurrence of x in b.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Precondition: b is sorted (in ascending order) and x is in b */<br>
+    <strong>public static int</strong> binarySearch(int x, int[] b)</div>
+  <p>A call <span class="code">binarySearch(25, c)</span> will work properly only if 25 is in array c and c is sorted. If not, the method can do <em>anything</em>.</p>
+  <p>If it doesn't cost too much, the method can be made more robust by checking that the precondition is true (using a Java assert statement), but it is not necessary.</p>
+  <p>Similarly, a postcondition is an assertion that will be true upon termination of the method.</p>
+  <a name="classspecs" id="classspecs"></a>
+  <p>&nbsp;</p>
+  <div class="subsection">3.5. Class specifications</div>
+  <p> Each public class is given in a separate file. The beginning of the file should contain a javadoc comment that explains what the class is for. This can be a simple, short summery. Often, one also puts here information concerning the author, the date of last modification, and so on. Here is an example.</p>
+  <div class="codegries"> /** An object of class Auto represents a car.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Author: John Doe.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Date of last modification: 25 August 1998 */<br>
+    public  class Auto { ... }</div>
+  <p> Inner classes and non-public classes that are defined in the same file along with a public class should be specified in a similar fashion.</p>
+  <a name="statementComments"></a>
+  <div class="subsection">3.6. Statement-comments</div>
+  <p>Just as the sentences of an essay are grouped in paragraphs, so the sequence of statements of the body of a method should be grouped into logical units. Often, the clarity of the program is enhanced by preceding a logical unit by a comment that explains what it does. This comment serves as the specification for the logical unit; it should say precisely what the logical unit does.</p>
+  <p> The comment for such a logical unit is called a <em>statement-comment</em>. It should be written as a command to do something. Here is an example.</p>
+  <div class="codegries">// Truthify x &gt;= y by swapping x and y if needed.<br>
+    if (x &lt; y) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;int tmp= x;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;x= y;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;y= tmp;<br>
+    }</div>
+  <p> <span class="reddish">A statement-comment should explain what the group of statements does, not how it does it</span>. Thus, it serves the same purpose as the specification of a method: it allows one to skip the reading of the statements of the logical unit and just read the comment. With suitable statement-comments in the body of a method, one can read the method at several &quot;levels of abstraction&quot;, which helps one scan a program quickly to find a section of current interest, much like on scans section and subsection headings in an article or book. But this purpose is served only if statement-comment are precise.</p>
+  <p> Statement comments must be complete. The comment</p>
+  <div class="codegries">// Test for valid input</div>
+  <p> is not adequate. What happens if the input is valid? What if it isn't --is an error message written or is some flag set? Without this information, one must read the statements for which this statement-comment is a specification, and the whole purpose of the statement comment is lost.</p>
+  <p><strong>Use of blank lines. </strong>Place a blank line after the implementation of each each statement-comment. In the following example, </p>
+  <div class="codegries">// Eliminate whitespace from the beginning and end of t<br>
+    &nbsp;&nbsp;&nbsp; while (t.length() != 0 &amp;&amp; isWhitespace(t.charAt(0))) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t= t.substring(1);<br>
+    &nbsp;&nbsp;&nbsp; } <br>
+    <br>
+    // If t is empty, print an error message and return<br>
+    if (t.length() == 0) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+    }<br>
+    <br>
+    if (containsCapitals(t)) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+    }<br>
+    <br>
+    // Store the French translation of t in tFrench<br>
+    ...<br>
+    <br>
+  </div>
+  <p> This sequence consists of 4 statements: (1) eliminate the whitespace ..., (2) print a message and return false if t is empty, (3) do something if t comtains capitals, and (4) store the Frnech translation. Three of these are statement-comments, and one can easily see, because of the blank lines, where their implementations end. </p>
+  <a name="assertions"></a>
+  <div class="subsection">3.7 Assertions and the assert statement</div>
+  <p>An assertion is a true-false statement that is placed (as a comment) at some point in a method body to indicate what is true at that point. In order to distinguish it from a statement-comment, it is suggested to place it in barces { and } as shown in the following example --historically, that was how assertions were written. However, few people will take the trouble to put in the braces.</p>
+  <div class="codegries">// { b[0..t-1] is sorted }</div>
+  <p>Place assertions wherever the code below depends on that assertion being true and the assertion helps the reader understand. One particular use of it can be in a function body that returns in several places. The following illustrates this:</p>
+  <div class="codegries"> /** Return the middle value of b, c, d */<br>
+    public static int middle(int b, int c, int d) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (b &gt; c ) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int temp= b;           b= c; c= temp;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { b &lt;= c }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (b &lt;= d) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// { middle value is smaller of c and d }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return Math.min(c, d);<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { d &lt; b &lt;= c }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return b; <br>
+    } </div>
+  <p>In place of the assertion as a comment, one could also use the Java assert statement:</p>
+  <div class="codegries"><strong>assert</strong> &lt;boolean expression&gt; ;</div>
+  <p>If the &lt;boolean expression&gt; is true, nothing is done, but if it is false, execution throws an exception and, generally, the program terminates.</p>
+  <p>Using the assert statement instead of an assertion-comment has the advantage of catching errors that cause the assertion to be false. Some people advocate leaving assertions in a finished program, for just that reason, unless the boolean expression is so complicated that it end up slowing down the program execution.</p>
+  <p><a name="loopInvariant"></a></p>
+  <div class="subsection">3.8 Loop invariants</div>
+  <p>A loop invariant is an assertion that is true before and after each iteration of a loop and is used to prove correctness of the loop (i.e. that execution of the loop achieves the desired postcondition). We do not explain loop invariants here.
+    Our purpose is only to show where they are placed in the program. </p>
+  <p>A loop invariant is placed as a comment just before the loop. Below, we show a loop invariant in the same code written using a while loop and written using a for-loop.</p>
+  <div class="codegries">// Sort b[0..]<br>
+    k= 0;<br>
+    // invariant: b[0..k-1] is sorted and b[0..k-1] &lt;= b[k..]<br>
+    while (k &lt; b.length) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Swap b[k] with smallest of b[k..];<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;k= k+1; <br>
+    } <br>
+    <br>
+    <br>
+    // Sort b[0..]<br>
+    // invariant: b[0..k-1] is sorted and b[0..k-1] &lt;= b[k..]<br>
+    for (int k= 0; k &lt; b.length; k= k+1) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Swap b[k] with smallest of b[k..];<br>
+    }</div>
+  <a name="codeOrganization">
+  <p>&nbsp;</p>
+  <div class="section">4. Code organization</div>
+  <a name="fielddecs"></a>
+  <div class="subsection">4.1 Field and class variable declarations go at the beginning of a class</div>
+  <p>Place all field and class (static) variables at the beginning of a class, before all the methods. That is where a reader will look for them. </p>
+  <a name="shortmethods"></a>
+  <div class="subsection">4.2 Keep methods short</div>
+  <p>As a general rule of thumb, if a
+    single method is getting beyond 20-50 lines, consider <em>lifting</em> some of its functionality into
+    other methods. Rarely should a method be over 50 lines.</p>
+  <p>Similarly, if you find yourself pasting
+    the exact same chunk of code into several places, consider creating a single method that does the job.
+    The <em>Refactor</em> contextual menu in Eclipse can help with
+    this. </p>
+  <p>It is possible to go
+    overboard with this. Even if two blocks of code are
+    structurally similar, don't merge them into the same
+    method if they do different things. Each method should have
+    only one purpose. Names like <tt>saveOrLoadAnimal()</tt> are a clue
+    that you really need two methods:<tt> saveAnimal()</tt> and <tt>loadAnimal()</tt>.</p>
+  <a name="useStateComs"></a>
+  <div class="subsection">4.3 Use statement-comments to organize a method</div>
+  <p>A long method body should generally be broken into a sequence of logical units, each performing some subtask. Each of these logical units needs a comment that describes <em>what</em> the unit does. The section on <a href="#statementComments">statement-comments</a> discusses this.</p>
+  <p>Often, the process of <em>step-wise refinement</em> of a program leads naturally to these logical units. For example, one might look at the specification of a method and decide that it can be implemented in three steps, each written in English:</p>
+  <div class="codegries">Do b;<br>
+    Do c;<br>
+    Do d </div>
+  <p>They would become statement-comments, with their implementations underneath:</p>
+  <div class="codegries">// Do b<br>
+    implementation of &quot;Do b&quot;<br>
+    <br>
+    // Do c<br>
+    implementation of &quot;Do c&quot;<br>
+    <br>
+    // Do d <br>
+    implementation of &quot;Do d&quot; </div>
+  <a name="returns"></a>
+  <div class="subsection">4.4 Use returns to simplify method structure</div>
+  <p>You may hear from some people that a method should return only in the last statement of the method, at the end of the method body. In some cases, that can lead to a messy, incomprehensible method body. Use of return statements in several places, along with appropriate use of <a href="#assertions">assertions</a>, can lead to a far more comprehensible method. Further, this use of returns is developed naturally during stepwise refinement. However, one must be disciplined with the use of the returns and assertions.</p>
+  <p class="codegries">As an example, we present a method that calculates the score for a bowling frame given the two objects for the next two frames. (Understanding this requires knowledge of bowling!). Note the use of assertions. We challenge you to write this method more simply, using only one return statement. or by using nested if-else statements, ecah part of which ends with a return statement.</p>
+  <div class="codegries">/** = the score for this frame, given the two following frames f1 and f2.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Pre: If this is the ninth frame,  f2 is null.<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If this is the tenth frame, f1 and f2 are null*/<br>
+    public int score(Frame f1, Frame f2) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (isTenth) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return firstBall + secondBall + thirdBall;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { it's not the tenth frame }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Return value if it is not a strike or spare<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (firstBall + secondBall &lt; 10) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return firstBall + secondBall;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Return the value for a spare --in other than 10th frame<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (firstBall &lt; 10 &amp;&amp; firstBall + secondBall == 10) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return firstBall + secondBall + f1.firstBall;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { it's a strike and it's not the tenth frame }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Return a value for a strike in the ninth frame<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (f2 == null) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return firstBall + f1.firstBall + f1.secondBall;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Return a value for a strike in frame in the range 1..8<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (f1.firstBall &lt; 10) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 10 + f1.firstBall + f1.secondBall;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { The next frame is a strike }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return firstBall + f1.firstBall + f2.firstBall;<br>
+    }</div>
+  <a name="shorterinIf"></a>
+  <div class="subsection">4.5 Put the shorter of the then-part and else-part first</div>
+  <p>One sometimes sees a segment that looks like this:</p>
+  <div class="codegries">if (condition) {<br>
+    &nbsp;&nbsp;&nbsp;...<br>
+    &nbsp;&nbsp;&nbsp;30 lines of code<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+    } else single-statement</div>
+  <p>The long distance of the if-line from the else-part makes it difficult for the reader. Better is to structure it like this:</p>
+  <div class="codegries">if (!condition) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;single-statement<br>
+    } else {<br>
+    &nbsp;&nbsp;&nbsp;...<br>
+    &nbsp;&nbsp;&nbsp;30 lines of code<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+    }</div>
+  <p>Further, if the single-statement is a return statement, simplify the structure by writing it like this:</p>
+  <div class="codegries">if (!condition) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return ...;<br>
+    // { ! condition } <br>
+    ...<br>
+    30 lines of code<br>
+    ...<br>
+  </div>
+  <a name="locals"></a>
+  <div class="subsection">4.6 Declare local variables close to first use</div>
+  <p>A local variable is a variable declared within a method body.</p>
+  <p>The tendency is to declare all variables at the beginning of the method body, and to start off throwing there all the variables you think you might need. <strong><span class="reddish">Fight this tendency! </span></strong>It leads to a proliferation of variables that often are not needed, and it forces the reader to look at an think about variables at the wrong time.</p>
+  <p><span class="reddish">Principle</span>: Declare a variable as close to its first use as possible.</p>
+  <p>Look at the small example below. Variable temp has been declared first. This causes the reader to ask, &quot;what is temp for? Well, I don't know.&quot; The reader goes on and sees that there are some statements to sawpa b and c under certain circumstances and skips them because the reader knows how to write a swap. Well, the reader still doesn't know what temp is for!</p>
+  <div class="codegries">/** Return middle value of b, c, d */<br>
+    public static int middle(int b, int c, int d) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;int temp;<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Swap b, c to put smaller in b<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (b &gt; c) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp= b;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b= c;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c= temp;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { b &lt;= c }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (d &lt;= b) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return b;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { b &lt; d and b &lt;= c }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return Math.min(c, d); <br>
+    }</div>
+  <p>In the code below, temp is delcared where it belongs, and the reader who doesn't want to read the swap implementation doesn't ever have to know that there is a local variable tempt.</p>
+  <p>This is a <em>small</em> example. In a longer method, with loops and such, the use of the principle to place local variables as close to their first use as possible becomes more important.</p>
+  <div class="codegries">/** Return middle value of b, c, d */<br>
+    public static int middle(int b, int c, int d) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// Swap b, c to put smaller in b<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (b &gt; c) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int temp= b;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b= c;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c= temp;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { b &lt;= c }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;if (d &lt;= b) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return b;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;// { b &lt; d and b &lt;= c }<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;return Math.min(c, d); <br>
+    }</div>
+  <a name="accessModifiers"></a>
+  <p>&nbsp;</p>
+  <div class="section">5. Public/private access modifiers</div>
+  <p>Java has four levels of
+    access: public, private, protected, and package (the default; what you get when no
+    modifier is specified).  Here is how we generally use them:</p>
+  <p><strong>public</strong>: public items can be used anywhere. </p>
+  <p> Methods are public if they are part of the outward &quot;behavior&quot; of the class, i.e. if the user should be able to use them. Otherwise, make them private.</p>
+  <p>Constants, i.e. static final fields, are usually public so that anyone can use them.</p>
+  <p><strong>private</strong>: private items can be refered to only in code within the class.</p>
+  <p>Fields and class (i.e. static) variables should should be
+    private unless there is a specific, good reason for them to be otherwise.</p>
+  <p>A method should be made private if the user should not be able to call it from outside the class.</p>
+  <p><strong>protected</strong>: Protected compnents can be referenced within the class, within subclasses, and within any class defined in the same package. We generally do not use this in CS 2110.</p>
+  <p><strong>package</strong> (the default, i.e. what one gets when no modifer is used): package components can be referenced within the class and within any class that is in the same package. We generally do not use this in CS 2110. Do not put a field declaration or a method declaration without an access modifier unless you put a comment justifying the decision.</p>
+  <table width="200" border="1">
+    <caption>
+      Use of access modifiers
+    </caption>
+    <tr>
+      <th align="center" scope="col">Modifier</th>
+      <th align="center" scope="col">Class</th>
+      <th align="center" scope="col">Package</th>
+      <th align="center" scope="col">Subclass</th>
+      <th align="center" scope="col">World</th>
+    </tr>
+    <tr>
+      <td align="left"><strong>public</strong></td>
+      <td align="center">yes</td>
+      <td align="center">yes</td>
+      <td align="center">yes</td>
+      <td align="center">yes</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>protected</strong></td>
+      <td align="center">yes</td>
+      <td align="center">yes</td>
+      <td align="center">yes</td>
+      <td align="center">no</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>package</strong></td>
+      <td align="center">yes</td>
+      <td align="center">yes</td>
+      <td align="center">no</td>
+      <td align="center">no</td>
+    </tr>
+    <tr>
+      <td align="left"><strong>private</strong></td>
+      <td align="center">yes</td>
+      <td align="center">no</td>
+      <td align="center">no</td>
+      <td align="center">no</td>
+    </tr>
+  </table>
+  <a name="mutatoretc"></a>
+  <p>&nbsp;</p>
+  <div class="section">6. Creators/observers/mutators</div>
+  <p class="reddish"><strong>Problems with getters/setters and the use of that terminology</strong></p>
+  <p>The terminology one usually hears is this: a <em>getter method</em> is a function that returns the value of a field (and changes nothing); a <em>setter method</em> is a procedure that stores a value in a field.</p>
+  <p>Some people automatically add getters and setters for all fields of the class they are writing. This can severely undermine the abstraction that a class behavior (as characterized by the set of public methods and their specifications) is designed for. You might as well make the fields public and remove the setters/getters.</p>
+  <p>Resist the temptation to blindly insert getters/setters for all fields. Add them only if there is a good reason to do so, if they are actually part of the behavior you want of the class.</p>
+  <p>The getter/setter terminology has problems in that it influences the programmer  to think that the specification of the method should tell the user that a field is being referenced or changed, but the fields are generally prvate so the user doesn't even know about them. Putting the specification &quot;set field x to parameter p&quot; doesn't make sense from the user's point of view because the user doesn't know there is a field named x.</p>
+  <p>Specifications should be written from the caller's perspective, talking only about what the caller knows about the class.</p>
+  <p>Here's an example. In class javax.swing.JFrame, procedure call j.setTitle(String) sets the title of the window associated with object j. The specification says just that; it does not mention the name of the field in which the title is stored (if there is one). </p>
+  <p>Finally, refactoring to change the fields of a class may mean that a method is no longer a getter method, in that it doesn't retrieve the value of a field. Here's an example. Consider a class <em>Time</em> that has field <em>hour</em> for the hour of the day and field <em>minute</em> for the minute of the hour. We have getter method <em>getHour</em>(). We decide to replace the two fields by a single field <em>m</em> that contains the minute of the day, in the range 0..23*60-1. We have to change function <em>getHour</em>() accordingly, but it is not longer a getter method in the sense of returning the value of a field.</p>
+  <p class="reddish"><strong>Creator/observer/mutator</strong></p>
+  <p>A broader way of looking at methods in classes breaks them into three categories: creators, observers, and mutators. This is based on  the book &quot;<em>Program Development in Java: Abstraction, Specification, and Object-Oriented</em>&quot;, by Barbara Liskov and John Guttag. </p>
+  <blockquote>
+    <p>A <span class="reddish">creator</span> is a method that creates an object. There may be reasons for making all constructors private and providing a  public function (or more than one) that returns an object the class. That function could use a new-expression, thus creating an object, and return it. Note that a constructor is <em>not</em> a creator. Evaluation of a new-expression creates an object; all a constructor does is initialize fields.</p>
+    <p>An <span class="reddish">observer</span> is a function that reports something about the state of the object and does not change the state --it has no side effect. An example is function <em>size</em>() in class <em>Vector</em> or class <em>ArrayList</em>. Function <em>size</em>() doesn't change anything; it just returns the number of elements in the <em>Vector</em> or <em>ArrayList</em>. <em>size</em>() need not be a getter function: we don't even know whether there is a field that contains the number of elements or whether the size is obtained in another way.</p>
+    <p>Another observer function <em>soc</em>() could be a function in a class that maintains (among other things) the social security number of people. <em>soc</em>() could return just the last four digits of the social security number, thus providing some security --the complete social security number is not made available.</p>
+    <p>A <span class="reddish">mutator</span> is a method that changes the state of an object (it may be a function or a procedure). Examples are procedure <em>setTitle</em>(<em>String</em>) in class <em>javax.swing.JFrame</em>. This function must do far more than change a field of an object (if it does that), for it must execute at least one call that puts the title on the associated window on the monitor. Having a setter method that simply sets a field to the the parameter would be disastrous, because the title would not display properly in the window on the monitor.</p>
+  </blockquote>
+  <p class="reddish"><strong>Immutable classes (or objects)</strong></p>
+  <p>Classes that contain no mutator methods are called <span class="reddish">immutable</span> (or rather their objects are <span class="reddish">immutable</span>). <span class="reddish">Immutable</span> means not capable of change, invariable, unalterable. Classes <em>String</em> and <em>Integer</em> are immutable. You cannot change the value of the string in a String object --but you can create new String objects. The advantage of immutable classes is that their objects can be shared freely by different code modules.</p>
+  <a name="sideEffects"></a>
+  <p>&nbsp;</p>
+  <div class="section">7. Side effects</div>
+  <p>A side effect occurs when evaluation of an expression changes a value. For example, a side effect occurs if evaluation of the following loop condition, which is a call on function f, changes some variable:</p>
+  <blockquote>
+    <p class="code"><strong>while</strong> (f(...)) {...}</p>
+  </blockquote>
+  <p>Generally, side effects should be avoided. This means, for example, that an assignment statement like</p>
+  <blockquote>
+    <p> b= ...; </p>
+  </blockquote>
+  <p>should change no variable other than b. A side-effect that changes something else could be disastrous, unless it is very well documented and the programmer is aware of what is happening. In fact, the theory of proving programs correct tells us that formal proofs of correctness when side effects may occur are far far more complex than when they may not.</p>
+  <p class="reddish"><strong>Standard paradigms</strong></p>
+  <p>One does see some standard paradigms that use side effects. For example, below is a loop that reads and prints lines of a <em>BufferedReader br</em>; the loop condition has the side effect of assigning to variable <em>line</em>.</p>
+  <blockquote> <span class="code">String line;</span><br>
+    <span class="code">while ((line= br.readLine()) != null) {</span><br>
+    <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(&quot;line is &quot; + line);</span><br>
+    <span class="code">}</span></blockquote>
+  <p>However, we would never write the loop like this, preferring to write it as follows, in a way that has no side effects, even though it is longer that the one above.</p>
+  <blockquote> <span class="code">String line= br.readLine();</span><br>
+    <span class="code">// invariant: all lines read in, except line, have been printed</span> <br>
+    <span class="code">while (line != null) {</span><br>
+    <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(&quot;line is &quot; + line);</span><br>
+    <span class="code">&nbsp;&nbsp;&nbsp;&nbsp;line= br.readLine(); </span> <br>
+    }</span></blockquote>
+  <p class="reddish"><strong>Benevolent side effects</strong></p>
+  <p>There is one class of side effect that is OK. A benevolent side effect is one that changes the state but not in a way that the user can observe. A benevolent side effect cna be used to make a program more efficient. Here is an example.</p>
+  <p>Consider implementing a class that mantains a set of questions-and-answers. When someone asks a question, the corresponding answer is given. The questions-and-answers are implemented in an array, and one has to search the list in linear fashion to find a question. It is better if more frequently asked questions are at the front of the list, so they are more efficiently found. This can be achieved by the following: Whenever a question is asked, move it up one position in the array. This changes the representation of the set of questions-and-answers, but not the set itself; the user cannot notice the change. This is a benevolent side effect.<br>
+  </p>
+  <a name="codeToInterface"></a>
+  <p>&nbsp;</p>
+  <div class="section">8. Code to interfaces instead of implementations</div>
+  <p>In most cases, client code
+    doesn't care about the implementation of the list ---t just
+    wants to know what operations are supported. Specifying a
+    linked list is needlessly providing a detail that makes future
+    changes harder.</p>
+  <div class="codegries">List&lt;String&gt; users = new LinkedList&lt;String&gt;(); <span class="good">// Good</span><br>
+    LinkedList&lt;String&gt; users = new LinkedList&lt;String&gt;(); <span class="bad">// Bad</span></div>
+  <a name="deprecated"></a>
+  <p>&nbsp;</p>
+  <div class="section">9. Avoid deprecated patterns</div>
+  <p>Java has changed over the years, and as changes have been made, some methods and classes have been <span class="reddish">deprecated</span>. <span class="reddish">Deprecated</span> literally means &quot;disapproved of&quot;, but a more accurate translation would be <span class="codegries">&quot;retired</span>&quot;. A deprecated method (or class) is still usable, but it is best not to use it. It will gradually be phased out. There is a new method to do the same thing.</p>
+  <p>So if you see that something is deprecated and you ahve the time, look for the better alternative and use it instead.</p>
+  <a name="newFeatures"></a>
+  <p>&nbsp;</p>
+  <div class="section">10. Use features from later versions of Java</div>
+  <p>Java has been revised every so often, each time adding more features, streamliningg others, and so forth. We expect you to work with Java version 7 (sometimes called 1.7), the latest, and to learn these new features. We mention a few of the important ones here.</p>
+  <a name="generics"></a>
+  <div class="subsection">10.1 Type parameters</div>
+  <p>When using collections like
+    those derived from List, Map, and Set, use appropriate type
+    parameters:</p>
+  <div class="codegries">List&lt;Fish&gt; dinnerMenu= new LinkedList&lt;Fish&gt;(); <span class=
+"good">// Good</span> List<br>
+    dinnerMenu= new LinkedList(); <span class="bad">// Bad</span></div>
+  <p>Here, the first line creats a linked list that can contain only objects of class Fish. The second line creates a linked list that can contain any objects, and it is up to the programmer to ensure than only Fish are put into it (if that is desired). Here, Fish is called a type parameter. Eclipse will give warnings if type parameters are ignored.</p>
+  <p>The type parameter is part of a new feature called <em>generics</em>. We do cover generics
+    in class. However, before we cover them, you can use type parameters as illustrated above. </p>
+  <a name="forLoop"></a>
+  <div class="subsection">10.2 Java 1.5 for-loop syntax</div>
+  <p>When writing a for
+    loop that iterates over an array or an <tt>Iterable</tt> (such as ArrayList,
+    etc), use the new for-loop syntax when possible:</p>
+  <div class="codegries">
+    <p>private List&lt;Fish&gt; inhabitants; <span class="good"><br>
+      </span> ...<br>
+      for (Fish fish : inhabitants) { <span class="good">// Good (Java 1.5 style)</span><br>
+      &nbsp;&nbsp; fish.feed(foodAmount);<br>
+      }<span class="bad"><br>
+        <br>
+        </span> ...<br>
+      Iterator i= inhabitants.iterator(); <span class="bad">// Bad (Java 1.1 style)</span><br>
+      while (i.hasNext()) { <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      Fish fish= (Fish) i.next();<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      fish.feed(foodAmount);<br>
+      } </p>
+  </div>
+  <p>In some case, you might
+    have to explicitly create an iterator, e.g. to
+    remove elements <em>in situ</em>. But if you can use the new for-loop syntax, do it!</p>
+  <a name="avoidindexing"></a>
+  <div class="subsection">10.4 Avoid integer indexing</div>
+  <p>For an array declared as </p>
+  <div class="codegries">String[] s= new String[30];</div>
+  <p>one would iterate through the elements in the old fashion as follows:</p>
+  <div class="codegries">for (int k= 0; k &lt; s.length; k= k+1) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Process s[k] in some fashion;<br>
+    } </div>
+  <p>If there is no need to know abut the index k, i.e. processing works only with the string s[k], then use the new for-loop syntax and write it as follows:</p>
+  <div class="codegries">for (String st : s) {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Process st in some fashion;<br>
+    }</div>
+  <h3>&nbsp;</h3>
+</div>
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>

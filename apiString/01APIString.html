@@ -1,0 +1,324 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/onecolumntemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University 
+	naming conventions.
+-->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>API specs, strings</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+<link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+.colorRed {
+		color:firebrick;
+	font-style: oblique;
+	font-weight:500;
+}
+</style>
+<script type="text/javascript" src="../js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='../menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="onecolumn">
+
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a>
+</div>
+
+<hr />
+<div ID="header1">
+	<table>
+		<tr>
+			<td>
+				<img src="../images/cucs.gif" width="335"  alt=""/>
+			</td>
+			<td>
+				<span ID="title">
+					<br>
+    JavaHyperText and Data Structures
+  </span>
+    
+    <div ID="instructor"><br>
+      David Gries, with help from many</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	
+
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+
+<li><a href='../definitions.html'><span>Java<br />
+HyperText</span></a></li>
+	
+	<li><a href='../JavaStyle.html'><span>Style<br />
+Guide</span></a></li>
+
+<li class='has-sub '><a href='../eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
+     <ul>
+         <li><a href='../eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='../eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='../eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='../eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='../eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='../eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='../eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='../eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+</ul>
+</li>
+
+<li class='has-sub '><a href='01APIString.html'><span>API &<br /> 
+    strings</span></a>
+      <ul>
+         <li><a href='01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='01APIString.html#string'><span>3. Class String</span></a></li>
+</ul>
+</li>
+	
+	<li class='has-sub '><a href='../explainJava/explainJava.html'><span>Explain<br />
+constructs</span></a>
+      <ul>
+         <li><a href='../explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='../explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='../explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         
+         <li><a href='../explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+</ul>
+</li>
+   
+
+<li class='has-sub '><a href='../exceptions/EX1.html'><span>Exceptions</span></a>
+      <ul>
+         <li><a href='../exceptions/EX1.html'><span>1. Output of thrown exceptions</span></a></li>
+         <li><a href='../exceptions/EX2.html'><span>2. Throwable objects</span></a></li>
+         <li><a href='../exceptions/EX3.html'><span>3. Try-stmt/propagation</span></a></li>
+         <li><a href='../exceptions/EX4.html'><span>4. Throw-statement</span></a></li>
+         <li><a href='../exceptions/EX5.html'><span>5. Throws-clause</span></a></li>
+         <li><a href='../exceptions/EX6.html'><span>6. Hints</span></a></li>
+</ul>
+</li>
+
+<li><a href='../abstractInterface/01ai.html'><span>Abstract classes<br />
+interfaces</span></a></li>
+
+<li><a href='../iteratorIterable/iterator.html'><span>Iterator &<br />
+ Iterable</span></a></li>
+
+
+</ul>
+</div>
+
+	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+	
+	<li><a href='../programCorrectness/programCorrectness.html'><span>Program<br />
+correctness</span></a></li>
+
+   <li class='has-sub '><a href='../loops/01aloop1.html'><span>Loop<br />
+invariants</span></a>
+      <ul>
+         <li><a href='../loops/01aloop1.html'><span>1. Introduction</span></a></li>
+         <li><a href='../loops/20aloop.html'><span>2. Developing loops</span></a></li>
+         <li><a href='../loops/30aloop.html'><span>3. Finding an invariant</span></a></li>
+</ul>
+</li>
+	
+<li><a href='../stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
+
+
+<li><a href='../hashing/01hashing.html'><span>Hashing</span></a></li> 
+
+
+
+<li><a href='../dfs/dfs01.html'><span>DFS<br />
+BFS</span></a></li>
+
+
+<li><a href='../shortestPath/shortestPath.html'><span>Shortest<br />
+ path</span></a></li>
+
+</ul>
+</div>
+
+<hr />
+
+
+
+
+<!-- The content div contains the main content of the page -->
+<!-- InstanceBeginEditable name="content" -->
+<div  id="content">
+  <div id="main">
+      <h2 class="colorRed">Java API specifications, class Character, class String</h2>
+      <p > The goal of this module is to:</p>
+      <ol>
+          <li>Get you to practice looking at the Java API (Application Programmer Interface) specifications of Java classes;</li>
+          <li>Introduce you to class Character;</li>
+          <li>Introduce you to class String;</li>
+      </ol>
+      <p >Goal 1 is important.  Java comes with <em>many</em> classes that you can use in Java programs, but you can learn about them and use them only if you have some skill in accessing the API specs of a class, in reading its general explanation, and in looking through its methods to find out what is available. Gaining a skill in this now will help you immensely later in the course and afterward.</p>
+      <h3><a name="apidoc" id="apidoc"></a>The Java API documentation</h3>
+      <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/wTa_0xGY8Rs?rel=0"><img src="../imagesActivity/WhiteFill.png"  width="100"  align="left" hspace="5" /></a>Java has predefined classes for all sorts of things from dealing with strings of characters to building GUIS to reading web pages.  Because there are so many classes, they are grouped into &quot;packages&quot;. The documentation for all these classes appears on the web as the &quot;Java API Specification&quot;. This video shows you how to visit the JAVA API Spec in a browser and how to read it. (2:49 minutes) Read it here: <a href="01API.pdf">01API.pdf</a></p>
+      <p>&nbsp;</p>
+      <h3><a name="char" id="char"></a>The API specification for class Character</h3>
+      <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/jQVHJajY2ds?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We use the spec for class Character to show you the various sections of an API spec and show you how to navigate around it. When you are finished, bring up  the spec for class Character in your favorite browser and become familiar with the  methods listed below. This will help you later, when you need to use them in a program you are writing. (5:50 minutes) Read it here: <a href="02Character.pdf">02Character.pdf</a></p>
+      <table border="3" align="center" cellpadding="0" cellspacing="0" vspace="0">
+          <tr >
+              <td class="griestd"><strong>instance</strong></td>
+              <td class="griestd">charValue()</td>
+              <td class="griestd">compareTo(Character c);</td>
+              <td class="griestd">equals(Object obj)</td>
+          </tr>
+          <tr >
+              <td class="griestd"><strong>static</strong></td>
+              <td class="griestd">compare(char x, char y)</td>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr >
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">isDigit(char ch)</td>
+              <td class="griestd">isLetter(char ch)</td>
+              <td class="griestd">isLetterOrDigit(char ch)</td>
+          </tr>
+          <tr>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">isJavaIdentifierPart(char ch)</td>
+              <td class="griestd">isJavaIdentifierStart(char ch)</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">isLowerCase(char ch)</td>
+              <td class="griestd">isUpperCase(char ch)</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">isSpaceChar(char ch)</td>
+              <td class="griestd">isWhitespace(char ch)</td>
+              <td class="griestd">&nbsp;</td
+    >
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">toLowerCase(char ch)</td>
+              <td class="griestd">toUpperCase(char ch)</td>
+              <td class="griestd">toString()</td>
+          </tr>
+          <tr></tr>
+      </table>
+      <h3><a name="string" id="string"></a>Class String</h3>
+      <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/evONtE0TlOo?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We discuss important aspects about class String, including how a String is implemented. We ask  you to spend some time looking at the API specs of the String methods shown below (many of the functions are overloaded, and we just give their names). Then, we develop a short function that manipulates a string in order to talk about the development process. (5:30 minutes) Read it here: <a href="03String.pdf">03String.pdf</a></p>
+      <table border="3" align="center" cellpadding="0" cellspacing="0" vspace="0">
+          <tr >
+              <td class="griestd"><strong>instance</strong></td>
+              <td class="griestd">length</td>
+              <td class="griestd">charAt;</td>
+              <td class="griestd">substring</td>
+          </tr>
+          <tr >
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">indexOf</td>
+              <td class="griestd">lastIndexOf</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr >
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">startsWith</td>
+              <td class="griestd">endsWith</td>
+              <td class="griestd">contains</td>
+          </tr>
+          <tr>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">compareTo</td>
+              <td class="griestd">equal</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">trim</td>
+              <td class="griestd">replace</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">toLowerCase</td>
+              <td class="griestd">toUpperCase</td>
+              <td class="griestd">&nbsp;</td
+    >
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd"><strong>static</strong></td>
+              <td class="griestd">valueOf</td>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr></tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+  </div>
+</div>
+<!-- InstanceEndEditable --></div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2017 David Gries</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+         width : '70%',
+         height : '70%'
+     });
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>

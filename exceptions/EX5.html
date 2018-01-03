@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/onecolumntemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<!--
+	This document provides the basis of a semantically structured web page 
+	authored in XHTML 1.0 Transitional using established Cornell University 
+	naming conventions.
+-->
+
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Exceptions, checked; throws clause</title>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+<!--
+	All layout and formatting should be controlled through Cascading Stylesheets (CSS).
+	The following link tag should appear in the head of every page in the website. see
+	styles/screen.css.
+-->
+<link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
+<style type="text/css">
+.authornames {
+	font-size: 12pt;
+}
+.colorRed {
+		color:firebrick;
+	font-style: oblique;
+	font-weight:500;
+}
+</style>
+<script type="text/javascript" src="../js/fancyBox/source/jquery.fancybox.pack.js"></script> 
+<link href='../menus/103/menu103id24_style.css' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="onecolumn">
+
+<!--
+	The following link provides a way for people using text-based browsers and
+	screen readers to skip over repetitive navigation elements so that they can 
+	get directly to the content. It is hidden from general users through CSS.
+-->
+<div id="skipnav">
+	<a href="#content">Skip to main content</a>
+</div>
+
+<hr />
+<div ID="header1">
+	<table>
+		<tr>
+			<td>
+				<img src="../images/cucs.gif" width="335"  alt=""/>
+			</td>
+			<td>
+				<span ID="title">
+					<br>
+    JavaHyperText and Data Structures
+  </span>
+    
+    <div ID="instructor"><br>
+      David Gries, with help from many</div>
+			</td>
+		</tr>
+	</table>
+</div>
+	
+
+
+<!-- The header div contains the main identity and main navigation for the site -->
+<div id="header">	
+	<!--
+		The navigation div contains the site's main navigation. These
+		links will be displayed in a horizontal, gray navigation bar 
+		under the unit signature banner.
+	-->	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+
+<li><a href='../definitions.html'><span>Java<br />
+HyperText</span></a></li>
+	
+	<li><a href='../JavaStyle.html'><span>Style<br />
+Guide</span></a></li>
+
+<li class='has-sub '><a href='../eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
+     <ul>
+         <li><a href='../eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='../eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='../eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='../eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='../eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='../eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='../eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='../eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+</ul>
+</li>
+
+<li class='has-sub '><a href='../apiString/01APIString.html'><span>API &<br /> 
+    strings</span></a>
+      <ul>
+         <li><a href='../apiString/01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='../apiString/01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='../apiString/01APIString.html#string'><span>3. Class String</span></a></li>
+</ul>
+</li>
+	
+	<li class='has-sub '><a href='../explainJava/explainJava.html'><span>Explain<br />
+constructs</span></a>
+      <ul>
+         <li><a href='../explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='../explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='../explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         
+         <li><a href='../explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+</ul>
+</li>
+   
+
+<li class='has-sub '><a href='EX1.html'><span>Exceptions</span></a>
+      <ul>
+         <li><a href='EX1.html'><span>1. Output of thrown exceptions</span></a></li>
+         <li><a href='EX2.html'><span>2. Throwable objects</span></a></li>
+         <li><a href='EX3.html'><span>3. Try-stmt/propagation</span></a></li>
+         <li><a href='EX4.html'><span>4. Throw-statement</span></a></li>
+         <li><a href='EX5.html'><span>5. Throws-clause</span></a></li>
+         <li><a href='EX6.html'><span>6. Hints</span></a></li>
+</ul>
+</li>
+
+<li><a href='../abstractInterface/01ai.html'><span>Abstract classes<br />
+interfaces</span></a></li>
+
+<li><a href='../iteratorIterable/iterator.html'><span>Iterator &<br />
+ Iterable</span></a></li>
+
+
+</ul>
+</div>
+
+	
+<div>
+<div id='menu103id24' class='cmmMenu'>
+<ul>
+	
+	<li><a href='../programCorrectness/programCorrectness.html'><span>Program<br />
+correctness</span></a></li>
+
+   <li class='has-sub '><a href='../loops/01aloop1.html'><span>Loop<br />
+invariants</span></a>
+      <ul>
+         <li><a href='../loops/01aloop1.html'><span>1. Introduction</span></a></li>
+         <li><a href='../loops/20aloop.html'><span>2. Developing loops</span></a></li>
+         <li><a href='../loops/30aloop.html'><span>3. Finding an invariant</span></a></li>
+</ul>
+</li>
+	
+<li><a href='../stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
+
+
+<li><a href='../hashing/01hashing.html'><span>Hashing</span></a></li> 
+
+
+
+<li><a href='../dfs/dfs01.html'><span>DFS<br />
+BFS</span></a></li>
+
+
+<li><a href='../shortestPath/shortestPath.html'><span>Shortest<br />
+ path</span></a></li>
+
+</ul>
+</div>
+
+<hr />
+
+
+
+
+<!-- The content div contains the main content of the page -->
+<!-- InstanceBeginEditable name="content" -->
+<div id="content">
+  <div id="main">
+  <div align="right"> <a href="EX4.html">4. The throw-statement</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="EX6.html">6. Hints on using exceptions</a></div>
+
+  
+  
+  <h2 class="colorRed">5. Checked exceptions and the throws clause</h2>
+
+
+  <h3>Checking that thrown objects are caught</h3>
+
+<p>
+A Java compiler checks to make sure that certain thrown objects are caught by your 
+program; if they are not caught, the compiler 
+issues an error message and refuses to compile the program. For example, consider this 
+method <span class="java">main</span>: </P>
+
+<blockquote>
+<p class="java">
+public static void main(String[] args) {
+<br>      
+&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception(); <br>   
+}</P>
+</blockquote>
+
+
+<p>(This method is useless ---except to illustrate our point.) Upon attempting to compile 
+this method, the compiler issues this error message: </P>
+
+<blockquote>
+<p class="java">Error: Exception java.lang.Exception must be caught or
+<br>it must be declared in the throws clause of this method.</blockquote>
+
+<P>You can get rid of this message by using a try-statement that catches the thrown object 
+(again, this is a useless program except to illustrate our point). But don't do this simply to have an exception ignored! If your program cannot reasonably handle a thrown exception, don't use the following trick to get rid of it.</P>
+
+
+<blockquote>
+<P class="java">public static void main(String[]) {
+<br>      
+&nbsp;&nbsp;&nbsp;try { <br>          
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception(); <br>      
+&nbsp;&nbsp;&nbsp;} catch {Exception ex) { <br>          
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... <br>      
+&nbsp;&nbsp;&nbsp;} <br>   }</P>
+</blockquote>
+<p>Instead, use a throws-clause, as explained below. But before we explain the throws-clause, we talk about checked and unchecked objects.</p>
+
+<h3>Checked and unchecked objects</h3>
+
+<P>Checking that thrown objects are caught is a good idea, for it forces the programmer to think 
+carefully about how thrown objects should be handled. But the Java compiler does not 
+check ALL thrown objects in this manner. Checking all possible thrown objects would be awkward and cumbersome, for there are <em>many</em> possibilities. For example, there are many possible RuntimeExceptions like divide-by-0, index-out-of-bounds, and null-pointer-exception.</P>
+<P>Java checks all of throwable classes EXCEPT: </P>
+
+<ol><li>Thrown objects of class <span class="java">Error</span> and its subclasses</li>
+<li>Thrown objects of class <span class="java">RuntimeException</span> and its subclasses</li>
+</ol>
+<h3>The throws clause</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/IjDL0tlywkM?rel=0"><IMG SRC=../imagesActivity/throwsClause.jpg width="129" hspace="5" align="left"></a>A method might not WANT to catch a thrown object. Instead, it might want to have it thrown further to the calling method. To 
+eliminate the error mentioned at the beginning of this webpage and have the thrown object thrown further, put a <DFN>throws clause</DFN> 
+  on the method header. Here's the <a href="09throwsClause.pdf">modified script</a>.</P>
+<p>&nbsp;</P>
+<p>The throws clause has the form</p>
+
+<blockquote>
+<P>  <span class="java">throws</span> &lt;class-name&gt;, ..., &lt;class-name&gt;
+</P></blockquote>
+
+<P>where each class-name is <span class="java">Throwable</span> or one of its subclasses. 
+Placing a throws clause on a method relieves the method of the responsibility of 
+catching objects of the named classes and places the responsiblity on any method 
+that calls this one.</P>
+<P>Here's a suggestion. Don't worry about putting in throws clauses. Put them out of your mind. But, whenever Javatells you that an exception must be caught, put in the throws clause.</P>
+<p>&copy;This material is from the CD ProgramLive by David Gries and Paul Gries</p>
+
+<!-- InstanceEndEditable --></div>
+
+<hr />
+
+<div id="footer">
+<!-- The footer-content div contains the Cornell University copyright -->
+<div id="footer-content">
+	&copy;2017 David Gries</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".fancybox").fancybox({
+         width : '70%',
+         height : '70%'
+     });
+});
+</script>
+</body>
+<!-- InstanceEnd --></html>

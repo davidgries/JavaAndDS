@@ -1,0 +1,1 @@
+public class S extends C implements I1, I2 {}
