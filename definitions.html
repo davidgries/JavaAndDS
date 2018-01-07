@@ -236,7 +236,7 @@
 <li><a href='definitions.html'><span>Java<br />
 HyperText</span></a></li>
 	
-	<li><a href='JavaStyle.html'><span>Style<br />
+	<li><a href='JavaStyle.html'><span>Style <br />
 Guide</span></a></li>
 
 <li class='has-sub '><a href='eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
@@ -314,6 +314,11 @@ invariants</span></a>
 	
 <li><a href='stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
 
+	<li class='has-sub '><a href='recursion/recursion.html'><span>Recursion</span></a>
+      <ul>
+         <li><a href='recursion/recursionTree.html'><span>&nbsp;&nbsp;on trees</span></a></li>
+</ul>
+</li>
 
 <li><a href='hashing/01hashing.html'><span>Hashing</span></a></li> 
 
@@ -1385,6 +1390,12 @@ BFS</span></a></li>
           <dd>An object is mutable if (some of) its fields can be changed.
           See <a class = "linker" title="#immutable">immutable</a>.</dd>
         </div>
+		  
+		  <div class = "display">
+          <dt>mutual recursion</dt>
+          <dd>Two (or more) methods are mutually recursive if they do something like this: Method A calls method B, B calls method C, and C calls A.</dd>
+        </div>
+		  
         <div class = "display">
           <dt><a name="narrowertype" id="narrowertype"></a>narrower type</dt>
           <dd>Below, each line gives a series of types, beginning with the narrowest
@@ -1637,8 +1648,9 @@ BFS</span></a></li>
 		  
 		  <div class = "display">
           <dt><a name="recursion" id="recursion"></a>recursion</dt>
-          <dd>A method is <em>recursive</em> if its body contains a call on itself. Recursion is an important tool; using it can simplify a method greatly.<br />
-              There are two aspects to recursion: (1) how recursive calls are executed and (2) how one understands a recursive method. The first aspect is discussed in several videos on how method calls are executed <a href="explainJava/03methodCalls.html">on this page</a>. Study this and recursion won't seem to confusing.</dd>
+          <dd>A method is <em>recursive</em> if its body contains a call on itself.<br />
+              <a href="recursion/recursion.html">This webpage</a> contains a detailed explanation.<br />
+<a href="recursion/recursionTree.html">This webpage</a> contains two videos that develop recursive methods for traversing trees. </dd>
           <dd>&nbsp;</dd>
         </div>
 		  

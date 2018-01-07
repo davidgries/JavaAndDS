@@ -10,8 +10,7 @@
 
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
-
-<title>AssertEquals</title>
+<title>Recursion</title>
 <!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
@@ -90,16 +89,16 @@ HyperText</span></a></li>
 	<li><a href='../JavaStyle.html'><span>Style <br />
 Guide</span></a></li>
 
-<li class='has-sub '><a href='Ecl01eclipse.html'><span>Eclipse</span></a>
+<li class='has-sub '><a href='../eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
      <ul>
-         <li><a href='Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
-         <li><a href='Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
-         <li><a href='Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
-         <li><a href='Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
-         <li><a href='Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
-         <li><a href='Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
-         <li><a href='Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
-         <li><a href='Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+         <li><a href='../eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='../eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='../eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='../eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='../eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='../eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='../eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='../eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
 </ul>
 </li>
 
@@ -165,9 +164,9 @@ invariants</span></a>
 	
 <li><a href='../stepwise/stepwise.html'><span>Stepwise<br />refinement</span></a></li> 
 
-	<li class='has-sub '><a href='../recursion/recursion.html'><span>Recursion</span></a>
+	<li class='has-sub '><a href='recursion.html'><span>Recursion</span></a>
       <ul>
-         <li><a href='../recursion/recursionTree.html'><span>&nbsp;&nbsp;on trees</span></a></li>
+         <li><a href='recursionTree.html'><span>&nbsp;&nbsp;on trees</span></a></li>
 </ul>
 </li>
 
@@ -195,25 +194,51 @@ BFS</span></a></li>
 <div id="content">
   <div id="main">
   
-<h2><b>assertEquals</b></h2>
+<h2 class="colorRed">Recursion</h2>
 
-<p >The image below shows  class <span class="java">C</span> and JUnit testing class <span class="java">CTester</span>, which appear in the same default package. Static function <span class="java">C.min</span> returns the minimum of three values. Procedure <span class="java">testMin</span> in <span class="java">CTester</span> tests whether function <span class="java">C.min</span> is correct by calling procedure <span class="java">assertEquals</span> three times.</P>
-<p ><img src="Ecl08JUnitAssert1.png" width="700" alt="Junit testing" /></P>
-<p >Procedure <span class="java">assertEquals</span> has two parameters, the <em>expected-value</em> and the <em>computed-value</em>, so a call looks like this:</P>
+<p > A recursive definition is definition that is defined in terms of itself. Here is an example from  English grammar:</P>
 <blockquote>
-<p ><span class="java">assertEquals</span>(<em>expected-value</em>, <em>computed-value</em>);</P>
+    <p >
+        A noun-phrase is either<br />
+        (1) a noun or<br />
+        (2) an adjective followed by a noun-phrase.</P>
 </blockquote>
-<p >Note the order of parameters: <em>expected-value</em> and <em>computed-value</em>. Therefore, do <em>not</em> write the first call this way: <span class="java">assertEquals(C.min(3, 5, 4), 3);</span></P>
-<p >Actually, there are many methods <span class="java">assertEquals</span>, one has <strong>int</strong> parameters, one has <strong>char</strong> parameters, one has <strong>float</strong> parameters, etc. The name <span class="java">assertEquals</span> is overloaded.</P>
-<p ><span class="java">assertEquals(e, c);</span> is executed as follows. If the values of <span class="java">e</span> and <span class="java">c</span> are equal,  nothing is done. If <span class="java">e</span> and <span class="java">c</span> are different, an &quot;exception&quot; is thrown, thus causing a failure, so that a red line appears in the resulting JUnit testing pane. That's all there is to it.</P>
-<p >Look at the above example when you have to write a JUnit testing procedure to test a static function. Make sure you put in enough test cases (i.e. calls on <span class="java">assertEquals</span>) so that each part of the static function is exercised in at least one test case.</P>
-<p >&nbsp;</P>
-<p >&nbsp;</P>
-<p >&nbsp;</P>
-<p >&nbsp;</P>
-<p >&nbsp;</P>
+<p >Using that definition, these are all noun-phrases:</P>
+<blockquote>
+	<p>dog, big dog, big white dog, big white furry dog, big big big white dog.</p>
+</blockquote>
+	<p >Recursive definitions abound in mathematics. Think, for example of the definition of n! = n*(n-1)*...*1:</P>
+<blockquote>
+	<p >0! = 1<br />
+		n! = n*(n-1)!   for n > 0.		</P>
+</blockquote>
+	<p >In programming, a recursive method is a method that contains a call on itself. It is easy to translate the above definition of n! into a recursive Java function:</P>
+	
+	<blockquote>
+	<p >/** Return n!<br />
+	 &nbsp;&nbsp;&nbsp;*  Precondition: n &gt;= 0 */<br />
+	<strong>public static int</strong> factorial(<strong>int</strong> n) {<br />
+	&nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> (n == 0) <strong>return</strong> 1;<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> n * factorial(n-1);<br />
+	}</P>
+	</blockquote>
+	<h3>How recursive calls are executed</h3>
+	<p >You may wonder how recursive calls are executed. Once you understand how <em>any </em>call, nonrecursive or recursive, is executed, any confusion will disappear. <a href="../explainJava/03methodCalls.html">Here are videos</a> that explain execution of method calls.</P>
+	<h3 >How to understand that a recursive method implements its specification</h3>
+	<p >Still to be written</P>
+	<h3>Using recursion to traverse trees</h3>
+<p><a href="recursionTree.html">Here are two videos</a> that give models for using recursion for traversing trees.</P>
+<h3>Using recursion to traverse graphs</h3>
+<p>The simplest depth-first search of a graph is recursive. Watch the first two videos <a href="../dfs/dfs01.html">on this page</a>.</P>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <h3>&nbsp;</h3>
-  </div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    </div>
 </div>
 <!-- InstanceEndEditable --></div>
 
