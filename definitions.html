@@ -253,12 +253,11 @@ Guide</span></a></li>
 </ul>
 </li>
 
-<li class='has-sub '><a href='apiString/01APIString.html'><span>API &<br /> 
+<li class='has-sub '><a href='apiString/10APIString.html'><span>API &<br /> 
     strings</span></a>
       <ul>
-         <li><a href='apiString/01APIString.html#apidoc'><span>1. API documentation</span></a></li>
-         <li><a href='apiString/01APIString.html#char'><span>2. Class Character</span></a></li>
-         <li><a href='apiString/01APIString.html#string'><span>3. Class String</span></a></li>
+         <li><a href='apiString/10APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='apiString/10APIString.html#string'><span>3. Using Strings</span></a></li>
 </ul>
 </li>
 	
@@ -822,6 +821,13 @@ BFS</span></a></li>
           <dt><a name="decimalnumber" id="decimalnumber"></a>decimal number system</dt>
           <dd>The system for writing natural numbers 0, 1, 2, ... using digits 0, 1, ..., 9. See <a href="files/bases.pdf">this pdf file</a>.</dd>
         </div>
+		  
+		  <div class = "display">
+          <dt>default package</dt>
+          <dd>The <a class = "linker" title="#package">package</a> that is used for a class file that is not placed in an explicitly named package. See <a href="files/packageImport.pdf">this pdf file</a> for an explanation.</dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt>default values</dt>
           <dd>Fields (both static and non-static) have default values (if they
@@ -1134,9 +1140,7 @@ BFS</span></a></li>
         where the &lt;<span class="italixs">path</span>&gt; is a path of the
         API package (e.g. <span class="java">javax.swing</span>) or a
         path to a directory on your hard drive that represents a package of classes.
-        It is placed as the first statement of a file that contains a class definition
-        in order to indicate that the class may refer to the classes in the directory
-        given by the &lt;<span class="italixs">path</span>&gt;.</dd>
+        See the second page of <a href="files/packageImport.pdf">this pdf file</a> for more information.</dd>
         </div>
         <div class = "display">
           <dt><a name="infix" id="infix"></a>infix operator</dt>
@@ -1495,21 +1499,29 @@ BFS</span></a></li>
             Static components are <em>not</em> overridden but are hidden. This is explained in this one-page <a href="files/staticHide.pdf">pdf file</a>. </p>
         </div>
         <div class = "display">
-          <dt>package</dt>
+          <dt><a name="package" id="package"></a>package</dt>
           <dd>A package consists of the classes that are contained in a specific
           directory on your hard drive (or the API packages, like javax.swing
-          and java.lang). <br><br>
+          and java.lang). <br />
+          See <a href="files/packageImport.pdf">this pdf file</a> for an explanation. <br><br>
 			 The default <a class = "linker" title="#accessmodifier">access modifier</a> ---used when
 			  no access modifier is present in a declaration. A variable or
           method that is declared without a modifier can be referenced in any class
 			  declared within this package.</dd>
         </div>
         <div class = "display">
+          <dt><a name="packagestatement" id="packagestatement"></a>package statement</dt>
+          <dd>A statement that must be put at the head of each class that appears in a package. See <a href="files/packageImport.pdf">this pdf file</a> for an explanation.</dd>
+        </div>
+		  
+		  <div class = "display">
           <dt><a name="parameter" id="parameter"></a>parameter</dt>
           <dd>A <a class = "linker" title="#Variable">variable</a> that is declared within the parentheses
           of the <a class = "linker" title="#methodheader">header
           of a method</a>.</dd>
         </div>
+		  
+		  
         <div class = "display">
           <dt>parameter declaration</dt>
           <dd>A parameter declaration occurs within the parentheses of the <a class = "linker" title="#methodheader">header

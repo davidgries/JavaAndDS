@@ -10,7 +10,7 @@
 
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Shortest-path algorithm</title>
+<title>API specs, strings</title>
 <!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
@@ -22,7 +22,7 @@
 -->
 <link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
 <!-- InstanceBeginEditable name="head" -->
-    <!-- InstanceEndEditable -->
+<!-- InstanceEndEditable -->
 <script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
 <style type="text/css">
@@ -103,11 +103,12 @@ Guide</span></a></li>
 </ul>
 </li>
 
-<li class='has-sub '><a href='../apiString/10APIString.html'><span>API &<br /> 
+<li class='has-sub '><a href='01APIString.html'><span>API &<br /> 
     strings</span></a>
       <ul>
-         <li><a href='../apiString/10APIString.html#apidoc'><span>1. API documentation</span></a></li>
-         <li><a href='../apiString/10APIString.html#string'><span>3. Using Strings</span></a></li>
+         <li><a href='01APIString.html#apidoc'><span>1. API documentation</span></a></li>
+         <li><a href='01APIString.html#char'><span>2. Class Character</span></a></li>
+         <li><a href='01APIString.html#string'><span>3. Class String</span></a></li>
 </ul>
 </li>
 	
@@ -178,7 +179,7 @@ invariants</span></a>
 BFS</span></a></li>
 
 
-<li><a href='shortestPath.html'><span>Shortest<br />
+<li><a href='../shortestPath/shortestPath.html'><span>Shortest<br />
  path</span></a></li>
 
 </ul>
@@ -191,34 +192,75 @@ BFS</span></a></li>
 
 <!-- The content div contains the main content of the page -->
 <!-- InstanceBeginEditable name="content" -->
-<div id="content">
+<div  id="content">
   <div id="main">
-  
-<h2 class="colorRed">The shortest-path algorithm</h2>
-
-<p > The shortest-path algorithm calculates the shortest path from a start node to each node of a connected graph. Developed in 1956 by Edsger W. Dijsktra, it is the basis for all the apps that show you a shortest route from one place to another. In 15 minutes of video, we tell you about the history of the algorithm and a bit about Edsger himself, we state the problem, and then we develop the algorithm.</P>
-<p >&nbsp;</P>
-<h3>History of Dijkstra's short-path algorithm</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/-8laQUhfYUk?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>Edsger W. Dijkstra developed this algorithm in 1956. He was 26 at the time, working on his PhD in the Netherlands. Watch this 3.3 minute video to get a sense of the times and how he developed it. Read it here: <a href="01shortestPathHistory.pdf">01shortestPathHistory.pdf</a><br />
-</P>
-<p>&nbsp;</P>
-<h3>The shortest-path problem</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/zPMZ5ylhErw?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>In this video, we state the problem.  (2 minutes).<br />
-  Read it here: <a href="02shortestPathProblem.pdf">02shortestPathProblem.pdf</a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h3>The invariant of the algorithm and a theorem about it</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/WhlGaIShFOI?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>The invariant of the algorithm is remarkably simple, consisting of 3 parts. We are also prove a theorem about the invariant, which will help us in the next video to develop the algorithm from the invariant. (4.75 minutes): <a href="03shortestPathInv.pdf">03shortestPathInv.pdf</a></p>
-<p>It will help you to get out a blank piece of paper and write down what you remember of the invariant and the theorem. Compare what you wrote to what we wrote and then try again.</p>
-<h3>The development of the algorithm</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/hKt7ZqCemVg?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We develop the algorithm. As you watch the development, focus on the invariant and see how relatively easily the algorithm is developed from it. It takes only 6 minutes(!) ---allthough we do ask you to stop the video and do some thinking yourself in 4 different places. Read the development here: <a href="04shortestPathDevelop.pdf">04shortestpathDevelop.pdf</a></p>
-<p>&nbsp;</p>
-<p>Here is <a href="1959dijkstra.pdf">Edsger Dijkstra's paper, from 1959</a>. He presents two algorithms; the second one is the shortest-path algorithm: </p>
-<p>Some of you may not be comfortable yet with understanding a presentation like this. Instead, you want to see the algorithm being executed. But you don't need <em>us</em> to show you an execution ---<strong>you</strong> can do it yourself, and you will gain more understanding by doing it yourself. Start with a small graph, like the one used in the problem statement (shown) below, and carefully execute the algorithm, keeping track of what is in the settled and frontier sets and in array d. The algorithm itself is on the second page of the pdf document for this video: <a href="04shortestPathDevelop.pdf">04shortestpathDevelop.pdf</a></p>
-
-<p><img src="shortestPath_clip_image001.png" alt="a graph" width="151" height="111" align="left" /></p>
-<p>&nbsp;</p>
-    </div>
+      <h2 class="colorRed">Java applications, packages, API specs, programming with Strings      </h2>
+      <p >The goals of this module are for you to learn:</p>
+      <ol>
+          <li>How to run Java applications in Eclipse;</li>
+          <li>What a package is and how you view Java specifications on the web ---the Java API (Application Programmer Interface) specs;</li>
+          <li>How to write programs that manipulate strings (sequences of characters).</li>
+      </ol>
+      <p >There is nothing deep in all this! You have already used an IDE (Integrated Development Environment) to write programs that manipulate strings in some language. It's just a matter of learning the mechanics of programming using Eclipse, learning a little bit about classes and objects, and seeing how strings are manipulated in Java. There's a lot of detail, and it may be frustrating at first, but stick with it and soon this will all appear simple.</p>
+      <h3><a name="apidoc" id="apidoc2"></a>1. Running a Java application to print &quot;hello&quot; in several languages.</h3>
+      <p>In the tutorial on Eclipse, you already learned how to to write and run a Java application. If you don't remember, please <a href="../eclipse/Ecl01eclipse.html">visit this page</a> and watch the first video on it. Then, in Eclipse, create a new project, create a method <em>main</em> in it ---you can type any simple string in the println statement, for example,  "hello"--- and run it.</p>
+      <h3>2. Packages and the package and import statements</h3>
+      <p>A <em>package</em> is a collection of related Java classes —and perhaps other (sub) packages. <a href="../files/packageImport.pdf">This pdf file</a> gives full details. It also tells you about the package statement and the import statement.      </p>
+      <h3><a name="apidoc" id="apidoc"></a>3. The Java API documentation</h3>
+      <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/wTa_0xGY8Rs?rel=0"><img src="../imagesActivity/WhiteFill.png"  width="100"  align="left" hspace="5" /></a>Java has predefined classes for all sorts of things from dealing with strings of characters to building GUIS to reading web pages.  Because there are so many classes, they are grouped into packages. The documentation for all these classes appears on the web as the &quot;Java API Specification&quot;. This video shows you how to visit the Java API Spec in a browser and how to read it. (2:49 minutes) Read it here: <a href="01API.pdf">01API.pdf</a></p>
+      <p>&nbsp;</p>
+      <h3>4. Primitive type char</h3>
+      <p>Read <a href="../files/char.pdf">this pdf file</a> to learn about primitive type <strong>char</strong>. There's more than you need to remember. Important points to remember are:</p>
+      <p>(1) a character is enclosed in single quotes, e.g. '$'.</p>
+      <p>(2) Special <strong>char</strong>s require an escape char \, e.g. '\n' is the new-line character and '\\' is the backslash character.</p>
+      <p>(3) A character is represented internally by an <strong>int</strong>, and one can cast between a <strong>char</strong> and its <strong>int</strong> representation. Such casts happen automatically when necessary. Example: The value of &nbsp;(<strong>char</strong>) 65&nbsp; is 'A'. Example, the value of &nbsp;(<strong>int</strong>) 'A'&nbsp; is 65.</p>
+      <p>(4) Most characters are represented in <em>Unicode</em>, a 16-bit representation. See <a href="http://www.unicode.org/">www.unicode.org/</a></p>
+      <h3><a name="string" id="string"></a>5. Class String</h3>
+      <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/-RWd6QFY_ks?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>In this video, we talk about strings ---sequences of characters--- and show you what the Java API documention looks like for class String. We introduce basic string functions and show you how to write calls on them. We end by developing a function from its specification, showing you how we intersperse English statements with their implementations in Java.  (5:30 minutes) Read it here: <a href="API13String.pdf">String.pdf</a>. Below are the frequently used String functions.</p>
+      <table border="3" align="center" cellpadding="0" cellspacing="0" vspace="0">
+          <tr >
+              <td class="griestd">length</td>
+              <td class="griestd">charAt</td>
+              <td class="griestd">substring</td>
+          </tr>
+          <tr >
+             <td class="griestd">indexOf</td>
+              <td class="griestd">lastIndexOf</td>
+              <td class="griestd">&nbsp;</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr >
+             <td class="griestd">startsWith</td>
+              <td class="griestd">endsWith</td>
+              <td class="griestd">contains</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">compareTo</td>
+              <td class="griestd">equal</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">trim</td>
+              <td class="griestd">replace</td>
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          <tr>
+              <td class="griestd">toLowerCase</td>
+              <td class="griestd">toUpperCase</td>
+              <td class="griestd">&nbsp;</td
+    >
+              <td class="griestd">&nbsp;</td>
+          </tr>
+          
+          <tr></tr>
+      </table>
+      <p>We suggest that you look through the API Specs for class String. Here's the webpage:</p>
+      <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;docs.oracle.com/javase/8/docs/api/java/lang/String.html
+      </p>
+      <h3>&nbsp;</h3>
+      <p>&nbsp;</p>
+  </div>
 </div>
 <!-- InstanceEndEditable --></div>
 
