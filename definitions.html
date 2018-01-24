@@ -664,10 +664,10 @@ BFS</span></a></li>
         </div>
 		  
         <div class = "display">
-          <dt><a name="Class" id="Class"></a>class</dt>
-          <dd> A class definition defines the format of <a class = "linker" title="#Object">objects</a> (or
+          <dt><a name="Class" id="Class"></a>class definition, class declaration</dt>
+          <dd> A class definition (or declaration) defines the format of <a class = "linker" title="#Object">objects</a> (or
           instances or folders) of the class —it defines the <a class = "linker" title="#Method">methods</a> and <a class = "linker" title="#Field">fields</a>        that
-          go in each <a class = "linker" title="#Object">object</a> of the class. This <a href="files/object.pdf">pdf file</a> explains how we draw an object of a class.<br>
+          go in each <a class = "linker" title="#Object">object</a> of the class. It is a <em>blueprint</em> for objects of the class. This <a href="files/classDef.pdf">pdf file</a> explains describes the basic class definition and explains how we draw objects.<br>
           <br>
           The class definition also defines the <a class = "linker" title="#Static">static</a> variables
           (class variables) and <a class = "linker" title="#Static">static</a> methods (class methods).<br><br>
@@ -952,7 +952,8 @@ BFS</span></a></li>
         </div>
         <div class = "display">
           <dt>equals</dt>
-          <dd>The call b.equals(c) on function equals in class Object returns true iff b == c is true. But equals should sometimes be overridden in a class to define what equality means for that class. This <a href="files/equals.pdf">pdf file</a> tells you how to do it, and here are some .java files to demo with: <a href="files/equals.zip">equalsDemo.zip</a></dd>
+          <dd>The call b.equals(c) on function equals in class Object returns true iff b == c is true, i.e. b and c evaluate to null or to the same pointer ---they point to the same object.</dd>
+          <dd>Equals should sometimes be overridden in a class to define what equality means for that class. This <a href="files/equals.pdf">pdf file</a> tells you how to do it, and here are some .java files to demo with: <a href="files/equals.zip">equalsDemo.zip</a></dd>
         </div>
         <div class = "display">
           <dt>Error, class</dt>
@@ -1529,12 +1530,12 @@ BFS</span></a></li>
         <div class = "display">
           <dt><a name="Object" id="Object"></a>object</dt>
           <dd> An instance of a <a class = "linker" title="#Class">class</a>, also called a folder. Each object of a class contains the <a class = "linker" title="#Instance">non-static</a> <a class = "linker" title="#Field">fields</a> and <a class = "linker" title="#Method">methods</a> defined
-          in and inherited by the class. See <a class = "linker" title="#Class">class</a>. This <a href="files/object.pdf">pdf file</a> explains how we draw objects.</dd>
+          in and inherited by the class. See <a class = "linker" title="#Class">class</a>. This <a href="files/classDef.pdf">pdf file</a> explains how we draw objects.</dd>
         </div>
         <div class = "display">
           <dt>Object, class</dt>
           <dd>The superest class of them all: any class that does not explicitly
-          extend another class automatically extends class Object. This <a href="files/object.pdf">pdf file</a>  explains how we draw objects.</dd>
+          extend another class automatically extends class Object. This <a href="files/classDef.pdf">pdf file</a>  explains how we draw objects with a partition for superclass Object.</dd>
         </div>
         <div class = "display">
           <dt><a name="ObjectType" id="ObjectType"></a>object type</dt>
@@ -1599,8 +1600,8 @@ BFS</span></a></li>
           <dd>See <a class = "linker" title="#typePar">type parameter</a>.</dd>
         </div>
         <div class = "display">
-          <dt><a name="partition" id="partition">partition, of an object</dt>
-          <dd>A place within an object for the components declared in a particular class. See this <a href="files/object.pdf">pdf file</a> for an explanation.</dd>
+			<dt><a name="partition" id="partition"></a>partition, of an object</dt>
+          <dd>A place within an object for the components declared in a particular class. See this <a href="files/classDef.pdf">pdf file</a> for an explanation.</dd>
         </div>
         <div class = "display">
           <dt>path, in file system</dt>
@@ -2018,7 +2019,7 @@ BFS</span></a></li>
           <dt>toString function</dt>
           <dd>A Java convention is to write an instance function toString() that
           yields a description of the object in which it resides. Function toString() is defined in Object, the superest class of them all. That function returns the name of the object (e.g. C@fdee).</dd>
-          <dd>Example. In a class Point with two fields contain the x- and y coordinates of a point in the plane, calling p.tostring() where object p contains x-value 5 and y-value 4 could return "(5, 4)".</dd>
+          <dd>Example. In a class Point with two fields contain the x- and y-coordinates of a point in the plane, calling p.tostring() where object p contains x-value 5 and y-value 4 could return "(5, 4)".</dd>
         </div>
         <div class = "display">
           <dt>try-statement</dt>
