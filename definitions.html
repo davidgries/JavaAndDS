@@ -1390,13 +1390,33 @@ BFS</span></a></li>
           <dt>Long, class</dt>
           <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#long">long</a>.</dd>
         </div>
+		  
+
         <div class = "display">
-          <dt><a name="loops" id="loops"></a>loops</dt>
+          <dt><a name="loops" id="loops"></a>loop</dt>
           <dd>Java has four different kinds of loop. Here are one-page pdf files that explain each of them:<br>
           <a href="files/for-loop.pdf">for-loop</a>, <a href="files/while-loop.pdf">while-loop</a>, <a href="files/do-loop.pdf">do-loop</a>, <a href="files/foreach.pdf">foreach loop</a>.<br>
           You can enable the use of the foreach statement on your own collection class by implementing interfaces Iterator and Iterable. This tutorial shows you how in
           less than 15 minutes of video: <a href="iteratorIterable/iterator.html">webpage</a>.</dd>
         </div>
+		  
+		  		  <div class = "display">
+          <dt>Loop invariant</dt>
+          <dd><em>Invariant</em> means <em>non-changing</em>. A mathematical expression is an invariant if its value doesn't change. Thus, a loop invariant is a boolean expression that is true before and after each iteration of the loop.<br />
+              Loop invariants are used to prove loops correct and, more importantly, to help in the <em>development</em> of loops. <br />
+              <a href="loops/01aloop1.html">This tutorial</a> discusses loop invariants thoroughly. For a brief intro, read this <a href="loops/02looploopyq.pdf">pdf file</a>.</dd>
+        </div>
+		  
+    <div class = "display">
+          <dt>loopy questions</dt>
+        <dd>The four loopy questions are used to prove that a loop is correct. For a brief intro,  read this <a href="loops/02looploopyq.pdf">pdf file</a>.<br />
+            Here, in brief, are the 4 loopy questions, using the name P for the invariant:<br />
+        1. Does it start right: does the initialization truthify P?<br />
+        2. Does it end right: Does the falsity of the loop condition together with P imply that the postcondition is true?<br />
+        3. Does the repetend make progress toward termination?<br />
+        4. Does the repetend main P: if P and loop condition are true, does execution of the repetend end with the P true?</dd>
+        </div>
+		  
         <div class = "display">
           <dt>lower-bounded type or wildcard</dt>
           <dd>See <a class = "linker" title="#generics">generics</a>.</dd>
