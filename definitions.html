@@ -1240,7 +1240,8 @@ BFS</span></a></li>
         <div class = "display">
           <dt><a name="insideOut" id="insideOut"></a>inside-out rule</dt>
           <dd>A rule, used in most programming languages, that indicates how to determine
-          what a reference to a variable or a method means (which declaration it refers to). It is explained in this <a href="files/insideOutRule.pdf">pdf file</a>.</dd>
+          what a reference to a variable or a method means (which declaration it refers to). It is explained in this <a href="files/insideOutRule.pdf">pdf file</a>.<br />
+          <a href="files/useOfThisDot.pdf">This pdf file</a> shows how to reference a field that has been shadowed because of the inside-out rule.</dd>
         </div>
         <div class = "display">
           <dt><a name="Instance" id="Instance"></a>instance</dt>
@@ -1892,7 +1893,7 @@ BFS</span></a></li>
         </div>
         <div class = "display">
           <dt>shadowing a variable</dt>
-          <dd>shadowing refers to declaring two variables with the same name with overlapping scopes. Given a reference to such a variable, the <a class = "linker" title="#insideOut">inside-out rule</a> indicates to which of the declarations the reference refers. For example, suppose a class has a field x and a method m within the class has a parameter x. That parameter, shodows field x ---every reference to x within the method refers to the parameter.</dd>
+          <dd>shadowing refers to declaring two variables with the same name with overlapping scopes. Given a reference to such a variable, the <a class = "linker" title="#insideOut">inside-out rule</a> indicates to which of the declarations the reference refers. For example, suppose a class has a field x and a method m within the class has a parameter x. That parameter, shadows field x ---every reference to x within the method refers to the parameter. <a href="files/useOfThisDot.pdf">This pdf file</a> shows how to use &quot;this.&quot; to reference a shadowed field.</dd>
         </div>
         <div class = "display">
           <dt><a name="short" id="boolean3"></a>short</dt>
@@ -2038,7 +2039,10 @@ BFS</span></a></li>
         <div class = "display">
           <dt>this</dt>
           <dd>A keyword that is used in two ways.</dd>
-          <p>(1) <strong>this</strong> is an expression; it evaluates to the name of (pointer to) the object in which it appears. For example, <strong>this</strong>.x is a reference to a field x of the object.</p>
+          <p>(1) <strong>this</strong> is an expression; it evaluates to the name of (pointer to) the object in which it appears.
+			  For example, <strong>this</strong>.x is a reference to a field x of the object.
+			  Generally, we refrain from using &quot;this.&quot; indiscriminately to avoid useless clutter.
+			  <a href="files/useOfThisDot.pdf">This pdf file</a> shows how to use it to reference a shadowed field.
           <p> (2) "<strong>this</strong>(...);" can appear as the first statement in a constructor; it calls another constructor in this class ---which one is called depends on the types of the arguments within the parentheses.   </p>
         </div>
         <div class = "display">
