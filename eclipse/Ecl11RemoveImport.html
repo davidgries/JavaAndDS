@@ -10,7 +10,8 @@
 
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Explaining algorithms: assignment</title>
+
+<title>AssertEquals</title>
 <!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
@@ -90,17 +91,17 @@ HyperText</span></a></li>
 	<li><a href='../JavaStyle.html'><span>Style <br />
 Guide</span></a></li>
 
-<li class='has-sub '><a href='../eclipse/Ecl01eclipse.html'><span>Eclipse</span></a>
+<li class='has-sub '><a href='Ecl01eclipse.html'><span>Eclipse</span></a>
      <ul>
-         <li><a href='../eclipse/Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
-         <li><a href='../eclipse/Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
-         <li><a href='../eclipse/Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
-         <li><a href='../eclipse/Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
-         <li><a href='../eclipse/Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
-         <li><a href='../eclipse/Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
-         <li><a href='../eclipse/Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
-         <li><a href='../eclipse/Ecl10Assert.html'><span>7. Assert statement</span></a></li>
-         <li><a href='../eclipse/Ecl11RemoveImport.html'><span>8. Remove unused imports</span></a></li>
+         <li><a href='Ecl01eclipse.html#createProject'><span>1. Create project</span></a></li>
+         <li><a href='Ecl02LineNos.html'><span>2. Line numbers</span></a></li>
+         <li><a href='Ecl03layoutBad.html'><span>3. Reset layout</span></a></li>
+         <li><a href='Ecl04syntaxHelp.html'><span>4. Syntax help</span></a></li>
+         <li><a href='Ecl01eclipse.html#twoFiles'><span>5. Open 2 files</span></a></li>
+         <li><a href='Ecl05TODO.html'><span>6. ToDO comments</span></a></li>
+         <li><a href='Ecl06JUnitTesting.html'><span>6. JUnit testing</span></a></li>
+         <li><a href='Ecl10Assert.html'><span>7. Assert statement</span></a></li>
+         <li><a href='Ecl11RemoveImport.html'><span>8. Remove unused imports</span></a></li>
 </ul>
 </li>
 
@@ -112,15 +113,15 @@ Guide</span></a></li>
 </ul>
 </li>
 	
-	<li class='has-sub '><a href='explainJava.html'><span>Explain<br />
+	<li class='has-sub '><a href='../explainJava/explainJava.html'><span>Explain<br />
 constructs</span></a>
       <ul>
-         <li><a href='explainJava.html'><span>Introduction</span></a></li> 
-         <li><a href='explainJava.html'><span>1. Assignment statement</span></a></li>
-         <li><a href='explainJava.html#newExp'><span>2. New-expression</span></a></li>
-         <li><a href='explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
+         <li><a href='../explainJava/explainJava.html'><span>Introduction</span></a></li> 
+         <li><a href='../explainJava/explainJava.html'><span>1. Assignment statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#newExp'><span>2. New-expression</span></a></li>
+         <li><a href='../explainJava/explainJava.html#methodCalls'><span>3. Method calls</span></a></li>
          
-         <li><a href='explainJava.html#tryState'><span>2. Try-statement</span></a></li>
+         <li><a href='../explainJava/explainJava.html#tryState'><span>2. Try-statement</span></a></li>
 </ul>
 </li>
    
@@ -193,35 +194,20 @@ BFS</span></a></li>
 <!-- The content div contains the main content of the page -->
 <!-- InstanceBeginEditable name="content" -->
 <div id="content">
+  <div id="main2">
+      <p ><br />
+      </p>
+  </div>
   <div id="main">
   
-<h2 class="colorRed">1. How to execute the assignment statement</h2>
+<h2><b>8. Remove unused import statements</b></h2>
 
-<p >We hope that this little 5-minute tutorial will clear up some misconceptions and make the rest of the course easier for you and us. Developing this presentation took many many hours! It is worth it if you take fifteen minutes or so doing what we ask here.</P>
-<blockquote>&nbsp;</blockquote>
-<h3>1. Explaining how to execute the assignment statement</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/3w2RTaI4NcU?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>In this 2.5-minute video, we emphasize the  difference between syntax and semantics once more, show what it means to execute the assignment statement, and finally give an example of execution of an assignment. Read it here: <a href="01presentingAlgorithmsA.pdf">01presentingAlgorithmsA.pdf</a></p>
-<p>&nbsp;</p>
-<blockquote>
-  <p>&nbsp;</p>
-</blockquote>
-<h3>2. Homework assignment HW1</h3>
-<p>The first question is easy ---you can copy from the first video or its transcript on the pdf file. Questions 2 and 3 ask about the if-statement and if-else statement. These are the same as in just about any programming language, except for the syntax, of course. So use your knowledge of these statements in whatever programming language you know.</p>
-<blockquote>
-  <p>1. Write the algorithm for executing the Java assignment statement &lt;variable&gt;= &lt;expression&gt;;</p>
-<p>2. Write the algorithm for executing the Java if-statement &nbsp;</p>
-<p>           &nbsp;<strong>if</strong> (&lt;boolean-expression&gt;) &lt;statement 1&gt;</p>
-<p>3. Write the algorithm for executing the Java if-else-statement &nbsp;</p>
-<p>           &nbsp;<strong>if</strong> (&lt;boolean-expression&gt;) &lt;statement 1&gt; <strong>else</strong> &lt;statement 2&gt;</p>
-<p>4. Tell us in a few words what you thought of the videos on presenting algorithms in English and executing the assignment statement, their message, and the homework.</p>
-</blockquote>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h3>&nbsp;</h3>
-<p>&nbsp;</p>
-    </div>
+<p >There is a simple way to remove unused import statements in any class.</P>
+<p >On a PC, use ctrl + shift + O .</P>
+<p >On a Mac, use command + shift + O .</P>
+<p >&nbsp;</P>
+<p >&nbsp;</P>
+  </div>
 </div>
 <!-- InstanceEndEditable --></div>
 
