@@ -1287,10 +1287,19 @@ BFS</span></a></li>
           folder</span> are synonyms.</dd>
         </div>
         <div class = "display">
+          <dt>in situ algorithm</dt>
+          <dd>An algorithm is an <em>in situ</em>, or <em>in-place</em> algorithm if it processes its data using only a constant amount of extra space (except perhaps for recursive calls on the call stack).<br />
+            Selection sort is an<em> in situ</em> sorting algorithm. <br />
+            Quicksort is an in situ sorting algorithm; it works by modifying the array itself. But it needs extra space for recursive calls. It can be written to require only O(n log n) space on the call stack.<br />
+            Mergesort is not an <em>in situ</em> sort algorithm because it generally copies 1/2 of the array into another array in order to be able to merge two sorted adjacent array segments efficiently. It also requires O(n log n) space on the call stack.</dd>
+        </div>
+		  
+		  <div class = "display">
           <dt><a name="instancemethod" id="instancemethod"></a>instance method</dt>
           <dd>A <a class = "linker" title="#Method">method</a> that is defined without modifier <span class="javakeyword">static</span> in
           a class. A copy of the method resides in each instance of the class.</dd>
         </div>
+		  
         <div class = "display">
           <dt>instanceof</dt>
           <dd>Operation &lt;<span class="italixs">object</span>&gt;<span class="javakeyword"> instanceof </span>&lt;<span class="italixs">class-name</span>&gt; yields true
@@ -1809,6 +1818,12 @@ BFS</span></a></li>
           <dd>A race condition occurs when two or more processes executing in parallel access shared data in a way that<br>
           results in unexpected (and wrong) results. See this <a href="files/raceCondition.pdf">pdf file</a>.</dd>
         </div>
+		  
+    <div class = "display">
+        <dt>quicksort</dt>
+        <dd>An expected case n log n sorting algorithm. <a href="files/sort2partition.pdf">the partition algorithm</a>. <a href="files/sort3Quicksort1.pdf">Basic quicksort</a>. Improved quicksort.</dd>
+        </div>
+		  
         <div class = "display">
           <dt><a name="radix" id="radix"></a>radix</dt>
           <dd>The base of a number system. For example, base 2 is the same as radix 2. See <a href="files/bases.pdf">this pdf file</a>.</dd>
@@ -1838,7 +1853,8 @@ BFS</span></a></li>
           <dt><a name="recursion" id="recursion"></a>recursion</dt>
           <dd>A method is <em>recursive</em> if its body contains a call on itself.<br />
               <a href="recursion/recursion.html">This webpage</a> contains a detailed explanation.<br />
-<a href="recursion/recursionTree.html">This webpage</a> contains two videos that develop recursive methods for traversing trees. </dd>
+<a href="recursion/recursionTree.html">This webpage</a> contains two videos that develop recursive methods for traversing trees.<br />
+<a href="files/recursionTail.pdf">This pdf file</a> defines<em> tail call</em> shows how tail calls can be optimized.</dd>
           <dd>&nbsp;</dd>
         </div>
 		  
@@ -1970,7 +1986,7 @@ BFS</span></a></li>
           <dt>sorting<br />
           </dt>
           <dd>For insertion sort and selection sort, see this <a href="files/sort1.pdf">pdf file</a>.<br />
-              Quicksort: <a href="files/sort2partition.pdf">the partition algorithm</a>. Basic quicksort. Improved quicksort.<br />
+              For quicksort: <a href="files/sort2partition.pdf">the partition algorithm</a>. <a href="files/sort3Quicksort1.pdf">Basic quicksort</a>. Improved quicksort.<br />
               For a discussion of <em>stable sorting</em> see <a class = "linker" title="#stablesort">stable sort</a>.
               Sort using an anonymous function: array <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionArraySort.pdf">pdf file</a>, List or ArrayList or LinkedList <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionListSort.pdf">pdf file</a>.</dd>
         </div>
@@ -2094,6 +2110,14 @@ BFS</span></a></li>
           <dd><blockquote>&lt;variable&gt; = &nbsp;&nbsp;&lt;expression&gt; ;</blockquote></dd>
           <dd>where (1) the &lt;variable&gt; must be declared beforehand and (2) the type of the &lt;expression&gt; must be the same as or narrower than the type of the &lt;variable&gt;. That's all part of the syntax, and a program will not be <a class = "linker" title="#compiler">compiled</a> if the rules are not followed.</dd>
         </div>
+		  
+		  <div class = "display">
+          <dt>tail call, tail recursion</dt>
+          <dd>A recursive call is a <em>tail call</em> if no further action is performed in the method after that tail call has been executed. A method with a tail call is termed <em>tail recursive</em>.
+              This <a href="files/recursionTail.pdf">pdf file</a> shows how tail calls can be optimized. </dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt><a name="ternary" id="ternary"></a>ternary operator</dt>
           <dd>An operator with three operands. One example in Java is the <a class = "linker" title="#conditional">conditional expression</a>. See also <a class = "linker" title="#unary">unary operator</a> and <a class = "linker" title="#binary">binary operator</a>.</dd>
