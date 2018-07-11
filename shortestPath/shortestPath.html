@@ -219,6 +219,17 @@ BFS</span></a></li>
 
 <p><img src="shortestPath_clip_image001.png" alt="a graph" width="151" height="111" align="left" /></p>
 <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Calculating the shortest paths as well as their lengths using backpointers</strong></h3>
+<p><a href="SP05Bkptrs.pdf">This pdf file</a> extends the algorithm to save not only the distance of all shortest paths with start node v but also the paths themselves, using <em>backpointers</em>.</p>
+<h3>The runtime complexity of the shortest-path algorithm</h3>
+<p><a href="SP06Time.pdf">This pdf file</a> analyzes the expected-case and worst-case time of the algorithm, giving different results for sparse and dense graphs.
+	The analysis is interesting because for all but one line of the algorithm, we can determine exactly how many times it is executed.</p>
+<h3>Implementing the shortest-path algorithm</h3>
+<p><a href="SP07Concretize.pdf">This pdf file</a> discusses implementing the algorithm in Java. Nodes will be given not as numbers bu as objects, so the two arrays d and bp cannot be used. Besides discussing the necessary data structures, the pdf file gives a number of stylistic points; following them carefully <em>as one programs</em> will lead more quickly to a well-structured, pleasing, even beautiful implementation.</p>
+<p>&nbsp;</p>
     </div>
 </div>
 <!-- InstanceEndEditable --></div>

@@ -589,6 +589,11 @@ BFS</span></a></li>
         </div>
 		  
 		  <div class = "display">
+          <dt>backpointer</dt>
+          <dd>Consider a path (p, p1, p2, ...) in a graph. A backpointer for a node in the path is the previous node. Thus, p1's backpointer is p and p2's backpointer is p1. Backpointers are used in <a class = "linker" title="#shortestPath">Dijkstra's shortest path algorithm</a>.</dd>
+        </div>
+		  
+    <div class = "display">
           <dt><a name="base" id="base"></a>base 2, 8, 10, and 16</dt>
           <dd>The natural numbers 0, 1, 2, ... can be represented in different bases or radixes. See <a href="files/bases.pdf">this pdf file</a>.</dd>
         </div>
@@ -1987,12 +1992,14 @@ BFS</span></a></li>
           <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#byte">short</a>.</dd>
         </div>
 		  <div class = "display">
-          <dt>shortest path algorithm</dt>
-          <dd>An algorithm developed by Edsger W. Dijkstra in 1957 for finding the shortest path from a start node to all nodes 
+          <dt><a name="shortestPath" id="shortestPath"></a>shortest path algorithm</dt>
+          <dd>An algorithm developed by Edsger W. Dijkstra in 1956 for finding the distance of the shortest path from a start node to each node 
 			  (or to one particular node) in a graph in which the edges have positive weights.<br />
               <a href="shortestPath/shortestPath.html">This webpage</a> contains four videos that (1) give the history of the algorithm, (2) state the problem, (3) show the invariant of the algorithm, and (4) develop the algorithm from the invariant.<br />
-              This pdf file analyzes the runtime of the algorithm (to be written).
-          </dd>
+              <a href="shortestPath/SP05Bkptrs.pdf">This pdf file</a> extends the algorithm to calculate and save not only the shortest-path distances but the shortest paths themselves, using <em>backpointers</em>.<br />
+              <a href="shortestPath/SP06Time.pdf">This pdf file</a> analyzes the runtime of the algorithm.<br />
+              <a href="shortestPath/SP07Concretize.pdf">This pdf file</a> discusses implementing the algorithm in a realistic way. It can be used as the basis of a
+          programming project.</dd>
         </div>
         <div class = "display">
           <dt>signature</dt>
