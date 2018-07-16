@@ -457,6 +457,18 @@ BFS</span></a></li>
             </tr>
           </tbody></table>
         </div>
+		  
+		  		  		  <div class = "display">
+          <dt>acyclic</dt>
+          <dd>A graph is acyclic if it does not contain a cycle.
+			  See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  		  <div class = "display">
+          <dt>adjacent</dt>
+          <dd>Two nodes of a graph are said to be <em>adjacent</em> if there is an edge connecting them.
+			  See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
         <div class = "display">
           <dt>actual parameter</dt>
           <dd>A term used for <a class = "linker" title="#argument">argument</a> (of a method call).
@@ -607,6 +619,13 @@ BFS</span></a></li>
           <dt><a name="binary" id="binary"></a>binary operator</dt>
           <dd>An operator with two operands. Examples are addition and multiplication, 5 + 2 and 6 * 8. See also <a class = "linker" title="#ternary">ternary operator</a> and <a class = "linker" title="#unary">unary operator</a>.</dd>
         </div>
+		  
+    <div class = "display">
+        <dt>bipartite graph</dt>
+        <dd>A graph is <em>bipartite</em> if its nodes can be partitioned into two sets such that no edge connects two nodes in the same set. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt>block</dt>
           <dd>A sequence of statements, local variable declarations, and local class declarations enclosed in braces { }.</dd>
@@ -883,6 +902,17 @@ BFS</span></a></li>
           <dd>A segment of code that has to be executed as an atomic action —with no other processing accessing or changing the variables it uses while that segment is being executed. See <a href="files/syncIntro.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
+          <dt>cycle</dt>
+          <dd>A path in a graph is a cycle if its length is >= 1 and its first and last nodes are the same. The cycle is simple
+			  if the first node appears exactly twice. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  		         <div class = "display">
+          <dt>DAG</dt>
+          <dd>A directed acyclic graph is called a DAG. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		         <div class = "display">
           <dt>daemon thread</dt>
           <dd>See <a href="files/ThreadsDaemon.pdf">pdf file</a>.</dd>
         </div>
@@ -919,6 +949,12 @@ BFS</span></a></li>
           are not initialized), as follows: numeric-type fields: <span class="java">0</span>; boolean
           fields: <span class="javakeyword">false</span>; char fields: <span class="java">'\u0000'</span>; and class-type fields: <span class="javakeyword">null</span>.
           Local variables do not have initial default values and must be assigned before referenced.</dd>
+        </div>
+		  
+		 <div class = "display">
+          <dt>degree</dt>
+          <dd>The <em>degree</em> of a node u in an undirected graph is the number of edges
+			  for which u is an endpoint. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  		  <div class = "display">
@@ -964,10 +1000,20 @@ BFS</span></a></li>
           <dd>An abbreviation in a new-expression like new ArrayList&lt;&gt;(). See this <a href="files/genericBasic.pdf">pdf file</a>.</dd>
         </div>
 		  
+		  		         <div class = "display">
+          <dt>digraph</dt>
+          <dd>A directed graph is sometimes called a <em>digraph</em>.</dd>
+        </div>
+		  
 		  <div class = "display">
           <dt><a name="dining" id="dining"></a>dining philosophers</dt>
           <dd>A problem invented by Edsger W. Dijkstra to illustrate 
 			  <a class = "linker" title="#deadlock">deadlock</a>. See this <a href="files/deadlock.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  <div class = "display">
+          <dt>directed graph</dt>
+          <dd>A graph whose edges are directed from one node to another. See this <a href="files/graph1.pdf">pdf file</a>.</dd>
         </div>
 		  
         <div class = "display">
@@ -1002,6 +1048,11 @@ BFS</span></a></li>
           <dd>We use the IDE Eclipse for developing, testing, and running Java programs.<br />
               Use the <em>Eclipse</em> menu in the navigation bar at the top of the page to learn more.<br />
               To learn more about IDEs in general, read<a href="https://en.wikipedia.org/wiki/Integrated_development_environment"> this Wiki page</a>.</dd>
+        </div>
+		  
+		  		  <div class = "display">
+          <dt>endpoint</dt>
+          <dd>For an edge {u, v} of an undirected graph, u and v are the endpoints of the edge. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
         </div>
 		  
         <div class = "display">
@@ -1261,6 +1312,14 @@ BFS</span></a></li>
         See menu item Eclipse -&gt; Remove unused imports to see how to easily remove unused import statements from a class.
           </dd>
         </div>
+		  
+		  <div class = "display">
+          <dt>indegree</dt>
+          <dd>The <em>indegree</em> of a node u in a directed graph is the number of edges
+			  for which u is the sink. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt><a name="infix" id="infix"></a>infix operator</dt>
           <dd>An operator that is written between its two operands. E.g. +, as in 5 + 6. See also <a class = "linker" title="#prefix">prefix operator</a> and <a class = "linker" title="#postfix">postfix operator</a>.</dd>
@@ -1692,6 +1751,14 @@ BFS</span></a></li>
           <dd>A method name is overloaded if there are two methods with the same
           name but different <a class = "linker" title="#methodsignature">signatures</a>. For example, class <span class="java">Math</span> contains static functions with signatures <span class="java">min(</span><span class="javakeyword">int</span><span class="java">, </span><span class="javakeyword">int</span><span class="java">)</span> and <span class="java">min(</span><span class="javakeyword">double</span><span class="java">, </span><span class="javakeyword">double</span><span class="java">)</span>.</dd>
         </div>
+		  
+		  	  <div class = "display">
+          <dt>outdegree</dt>
+          <dd>The <em>outdegree</em> of a node u in a directed graph is the number of edges
+			  for which u is the source. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt>override</dt>
           <dd>A method that is <a class = "linker" title="#inheritance">inherited</a> from the superclass can be overridden
@@ -1742,6 +1809,15 @@ BFS</span></a></li>
           <dt>partition algorithm</dt>
           <dd>The partition algorithm is used in quicksort. See <a href="files/sort2partition.pdf">this pdf file</a>.</dd>
         </div>
+		  
+	<div class = "display">
+          <dt>path, in a graph</dt>
+          <dd>A path in a graph 
+               is a sequence (v0, v1, …, vp) of nodes such that for k, 0 ≤ k &lt; p:<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;            If the graph is undirected, {vk, vk+1} is an edge,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  If the graph is directed (vk, vk+1) is an edge. <br />
+The length of the path is the number of edges, i.e. p. See this <a href="files/graph2.pdf">pdf file</a>. </dd>
+    </div>
 		  
 		  <div class = "display">
           <dt>path, in file system</dt>
@@ -2025,10 +2101,16 @@ BFS</span></a></li>
         </div>
 		  
 		  <div class = "display">
-          <dt>signature</dt>
-          <dd>See <a class = "linker" title="#methodsignature">method signature</a>.</dd>
+          <dt>simple path, simple cycle</dt>
+          <dd>A path is simple if all nodes in it are different ---no node is repeated. 
+			    A cycle is simple if tits first node appears exactly twice in it.
+			    See this <a href="files/graph2.pdf">pdf file</a>.</dd>
         </div>
 		  
+		  <div class = "display">
+          <dt>sink</dt>
+          <dd>For an edge (u, v) of a directed graph, u is the source and v is the sink of the edge. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
 		  
     <div class = "display">
           <dt>sorting<br />
@@ -2037,6 +2119,11 @@ BFS</span></a></li>
               For quicksort: <a href="files/sort2partition.pdf">the partition algorithm</a>. <a href="files/sort3Quicksort1.pdf">Basic quicksort</a>. Improved quicksort.<br />
               For a discussion of <em>stable sorting</em> see <a class = "linker" title="#stablesort">stable sort</a>.
               Sort using an anonymous function: array <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionArraySort.pdf">pdf file</a>, List or ArrayList or LinkedList <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionListSort.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  		  <div class = "display">
+          <dt>source</dt>
+          <dd>For an edge (u, v) of a directed graph, u is the source and v is the sink of the edge. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  <div class = "display">
@@ -2275,6 +2362,12 @@ BFS</span></a></li>
           <dd>An operator with one operand. In the following examples, unary minus and factorial each have one operand:<br>
           <span class="java">- (6+2)</span>, <span class="java">6!</span> . Unary prefix operators have highest precedence and are evaluated from right to left. E.g. <span class="java">- +  - 8 + 5</span> is evaluated as <span class="java">(-(+(- 8))) + 5</span>. See also <a class = "linker" title="#ternary">ternary operator</a> and <a class = "linker" title="#binary">binary operator</a>.</dd>
         </div>
+		  
+		  		  <div class = "display">
+          <dt>undirected graph</dt>
+          <dd>A graph whose edges are undirected. See this <a href="files/graph1.pdf">pdf file</a>.</dd>
+        </div>
+		  
         <div class = "display">
           <dt>unicode</dt>
           <dd>This <a href="files/char.pdf">pdf file</a> explains type <strong>char</strong> and the unicode representation of characters.</dd>
