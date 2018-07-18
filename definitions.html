@@ -909,8 +909,9 @@ BFS</span></a></li>
 		  
 		  		         <div class = "display">
           <dt>DAG</dt>
-          <dd>A directed acyclic graph is called a DAG. See this <a href="files/graph2.pdf">pdf file</a>.<br />
-              <a href="files/griesGenealogy.pdf">This pdf file</a> shows David Gries's PhD genealogy —it's a DAG and not a tree. </dd>
+          <dd>A directed acyclic graph is called a DAG. See this <a href="files/graph2.pdf">pdf file</a>. <a href="files/graphDAG.pdf">This pdf file</a> goes into more detail.<br />
+              <a href="files/griesGenealogy.pdf">This pdf file</a> shows David Gries's PhD genealogy —it's a DAG and not a tree.<br />
+              <a href="files/graphDAG.pdf">This pdf file</a> develops topological sort, an algorithm to produce an ordering of a DAG in which the source of each edge precedes its sink. </dd>
         </div>
 		  
 		         <div class = "display">
@@ -2303,14 +2304,20 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           Warning: Do not use notify() unless you know what you are doing. <a href="files/notifyNotifyAll.pdf">pdf file 11</a>.<br>
           What's a daemon thread? <a href="files/ThreadsDaemon.pdf">pdf file 12</a>. </dd>
         </div>
+		  
+		   <div class = "display">
+          <dt>throws-clause</dt>
+          <dd>A clause of the form &nbsp;<strong>throws&nbsp;</strong>&lt;class-name&gt; that may have to be included in a method header if the method may throw a <a class = "linker" title="#checkedException">checked exception</a>. This <a href="exceptions/EX5.html">webpage</a> contains a video that explains.</dd>
+        </div>
+		  
         <div class = "display">
           <dt>Throwable, class</dt>
           <dd>The superclass of all classes whose objects can be thrown in a throw-statement.<br>
           Watch a 3.2-minute video on throwable objects <a href="exceptions/EX2.html">here</a>.</dd>
         </div>
         <div class = "display">
-          <dt>throws-clause</dt>
-          <dd>A clause of the form &nbsp;<strong>throws&nbsp;</strong>&lt;class-name&gt; that may have to be included in a method header if the method may throw a <a class = "linker" title="#checkedException">checked exception</a>. This <a href="exceptions/EX5.html">webpage</a> contains a video that explains.</dd>
+          <dt>topological sort</dt>
+          <dd>An algorithm that orders the nodes of a DAG so that the source of each edge precedes the sink. <a href="files/graphDAG.pdf">This pdf file</a> develops the algorithm.</dd>
         </div>
         <div class = "display">
           <dt>throw-statement</dt>
