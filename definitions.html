@@ -785,10 +785,18 @@ BFS</span></a></li>
           <dd>Same as a <a class = "linker" title="#staticvariable">static variable</a>.</dd>
         </div>
 		  
-		  <div class = "display">
+		  		  <div class = "display">
           <dt>clone, cloning</dt>
           <dd>To clone means to make an exact duplicate of.<a href="files/clone.pdf"> This pdf file</a> introduces the topic.<br />
               Later pdf files will explain how to clone in Java.
+          </dd>
+        </div>
+		  
+		  <div class = "display">
+          <dt>coloring</dt>
+          <dd>A coloring of an undirected graph is an assignment of a color to each node such that no two adjacent nodes get<br />
+              the same color. One application is a map, in which the nodes are countries and adjacent countries are connected by an edge.<br />
+              More on the four-color theorem later.
           </dd>
         </div>
 		  
@@ -801,10 +809,18 @@ BFS</span></a></li>
           <dd>This rule  determines whether a component reference like p.v or p.m(...) is syntactically correct. See this <a href="files/compiletimeReferenceRule.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
+          <dt>complete graph</dt>
+          <dd>A complete graph has as many edges as possible.<br />
+            A complete directed graph with n nodes has n(n-1) edges. A complete undirected graph of n nodes has half as many: n(n-1)/2.<br />
+            See <a href="files/graph2.pdf">this pdf file</a>. </dd>
+        </div>
+		  
+		  <div class = "display">
           <dt>component</dt>
           <dd>A component of a class is a variable, method, or inner class that is declared in
           the class or is <a class = "linker" title="#inheritance">inherited</a> from the superclass.</dd>
         </div>
+		  
         <div class = "display">
           <dt>compound assignment operator</dt>
           <dd>See <a href="files/assignmentComp.pdf">pdf file</a>.</dd>
@@ -903,7 +919,7 @@ BFS</span></a></li>
         </div>
         <div class = "display">
           <dt>cycle</dt>
-          <dd>A path in a graph is a cycle if its length is >= 1 and its first and last nodes are the same. The cycle is simple
+          <dd>A path in a graph is a cycle if it contains at least one edge and its first and last nodes are the same. The cycle is simple
 			  if the first node appears exactly twice. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
         </div>
 		  
@@ -1165,6 +1181,12 @@ BFS</span></a></li>
           adjectives tend to be forgotten and then there is no difference in
           the terms.</dd>
         </div>
+		  
+    <div class = "display">
+          <dt>four color theorem</dt>
+        <dd>The four-color theorem: <a href="files/graphColor.pdf">this pdf file</a>. Sipka's paper on Kempe's flawed proof: <a href="files/sipkaOnKempe.pdf">this pdf file</a>.</dd>
+        </div>
+		  
         <div class = "display">
           <dt><a name="frameforcall" id="frameforcall"></a>frame for a call</dt>
           <dd>When a method is called, a frame is created for the call. This frame
@@ -1241,9 +1263,14 @@ BFS</span></a></li>
 		  
 		  <div class = "display">
           <dt>graph</dt>
-          <dd>For the definition of <em>graph</em> and examples of graphs, see <a href="files/graph1.pdf">this pdf file</a>.<br />
-              For depth-first search and breadth-first search, visit ths <a href="dfs/dfs01.html">webpage</a>. <br />
-              For Dijkstra's shortest path algorithm,
+          <dd>The definition of <em>graph</em> and examples of graphs: <a href="files/graph1.pdf">this pdf file</a>.<br />
+              Basic graph terminology and kinds of graphs: <a href="files/graph2.pdf">this pdf file</a>.<br />
+              DAGs and topological sort: <a href="files/graphDAG.pdf">this pdf file</a>. <br />
+              Planarity: <a href="files/graphPlanar.pdf">this pdf file</a>.<br />
+              The four-color theorem: <a href="files/graphColor.pdf">this pdf file</a>. Sipka's paper on Kempe's flawed proof: <a href="files/sipkaOnKempe.pdf">this pdf file</a>.<br />
+              The Gries-Xue presentation of the Hopcroft-Tarjan planarity algorithm: <a href="files/88-906.pdf">this pdf file</a>.<br />
+              Depth-first search and breadth-first search, visit this <a href="dfs/dfs01.html">webpage</a>. <br />
+              Dijkstra's shortest path algorithm,
           visit <a href="shortestPath/shortestPath.html">this webpage</a>.</dd>
         </div>
 		  
@@ -1824,14 +1851,19 @@ BFS</span></a></li>
           <dt>path, in a graph</dt>
           <dd>A path in a graph 
                is a sequence (v0, v1, …, vp) of nodes such that for k, 0 ≤ k &lt; p:<br />
-  &nbsp;&nbsp;&nbsp;&nbsp;            If the graph is undirected, {vk, vk+1} is an edge,<br />
-&nbsp;&nbsp;&nbsp;&nbsp;  If the graph is directed (vk, vk+1) is an edge. <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;            If the graph is undirected, {vk, v(k+1)} is an edge,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;  If the graph is directed (vk, v(k+1)) is an edge. <br />
 The length of the path is the number of edges, i.e. p. See this <a href="files/graph2.pdf">pdf file</a>. </dd>
     </div>
 		  
 		  <div class = "display">
           <dt>path, in file system</dt>
           <dd>See <a class = "linker" title="#IO">I/O</a>.</dd>
+        </div>
+		  
+		   <div class = "display">
+          <dt>planar graph</dt>
+          <dd>A graph that can be drawn in the plane with no edges crossing. See <a href="files/graphPlanar.pdf">this pdf file</a> for a discussion. See <a href="files/88-906.pdf">this pdf file</a> for a presentation by Gries and Xue of the Hopcroft-Tarjan linear-time planar testing algorithm.</dd>
         </div>
 		  
 		  
@@ -2113,7 +2145,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 		  <div class = "display">
           <dt>simple path, simple cycle</dt>
           <dd>A path is simple if all nodes in it are different ---no node is repeated. 
-			    A cycle is simple if tits first node appears exactly twice in it.
+			    A cycle is simple if its first node appears exactly twice in it.
 			    See this <a href="files/graph2.pdf">pdf file</a>.</dd>
         </div>
 		  
