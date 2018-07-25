@@ -1191,6 +1191,13 @@ BFS</span></a></li>
           You can enable the use of the foreach statement on your own collection class by implementing interfaces Iterator and Iterable. This tutorial shows you how in
           less than 15 minutes of video: <a href="iteratorIterable/iterator.html">webpage</a>.</dd>
         </div>
+		  
+		  <div class = "display">
+          <dt>forest</dt>
+          <dd>A set of zero or more trees. See <a href="files/spanningTree1.pdf">this pdf file</a> on spanning trees.</dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt><a name="forLoop" id="forLoop"></a>for-loop</dt>
           <dd>See this <a href="files/for-loop.pdf">pdf file</a> for an explanation of the for-loop.</dd>
@@ -1289,16 +1296,16 @@ BFS</span></a></li>
 		  
 		  <div class = "display">
           <dt>graph</dt>
-          <dd>The definition of <em>graph</em> and examples of graphs: <a href="files/graph1.pdf">this pdf file</a>.<br />
+          <dd>Definition of <em>graph</em> and examples of graphs: <a href="files/graph1.pdf">this pdf file</a>.<br />
               Basic graph terminology and kinds of graphs: <a href="files/graph2.pdf">this pdf file</a>.<br />
               Adjacency list and adjacency matrix representations of a graph: <a href="files/graphRep.pdf">this pdf file</a>.<br />
               DAGs and topological sort: <a href="files/graphDAG.pdf">this pdf file</a>. <br />
               Planarity: <a href="files/graphPlanar.pdf">this pdf file</a>.<br />
               The four-color theorem: <a href="files/graphColor.pdf">this pdf file</a>. Sipka's paper on Kempe's flawed proof: <a href="files/sipkaOnKempe.pdf">this pdf file</a>. Gonthier's paper on the Coq proof: <a href="files/Gonthier4ColorCoq.pdf">this pdf file</a>.<br />
               The Gries-Xue presentation of the Hopcroft-Tarjan planarity algorithm: <a href="files/88-906.pdf">this pdf file</a>.<br />
-              Depth-first search,  breadth-first search, and depth-first walk: visit this <a href="dfs/dfs01.html">webpage</a>. <br />
-              Dijkstra's shortest path algorithm:
-          visit <a href="shortestPath/shortestPath.html">this webpage</a>.</dd>
+              Depth-first search,  breadth-first search, and depth-first walk: <a href="dfs/dfs01.html">this webpage</a>. <br />
+              Dijkstra's shortest path algorithm:          <a href="shortestPath/shortestPath.html">this webpage</a>.<br />
+          Spanning tree of an undirected connected graph: <a href="files/spanningTree1.pdf">this pdf file</a>. </dd>
         </div>
 		  
     <div class = "display">
@@ -1772,9 +1779,15 @@ BFS</span></a></li>
           <dd>The new expression has the form&nbsp; <span class="javakeyword">new </span>&lt;constructor-call&gt;<span class="java"></span>. Evaluation of the new-expression creates a new object and has as its value the name of (pointer to) the created object. See a full, detailed explanation of it in a 2-minute video on this <a href="explainJava/explainJava.html">webpage</a>.</dd>
         </div>
         <div class = "display">
+          <dt>nondeterministic algorithm</dt>
+          <dd>An algorithm that may behave differently and give different results when run twice on the same input. See the second page of <a href="files/spanningTree1.pdf">this pdf file</a>.</dd>
+        </div>
+		  
+		  <div class = "display">
           <dt>non-static nested class</dt>
           <dd>See <a class = "linker" title="#innerClass">inner class</a>.</dd>
         </div>
+		  
         <div class = "display">
           <dt>non-static method</dt>
           <dd>Same as <a class = "linker" title="#instancemethod">instance method</a>.</dd>
@@ -2207,10 +2220,17 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
               Sort using an anonymous function: array <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionArraySort.pdf">pdf file</a>, List or ArrayList or LinkedList <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionListSort.pdf">pdf file</a>.</dd>
         </div>
 		  
-		  		  <div class = "display">
+		<div class = "display">
           <dt>source</dt>
           <dd>For an edge (u, v) of a directed graph, u is the source and v is the sink of the edge. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
         </div>
+		  
+		<div class = "display">
+          <dt>spanning tree</dt>
+          <dd>A subset of an undirected graph that contains all nodes of the graph and is a tree.
+			  See <a href="files/spanningTree1.pdf">this pdf file</a>.</dd>
+        </div>
+
 		  
 		  <div class = "display">
           <dt>sparse</dt>
@@ -2403,11 +2423,18 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           Watch a 5-minute video on interpreting the output of an uncaught thrown object <a href="exceptions/EX1.html">here</a>.<br>
           Watch a video on the throw-statement and a video on catching and throwing the exception further <a href="exceptions/EX4.html">here</a>.</dd>
         </div>
-        <div class = "display">
+		  
+		  <div class = "display">
           <dt>toString function</dt>
           <dd>A Java convention is to write an instance function toString() that
           yields a description of the object in which it resides. Function toString() is defined in Object, the superest class of them all. That function returns the name of the object (e.g. C@fdee).</dd>
           <dd>Example. In a class Point with two fields contain the x- and y-coordinates of a point in the plane, calling p.tostring() where object p contains x-value 5 and y-value 4 could return "(5, 4)".</dd>
+        </div>
+		  
+		  
+    <div class = "display">
+          <dt>tree</dt>
+          <dd>When an undirected graph is a tree: <a href="files/spanningTree1.pdf">this pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>try-statement</dt>
@@ -2455,7 +2482,18 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <span class="java">- (6+2)</span>, <span class="java">6!</span> . Unary prefix operators have highest precedence and are evaluated from right to left. E.g. <span class="java">- +  - 8 + 5</span> is evaluated as <span class="java">(-(+(- 8))) + 5</span>. See also <a class = "linker" title="#ternary">ternary operator</a> and <a class = "linker" title="#binary">binary operator</a>.</dd>
         </div>
 		  
-		  		  <div class = "display">
+	<div class = "display">
+        <dt>underdetermined specification</dt>
+        <dd>The word <em>underdetermined</em> means not having enough constraints to specify a unique solution.<br />
+            An underdetermined specification of an algorithm  allows for implementations that could give different results.<br />
+            
+        A simple example. Suppose the spec says to put the 0's in an array first.<br />
+        So the array containing (5, 0, 0, 3) could be changed to (0, 0, 3, 5) or (0, 0, 5, 3).<br />
+        Underdetermined specs can be a good thing, giving the implementor more freedom in finding an efficient solution.
+        </dd>
+        </div>
+		  
+		  <div class = "display">
           <dt>undirected graph</dt>
           <dd>A graph whose edges are undirected. See this <a href="files/graph1.pdf">pdf file</a>.</dd>
         </div>
