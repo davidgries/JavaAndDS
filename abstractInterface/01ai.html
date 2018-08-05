@@ -224,7 +224,8 @@ BFS</span></a></li>
 <p>2. Starting in Java 8, an interface can have a <em>default</em> <em>implementation</em> of a method. Suppose an interface has this declaration:</P>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default public String noise() { return &quot; &quot;; }</P>
 <p>If an implementing class does not override method noise, the default  is used.</P>
-<p>There were excellent reasons for introducing default methods into Java 8, but a discussion of this topic is outside the scope of this introduction. Moreover,  conflicts can arise, and the way they are solved is also outside the scope of this introduction. An example of a conflict: Suppose a class inherits  default method noise() from two different interfaces and those  default methods return different values; which is used?</P>
+<h3>Default methods in interfaces and the diamond problem</h3>
+<p>In Spring 2014, version 8 of Java was introduced. Now, interfaces can have default methods. If a class implements an interface and doesn't implement a method that has a default implementation, the default implementation is used. This brings up issues of &quot;multiple inheritance&quot; ---inheritance of a method from several sources, which has to be resolved. <a href="05diamond.pdf">This pdf file</a> talks about the <em>diamond problem</em> and how it is solved in Java.</P>
 <p>&nbsp;</P>
 <p>&nbsp;</P>
   </div>
