@@ -17,7 +17,7 @@ outline:none;
 display:block;
 position:relative;
 padding:3px 20px;
-font:bold 13px/100% Arial, Helvetica, sans-serif;
+font:bold 13px/100% Arial, Helvetica, sans-serif; color:firebrick;
 text-align:center;
 text-decoration:none;
 text-shadow:1px 1px 0 rgba(0,0,0, 0.4);

@@ -1327,6 +1327,12 @@ BFS</span></a></li>
           by convention, the name of the getter method is <span class="java">getXab</span>. But the convention need not be followed, and we often don't.</dd>
         </div>
 		  
+    <div class = "display">
+        <dt>grammar</dt>
+        <dd>One definition of <em>grammar</em> is the system of rules that defines the grammatical structure of a language. That doesn't help much, because <em>grammatical</em> is defined as: of or relating to grammar. Kind of a recursive, non-ending definition. We can instead say that a grammar defines the <em>syntax</em> of a language but not its semantics (meaning). Here's an example of a grammatical definition:  in English, a noun phrase can be a list of adjectives followed by a noun. And, in Java, the simple assignment statement has the form &quot;&lt;variable&gt; = &nbsp;&lt;expression&gt; ;&quot;.</dd>
+        </div>
+		  
+		  
 		  <div class = "display">
           <dt>graph</dt>
           <dd>Definition of <em>graph</em> and examples of graphs: <a href="files/graph1.pdf">pdf file</a>.<br />
@@ -1362,6 +1368,15 @@ BFS</span></a></li>
           <dt><a name="hashCode" id="hashCode"></a>hashCode and equals</dt>
           <dd>Function hashCode in class Object, the superest class of them all, returns the address in memory of the object.<br />
               If a class overrides function equals and if that class may be used in any Collections class that deals with hashing (e.g. class HashSet and HashMap), then the class must also override function hashCode so that: if b.equals(c), then b.hashCode() == c.hashCode(). <a href="hashing/04equalsHashcode.pdf">This pdf file</a> explains why. Here is a <a href="hashing/01hashing.html">tutorial on hashing</a>.</dd>
+        </div>
+		  
+    <div class = "display">
+          <dt>hashing, hash table, hash function</dt>
+        <dd>A <em>hash table</em> is a data structure for maintaining sets or maps that typically offers expected time O(1) for adding and removing elements and for testing whether a value is in the set or map. That's neat!<br />
+            Given a value, a <em>hash function</em> is used to obtain an index into the  hash table where the value might be stored.<br />
+        Here is a <a href="hashing/01hashing.html">tutorial on hashing</a>.<br />
+        Two important Java collections classes that implement sets and maps using hashing are java.util.HashSet and 
+        java.util.HashMap.</dd>
         </div>
 		  
         <div class = "display">
@@ -1454,6 +1469,15 @@ BFS</span></a></li>
             <p>The Java spec uses "inheritance" slightly differently: private fields are not inherited. However, the private fields DO appear in each object of the subclass, so we think the Java use of "inherited" is wrong and will continue to say that ALL components are inherited.</p>
             <p>Here's an analogy. Suppose a 16-year-old son's parent's die. He inherits their money. But the money is put in a Trust, and, he cannot touch the money until he is 18. That's like saying the private field appears in each object of the subclass but it is private.</p>
         </div>
+		  
+		      <div class = "display">
+          <dt> inlining a method call</dt>
+          <dd>The process of replacing a call on a method by the body of the method, with suitable replacement of parameters by arguments.
+			  <a href="files/refactorMethod.pdf">This pdf file</a> explains how to use Eclipse's refactoring tool to inline a method call.<br />
+          </dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt><a name="innerClass" id="innerClass"></a>inner class</dt>
           <dd>A non-static class that is declared within another class.<br>
@@ -1717,6 +1741,16 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           <dt>manila folder</dt>
           <dd> Same as <a class = "linker" title="#Object">object</a> or instance.</dd>
         </div>
+		  
+    <div class = "display">
+          <dt>map</dt>
+        <dd> In computer science, a <em>map</em> is simply a function: given a <em>key</em>, it returns a <em>value</em>.<br />
+            The difference between a map as a data structure and a function is that one can add (and delete) key/value pairs to a map, while one cannot do that for the usual function.<br />
+          Think of a map as a dictionary: a key is a word and the corresponding value is the meaning of the word. Thus, a dictionary is a set of word/meaning pairs. In fact, the programming language Python uses the word <em>dictionary</em> instead of <em>map</em>.<br />
+          Maps are often implemented using hash tables or some kind of search tree.
+        In Java, take a look at interface java.util.Map and class java.util.HashMap.</dd>
+        </div>
+		  
         <div class = "display">
           <dt>Math, class</dt>
           <dd>Class <span class="java">Math</span>, in package <span class="java">java.lang</span>, contains a bunch of mathematical
@@ -2164,19 +2198,19 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 		  <div class = "display">
           <dt><a name="recursion" id="recursion"></a>recursion</dt>
           <dd>A method is <em>recursive</em> if its body contains a call on itself.<br />
-              <a href="recursion/recursion.html">This webpage</a> contains a detailed explanation.<br />
-<a href="recursion/recursionTree.html">This webpage</a> contains two videos that develop recursive methods for traversing trees.<br />
-<a href="files/recursionTail.pdf">This pdf file</a> defines<em> tail call</em> shows how tail calls can be optimized.</dd>
+              Introduction to recursion: <a href="files/recursion1.pdf">pdf file.</a><br />
+              Videos that develop recursive methods for traversing trees: <a href="recursion/recursionTree.html">this webpage</a>.<br />
+<a href="files/recursionTail.pdf"></a> Definition of <em> tail call</em> and a discussion of how to optimize them: <a href="files/recursionTail.pdf">pdf file</a>.</dd>
           <dd>&nbsp;</dd>
         </div>
 		  
     <div class = "display">
           <dt> refactor</dt>
           <dd>To refactor a program means to modify it without changing its behavior/correctness with an eye to improving it in some way.<br />
-              <a href="files/refactor.pdf">1. This pdf file</a> introduces the Eclipse refactor tool and shows how to use it to change a name (i.e. an identifier).<br />
-              <a href="files/refactorAddLocal.pdf">2. This pdf file</a> shows how to <em>extract </em> a local variable: highlight an expression whose value is to be assigned to the new local variable.<br />
-              <a href="files/refactorMethod.pdf">2. This pdf file</a> shows how to <em>extract</em> a method and <em>inline</em> a method call.<br />
-              <a href="files/refactorSelectionSort.pdf">3. This pdf file</a> refactors a version of selectionSort, using both extracting a method and inlining a method call.</dd>
+              1.  The Eclipse refactor tool; using it to change a name (i.e. an identifier): <a href="files/refactor.pdf">pdf file</a>.<br />
+              2. <em>Extract </em> a local variable: highlight an expression whose value is to be assigned to the new local variable: <a href="files/refactorAddLocal.pdf">pdf file</a>.<br />
+              3. <em>Extract</em> a method and <em>inline</em> a method call: <a href="files/refactorMethod.pdf">pdf file</a>.<br />
+        4. Refactoring a version of selectionSort, using both extracting a method and inlining a method call: <a href="files/refactorSelectionSort.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  <div class = "display">
@@ -2256,7 +2290,8 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 		  
 		  <div class = "display">
           <dt>selection sort</dt>
-          <dd>A quadratic-time sorting algorithm. See this <a href="files/sort1.pdf">pdf file</a>.</dd>
+          <dd>A quadratic-time sorting algorithm: <a href="files/sort1.pdf">pdf file</a>.<br />
+          Refactoring a version of selectionSort, using both extracting a method and inlining a method call: <a href="files/refactorSelectionSort.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  
