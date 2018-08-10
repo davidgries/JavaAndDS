@@ -699,14 +699,22 @@ BFS</span></a></li>
           <dd>A <em>memory</em> cache for a CPU (Central Processing Unit) is a small hardware component that contains copies of some main memory locations so that future requests for them can be served faster than retrieving them from main memory. See <a href="files/cache1.pdf">this pdf file</a> for a longer explanation with more examples of caches.</dd>
         </div>
 		  
+		  		  
+		  <div class = "display">
+          <dt>call stack</dt>
+          <dd>At runtime (during execution of a Java program), the call stack contains a list of frames for method calls
+			  that have been started but have not yet completed. The list is actually a stack because it follows the LIFO principle.
+			  <a href="explainJava/03methodCalls.html">This webpage</a> discusses the call stack.</dd>
+        </div>
+		  
         <div class = "display">
           <dt><a name="cast" id="cast"></a>cast</dt>
           <dd>A cast converts a value from one type to another.
           Example: the cast <span class="java">(<strong>double</strong>)(5+6)</span> converts the value of the expression 5+6 to <span class="javakeyword">double</span> format. <br>
-          This <a href="files/char.pdf">pdf file</a> explains casting between types <strong>char</strong> and <strong>int</strong>.<br>
-          This <a href="files/primitiveNumberTypes.pdf">pdf file</a> explains casting among the number types <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, and <strong>double</strong>. <br>
-          This <a href="files/castingAbout.pdf">pdf file</a> explains casting with classes, called <em>class casts</em>.<br>
-          This <a href="abstractInterface/01ai.html">webpage</a> contains a 3.75-minute video on casting with interfaces.</dd>
+          Casting between types <strong>char</strong> and <strong>int</strong>: <a href="files/char.pdf">pdf file</a>.<br>
+          Casting among the number types <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, and <strong>double</strong>: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br>
+          Casting with classes, called <em>class casts</em>: <a href="files/castingAbout.pdf">pdf file</a>.<br>
+          3.75-minute video on casting with interfaces: <a href="abstractInterface/01ai.html">webpage</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="catenate" id="catenate"></a>catenate, catenation</dt>
@@ -928,7 +936,7 @@ BFS</span></a></li>
         </div>
         <div class = "display">
           <dt>continue statement</dt>
-          <dd>Execution of the statement "continue;" terminates execution of the loop body in which it occurs. See this <a href="files/continue.pdf">pdf file</a>.</dd>
+          <dd>Execution of the statement "continue;" terminates execution of the loop body in which it occurs. See <a href="files/continue.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>core</dt>
@@ -954,9 +962,9 @@ BFS</span></a></li>
 		  
 		  		         <div class = "display">
           <dt>DAG</dt>
-          <dd>A directed acyclic graph is called a DAG. See this <a href="files/graph2.pdf">pdf file</a>. <a href="files/graphDAG.pdf">This pdf file</a> goes into more detail.<br />
-              <a href="files/griesGenealogy.pdf">This pdf file</a> shows David Gries's PhD genealogy —it's a DAG and not a tree.<br />
-              <a href="files/graphDAG.pdf">This pdf file</a> develops topological sort, an algorithm to produce an ordering of a DAG in which the source of each edge precedes its sink. </dd>
+          <dd>A directed acyclic graph is called a DAG. Summary: <a href="files/graph2.pdf">pdf file</a>. More detail: <a href="files/graphDAG.pdf">pdf file</a>.<br />
+              David Gries's PhD genealogy —it's a DAG and not a tree: <a href="files/griesGenealogy.pdf">pdf file</a>.<br />
+              Topological sort, an algorithm to produce an ordering of a DAG in which the source of each edge precedes its sink: <a href="files/graphDAG.pdf">pdf file</a>.</dd>
         </div>
 		  
 		         <div class = "display">
@@ -1062,7 +1070,7 @@ BFS</span></a></li>
 		<div class = "display">
             <dt>Edsger W. Dijkstra</dt>
           <dd>The Jarník/Prim/Dijkstra algorithm for constructing a minimum spanning tree:<a href="files/spanningTree2.pdf"> pdf file</a>.<br />
-          Shortest path algorithm: <a href="shortestPath/shortestPath.html">this webpage</a>.<br />
+          Shortest path algorithm: <a href="shortestPath/shortestPath.html">webpage</a>.<br />
           Dijkstra's paper containing the shortest path and minimum spanning tree
           algorithms: <a href="shortestPath/1959dijkstra.pdf">pdf file</a>.<br />
           Implementing the JPD algorithm: <a href="files/spanningPrim.pdf">pdf file</a>. <br />
@@ -1138,9 +1146,8 @@ BFS</span></a></li>
           <dt>enums, or enumeration types</dt>
           <dd>An enum class provides constants (static final variables), like Coin.PENNY and Coin.NICKEL.<br>
           
-          This two-page <a href="files/enums.pdf">pdf file</a> gives you the basics.<br>
-          This two-page <a href="files/AdvancedEnums.pdf">pdf file</a> shows you how to add fields and methods to an enum class.
-		    </dd>
+          The basics: <a href="files/enums.pdf">pdf file</a>.<br>
+          Adding fields and methods to an enum class: <a href="files/AdvancedEnums.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>equals</dt>
@@ -1257,15 +1264,15 @@ BFS</span></a></li>
           <dt><a name="frameforcall" id="frameforcall"></a>frame for a call</dt>
           <dd>When a method is called, a frame is created for the call. This frame
           contains<br>
-          <br>
-          (1) the name of the method,<br>
-          (2) a program counter, which
+          &nbsp;&nbsp;&nbsp;(1) the name of the method,<br>
+          &nbsp;&nbsp;&nbsp;(2) a program counter, which
           indicates which statement to execute next,<br>
-          (3)
+          &nbsp;&nbsp;&nbsp;(3)
           a scope box, which contains the name of the class or object in which
           the method resides,<br>
-          (4) the parameters of the method, and<br>
-          (5) the local variables of the method.</dd>
+          &nbsp;&nbsp;&nbsp;(4) the parameters of the method, and<br>
+          &nbsp;&nbsp;&nbsp;(5) the local variables of the method.<br />
+          <a href="explainJava/03methodCalls.html">This webpage</a> discusses the frame for a call.</dd>
         </div>
         <div class = "display">
           <dt><a name="Function" id="Function"></a>function</dt>
@@ -1506,8 +1513,9 @@ BFS</span></a></li>
         <div class = "display">
           <dt><a name="insideOut" id="insideOut"></a>inside-out rule</dt>
           <dd>A rule, used in most programming languages, that indicates how to determine
-          what a reference to a variable or a method means (which declaration it refers to). It is explained in this <a href="files/insideOutRule.pdf">pdf file</a>.<br />
-          <a href="files/useOfThisDot.pdf">This pdf file</a> shows how to reference a field that has been shadowed because of the inside-out rule.</dd>
+          what a reference to a variable or a method means (which declaration it refers to).<br />
+          Explanation: <a href="files/insideOutRule.pdf">pdf file</a>.<br />
+          Referencing a field that has been shadowed because of the inside-out rule: <a href="files/useOfThisDot.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="Instance" id="Instance"></a>instance</dt>
@@ -1564,8 +1572,8 @@ BFS</span></a></li>
           <dd>The Java <a class = "linker" title="#PrimitiveType">primitive types</a> whose values
           are integers: <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>,
           and <a class = "linker" title="#char">char</a>.<br>
-          See this <a href="files/char.pdf">pdf file</a> for an explanation of <strong>char</strong>. <br>
-          See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation of <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, and <strong>long</strong>.      </dd>
+          Explanation of <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.<br>
+          Explanation of <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, and <strong>long</strong>: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="interface" id="interface"></a>interface</dt>
@@ -1601,7 +1609,8 @@ BFS</span></a></li>
 		  
         <div class = "display">
           <dt>javadoc</dt>
-          <dd>An application that extracts appropriately written specifications from a a Java project. <a href="files/javadoc.pdf">Read this pdf file</a> to learn about javadoc specifications and why they are useful to hyou as you program.<br />
+          <dd>An application that extracts appropriately written specifications from a a Java project.<br />
+              <a href="files/javadoc.pdf">Read this pdf file</a> to learn about javadoc specifications and why they are useful to you as you program.<br />
               <a href="eclipse/Eclipse10Javadoc.pdf">Read this
           pdf file</a> for instructions on how to generate a javadoc webpage for you project. It also tells you how to fix Eclipse if the javadoc command is not found.</dd>
         </div>
@@ -1640,10 +1649,9 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           <dt><a name="JUnit" id="JUnit"></a>JUnit testing</dt>
           <dd>JUnit is a framework for writing repeatable tests ---so you can repeat them whenever you want.
           See the website <a href="http://junit.org/">junit.org/</a>. We use version JUnit5.<br>
-          <a href="eclipse/Ecl06JUnitTesting.html">
-          See this page</a> to learn how to write a JUnit testing class in Eclipse, for example, to test the methods in a class.<br>
-          <a href="eclipse/Eclipse09CheckAsserts.pdf">This pdf file</a> explains how to test whether an assert statement is correct.<br />
-          <a href="files/testingThrow.pdf">This pdf file</a> explains ow to test whether a method call throws a particular exception.<br />
+          <a href="eclipse/Ecl06JUnitTesting.html">          </a>Writing a JUnit testing class in Eclipse, for example, to test the methods in a class: <a href="eclipse/Ecl06JUnitTesting.html">webpage</a>.<br>
+          Testing whether an assert statement is correct: <a href="eclipse/Eclipse09CheckAsserts.pdf">pdf file</a>.<br />
+          Testing whether a method call throws a particular exception: <a href="files/testingThrow.pdf">pdf file</a>.<br />
       JUnit 5 annotations: <a href="files/JUnitAnnotations.pdf">pdf file</a>. </dd>
         </div>
         <div class = "display">
@@ -1670,8 +1678,8 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
     <div class = "display">
           <dt><a name="literal" id="interface2"></a>literal</dt>
           <dd>A Java denotation of a value. Here are examples of literals:  354, 3.56F, true, 'c', and "peace".<br>
-          See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for literals of the number types (like <strong>int</strong> and <strong>float</strong>).<br>
-          See this <a href="files/char.pdf">pdf file</a> for literals of type <strong>char</strong></dd>
+          SLiterals of the number types (like <strong>int</strong> and <strong>float</strong>): <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br>
+          Literals of type <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="localvariable" id="localvariable"></a>local variable</dt>
@@ -1895,9 +1903,9 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         <div class = "display">
           <dt><a name="nestedClass" id="nestedClass"></a>nested class</dt>
           <dd>A class that is declared within another class.<br>
-          This <a href="files/nestedClasses.pdf">pdf file</a> explains why nested classes are useful.<br>
-          Here is a simple but realistic example of the use of a static nested class: <a href="files/StaticNestedClass.pdf">pdf file</a>.<br>
-          Here is a simple but realistic example of the use of an inner class: <a href="files/innerClass.pdf">pdf file</a>.</dd>
+          TWhy nested classes are useful: <a href="files/nestedClasses.pdf">pdf file</a>.<br>
+          A simple but realistic example of the use of a static nested class: <a href="files/StaticNestedClass.pdf">pdf file</a>.<br>
+          A simple but realistic example of the use of an inner class: <a href="files/innerClass.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="newexpression" id="newexpression"></a>new-expression</dt>
@@ -1930,8 +1938,8 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         <div class = "display">
           <dt>number types</dt>
           <dd>The Java <a title="#PrimitiveType" class = "linker">primitive types</a> <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>, <a class = "linker" title="#char">char</a>, <a class = "linker" title="#float">float</a>, and <a class = "linker" title="#double">double</a>.<br>
-          See this <a href="files/char.pdf">pdf file</a> for an explanation of <strong>char</strong>. <br>
-          See this <a href="files/primitiveNumberTypes.pdf">pdf file</a> for an explanation of <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, and <strong>double</strong>.</dd>
+          Explanation of <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.<br>
+          Explanation of <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, and <strong>double</strong>: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="Object" id="Object"></a>object</dt>
@@ -2045,7 +2053,8 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 		  
 		   <div class = "display">
           <dt>planar graph</dt>
-          <dd>A graph that can be drawn in the plane with no edges crossing. See <a href="files/graphPlanar.pdf">this pdf file</a> for a discussion. See <a href="files/88-906.pdf">this pdf file</a> for a presentation by Gries and Xue of the Hopcroft-Tarjan linear-time planar testing algorithm.</dd>
+          <dd>A graph that can be drawn in the plane with no edges crossing: <a href="files/graphPlanar.pdf">pdf file</a>.<br />
+              Presentation by Gries and Xue of the Hopcroft-Tarjan linear-time planar testing algorithm: <a href="files/88-906.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  
@@ -2094,9 +2103,9 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt><a name="PrimitiveType" id="PrimitiveType"></a>primitive type</dt>
           <dd> A <a class = "linker" title="#Type">type</a> that is fully integrated into Java, i.e.
           one that is not defined by a <a class = "linker" title="#Class">class</a> definition.<br>
-          See this <a href="files/char.pdf">pdf file</a> for an explanation of primitive type <a class = "linker" title="#char">char</a>.<br>
-          See this<a href="files/primitiveNumberTypes.pdf"> pdf file</a> for an explanation of the other primitive number types: <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>, <a class = "linker" title="#float">float</a>, and <a class = "linker" title="#double">double</a>. <br>
-          See this <a href="files/boolean.pdf">pdf file</a> for an explanation of type boolean. </dd>
+          Explanation of primitive type <a class = "linker" title="#char">char</a>: <a href="files/char.pdf">pdf file</a>.<br>
+          Explanation of the other primitive number types: <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>, <a class = "linker" title="#float">float</a>, and <a class = "linker" title="#double">double</a>: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br>
+          Explanation of type boolean: <a href="files/boolean.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>private</dt>
@@ -2165,9 +2174,9 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
     <div class = "display">
         <dt>quicksort</dt>
         <dd>An expected-case n log n in-place sorting algorithm.<br />
-<a href="files/sort2partition.pdf">The partition algorithm of quicksort</a>.<br />
-<a href="files/sort3Quicksort1.pdf">The basic quicksort algoriithm</a>.<br />
-<a href="files/sort3Quicksort3.pdf">Quicksort improved in three essential ways</a>.</dd>
+The partition algorithm of quicksort: <a href="files/sort2partition.pdf"> pdf file</a>.<br />
+The basic quicksort algoriithm: <a href="files/sort3Quicksort1.pdf">pdf file</a>.<br />
+Quicksort improved in three essential ways: <a href="files/sort3Quicksort3.pdf">pdf file</a>.</dd>
         </div>
 		  
         <div class = "display">
@@ -2199,7 +2208,8 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt><a name="recursion" id="recursion"></a>recursion</dt>
           <dd>A method is <em>recursive</em> if its body contains a call on itself.<br />
               Introduction to recursion: <a href="files/recursion1.pdf">pdf file.</a><br />
-              Videos that develop recursive methods for traversing trees: <a href="recursion/recursionTree.html">this webpage</a>.<br />
+              How a method call is executed, including a recursive call (so you see that recursive calls work): <a href="explainJava/03methodCalls.html">webpage</a>. <br />
+              Videos that develop recursive methods for traversing trees: <a href="recursion/recursionTree.html">webpage</a>.<br />
 <a href="files/recursionTail.pdf"></a> Definition of <em> tail call</em> and a discussion of how to optimize them: <a href="files/recursionTail.pdf">pdf file</a>.</dd>
           <dd>&nbsp;</dd>
         </div>
@@ -2325,11 +2335,11 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt><a name="shortestPath" id="shortestPath"></a>shortest path algorithm</dt>
           <dd>An algorithm developed by Edsger W. Dijkstra in 1956 for finding the distance of the shortest path from a start node to each node 
 			  (or to one particular node) in a graph in which the edges have positive weights.<br />
-              <a href="shortestPath/shortestPath.html">This webpage</a> contains four videos that (1) give the history of the algorithm, (2) state the problem, (3) show the invariant of the algorithm, and (4) develop the algorithm from the invariant.<br />
-              <a href="shortestPath/SP05Bkptrs.pdf">This pdf file</a> extends the algorithm to calculate and save not only the shortest-path distances but the shortest paths themselves, using <em>backpointers</em>.<br />
-              <a href="shortestPath/SP06Time.pdf">This pdf file</a> analyzes the runtime of the algorithm.<br />
-              <a href="shortestPath/SP07Concretize.pdf">This pdf file</a> discusses implementing the algorithm in a realistic way. It can be used as the basis of a
-          programming project.</dd>
+			  Four videos that (1) give  history, (2) state the problem, (3) show the invariant of the algorithm, and (4) develop the algorithm from the invariant: <a href="shortestPath/shortestPath.html">webpage</a>.<br />
+			  Extend the algorithm to calculate and save not only the shortest-path distances but the shortest paths themselves, using <em>backpointers</em>: <a href="shortestPath/SP05Bkptrs.pdf">pdf file</a>.<br />
+			  Analyze the runtime of the algorithm: <a href="shortestPath/SP06Time.pdf">pdf file</a>.<br />
+			  Discuss implementing the algorithm in a realistic way. It can be used as the basis of a
+          programming project: <a href="shortestPath/SP07Concretize.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>signature</dt>
@@ -2403,13 +2413,13 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
 		  
 		  <div class = "display">
           <dt><a name="stack" id="deque"></a>stack ---LIFO list</dt>
-          <dd>A stack is a list that supports removal from the end and insertion at the end. See this <a href="files/queueStack.pdf">pdf file</a>.</dd>
+          <dd>A stack is a list that supports removal from the end and insertion at the end: <a href="files/queueStack.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  
     <div class = "display">
           <dt>statement-comment</dt>
-          <dd>A comment that is a specification of the following lines of code. See this one-page <a href="files/statementComment.pdf">pdf file</a> for an explanation.</dd>
+          <dd>A comment that is a specification of the following lines of code: <a href="files/statementComment.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="Static" id="Static"></a>static</dt>
@@ -2428,8 +2438,8 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         <div class = "display">
           <dt><a name="staticNestedClass" id="staticNestedClass"></a>static nested class</dt>
           <dd>A static class that is declared within another class.<br>
-          This <a href="files/nestedClasses.pdf">pdf file</a> explains why nested classes are useful.<br>
-          Here is a simple but realistic example of the use of a static nested class: <a href="files/StaticNestedClass.pdf">pdf file</a>. </dd>
+          Why nested classes are useful: <a href="files/nestedClasses.pdf">pdf file</a>.<br>
+          A simple but realistic example of the use of a static nested class: <a href="files/StaticNestedClass.pdf">pdf file</a>. </dd>
         </div>
         <div class = "display">
           <dt>static type</dt>
@@ -2561,9 +2571,9 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           <dt>throw-statement</dt>
           <dd>The throw-statement has the form&nbsp; <strong>throw</strong>
           &lt;throwable-object&gt; ;<br>
-          Watch a 3.2-minute video on throwable objects <a href="exceptions/EX2.html">here</a>.<br>
-          Watch a 5-minute video on interpreting the output of an uncaught thrown object <a href="exceptions/EX1.html">here</a>.<br>
-          Watch a video on the throw-statement and a video on catching and throwing the exception further <a href="exceptions/EX4.html">here</a>.</dd>
+          3.2-minute video on throwable objects: <a href="exceptions/EX2.html">webpage</a>.<br>
+          5-minute video on interpreting the output of an uncaught thrown object: <a href="exceptions/EX1.html">webpage</a>.<br>
+           Videos on the throw-statement and  on catching and throwing the exception further: <a href="exceptions/EX4.html">webpage</a>.</dd>
         </div>
 		  
 		  <div class = "display">
@@ -2576,7 +2586,7 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
 		  
     <div class = "display">
           <dt>tree</dt>
-          <dd>When an undirected graph is a tree: <a href="files/spanningTree1.pdf">this pdf file</a>.</dd>
+          <dd>When an undirected graph is a tree: <a href="files/spanningTree1.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>try-statement</dt>
@@ -2591,7 +2601,7 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         </div>
         <div class = "display">
           <dt><a name="twosComp" id="twosComp"></a>two's complement notation</dt>
-          <dd>A way of representing an integer as a sequence of bits. Used in most computers today. See this explanation: <a href="files/twosComplement.pdf">pdf file</a>.</dd>
+          <dd>A way of representing an integer as a sequence of bits. Used in most computers today: <a href="files/twosComplement.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="Type" id="Type"></a>type</dt>
@@ -2600,11 +2610,11 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         </div>
         <div class = "display">
           <dt><a name="typeArg" id="typeArg"></a>type argument</dt>
-          <dd>The type given within &lt;&gt; of a generic variable declaration or new-expression, e.g. new ArrayList&lt;Integer&gt;(). See <a href="files/genericBasic.pdf">pdf file</a>.</dd>
+          <dd>The type given within &lt;&gt; of a generic variable declaration or new-expression, e.g. new ArrayList&lt;Integer&gt;(): <a href="files/genericBasic.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="typePar" id="typePar"></a>type parameter</dt>
-          <dd>The name given within &lt;&gt; of a generic class or method declaration, e.g. public class Wrapper&lt;V&gt; {...}.  See <a href="files/genericBasic.pdf">pdf file</a>.</dd>
+          <dd>The name given within &lt;&gt; of a generic class or method declaration, e.g. public class Wrapper&lt;V&gt; {...}: <a href="files/genericBasic.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>type, raw</dt>
@@ -2637,7 +2647,7 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
 		  
 		  <div class = "display">
           <dt>undirected graph</dt>
-          <dd>A graph whose edges are undirected. See this <a href="files/graph1.pdf">pdf file</a>.</dd>
+          <dd>A graph whose edges are undirected: <a href="files/graph1.pdf">pdf file</a>.</dd>
         </div>
 		  
         <div class = "display">
