@@ -167,7 +167,8 @@ invariants</span></a>
 
 	<li class='has-sub '><a href='recursion.html'><span>Recursion</span></a>
       <ul>
-         <li><a href='recursionTree.html'><span>&nbsp;&nbsp;on trees</span></a></li>
+         <li><a href='recursion.html'><span>Intro to recursion</span></a></li>
+		 <li><a href='recursionTree.html'><span>&nbsp;&nbsp;&nbsp;on trees</span></a></li>
 </ul>
 </li>
 
@@ -224,12 +225,17 @@ BFS</span></a></li>
 	}</P>
 	</blockquote>
 	<h3>How recursive calls are executed</h3>
-	<p >You may wonder how recursive calls are executed. Once you understand how <em>any </em>call, nonrecursive or recursive, is executed, any confusion will disappear. <a href="../explainJava/03methodCalls.html">Here are videos</a> that explain execution of method calls.</P>
+	<p >You may wonder how recursive calls are executed. Once you understand how <em>any </em>call, nonrecursive or recursive, is executed, any confusion will disappear. <a href="../explainJava/03methodCalls.html">These videos</a>  explain execution of method calls.</P>
 	<h3 >How to understand that a recursive method implements its specification</h3>
-	<p >Still to be written</P>
+	<p >Understanding a recursive method:base cases and recursive cases: <a href="../files/recursion2.pdf">pdf file</a>.<br />
+	    Using a bound function to proce termination of recursion: <a href="../files/recursionbf.pdf">pdf file</a>. <br />
+	    Recursion may require extra parameters: <a href="../files/recursionExtra.pdf">pdf file</a>. <br />
+	Tail calls and how to optimize them. <a href="../files/recursionTail.pdf">pdf file</a>.</P>
 	<h3>Using recursion to traverse trees</h3>
-<p><a href="recursionTree.html">These two videos</a>  give models for using recursion for traversing trees.</P>
-<p><a href="../files/recursiveBST.pdf">This pdf file</a> develops a recursive function to determine whether a binary tree is a BST. It uses the Mañana Principle, which you might want to glance at in <a href="../files/manana.pdf">this pdf file</a>.</P>
+<p>Two models for using recursion for traversing trees: <a href="recursionTree.html">webpage</a>.</P>
+<p>Developing a recursive function to determine whether a binary tree is a BST. <a href="../files/recursiveBST.pdf">pdf file</a>.<br />
+    (
+    It uses the Mañana Principle, which you might want to glance at in <a href="../files/manana.pdf">this pdf file</a>.)</P>
 <h3>Using recursion to traverse graphs</h3>
 <p>The simplest depth-first search of a graph is recursive. Watch the first two videos <a href="../dfs/dfs01.html">on this page</a>.</P>
 <p>&nbsp;</p>
