@@ -593,15 +593,15 @@ div.code-broken {
           public static printSum(int a, int b) { ... } </div><br />
 	  
       <p>Function specifications are generally written to indicate what to return, e.g.:</p>
-      <div class="codegries"> /** Return area of triangle whose side lengths are a, b, and c<br />
+      <div class="codegries"> /** Return area of triangle whose side lengths are a, b, and c. */<br />
           public static double area(double a, double b, double c) { ... } </div>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or
-<div class="codegries">/** = area of triangle whose side lengths are a, b, and c<br />
+<div class="codegries">/** = area of triangle whose side lengths are a, b, and c. */<br />
     public static double area(double a, double b, double c) { ... }</div><br />
 	  
 <p>The purpose of a constructor is to initialize all fields so that the class invariant is true. We favor writing a constructor specification as illustrated by the following:</p>
 <div class="codegries">/** Constructor: an instance with hour-of-day h and minute-of-the-hour m.<br />
-    Precondition: h in 0..23 and m in 0..59.<br />
+    &nbsp;&nbsp;&nbsp;* Precondition: h in 0..23 and m in 0..59. */<br />
     public Time(int h, int m) { ... } </div>
 <p><a name="prepost" id="prepost"></a></p>
 	  
