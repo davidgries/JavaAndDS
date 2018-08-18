@@ -1722,7 +1722,9 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
 		  
 	<div class = "display">
         <dt>linear probing, quadratic probing, probe</dt>
-          <dd>In hashing using open addressing, the elements in the set are stored in buckets of the hash table. Collisions may occur in that several values may hash to the same bucket.<br />
+          <dd>In hashing using chaining, a <em>probe</em> is a test of an element of the linked list in a bucket to see whether it is a particular element.<br />
+              <br />
+              In hashing using open addressing, the elements in the set are stored in buckets of the hash table. Collisions may occur in that several values may hash to the same bucket.<br />
               Suppose element <em>e</em> hashes to bucket number <em>h</em>.<br />
               In <em>linear probing</em>, to see 
 whether <em>e</em> is in the set, buckets <em>h</em>, <em>h</em>+1, <em>h</em>+2, <em>h</em>+3, ... (with wraparound) are probed until <em>e</em> is found or <strong>null</strong> is found, in which case <em>e</em> is not in the set.<br />
