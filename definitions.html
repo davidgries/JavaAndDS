@@ -700,6 +700,12 @@ BFS</span></a></li>
 			See the <a href="dfs/dfs01.html">tutorial on DFS BFS</a>.</dd>
         </div>
 		  
+		 <div class = "display">
+          <dt>bucket</dt>
+          <dd>In hashing, an element of the hash table is sometimes called a <em>bucket</em>. 
+			See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
+        </div>
+		  
         <div class = "display">
           <dt><a name="byte" id="boolean2"></a>byte</dt>
           <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are integers
@@ -744,6 +750,12 @@ BFS</span></a></li>
             <br>
           The simplest way to get a String representation of <em>any</em> expression is to catenate it with the empty String. For example, "" + (68 + 2) evaluates to a String that contains "70".</p>
         </div>
+		  
+		  <div class = "display">
+          <dt>chaining</dt>
+          <dd>In <em>hashing</em>, there are essentially two ways to maintain the elements of the set being implemented using hashing. In <em>chaining</em>, each bucket of the hash table is a linked list containing the values that hashed to that  bucket. In <em>open addressing</em>, each bucket is either null or an element of the set begin maintained. See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
+        </div>
+		  
         <div class = "display">
           <dt><a name="char" id="char"></a>char</dt>
           <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are single characters, like <span class="java">'h'</span>. This  <a href="files/char.pdf">pdf file</a> explains type <strong>char</strong> and the unicode representation of characters.</dd>
@@ -834,6 +846,13 @@ BFS</span></a></li>
           <dd>To clone means to make an exact duplicate of.<a href="files/clone.pdf"> This pdf file</a> introduces the topic.<br />
               Later pdf files will explain how to clone in Java.
           </dd>
+        </div>
+		  
+		  		 <div class = "display">
+          <dt>collision</dt>
+          <dd>In hashing with open addressing, if an element <em>e</em> to be put into the set hashes to a bucket <em>h</em> and
+			  an element is already in bucket <em>h</em>, a <em>collision</em> is said to have occurred. The collision is solved using some form of probing, usually linear or quadratic probing.
+See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
         </div>
 		  
 		  <div class = "display">
@@ -1701,6 +1720,19 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           <dd>See this <a href="files/labeled-statement.pdf">pdf file</a>.</dd>
         </div>
 		  
+	<div class = "display">
+        <dt>linear probing, quadratic probing, probe</dt>
+          <dd>In hashing using open addressing, the elements in the set are stored in buckets of the hash table. Collisions may occur in that several values may hash to the same bucket.<br />
+              Suppose element <em>e</em> hashes to bucket number <em>h</em>.<br />
+              In <em>linear probing</em>, to see 
+whether <em>e</em> is in the set, buckets <em>h</em>, <em>h</em>+1, <em>h</em>+2, <em>h</em>+3, ... (with wraparound) are probed until <em>e</em> is found or <strong>null</strong> is found, in which case <em>e</em> is not in the set.<br />
+In <em>quadratic probing</em>, the probed buckets are <em>h</em>, <em>h</em>+1*1, <em>h</em>+2*2, <em>h</em>+3*3, ... (with wraparound).<br />
+In 
+<em>double hashing</em>, two hash functions are used. Suppose hashing <em>e</em> with the two hash functions gives two integers <em>h1</em> and <em>h2</em>. Then the probed buckets are
+			  <em>h1</em>, <em>h1</em> + <em>h2</em>, <em>h1</em> + 2*<em>h2</em>, <em>h1</em> + 3*<em>h2</em>, ... (with wraparound).<br />
+See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing. Look in Wikipedia under <em>double hashing</em> for more information on that topic.</dd>
+    </div>
+		  
     <div class = "display">
           <dt><a name="linkedList" id="linkedList"></a>linked list</dt>
           <dd>See this <a href="files/linkedLists.pdf">pdf file</a>.<br />
@@ -1718,6 +1750,14 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           SLiterals of the number types (like <strong>int</strong> and <strong>float</strong>): <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br>
           Literals of type <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.</dd>
         </div>
+		  
+		    <div class = "display">
+		      <dt>load factor</dt>
+          <dd>In hashing, the load factor is the number of elements in the set implemented using a hash table divided by the size of the
+			  hash table. See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
+    </div>
+		  
+		  
         <div class = "display">
           <dt><a name="localvariable" id="localvariable"></a>local variable</dt>
           <dd>A <a class = "linker" title="#Variable">variable</a> that is declared within the body
@@ -2015,6 +2055,11 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
 		  <div class = "display">
           <dt><a name="octalnumber" id="octalnumber"></a>octal number system</dt>
           <dd>The system for writing natural numbers 0, 1, 2, ... using digits 0, 1, ..., 7. See <a href="files/bases.pdf">this pdf file</a>.</dd>
+        </div>
+		  
+    <div class = "display">
+        <dt>open addressing</dt>
+        <dd>In <em>hashing</em>, there are essentially two ways to maintain the elements of the set being implemented using hashing. In <em>open addressing</em>, each bucket is either null or an element of the set begin maintained. In <em>chaining</em>, each bucket of the hash table is a linked list containing the values that hashed to that  bucket. See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing. </dd>
         </div>
 		  
 		  
