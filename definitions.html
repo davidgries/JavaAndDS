@@ -1061,7 +1061,8 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
 		 <div class = "display">
           <dt>degree</dt>
           <dd>The <em>degree</em> of a node u in an undirected graph is the number of edges
-			  for which u is an endpoint. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+			  for which u is an endpoint. See <a href="files/graph2.pdf">this pdf file</a>.<br />
+		     The <em>degree</em> of a node in a tree is the number of children it has. Thus, a leaf has degree 0. See <a href="files/tree1.pdf">this pdf file</a>.</dd>
         </div>
 		  
 		  		  <div class = "display">
@@ -1087,6 +1088,18 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dd>An algorithm to traverse all nodes of a graph. 
 			See the <a href="dfs/dfs01.html">tutorial on DFS BFS</a>.</dd>
         </div>
+		  
+	<div class = "display">
+          <dt>depth, level, width, and height in a tree</dt>
+        <dd>The <em>depth</em> of a node is the length of the path from the root to the node. Thus, the root is at depth 0 and its children are at depth 1.<br />
+              The <em>level</em> of a node is  1 + (its depth).<br />
+              The <em>height</em> of a node is the length of a longest path from that node to a leaf.<br />
+              The <em>height</em> of a tree is the height of its root.<br />
+              The <em>width</em> of a tree at depth d is the number of nodes with depth d.<br />
+              The <em>width</em> of a tree is the maximum of its widths at all depths.<br />
+See <a href="files/tree1.pdf">this pdf file</a>.</dd>
+    </div>
+
 		  
 		  <div class = "display">
           <dt>depth first search walk (dfs walk)</dt>
@@ -2009,10 +2022,18 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dt><a name="newexpression" id="newexpression"></a>new-expression</dt>
           <dd>The new expression has the form&nbsp; <span class="javakeyword">new </span>&lt;constructor-call&gt;<span class="java"></span>. Evaluation of the new-expression creates a new object and has as its value the name of (pointer to) the created object. See a full, detailed explanation of it in a 2-minute video on this <a href="explainJava/explainJava.html">webpage</a>.</dd>
         </div>
+		  
         <div class = "display">
           <dt>nondeterministic algorithm</dt>
           <dd>An algorithm that may behave differently and give different results when run twice on the same input. See the second page of <a href="files/spanningTree1.pdf">this pdf file</a>.</dd>
         </div>
+		  
+		          <div class = "display">
+          <dt>node and edge of a tree</dt>
+          <dd>For the definition of a node and an edge of a tree, see <a href="files/tree1.pdf">this pdf file</a>.</dd>
+        </div>
+
+		  
 		  
 		  <div class = "display">
           <dt>non-static nested class</dt>
@@ -2127,10 +2148,17 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dd>A parameter declaration occurs within the parentheses of the <a class = "linker" title="#methodheader">header
             of a method</a>. It has the form &lt;<span class="italixs">type</span>&gt; &lt;<span class="italixs">variable-name</span>&gt;.</dd>
         </div>
+		  
         <div class = "display">
           <dt>parameter, type parameter</dt>
           <dd>See <a class = "linker" title="#typePar">type parameter</a>.</dd>
         </div>
+		  
+	<div class = "display">
+          <dt>parent, child, sibling, ancestor, and descendent (descendant) of a node in a tree</dt>
+          <dd>For definitions of these terms, see <a href="files/tree1.pdf">this pdf file</a>.</dd>
+    </div>
+		  
         <div class = "display">
 			<dt><a name="partition" id="partition"></a>partition, of an object</dt>
           <dd>A place within an object for the components declared in a particular class. See this <a href="files/classDef.pdf">pdf file</a> for an explanation.</dd>
@@ -2142,19 +2170,26 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
 		  
 	<div class = "display">
           <dt>path, in a graph</dt>
-          <dd>A path in a graph 
-               is a sequence (v0, v1, …, vp) of nodes such that for k, 0 ≤ k &lt; p:<br />
+          <dd>A sequence (v0, v1, …, vp) of nodes such that for k, 0 ≤ k &lt; p:<br />
   &nbsp;&nbsp;&nbsp;&nbsp;            If the graph is undirected, {vk, v(k+1)} is an edge,<br />
 &nbsp;&nbsp;&nbsp;&nbsp;  If the graph is directed (vk, v(k+1)) is an edge. <br />
 The length of the path is the number of edges, i.e. p. See this <a href="files/graph2.pdf">pdf file</a>. </dd>
     </div>
 		  
 		  <div class = "display">
+          <dt>path, in a tree</dt>
+          <dd>A sequence (v0, v1, …, vp) of nodes such that for k, 0 ≤ k &lt; p: (vk, v(k+1)) is an edge. <br />
+              Often, we speak only of <em>downward</em> paths, meaning that each edge goes from a node to one of its children.<br />
+              The length of the path is the number of edges, i.e. p. See this <a href="files/tree1.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		  
+		  <div class = "display">
           <dt>path, in file system</dt>
           <dd>See <a class = "linker" title="#IO">I/O</a>.</dd>
         </div>
-		  
-		   <div class = "display">
+
+		  <div class = "display">
           <dt>planar graph</dt>
           <dd>A graph that can be drawn in the plane with no edges crossing: <a href="files/graphPlanar.pdf">pdf file</a>.<br />
               Presentation by Gries and Xue of the Hopcroft-Tarjan linear-time planar testing algorithm: <a href="files/88-906.pdf">pdf file</a>.</dd>
@@ -2267,6 +2302,13 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           of <a href="files/boundedBuffer.pdf">this pdf file</a> shows how to efficiently implement a queue in an array.</dd>
         </div>
 		  
+   <div class = "display">
+        <dt>quicksort</dt>
+        <dd>1. An expected-case n log n in-place sorting algorithm.<br />
+2. The partition algorithm of quicksort: <a href="files/sort2partition.pdf"> pdf file</a>.<br />
+3. The basic quicksort algoriithm: <a href="files/sort3Quicksort1.pdf">pdf file</a>.<br />
+4. Quicksort improved in three essential ways: <a href="files/sort3Quicksort3.pdf">pdf file</a>.</dd>
+        </div>
 		  
     <div class = "display">
           <dt>race condition</dt>
@@ -2274,13 +2316,8 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           results in unexpected (and wrong) results. See this <a href="files/raceCondition.pdf">pdf file</a>.</dd>
         </div>
 		  
-    <div class = "display">
-        <dt>quicksort</dt>
-        <dd>1. An expected-case n log n in-place sorting algorithm.<br />
-2. The partition algorithm of quicksort: <a href="files/sort2partition.pdf"> pdf file</a>.<br />
-3. The basic quicksort algoriithm: <a href="files/sort3Quicksort1.pdf">pdf file</a>.<br />
-4. Quicksort improved in three essential ways: <a href="files/sort3Quicksort3.pdf">pdf file</a>.</dd>
-        </div>
+ 		  
+ 
 		  
         <div class = "display">
           <dt><a name="radix" id="radix"></a>radix</dt>
@@ -2383,6 +2420,14 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dd>
           Execution of the return statement terminates execution of the method body in which it occurs and, in the case of a function, returns the value of the <span class="java">&lt;</span><span class="italixs">expression</span><span class="java">&gt;</span> as the value of the function call.</dd>
         </div>
+		  
+  <div class = "display">
+          <dt>root, leaf, and internal node of a tree</dt>
+          <dd>For root, leaf, and internal node of a tree see this <a href="files/tree1.pdf">pdf file</a>.</dd>
+    </div>
+
+
+		  
         <div class = "display">
           <dt>Runnable</dt>
           <dd>The interface that declares method run(), which is called to start a thread of execuion. See <a href="files/threadsCreate.pdf">pdf file</a>.</dd>
@@ -2474,6 +2519,11 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 		  <div class = "display">
           <dt>sink</dt>
           <dd>For an edge (u, v) of a directed graph, u is the source and v is the sink of the edge. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
+        </div>
+		  
+<div class = "display">
+          <dt>size</dt>
+          <dd>Size of a tree: the number of nodes in the tree.</dd>
         </div>
 		  
     <div class = "display">
@@ -2600,6 +2650,14 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           clause <span class="java">extends C</span>. This means that every instance of class <span class="java">SC</span> <a class = "linker" title="#inheritance">inherits</a> all
           the components of class <span class="java">C</span>.</dd>
         </div>
+		  
+    <div class = "display">
+        <dt>subtree</dt>
+        <dd>Choose any node in a tree, say node <span class="java">C</span>. Then subtree <span class="java">C</span> consists of <span class="java">C</span>, all its children, all their children, etc.<br />
+        Thus, we use <span class="java">C</span> for two things: either a node or the subtree with <span class="java">C</span> as its root. See <a href="files/tree1.pdf">this pdf file</a>.</dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt>super</dt>
           <dd>A keyword that is used in two ways.<br>
@@ -2708,7 +2766,8 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 		  
     <div class = "display">
           <dt>tree</dt>
-          <dd>When an undirected graph is a tree: <a href="files/spanningTree1.pdf">pdf file</a>.</dd>
+          <dd>Intro to trees, tree terminology: <a href="files/tree1.pdf">pdf file</a>.<br />
+        When an undirected graph is a tree: <a href="files/spanningTree1.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>try-statement</dt>
