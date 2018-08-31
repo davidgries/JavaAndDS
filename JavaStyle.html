@@ -478,29 +478,29 @@ div.code-broken {
           <p><span class="reddish">Substatements of a statement or declaration should be indented</span>.</p>
       </blockquote>
       <p>For example, the declarations in a class, the body of a method, and the if-part and then-part of a conditional statement should be indented. We prefer indentation of 4 spaces, not 2. In Eclipse, you can set the amount to indent using menu item <span class="reddish">Preferences -&gt; Java -&gt; Code Style -&gt; Formatter</span>.</p>
-      <p>Eclipse makes it easy to indent a whole class conistently. Just select all lines (<span class="reddish">control-A</span> or <span class="reddish">command-A</span>) and press <span class="reddish">control-i </span>or <span class="reddish">ommand-i</span>.</p>
+      <p>Eclipse makes it easy to indent a whole class consistently. Just select all lines (<span class="reddish">control-A</span> or <span class="reddish">command-A</span>) and press <span class="reddish">control-i </span>or <span class="reddish">command-i</span>.</p>
       <p>We prefer putting an opening curly brace &quot;{&quot; at the end of a line, and not on a line by itself, as shown below. The closing brace &quot;}&quot; appears on its own line, indented as shown below.</p>
       <div class="codegries"> if (x &lt; y)        {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x &lt; y) {<br />
     &nbsp;&nbsp;&nbsp;&nbsp;x= y;       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= y;<br />
     &nbsp;&nbsp;&nbsp;&nbsp;y= 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= 0; <br />
-          }                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
+          }                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {<br />
           else {                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(or)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= 0;<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;x= 0; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= y/2;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;x= 0; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y= y/2;<br />
     &nbsp;&nbsp;&nbsp;&nbsp;y= y/2;          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
           } </div><br />
 	  
       <p>A second oft-used convention is to put the opening brace on a line by itself, as shown below. This has a disadvantage. A scarce resource is the number of lines that one can see on the monitor at one time, and this convention wastes that resource.</p>
       <div class="codegries"> if (x &lt; y)        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (x &lt; y)<br />
-          {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <br />
+          {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;{ <br />
     &nbsp;&nbsp;&nbsp;&nbsp;x= y;       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= y;<br />
     &nbsp;&nbsp;&nbsp;&nbsp;y= 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= 0; <br />
-          }                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
-          else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(or)     &nbsp;&nbsp;else<br />
-          {                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;x= 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x= 0;<br />
-    &nbsp;&nbsp;&nbsp; y= y/2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y= y/2;<br />
+          }                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;} else<br />
+          else &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(or)     &nbsp;{<br />
+          {                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;x= 0;<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;x= 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y= y/2;<br />
+    &nbsp;&nbsp;&nbsp; y= y/2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
           }
-          &nbsp;&nbsp;&nbsp;          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+          &nbsp;&nbsp;&nbsp;          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
       </div> <br />
 	  
       <p>If you are used to using the second convention, we suggest that you use the first convention for the remainder of the course. After that, you can choose either style for the rest of your life; you will be making an informed decision, based on experience with both.</p>
@@ -560,14 +560,14 @@ div.code-broken {
 	  
       <p>a pop-up window opens with the specification of the method in it! So you get to see preciely what the function call will do and what its preconditions is. Do you see how writing specifications during programming can help you?</p>
 	  
-      <p>Secondly, at any time, in Eclipse you can use menu titem Project -&gt; Generate Javadoc to extract from the program all properly written and placed javadoc comments into a bunch of webpages that document the class. Those pages are what other will use when using your pgoram ---they will not look at the source program.</p>
+      <p>Secondly, at any time, in Eclipse you can use menu item Project -&gt; Generate Javadoc to extract from the program all properly written and placed javadoc comments into a bunch of webpages that document the class. Those pages are what others will use when using your program ---they will not look at the source program.</p>
 	  
       <a name="overcomment" id="overcomment"></a>
       <div class="subsection">3.2 Don't over-comment</div>
-      <p>Some people have a tendency to put a &quot;//&quot; comment on almost every line. This is generally just noise, making it harder to read the program. Don't do it. Refrain from commmenting lines like this:</p>
+      <p>Some people have a tendency to put a &quot;//&quot; comment on almost every line. This is generally just noise, making it harder to read the program. Don't do it. Refrain from commenting lines like this:</p>
       <div class="codegries">i= i+1; // add one to i</div><br>
 	  
-      <p>Assume that the reader has experience with Java and understand basic statements. Generally speaking, the only kinds of comments needed are those that are mentioned in this section 3 on comments.</p>
+      <p>Assume that the reader has experience with Java and understands basic statements. Generally speaking, the only kinds of comments needed are those that are mentioned in this section 3 on comments.</p>
 	  
       <a name="classinvariant" id="classinvariant"></a>
       <div class="subsection">3.3 Class invariant</div>
@@ -583,7 +583,7 @@ div.code-broken {
 	  
       <div class="subsection">3.4 Method specifications</div>
       <p>Every method should be preceded by a blank line and then a Javadoc specification that describes what the method does, along with preconditions ---constraints on the arguments of a call. In order to do this properly, the specification must mention each parameter, indicating what it is for.</p>
-      <p>Java has certain conventions for describing the parameters and result of a method. For example, one can write thiis within a Javadoc specification to describe parameter b and the result</p>
+      <p>Java has certain conventions for describing the parameters and result of a method. For example, one can write this within a Javadoc specification to describe parameter b and the result</p>
       <div class="codegries">@param b one of the sides of the triangle<br />
           @return The area of the triangle</div><br />
 	  
@@ -618,7 +618,7 @@ div.code-broken {
 <a name="classspecs" id="classspecs"></a>
 <p>&nbsp;</p>
 <div class="subsection">3.5. Class specifications</div>
-<p> Each public class is given in a separate file. The beginning of the file should contain a javadoc comment that explains what the class is for. This can be a simple, short summery. Often, one also puts here information concerning the author, the date of last modification, and so on. Here is an example.</p>
+<p> Each public class is given in a separate file. The beginning of the file should contain a javadoc comment that explains what the class is for. This can be a simple, short summary. Often, one also puts here information concerning the author, the date of last modification, and so on. Here is an example.</p>
 <div class="codegries"> /** An object of class Auto represents a car.<br />
     &nbsp;&nbsp;&nbsp;&nbsp;Author: John Doe.<br />
     &nbsp;&nbsp;&nbsp;&nbsp;Date of last modification: 25 August 1998 */<br />
@@ -636,13 +636,13 @@ div.code-broken {
     &nbsp;&nbsp;&nbsp;&nbsp;y= tmp;<br />
     }</div><br>
 	  
-<p> <span class="reddish">A statement-comment should explain what the group of statements does, not how it does it</span>. Thus, it serves the same purpose as the specification of a method: it allows one to skip the reading of the statements of the logical unit and just read the comment. With suitable statement-comments in the body of a method, one can read the method at several &quot;levels of abstraction&quot;, which helps one scan a program quickly to find a section of current interest, much like on scans section and subsection headings in an article or book. But this purpose is served only if statement-comment are precise.</p>
+<p> <span class="reddish">A statement-comment should explain what the group of statements does, not how it does it</span>. Thus, it serves the same purpose as the specification of a method: it allows one to skip the reading of the statements of the logical unit and just read the comment. With suitable statement-comments in the body of a method, one can read the method at several &quot;levels of abstraction&quot;, which helps one scan a program quickly to find a section of current interest, much like on scans section and subsection headings in an article or book. But this purpose is served only if statement-comments are precise.</p>
 <p> Statement comments must be complete. The comment</p>
 <div class="codegries">// Test for valid input</div><br />
 	  
 <p> is not adequate. What happens if the input is valid? What if it isn't --is an error message written or is some flag set? Without this information, one must read the statements for which this statement-comment is a specification, and the whole purpose of the statement-comment is lost.</p>
-<p><strong>Use of blank lines. </strong>Place a blank line after the implementation of each each statement-comment. In the following example, </p>
-<div class="codegries">// Eliminate whitespace from the beginning and end of t.<br />
+<p><strong>Use of blank lines. </strong>Place a blank line after the implementation of each  statement-comment. In the following example, </p>
+<div class="codegries">// Eliminate whitespace from the beginning of t.<br />
     while (t.length() != 0 &amp;&amp; isWhitespace(t.charAt(0))) {<br />
     &nbsp;&nbsp;&nbsp;&nbsp;t= t.substring(1);<br />
     } <br />
@@ -665,7 +665,7 @@ div.code-broken {
 	  
 <a name="assertions" id="assertions"></a>
 <div class="subsection">3.7 Assertions and the assert statement</div>
-<p>An assertion is a true-false statement that is placed (as a comment) at some point in a method body to indicate what is true at that point. In order to distinguish it from a statement-comment, it is suggested to place it in barces { and } as shown in the following example --historically, that was how assertions were written. However, few people will take the trouble to put in the braces.</p>
+<p>An assertion is a true-false statement that is placed (as a comment) at some point in a method body to indicate what is true at that point. In order to distinguish it from a statement-comment, it is suggested to place it in braces { and } as shown in the following example --historically, that was how assertions were written. However, few people will take the trouble to put in the braces.</p>
 <div class="codegries">// { b[0..t-1] is sorted }</div><br />
 <p>Place assertions wherever the code below depends on that assertion being true and the assertion helps the reader understand. One particular use of it can be in a function body that returns in several places. The following illustrates this:</p>
 <div class="codegries"> /** Return the middle value of b, c, d */<br />
@@ -686,7 +686,7 @@ div.code-broken {
 <div class="codegries"><strong>assert</strong> &lt;boolean expression&gt; ;</div><br />
 	  
 <p>If the &lt;boolean expression&gt; is true, nothing is done, but if it is false, execution throws an exception and, generally, the program terminates.</p>
-<p>Using the assert statement instead of an assertion-comment has the advantage of catching errors that cause the assertion to be false. Some people advocate leaving assertions in a finished program, for just that reason, unless the boolean expression is so complicated that it end up slowing down the program execution.</p>
+<p>Using the assert statement instead of an assertion-comment has the advantage of catching errors that cause the assertion to be false. Some people advocate leaving assertions in a finished program, for just that reason, unless the boolean expression is so complicated that it ends up slowing down the program execution.</p>
 	  
 <p><a name="loopInvariant" id="loopInvariant"></a></p>
 <div class="subsection">3.8 Loop invariants</div>
@@ -751,7 +751,7 @@ div.code-broken {
 <a name="returns" id="returns"></a>
 <div class="subsection">4.4 Use returns to simplify method structure</div>
 <p>You may hear from some people that a method should return only in the last statement of the method, at the end of the method body. In some cases, that can lead to a messy, incomprehensible method body. Use of return statements in several places, along with appropriate use of <a href="#assertions">assertions</a>, can lead to a far more comprehensible method. Further, this use of returns is developed naturally during stepwise refinement. However, one must be disciplined with the use of the returns and assertions.</p>
-<p class="codegries">As an example, we present a method that calculates the score for a bowling frame given the two objects for the next two frames. (Understanding this requires knowledge of bowling!) Note the use of assertions. We challenge you to write this method more simply, using only one return statement. or by using nested if-else statements, ecah part of which ends with a return statement.</p>
+<p class="codegries">As an example, we present a method that calculates the score for a bowling frame given the two objects for the next two frames. (Understanding this requires knowledge of bowling!) Note the use of assertions. We challenge you to write this method more simply, using only one return statement, or by using nested if-else statements, each part of which ends with a return statement.</p>
 <div class="codegries">/** = the score for this frame, given the two following frames f1 and f2.<br />
     &nbsp;&nbsp;&nbsp;&nbsp;Pre: If this is the ninth frame,  f2 is null.<br />
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If this is the tenth frame, f1 and f2 are null*/<br />
@@ -838,7 +838,7 @@ div.code-broken {
     &nbsp;&nbsp;&nbsp;&nbsp;return Math.min(c, d); <br />
     }</div><br />
 	
-<p>In the code below, temp is delcared where it belongs, and the reader who doesn't want to read the swap implementation doesn't even have to know that there is a local variable temp.</p>
+<p>In the code below, temp is declared where it belongs, and the reader who doesn't want to read the swap implementation doesn't even have to know that there is a local variable temp.</p>
 <p>This is a <em>small</em> example. In a longer method, with loops and such, the use of the principle to place local variables as close to their first use as possible becomes more important.</p>
 <div class="codegries">/** Return middle value of b, c, d */<br />
     public static int middle(int b, int c, int d) {<br />
@@ -869,7 +869,7 @@ div.code-broken {
 <p>Fields and class (i.e. static) variables should should be
     private unless there is a specific, good reason for them to be otherwise.</p>
 <p>A method should be made private if the user should not be able to call it from outside the class.</p>
-<p><strong>protected</strong>: Protected compnents can be referenced within the class, within subclasses, and within any class defined in the same package.</p>
+<p><strong>protected</strong>: Protected components can be referenced within the class, within subclasses, and within any class defined in the same package.</p>
 <p><strong>package</strong> (the default, i.e. what one gets when no modifer is used): package components can be referenced within the class and within any class that is in the same package.</p>
 <table width="200" border="1">
     <caption>
@@ -956,7 +956,7 @@ div.code-broken {
 <a name="codeToInterface" id="codeToInterface"></a>
 <p>&nbsp;</p>
 <div class="section">8. Code to interfaces instead of implementations</div>
-<p>In most cases, client code
+<p>In most cases, the client code
     doesn't care about the implementation of the list ---it just
     wants to know what operations are supported. Specifying a
     linked list is needlessly providing a detail that makes future
@@ -968,9 +968,7 @@ div.code-broken {
 <div class="section">9. Avoid deprecated patterns</div>
 <p>Java has changed over the years, and as changes have been made, some methods and classes have been <span class="reddish">deprecated</span>. <span class="reddish">Deprecated</span> literally means &quot;disapproved of&quot;, but a more accurate translation would be <span class="codegries">&quot;retired</span>&quot;. A deprecated method (or class) is still usable, but it is best not to use it. It will gradually be phased out. There is a new method to do the same thing.</p>
 <p>So if you see that something is deprecated and you have the time, look for the better alternative and use it instead.</p>
-<div class="codegries">for (String st : s) {<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;Process st in some fashion;<br />
-    }</div>
+
 
 </div>
 <!-- InstanceEndEditable --></div>
