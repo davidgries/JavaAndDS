@@ -601,6 +601,14 @@ BFS</span></a></li>
             <br>
             See this <a href="files/assignmentComp.pdf">pdf file</a> for the compound assignment operators +=&nbsp; -=&nbsp; *=&nbsp;  /=&nbsp;  %=. </p>
         </div>
+		  
+		  <div class = "display">
+          <dt><a name="assertion" id="assertion"></a>atomic action</dt>
+          <dd>A section of a program that must be executed as an indivisible sequence of operations;
+			  no other process, or thread, can interrupt or interfere with its execution.</dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt>autoboxing, auto-unboxing, autowrapping</dt>
           <dd>In certain situations, like the declaration-assignment&nbsp; Integer d= 5; &nbsp;the integer 5 will automatically be wrapped in a new object of type Integer. This is called <em>autoboxing</em>, although <em>autowrapping</em> would have been more appropriate. Similarly, in the declaration-statement&nbsp; int k= d; &nbsp;the integer in d will be auto-unboxed so that it can be stored in k. Autoboxing and auto-unboxing can take place between each primitive type and its wrapper class. Read the pdf file at entry <a class = "linker" title="#wrapperclass">wrapper class</a>.</dd>
@@ -862,6 +870,14 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           </dd>
         </div>
 		  
+    <div class = "display">
+        <dt>comparison sort</dt>
+        <dd>A comparison-sorting algorithm is a sorting algorithm that uses only comparisons (like b &lt; c) to sort.<br />
+            The worst-case time using comparison sorting to sort an array of size n is O(n log n).
+            <br />
+            Read about comparison sorting in <a href="files/comparisonSorting.pdf">this pdf file</a>.</dd>
+        </div>
+		  
         <div class = "display">
           <dt><a name="compiler" id="compiler"></a>compiler</dt>
           <dd>A (Java) compiler is a program that checks the syntax of a program, and, if the program is syntactically correct, translates it into (the Java virtual) machine language, so that it can be run, or executed. This is called <em>compiling</em> the program, and it happens at <em>compiletime</em>. The Eclipse IDE calls the compiler often as you are editing a program, and it happens so fast that you don't notice it.</dd>
@@ -1009,7 +1025,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
         </div>
         <div class = "display">
           <dt>critical section</dt>
-          <dd>A segment of code that has to be executed as an atomic action —with no other processing accessing or changing the variables it uses while that segment is being executed. See <a href="files/syncIntro.pdf">pdf file</a>.</dd>
+          <dd>Part of a program that accesses resources shared by two or more threads. To avoid a race condition, have it executed as an atomic action —with no other processing accessing or changing the resources while the critical section is being executed. In Java, this is usually done using a synchronized statement or method. See <a href="files/syncIntro.pdf">this pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>cycle</dt>
@@ -2595,7 +2611,8 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
               3. merge sort: still to come.
               <br />
               4. stable sorting: see <a class = "linker" title="#stablesort">stable sort</a>.<br />
-              5. Sorting using an anonymous function: array <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionArraySort.pdf">pdf file</a>, List or ArrayList or LinkedList <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionListSort.pdf">pdf file</a>.</dd>
+              5. Sorting using an anonymous function: array <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionArraySort.pdf">pdf file</a>, List or ArrayList or LinkedList <a href="http://www.cs.cornell.edu/courses/JavaAndDS/files/anonFunctionListSort.pdf">pdf file</a>.<br />
+          6. Comparison sort: <a href="files/comparisonSorting.pdf">pdf file</a>. </dd>
         </div>
 		  
 		<div class = "display">
