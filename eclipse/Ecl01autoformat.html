@@ -10,8 +10,8 @@
 
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
-
-<title>JUnit testing</title>
+<meta charset="UTF-8">
+<title>Line numbers</title>
 <!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
@@ -197,31 +197,50 @@ BFS</span></a></li>
 <!-- InstanceBeginEditable name="content" -->
 <div id="content">
   <div id="main">
-  
-<h2 class="colorRed">7. JUnit testing</h2>
 
-<p >Testing is an important part of the programming progress. One kind of testing is <em>unit testing</em>, in which one unit, usually a method, is tested. Here, we describe how unit testing is done in Eclipse using <em>JUnit testing</em>, the <em>J</em> standing for Java.</P>
-<h3>Learn how to create and use a JUnit testing class</h3>
-<p><a href="Ecl06A_JUnitTesting.html">Read this page</a> to see how to create a JUnit testing class in Java.</p>
-<h3>Checking that your testing worked</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/9YoIHz5Mvqg?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>We illustrate the mechanics of testing, showing you (1) how to run a test, (2) what the results of a test look like, and (3) how to check what was actually tested. Point (3) is <em> important</em>! It is easy to make a  small mistake and <em>think</em> that your testing worked while in reality <em>nothing</em> was tested. People get bitten by this all the time. After seeing this video, it shouldn't happen to you. (4 minutes) Read it here: <a href="Eclipse07JUnit.pdf">JUnit mechanics.pdf</a></P>
-<p>&nbsp;</P>
-<h3>Writing assertEquals statements to test a static function</h3>
-<p><a href="Ecl06B_JUnitAssertEquals.html">Read this page</a> to see how to write a testing procedure to test a function that returns the minimum of three values. You'll learn about the use of procedure <span class="java">assertEquals</span>, the main tool for testing whether a computed value is correct.</P>
-<h3>Testing that a constructor does its job</h3>
-<p><a href="Ecl09JUnitTestConstructor.html">Read this page</a> to see what it means for a constructor to do its job and how one writes test cases for it.</P>
-<h3>Testing that an instance does its job</h3>
-<p><a href="Ecl09JUnitTestInstanceFunc.html">Read this page</a> to see how to test an instance method.</p>
-<p><a href="Eclipse08JUnitM.pdf">Read this pdf file</a> to see what other methods are available besides assertEquals.</p>
-<p><a href="Eclipse09CheckAsserts.pdf">Read this pdf file</a> to how to test whether an assert statement to test a precondition was written properly. </p>
-<p><a href="../files/testingThrow.pdf">Read this pdf file</a> to how to test whether a method call throws a particular exception. </p>
-<h3>A few guidelines for JUnit testing classes</h3>
-<p>1. Make the name of a testing procedure indicate what the procedure is for, e.g. <span class="java">testConstructor1</span> and <span class="java">testIsBefore</span>. Then, no specification is needed, because (1) these methods are fairly straightforward and (2) everyone knows generally what they are for. This is one case where complete and thorough javadoc specifications are not needed.</p>
-<p>2. Don't spread the testing of one method over several testing procedures. Instead, make each testing procedure focused and to the point. Example: have a testing procedure <em>completely</em> test one constructor, or <em>completely </em>test one or two instance functions.</p>
-<p>3. Don't use fields or static variables in a Junit testing class. Make all variables local variables of testing procedures. You don't know the order in which testing procedures are called, and you don't have complete understanding of JUnit testing classes.</p>
-<p>4. Once something has been tested using a testing procedure, <em>leave that testing procedure alone; don't change it </em>unless a change is required for a real reason. It's OK, and good, to test it again every time the testing class is run.</p>
-<p>&nbsp;</p>
+<h2 class="colorRed">2. Importing preferences for automatic formatting</h2>
+
+<p >Eclipse has the capability to do so some automatic formatting whenever a file that is being edited is saved. This automatic formatting can make programs more readable and understandable. For example, Eclipse can automatically put spaces around operators like + and - and insert blank lines between methods —things that you should be doing yourself. Having Eclipse do these tasks saves you time and provides consistency.</P>
+<p >Below, we give instructions for downloading and importing a file of such preferences. A list of most of the tasks performed is given at the end of this document.</P>
+<p >1. Download this file <a href="CS2110EclipseCodeStylePref.epf">CS2110EclipseCodeStylePref.epf</a>.</P>
+<p >2. In Eclipse, use menu item<br />
+    <br />
+&nbsp; &nbsp; <strong>File -&gt; import</strong><br />
+<br />
+In the window that opens, choose <strong>General -&gt; Preferences</strong> and click button <strong>Next</strong>.</P>
+<p ><img src="eclipseImport1.png" alt="" width="430"  height="262" align="right"/>3. A new window will open, as shown to the right. Use button <strong>Browse</strong> to navigate to where you stored file CS2110EclipseCodeStylePref.epf and choose it. After you do this, button <strong>Finish</strong> will become enabled.</P>
+<p >Make sure checkbox <strong>Import all</strong> is checked and click button <strong>Finish</strong>.</P>
 <p >&nbsp;</P>
+<p >&nbsp;</P>
+<p >&nbsp;</P>
+<p >&nbsp;</P>
+<p >4. In the window that pops up, click <strong>Restart</strong>, because otherwise your workbench might be in an inconsistent state.<br />
+<br />
+5. Once Eclipse opens again, use menu item <strong>Eclipse -&gt; Prefer<img src="CS2110EclipseSaveActions.png" alt="" height="300" align="right"/>ences</strong>.</P>
+<p >6. In the window that opens, choose <strong>Java -&gt; Editor -&gt; Save Actions</strong>. The window pane will now look as shown to the right. Make sure that these boxes are checked:</P>
+<ol>
+    <li>Perform the selected actions on save</li>
+    <li>Format source code</li>
+    <li>Format all lines</li>
+    <li>Organize imports</li>
+    <li>Additional actions</li>
+</ol>
+<p>Click button <strong>Apply and Close</strong>.</p>
+<ul>
+    <li></li>
+</ul>
+<p >&nbsp;</P>
+<p >&nbsp;</P>
+<h3 >Actions performed when a file is saved</h3>
+<ol>
+    <li>A blank line is inserted between adjacent methods.</li>
+    <li>A space is inserted before and after each operator, like +, -, &amp;, ||.</li>
+    <li>Each opening brace { is placed at the end of a line (with a space before it), and never on a line by itself. Why? A scarce resource is the number of lines one can see at any point. Placing a brace on a separate line wastes this resource.</li>
+    <li>Unnecessary parentheses are removed in expressions, thus removing useless clutter.</li>
+    <li>The assignment operator = will have no space before it and one space after it. This makes it look non-symmetric, which is good because assignment is not a symmetric operation. See <a href="../files/robertRecorde.pdf">this pdf file</a> for the history of == versus == and why using = for assignment was a sad choice.</li>
+    <li>Unnecessary uses of &quot;this.&quot; are removed.</li>
+    <li>Unnecessary casts are removed.  </li>
+</ol>
   </div>
 </div>
 <!-- InstanceEndEditable --></div>
