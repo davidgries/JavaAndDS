@@ -921,8 +921,21 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dd><a href="files/catenate.pdf">Same as</a> <a class = "linker" title="#catenate"><strong>catenate</strong></a>.</dd>
         </div>
         <div class = "display">
-          <dt>concurrency</dt>
-          <dd>Concurrency refers to having more than one thread of execution in a program, allowing different parts of a program to execute in parallel. See <a class = "linker" title="#Threads">Threads</a>.</dd>
+          <dt><a name="concurrency" id="concurrency"></a>concurrency</dt>
+          <dd>Concurrency refers to having more than one thread of execution in a program, allowing different parts of a program to execute in parallel. <br>
+			1. Cores and processing units, processes and threads: <a href="files/threads1.pdf">pdf file 1</a>.<br>
+          2. Learn about race conditions (<a href="files/raceCondition.pdf">pdf file 2</a>) and deadlock (<a href="files/deadlock.pdf">pdf file 3</a>).<br>
+          3. Creating and starting threads. <a href="files/threadsCreate.pdf">pdf file 4</a>.<br>
+          4. Some methods of class Thread. <a href="files/ThreadMethods.pdf">pdf file 5</a>.<br>
+          5. Intro to synchronized statements and methods. <a href="files/syncIntro.pdf">pdf file 6</a>.<br>
+          6. Intro to wait(), notify(), and notifyAll(). <a href="files/waitAndNotify.pdf">pdf file 7</a>.<br>
+          7. Implementing a bounded queue in an array and a bounded buffer. <a href="files/boundedBuffer.pdf">pdf file 8</a>. <br>
+          8. Java classes that provide for concurrency. <a href="files/javasynclasses.pdf">pdf file 9</a>. <br>
+          9. Warning: Unless you know what you are doing, synchronize <em>all</em> accesses to an object. 
+			  See the bottom of the second page of <a href="files/syncIntro.pdf">this pdf file</a>.<br>
+          10. Warning: Unless you know what you are doing, do not use notify(). 
+			  <a href="files/notifyNotifyAll.pdf">pdf file 11</a>.<br>
+          11. What's a daemon thread? <a href="files/ThreadsDaemon.pdf">pdf file 12</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="conditional" id="conditional"></a>conditional expression. Uses ? and :</dt>
@@ -2831,19 +2844,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
         </div>
         <div class = "display">
           <dt><a name="Threads" id="Threads"></a>Threads</dt>
-          <dd>1. Cores and processing units, processes and threads: <a href="files/threads1.pdf">pdf file 1</a>.<br>
-          2. Learn about race conditions (<a href="files/raceCondition.pdf">pdf file 2</a>) and deadlock (<a href="files/deadlock.pdf">pdf file 3</a>).<br>
-          3. Creating and starting threads. <a href="files/threadsCreate.pdf">pdf file 4</a>.<br>
-          4. Some methods of class Thread. <a href="files/ThreadMethods.pdf">pdf file 5</a>.<br>
-          5. Intro to synchronized statements and methods. <a href="files/syncIntro.pdf">pdf file 6</a>.<br>
-          6. Intro to wait(), notify(), and notifyAll(). <a href="files/waitAndNotify.pdf">pdf file 7</a>.<br>
-          7. Implementing a bounded queue in an array and a bounded buffer. <a href="files/boundedBuffer.pdf">pdf file 8</a>. <br>
-          8. Java classes that provide for concurrency. <a href="files/javasynclasses.pdf">pdf file 9</a>. <br>
-          9. Warning: Unless you know what you are doing, synchronize <em>all</em> accesses to an object. 
-			  See the bottom of the second page of <a href="files/syncIntro.pdf">this pdf file</a>.<br>
-          10. Warning: Unless you know what you are doing, do not use notify(). 
-			  <a href="files/notifyNotifyAll.pdf">pdf file 11</a>.<br>
-          11. What's a daemon thread? <a href="files/ThreadsDaemon.pdf">pdf file 12</a>. </dd>
+          <dd>See <a class = "linker" title="#concurrency">concurrency</a>.</dd>
         </div>
 		  
 		   <div class = "display">
