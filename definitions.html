@@ -349,15 +349,37 @@ BFS</span></a></li>
       <div id="main">
     <h2 class="colorRed"> JavaHyperText</h2>
         
-        <p>Type a word into the Filter field below and only entries that have that word in it will be displayed.       </p>
-        <p>In addition, the links in the navigation bars above take you to webpages with videos/tutorials on many aspects of Java and data structures.</p>
+ 
+        <table>
+  <tr>
+	<td width="300">
+		<p>The links in the navigation bars above take you to webpages with videos / tutorials on many aspects of Java and data structures.</p>
+		
+		<p>Type a word into the Filter field below and only entries containing that word will be displayed.</p>
         <div class="searchBar">
           <!--<form method="post">-->
           <!--<input type="text" placeholder="Search for Definitions" name="s" id="inputSearch" maxlength="255">-->
-          <div>Filter:</div>
+			<div><p>Filter:</p></div>
           <input type="text" class="search" placeholder="By definition name">
           <!--</form>-->
         </div>
+	</td>
+			  
+	<td width="400"><p>Type one of these words into the Filter field to see a table of contents for that topic:
+					  </p>
+					  <ul>
+						  <li>anonymous function</li>
+						  <li>concurrency</li>
+						  <li>generics</li>
+						  <li>I/O</li>
+						  <li>recursion</li>
+						  <li>sorting</li>
+						  <li>trees (not complete)</li>
+						  <li>graphs</li>
+					  </ul>
+				  </td>
+	</tr>
+</table>
         
         <div class = "display">
           <dt>%</dt>
@@ -495,7 +517,7 @@ BFS</span></a></li>
         <dt>amortize</dt>
         <dd>Merriam-Webster's online dictionary tells you that <em>amortize</em> means to write down gradually to extinguishment the cost of (as asset) by periodic charges to expense or profit and loss.
 			That is too abstract for us. <a href="files/amortize.pdf">This pdf file</a> explains <em>amortization</em>, using class ArrayList as an example. <a href="hashing/03loadFactor.pdf">This pdf file</a> uses <em>amortization</em> in estimating the time complexity of a hashing algorithm.</dd>
-        </div>
+    </div>
 
         <div class = "display">
           <dt>anonymous class</dt>
@@ -586,7 +608,7 @@ BFS</span></a></li>
           <dd>The assert statement has the form &nbsp;&nbsp;&nbsp;&nbsp;<strong>assert</strong> &lt;boolean-expression&gt; ; <br>
           To execute it, evaluate the &lt;boolean-expression&gt;;  if false, throw an AssertionError, which will generally cause the program to abort. <a href="eclipse/Ecl10Assert.html">Read this</a> to learn about its use and how to turn on its execution.<br />
           </dd>
-        </div>
+    </div>
         <div class = "display">
           <dt><a name="assertion" id="assertion"></a>assertion</dt>
           <dd>A true-false statement about the variables in a program that is placed
@@ -627,12 +649,12 @@ BFS</span></a></li>
             Some people call a bag a <em> multi set </em>or <em>multiset</em>, since an element can occur multiple times in a bag.<br />
         That goes against the usual use of an adjective to restrict, e.g. we can restrict the dogs we are considering by talking about old dogs or brown dogs.<br />
         Instead of <em>set</em> and <em>multiset</em>, we should use <em>bag</em> and <em>unibag</em>.</dd>
-        </div>
+    </div>
 		  
     <div class = "display">
           <dt><a name="base" id="base"></a>base 2, 8, 10, and 16</dt>
           <dd>The natural numbers 0, 1, 2, ... can be represented in different bases or radixes. See <a href="files/bases.pdf">this pdf file</a>.</dd>
-        </div>
+    </div>
 		  
 		  		  
     <div class = "display">
@@ -656,7 +678,7 @@ BFS</span></a></li>
     <div class = "display">
         <dt>bipartite graph</dt>
         <dd>A graph is <em>bipartite</em> if its nodes can be partitioned into two sets such that no edge connects two nodes in the same set. See this <a href="files/graph2.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
 		  
 		  
         <div class = "display">
@@ -877,7 +899,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
             The worst-case time using comparison sorting to sort an array of size n is O(n log n).
             <br />
             Read about comparison sorting in <a href="files/comparisonSorting.pdf">this pdf file</a>.</dd>
-        </div>
+    </div>
 		  
         <div class = "display">
           <dt><a name="compiler" id="compiler"></a>compiler</dt>
@@ -1033,7 +1055,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
     <div class = "display">
         <dt>counting sort</dt>
         <dd>A linear-time sorting algorithm that is not a comparison sort. It works by counting (and then using) the number of times each value occurs in the array being sorted. See <a href="files/sort5Counting.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
 		  
 		  
 		  <div class = "display">
@@ -1239,7 +1261,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
         An upcast, or upward cast, is a cast of that object to one of the superclasses or superinterfaces of C. Upcasts will be done automatically when necessary.<br />
         A downcast, or downward cast, is a cast of that 
         object to  one of the subclasses or subinterfaces of C. Downcasts  casts must be called for explicitly.</dd>
-        </div>
+    </div>
 		  
         <div class = "display">
           <dt>DrJava</dt>
@@ -1394,7 +1416,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
     <div class = "display">
           <dt>four color theorem</dt>
         <dd>The four-color theorem: <a href="files/graphColor.pdf">this pdf file</a>. Sipka's paper on Kempe's flawed proof: <a href="files/sipkaOnKempe.pdf">this pdf file</a>. Gonthier's paper on the Coq proof: <a href="files/Gonthier4ColorCoq.pdf">this pdf file</a>.</dd>
-        </div>
+    </div>
 		  
         <div class = "display">
           <dt><a name="frameforcall" id="frameforcall"></a>frame for a call</dt>
@@ -1473,11 +1495,11 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
     <div class = "display">
         <dt>grammar</dt>
         <dd>One definition of <em>grammar</em> is the system of rules that defines the grammatical structure of a language. That doesn't help much, because <em>grammatical</em> is defined as: of or relating to grammar. Kind of a recursive, non-ending definition. We can instead say that a grammar defines the <em>syntax</em> of a language but not its semantics (meaning). Here's an example of a grammatical definition:  in English, a noun phrase can be a list of adjectives followed by a noun. And, in Java, the simple assignment statement has the form &quot;&lt;variable&gt; = &nbsp;&lt;expression&gt; ;&quot;.</dd>
-        </div>
+    </div>
 		  
 		  
 		  <div class = "display">
-          <dt>graph</dt>
+          <dt>graphs</dt>
           <dd>1. Definition of <em>graph</em> and examples of graphs: <a href="files/graph1.pdf">pdf file</a>.<br />
               2. Basic graph terminology and kinds of graphs: <a href="files/graph2.pdf">pdf file</a>.<br />
               3. Adjacency list and adjacency matrix representations of a graph: <a href="files/graphRep.pdf">pdf file</a>.<br />
@@ -1497,7 +1519,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
         <dt>greedy algorithm</dt>
         <dd>An algorithm that follows the heuristic of making a locally optimum choice at each stage with the hope of reaching a global optimum. It doesn't always work.<br />
         See <a href="files/greedyAlgorithm.pdf">this pdf file</a> for the definition and examples.</dd>
-        </div>
+    </div>
 		  
 		    <div class = "display">
           <dt>David Gries</dt>
@@ -1520,7 +1542,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
         Here is a <a href="hashing/01hashing.html">tutorial on hashing</a>.<br />
         Two important Java collections classes that implement sets and maps using hashing are java.util.HashSet and 
         java.util.HashMap.</dd>
-        </div>
+    </div>
 		  
         <div class = "display">
           <dt><a name="methodheader" id="methodheader"></a>header, of a method</dt>
@@ -1640,7 +1662,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
           (2) A simple but realistic example of the use of an inner class: <a href="files/innerClass.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
-          <dt><a name="IO" id="IO"></a>IO Input-output</dt>
+          <dt><a name="IO" id="IO"></a>IO Input-output I/O</dt>
           <dd>(0) Java files and data to demo most of what appears here:<a href="files/iodemo.zip"> iodemo.zip</a><br />
             (1)
           A bit about the Java IO packages; intro to paths of files and directories: <a href="files/io1.pdf">pdf file</a>.<br />
@@ -1746,7 +1768,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
         <dd>If you want to be stuffy about it, you refer to a <em>function call</em>, like Math.min(b, c), as a <em>function invocation</em>. Evaluating the function call is then
 		called <em>invoking</em> the function.</dd>
           <dd>Note how strange that is. You have an <em>invo<strong>C</strong>ation</em> but then you turn the C into a K and write <em>invo<strong>K</strong>ing</em>. That's as bad as having a picnic but then picnic<strong>K</strong>ing. English is a weird language.</dd>
-        </div>
+    </div>
 		  
         <div class = "display">
           <dt>jagged array</dt>
@@ -1797,7 +1819,7 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
     <div class = "display">
           <dt><a name="JRE" id="JRE"></a>JRE</dt>
           <dd>Java Runtime Environment. The software package that contains an interpreter for Java bytecode and everything else that is needed to run (execute) programs that are in Java Virtual Machine (JVM) language form. <a href="files/howJavaWorks.pdf">See this pdf file</a>.</dd>
-        </div>
+    </div>
 		  
 		  
     <div class = "display">
@@ -1809,7 +1831,7 @@ I requires Java 9. <br />
 If you don't have Java 9, you can use this website:
         <a href="https://tryjshell.org">https://tryjshell.org</a>.<br />
         </dd>
-        </div>
+    </div>
 
 		  
         <div class = "display">
@@ -1851,7 +1873,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dt><a name="linkedList" id="linkedList"></a>linked list</dt>
           <dd>See this <a href="files/linkedLists.pdf">pdf file</a>.<br />
               Use anonymous function to sort a LinkedList: <a href="files/anonFunctionListSort.pdf">pdf file</a>. </dd>
-        </div>
+    </div>
 		  
 		  <div class = "display">
 		      <dt>list</dt>
@@ -1863,7 +1885,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dd>A Java denotation of a value. Here are examples of literals:  354, 3.56F, true, 'c', and "peace".<br>
           SLiterals of the number types (like <strong>int</strong> and <strong>float</strong>): <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br>
           Literals of type <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
 		  
 		    <div class = "display">
 		      <dt>load factor</dt>
@@ -1928,7 +1950,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
         2. Does it end right: Does the falsity of the loop condition together with P imply that the postcondition is true?<br />
         3. Does the repetend make progress toward termination?<br />
         4. Does the repetend main P: if P and loop condition are true, does execution of the repetend end with the P true?</dd>
-        </div>
+    </div>
 		  
         <div class = "display">
           <dt>lower-bounded type or wildcard</dt>
@@ -1952,7 +1974,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           Think of a map as a dictionary: a key is a word and the corresponding value is the meaning of the word. Thus, a dictionary is a set of word/meaning pairs. In fact, the programming language Python uses the word <em>dictionary</em> instead of <em>map</em>.<br />
           Maps are often implemented using hash tables or some kind of search tree.
         In Java, take a look at interface java.util.Map and class java.util.HashMap.</dd>
-        </div>
+    </div>
 		  
 		  <div class = "display">
           <dt>mark of a boolean tyro</dt>
@@ -1979,7 +2001,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
 			  For a nonempty bag of even size, it is the mean of the two middle values.<br />
 			  The median of the bag {1, 1, 3, 4, 5} is 3. The median of the bag {2, 3, 4, 5, 6, 7}
           is 4.5.</dd>
-        </div>
+    </div>
 		  
         <div class = "display">
           <dt><a name="Method" id="Method"></a>method</dt>
@@ -2190,7 +2212,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
     <div class = "display">
         <dt>open addressing</dt>
         <dd>In <em>hashing</em>, there are essentially two ways to maintain the elements of the set being implemented using hashing. In <em>open addressing</em>, each bucket is either null or an element of the set begin maintained. In <em>chaining</em>, each bucket of the hash table is a linked list containing the values that hashed to that  bucket. See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing. </dd>
-        </div>
+    </div>
 		  
 		  
         <div class = "display">
@@ -2300,7 +2322,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
     <div class = "display">
           <dt>pigeonhole sort</dt>
           <dd>A non-comparison sort, inspired by early electrical/mechanical sorting/tabulating machines: <a href="files/sort5pigeonHole.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
 
 		  <div class = "display">
           <dt>planar graph</dt>
@@ -2421,13 +2443,13 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 2. The partition algorithm of quicksort: <a href="files/sort2partition.pdf"> pdf file</a>.<br />
 3. The basic quicksort algoriithm: <a href="files/sort3Quicksort1.pdf">pdf file</a>.<br />
 4. Quicksort improved in three essential ways: <a href="files/sort3Quicksort3.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
 		  
     <div class = "display">
           <dt>race condition</dt>
           <dd>A race condition occurs when two or more processes executing in parallel access shared data in a way that<br>
           results in unexpected (and wrong) results. See this <a href="files/raceCondition.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
 		  
  		  
  
@@ -2491,7 +2513,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
               2. <em>Extract </em> a local variable: highlight an expression whose value is to be assigned to the new local variable: <a href="files/refactorAddLocal.pdf">pdf file</a>.<br />
               3. <em>Extract</em> a method and <em>inline</em> a method call: <a href="files/refactorMethod.pdf">pdf file</a>.<br />
         4. Refactoring a version of selectionSort, using both extracting a method and inlining a method call: <a href="files/refactorSelectionSort.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
 		  
 		  <div class = "display">
           <dt> reference</dt>
@@ -2559,7 +2581,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 			  decimal form. In Java, one used 'e' or 'E' to indicate the exponent. For example, 500 and 0.5 can be written in scientific notation
 			  as 5E2 and 5E-1, respecitively. See <a class = "linker" title="#float">float</a> and <a class = "linker" title="#double">double</a>.
 	    See  <a href="https://en.wikipedia.org/wiki/Scientific_notation" target="_blank">en.wikipedia.org/wiki/Scientific_notation</a> for a full explanation.</dd>
-        </div>
+    </div>
 		  
 		  
         <div class = "display">
@@ -2640,7 +2662,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 <div class = "display">
           <dt>size</dt>
           <dd>Size of a tree: the number of nodes in the tree.</dd>
-        </div>
+    </div>
 		  
     <div class = "display">
           <dt>sorting<br />
@@ -2659,7 +2681,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           5. For a broad overview of sorting, summarizing over 40 sort algorithms, see: <a href="https://en.wikipedia.org/wiki/Sorting_algorithm">en.wikipedia.org/wiki/Sorting_algorithm</a><br />
           6. Java classes that contain all the sorting algorithms discussed above, with JUnit tests: <a href="files/sortSearch.zip">sortSearch.zip</a><br />
           </dd>
-        </div>
+    </div>
 		  
 		<div class = "display">
           <dt>source</dt>
@@ -2716,7 +2738,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
     <div class = "display">
           <dt>statement-comment</dt>
           <dd>A comment that is a specification of the following lines of code: <a href="files/statementComment.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
         <div class = "display">
           <dt><a name="Static" id="Static"></a>static</dt>
           <dd> See <a class = "linker" title="#staticmethod">static method</a> and <a class = "linker" title="#staticvariable">static
@@ -2779,7 +2801,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
         <dt>subtree</dt>
         <dd>Choose any node in a tree, say node <span class="java">C</span>. Then subtree <span class="java">C</span> consists of <span class="java">C</span>, all its children, all their children, etc.<br />
         Thus, we use <span class="java">C</span> for two things: either a node or the subtree with <span class="java">C</span> as its root. See <a href="files/tree1.pdf">this pdf file</a>.</dd>
-        </div>
+    </div>
 		  
 		  
         <div class = "display">
@@ -2881,9 +2903,9 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
     <div class = "display">
           <dt>trees</dt>
           <dd>1. Intro to trees, tree terminology: <a href="files/tree1.pdf">pdf file</a>.<br />
-              2. Examples of trees: <a href="files/tree2examples.pdf">pdf file</a>.<br />
+              2. Examples of trees: pdf file.<br />
         When an undirected graph is a tree: <a href="files/spanningTree1.pdf">pdf file</a>.</dd>
-        </div>
+    </div>
         <div class = "display">
           <dt>try-statement</dt>
           <dd>Here is the syntax of the try-statement:<br>
@@ -2950,7 +2972,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
         So the array containing (5, 0, 0, 3) could be changed to (0, 0, 3, 5) or (0, 0, 5, 3).<br />
         Underdetermined specs can be a good thing, giving the implementor more freedom in finding an efficient solution.
         </dd>
-        </div>
+    </div>
 		  
 		  <div class = "display">
           <dt>undirected graph</dt>
@@ -3048,8 +3070,8 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
     <div class = "display">
         <dt>zero</dt>
         <dd>The number 0, sometimes called nil, nada, zilch, and many other terms. See <a href="https://en.wikipedia.org/wiki/0">en.wikipedia.org/wiki/0</a> for its history and more.</dd>
-        </div>
-        <!-- InstanceEndEditable --></div>
+    </div>
+    <!-- InstanceEndEditable --></div>
 
 <hr />
 
