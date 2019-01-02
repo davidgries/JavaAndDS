@@ -652,6 +652,11 @@ BFS</span></a></li>
         Instead of <em>set</em> and <em>multiset</em>, we should use <em>bag</em> and <em>unibag</em>.</dd>
     </div>
 		  
+		      <div class = "display">
+        <dt>balanced tree</dt>
+        <dd>There are several definitions of <em>balanced tree</em>. The goal of all of them is to ensure that the height of the tree is (close to) the minimum possible. <a href="files/tree3Balanced.pdf">pdf file</a>.</dd>
+    </div>
+		  
     <div class = "display">
           <dt><a name="base" id="base"></a>base 2, 8, 10, and 16</dt>
           <dd>The natural numbers 0, 1, 2, ... can be represented in different bases or radixes. See <a href="files/bases.pdf">this pdf file</a>.</dd>
@@ -1164,8 +1169,9 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dt>depth, level, width, and height in a tree</dt>
         <dd>The <em>depth</em> of a node is the length of the path from the root to the node. Thus, the root is at depth 0 and its children are at depth 1.<br />
               The <em>level</em> of a node is  1 + (its depth).<br />
-              The <em>height</em> of a node is the length of a longest path from that node to a leaf.<br />
-              The <em>height</em> of a tree is the height of its root.<br />
+        The <em>height</em> of a node is the length of a longest path from that node to a leaf.<br />
+        The <em>height</em> of an empty tree is 0.<br />
+              The <em>height</em> of a non-empty tree is the height of its root.<br />
               The <em>width</em> of a tree at depth d is the number of nodes with depth d.<br />
               The <em>width</em> of a tree is the maximum of its widths at all depths.<br />
 See <a href="files/tree1.pdf">this pdf file</a>.</dd>
@@ -1649,7 +1655,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
 		      <div class = "display">
           <dt> inlining a method call</dt>
           <dd>The process of replacing a call on a method by the body of the method, with suitable replacement of parameters by arguments.
-			  <a href="files/refactorMethod.pdf">This pdf file</a> explains how to use Eclipse's refactoring tool to inline a method call.<br />
+			  <a href="files/refactorMethod.pdf">This pdf file</a> explains how to use Eclipse's refactoring tool to inline a method call.
           </dd>
         </div>
 		  
@@ -1661,6 +1667,14 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
           (1) Study this example of the use of a static nested class before reading the next example: <a href="files/StaticNestedClass.pdf">pdf file</a>.<br>
           (2) A simple but realistic example of the use of an inner class: <a href="files/innerClass.pdf">pdf file</a>.</dd>
         </div>
+		  
+		        <div class = "display">
+          <dt> inner or internal node</dt>
+          <dd>An inner node or internal node of a tree is a node that is not a leaf ---i.e. a node that has a child.<br />
+          </dd>
+        </div>
+		  
+		  
         <div class = "display">
           <dt><a name="IO" id="IO"></a>IO Input-output I/O</dt>
           <dd>1. Java files and data to demo most of what appears here:<a href="files/iodemo.zip"> iodemo.zip</a><br />
@@ -2904,6 +2918,10 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt>trees</dt>
           <dd>1. Intro to trees, tree terminology: <a href="files/tree1.pdf">pdf file</a>.<br />
               2. Examples of trees: <a href="files/tree2examples.pdf">pdf file</a>.<br />
+              3. Binary trees.<br />
+              4. Balanced trees —this pdf file discusses them in terms of BSTS (item 5): <a href="files/tree3Balanced.pdf">pdf file</a>.<br />
+              5. Binary search trees (BSTs): pdf file.
+              <br />
         When an undirected graph is a tree: <a href="files/spanningTree1.pdf">pdf file</a>.</dd>
     </div>
         <div class = "display">
