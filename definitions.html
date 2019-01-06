@@ -369,7 +369,9 @@ BFS</span></a></li>
 					  </p>
 					  <ul>
 						  <li>anonymous function</li>
+						  <li>casts</li>
 						  <li>concurrency</li>
+						  <li>constructors</li>
 						  <li>generics</li>
 						  <li>I/O</li>
 						  <li>JUnit testing</li>
@@ -776,7 +778,7 @@ BFS</span></a></li>
         </div>
 		  
         <div class = "display">
-          <dt><a name="cast" id="cast"></a>cast</dt>
+          <dt><a name="cast" id="cast"></a>casts</dt>
           <dd>A cast converts a value from one type to another.
           Example: the cast <span class="java">(<strong>double</strong>)(5+6)</span> converts the value of the expression 5+6 to <span class="javakeyword">double</span> format. <br>
           1. Casting between types <strong>char</strong> and <strong>int</strong>: <a href="files/char.pdf">pdf file</a>.<br>
@@ -828,9 +830,33 @@ BFS</span></a></li>
           <span class="javakeyword">null</span> or the name of (or pointer to) an object of class <span class="java">C</span>.</dd>
         </div>
         <div class = "display">
+          <dt>classes, subclasses, and objects</dt>
+          <dd>1. Class definition or declaration: a bluprint for objects, describing what is in them.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;A. Format of the class definition and what an object of the class looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;B. Using keyword <strong>extends</strong> to define subclasses (and superclasses); what a subclass object looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;C. Definition of inheritance: see <a class = "linker" title="#inheritance">inheritance</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;D. Class Object, the superest class of them all, and the class hierachy:  <a href="files/classDef.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;E. Overriding a method and the use of &quot;<strong>super.</strong>&quot;: <a href="files/overriding.pdf">pdf file</a>.<br />
+2. Constructors,
+          all about them: See <a class = "linker" title="#constructor">constructor</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;A. The new-expression. See a full explanation of it in a 2-minute video on this <a href="explainJava/explainJava.html">webpage</a>.<br />
+3. The class/interface as a type.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;A. A class name can be used as a type. Its values are pointers to objects of that class (and also <strong>null</strong>).<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A variable of some class-type C contains a pointer or reference to an object of type C.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;B. An interface name can also be used as a type. Its values are pointers to objects of any class C <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(and also null) that implements the interface.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;C. The <em>compile-time reference rule</em> determines whether a component reference like p.v or p.m(...)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is syntactically correct: <a href="files/compiletimeReferenceRule.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;D. The bottom-up or overriding rule determines which method will be called at runtime: <a href="files/overriding.pdf">pdf file</a>.<br />
+              4. Abstract classes and interfaces. Still to come.       </dd>
+        </div>
+		  
+		  <div class = "display">
           <dt>class, apparent</dt>
           <dd>We don't use this terminology. If you see it being used, ignore it.</dd>
         </div>
+		  
+		  
         <div class = "display">
           <dt>class as a type</dt>
           <dd>A class name can be used as a type. Its values are the names of (pointers to) objects
@@ -1011,7 +1037,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dd>An operation or method takes constant time if the time it takes to carry it out does not depend on the size of its operands. For a more detailed explanation, with examples, see this <a href="files/constantTime.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
-          <dt><a name="constructor" id="constructor"></a>constructor</dt>
+          <dt><a name="constructor" id="constructor"></a>constructors</dt>
           <dd>A method that is declared with the basic form: </dd>
           <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="italixs">access modifier</span>&gt; &lt;<span class="italixs">class-name</span>&gt;<span class="java"> ( </span>&lt;<span class="italixs">parameter-declarations</span>&gt;<span class="java"> )
           { </span>...<span class="java"> }</span><br><br>
@@ -1945,10 +1971,10 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
 		  
 
         <div class = "display">
-          <dt><a name="loops" id="loops"></a>loop</dt>
-          <dd>Java has four different kinds of loop. Here are one-page pdf files that explain each of them:<br>
+          <dt><a name="loops" id="loops"></a>loops in Java</dt>
+          <dd>1. Java has four different kinds of loop. Here are one-page pdf files that explain each of them:<br>
           <a href="files/for-loop.pdf">for-loop</a>, <a href="files/while-loop.pdf">while-loop</a>, <a href="files/do-loop.pdf">do-loop</a>, <a href="files/foreach.pdf">foreach loop</a>.<br>
-          You can enable the use of the foreach statement on your own collection class by implementing interfaces Iterator and Iterable. This tutorial shows you how in
+          2. You can enable the use of the foreach statement on your own collection class by implementing interfaces Iterator and Iterable. This tutorial shows you how in
           less than 15 minutes of video: <a href="iteratorIterable/iterator.html">webpage</a>. </dd>
         </div>
 		  
@@ -2531,7 +2557,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
     </div>
 		  
     <div class = "display">
-          <dt> refactor</dt>
+          <dt> refactoring</dt>
           <dd>To refactor a program means to modify it without changing its behavior/correctness with an eye to improving it in some way.<br />
               1.  The Eclipse refactor tool; using it to change a name (i.e. an identifier): <a href="files/refactor.pdf">pdf file</a>.<br />
               2. <em>Extract </em> a local variable: highlight an expression whose value is to be assigned to the new local variable: <a href="files/refactorAddLocal.pdf">pdf file</a>.<br />
