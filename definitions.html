@@ -88,8 +88,10 @@
   //dictionary of special words to key terms
   var dictionary = {
   	arg: ["actual parameter"],
+	avl: ["trees"],
 	ba: ["escape character"],
 	bene: ["side effect"],
+	black: ["trees"],
 	buf: ["IO Input-output", "bounded buffer"],
 	cen: ["CPU"],
 	ma: ["manana"],
@@ -100,6 +102,7 @@
 	jf: ["IO Input-output"],
 	not: ["Threads"],
 	quo: ["escape character"],
+	red: ["trees"],
 	super: ["super", "constructor"],
 	tern: ["conditional expression", "ternary operator"],
 	wai: ["Threads"]
@@ -430,6 +433,12 @@ BFS</span></a></li>
           <dt>@Override</dt>
           <dd>An annotation that is placed on a method that is supposed to override a method in a superclass or interface. It's a good idea to use it, for it tells you there is an error if the method doesn't actually override another method, perhaps because of a typo.</dd>
         </div>
+		  
+		<div class = "display">
+          <dt>2-3 tree</dt>
+          <dd>See <a href="files/tree5BSTextensions.pdf">pdf file</a>.</dd>
+        </div>
+		  
         <div class = "display">
           <dt>absolute path, a in file system</dt>
           <dd>See <a class = "linker" title="#IO">I/O</a> (first entry).</dd>
@@ -653,6 +662,11 @@ BFS</span></a></li>
         <div class = "display">
           <dt>autoboxing, auto-unboxing, autowrapping</dt>
           <dd>In certain situations, like the declaration-assignment&nbsp; Integer d= 5; &nbsp;the integer 5 will automatically be wrapped in a new object of type Integer. This is called <em>autoboxing</em>, although <em>autowrapping</em> would have been more appropriate. Similarly, in the declaration-statement&nbsp; int k= d; &nbsp;the integer in d will be auto-unboxed so that it can be stored in k. Autoboxing and auto-unboxing can take place between each primitive type and its wrapper class. Read the pdf file at entry <a class = "linker" title="#wrapperclass">wrapper class</a>.</dd>
+        </div>
+		  
+		<div class = "display">
+          <dt>B-tree</dt>
+          <dd>See <a href="files/tree5BSTextensions.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  <div class = "display">
@@ -2708,6 +2722,11 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           programming project: <a href="shortestPath/SP07Concretize.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
+          <dt>side effect, benevolent side effect</dt>
+          <dd>A <em>side effect</em> occurs when evaluation of an expression changes a variable. We avoid them: <a href="files/sideEffects.pdf">pdf file</a>.</dd>
+        </div>
+		  
+		   <div class = "display">
           <dt>signature</dt>
           <dd>See <a class = "linker" title="#methodsignature">method signature</a>.</dd>
         </div>
@@ -2967,17 +2986,18 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
 		  
 		  
     <div class = "display">
-          <dt>trees</dt>
+          <dt><a name="trees" id="trees"></a>trees</dt>
           <dd>0. Poems about trees, including Joyce Kilmers famous poem: <a href="files/treepoems.pdf">pdf file</a>.<br />
               1. Intro to trees, tree terminology: <a href="files/tree1.pdf">pdf file</a>.<br />
               2. Examples of trees: <a href="files/tree2examples.pdf">pdf file</a>.<br />
               3. Binary trees.<br />
               4. Balanced trees —this pdf file discusses them in terms of BSTS (item 5): <a href="files/tree3Balanced.pdf">pdf file</a>.<br />
-              5. Binary search trees (BSTs): <a href="files/tree4BST.pdf">pdf file</a>.<br />
-        6. Representing arithmetic expressions as trees: <a href="files/tree6ExpTrees.pdf">pdf file</a>. Java implementation: <a href="files/treeExpressions.zip">treeExpressions.zip</a>.<br />
-        7. Heaps: to come<br />
-        8. Heap sort: <a href="files/Trees7HeapSort.pdf">pdf file</a>. <a href="files/heapSort.zip">JavaHeapSort.zip</a>.<br />
-        When an undirected graph is a tree: <a href="files/spanningTree1.pdf">pdf file</a>.</dd>
+        5. Binary search trees (BSTs): <a href="files/tree4BST.pdf">pdf file</a>.<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;5A. Takeoffs on BSTs (AVL tree, 2-3 tree, B-tree, red-black tree): <a href="files/tree5BSTextensions.docx">pdf file</a>.<br />
+              6. Representing arithmetic expressions as trees: <a href="files/tree6ExpTrees.pdf">pdf file</a>. Java implementation: <a href="files/treeExpressions.zip">treeExpressions.zip</a>.<br />
+              7. Heaps: to come<br />
+              8. Heap sort: <a href="files/Trees7HeapSort.pdf">pdf file</a>. <a href="files/heapSort.zip">JavaHeapSort.zip</a>.<br />
+        9. When an undirected graph is a tree: <a href="files/spanningTree1.pdf">pdf file</a>.</dd>
     </div>
         <div class = "display">
           <dt>try-statement</dt>
