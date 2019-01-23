@@ -1375,7 +1375,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
           <dd>Java's formal terminology for a foreach loop. See <a class = "linker" title="#foreach">foreach loop.</a></dd>
         </div>
         <div class = "display">
-          <dt>enums, or enumeration types</dt>
+          <dt>enum, or enumeration type</dt>
           <dd>An enum class provides constants (static final variables), like Coin.PENNY and Coin.NICKEL.<br>
           
           The basics: <a href="files/enums.pdf">pdf file</a>.<br>
@@ -1839,7 +1839,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
           <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#int">int</a>.</dd>
         </div>
         <div class = "display">
-          <dt>integral types</dt>
+          <dt>integral type</dt>
           <dd>The Java <a class = "linker" title="#PrimitiveType">primitive types</a> whose values
           are integers: <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>,
           and <a class = "linker" title="#char">char</a>.<br>
@@ -2286,7 +2286,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           a "null pointer exception" happens.</dd>
         </div>
         <div class = "display">
-          <dt>number types</dt>
+          <dt>number type</dt>
           <dd>The Java <a title="#PrimitiveType" class = "linker">primitive types</a> <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>, <a class = "linker" title="#char">char</a>, <a class = "linker" title="#float">float</a>, and <a class = "linker" title="#double">double</a>.<br>
           Explanation of <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.<br>
           Explanation of <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, and <strong>double</strong>: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.</dd>
@@ -3082,14 +3082,51 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt>type, raw</dt>
           <dd>See <a class = "linker" title="#rawType">raw type</a>.</dd>
         </div>
+		  
+	<div class = "display">
+        <dt>types
+        </dt>
+          <dd>A type is a set of values together with operations on them.<br />
+0. Strong vs weak typing in a programming language: <a href="files/strongWeakType.pdf">pdf file</a>.<br />
+1. Type integer: the integers&nbsp; ..., -2, -1, 0, 1, 2, ... &nbsp;with operators +, -, *, +, etc.<br />
+              2. Primitive types: <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, <strong>long</strong>, <strong>char</strong>, <strong>boolean</strong>: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br />
+              For primitive type <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.<br />
+     For primitive type <strong>boolean</strong>: <a href="files/boolean.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Integral type: <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>char</strong>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;Number type: <strong>byte</strong>, <strong>short</strong>, <strong>int</strong>, <strong>long</strong>, <strong>float</strong>, <strong>long</strong>, <strong>char</strong>: <a href="files/char.pdf">pdf file</a>.<br />
+3. Class name or interface name can be used as a type: Its values are names of<br />
+    (pointers to) objects that contain a partition with that name (and also <strong>null</strong>).<br />
+&nbsp;&nbsp;&nbsp;&nbsp;E.g. the declaration     JFrame j;     indicates that variable j can contain a pointer<br />
+    to any
+object that has a JFrame partition.<br />
+4. Wider/narrower types. Each line below gives a series of types; left is narrowest, right is widest:<br />
+     <strong>&nbsp;byte</strong> --&gt; <strong>short</strong> --&gt; <strong>int</strong> --&gt; <strong>long</strong> --&gt; <strong>float</strong> --&gt; <strong>double</strong><br />
+    &nbsp; <strong>char</strong> --&gt; <strong>int</strong> --&gt; <strong>long</strong> --&gt; <strong>float</strong> --&gt; <strong>double</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subclass --&gt; superclass   or    class --&gt; interface   or   subinterface --&gt; superinterface<br />
+5. &nbsp;Unary prefix <em>Cast operator</em>: (type) &nbsp;or&nbsp; (class-name)&nbsp; or &nbsp;(interface-name)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.g. &nbsp;&nbsp;(<strong>int</strong>) 5.3  &nbsp;&nbsp;casts <strong>float</strong> value 5.3 to type <strong>int</strong>, truncating to 5.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Widening casts may be inserted automatically. Narrowing casts must be<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done explicitly because they may lose information.<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Casting among number types: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casting between <strong>char</strong> and <strong>int</strong>: <a href="files/char.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casting among classes, called <em>class casts</em>:  <a href="files/castingAbout.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Casting with interfaces: 
+			  <a href="abstractInterface/01ai.html">3.75-minute video (webpage)</a>.<br />
+        </dd>
+    </div>
+		  
+		  
         <div class = "display">
           <dt>type safety</dt>
           <dd>See this <a href="files/strongWeakType.pdf">pdf file</a>.</dd>
         </div>
-        <div class = "display">
-          <dt>type, strong versus weak typing</dt>
-          <dd>See this <a href="files/strongWeakType.pdf">pdf file</a>.</dd>
-        </div>
+		  
+    <div class = "display">
+          <dt>type</dt>
+          <dd>Strong versus weak typing: <a href="files/strongWeakType.pdf">pdf file</a>.<br />
+        Java primitive types:          
+          <dd>          
+    </div>
 		  
 	<div class = "display">
           <dt>tyro</dt>
