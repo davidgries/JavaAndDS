@@ -877,24 +877,31 @@ BFS</span></a></li>
         </div>
         <div class = "display">
           <dt>classes, subclasses, and objects</dt>
-          <dd>1. Class definition or declaration: a bluprint for objects, describing what is in them.<br />
+          <dd>1. Class definition or declaration: a blueprint for objects, describing what is in them.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;A. Format of the class definition and what an object of the class looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;B. Using keyword <strong>extends</strong> to define subclasses (and superclasses); what a subclass object looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;B. Using keyword <strong>extends</strong> to define subclasses (and superclasses); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;what a subclass object looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;C. Definition of inheritance: see <a class = "linker" title="#inheritance">inheritance</a>.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;D. Class Object, the superest class of them all, and the class hierachy:  <a href="files/classDef.pdf">page 2 of pdf file</a>.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;E. Overriding a method and the use of &quot;<strong>super.</strong>&quot;: <a href="files/overriding.pdf">pdf file</a>.<br />
-2. Constructors,
-          all about them: Type&nbsp; &nbsp;<em>constructors</em>&nbsp; &nbsp;&nbsp;into the Filter field.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;A. The new-expression. See a full explanation of it in a 2-minute video on this <a href="explainJava/explainJava.html">webpage</a>.<br />
-3. The class/interface as a type.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;A. A class name can be used as a type. Its values are pointers to objects of that class (and also <strong>null</strong>).<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A variable of some class-type C contains a pointer or reference to an object of type C.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;B. An interface name can also be used as a type. Its values are pointers to objects of any class C <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(and also null) that implements the interface.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;C. The <em>compile-time reference rule</em> determines whether a component reference like p.v or p.m(...)<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is syntactically correct: <a href="files/compiletimeReferenceRule.pdf">pdf file</a>.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;D. The bottom-up or overriding rule determines which method will be called at runtime: <a href="files/overriding.pdf">pdf file</a>.<br />
-              4. Abstract classes and interfaces. Still to come.       </dd>
+&nbsp;&nbsp; &nbsp;F. Keyword<strong> this</strong> eveluates to a pointer to the object in which it occurs; the user of &quot;<strong>this</strong>.&quot;: <a href="files/useOfThisDot.pdf">pdf file</a>.<br />
+              2. Constructor. Purpose: To initialize fields of an object when it is created in order to<br />
+         make the class invariant true.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;A. The new-expression. Syntax: <strong>new</strong> &lt;constructor-call&gt; . 2-minute video on this <a href="explainJava/explainJava.html">webpage</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;B.  Rule: initialize superclass fields before subclass fields. <a href="files/constructors.pdf">pdf file</a>.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;C. Syntactic rule: a constructor that you write must start with a call on another constructor;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              what call is inserted if it is not present.<a href="files/constructors.pdf"> pdf file</a>.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;D. How to call another constructor using <strong>super</strong>(...) or <strong>this</strong>(...). <a href="files/constructors.pdf"> pdf file</a>.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;E. What constructor is inserted if a class does not have a constructor. <a href="files/constructors.pdf">pdf file</a>.<br />
+              3. The class/interface as a type.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;A. A class name can be used as a type. Its values are pointers to objects of that class (and also <strong>null</strong>).<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A variable of some class-type C contains a pointer or reference to an object of type C.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;B. An interface name can also be used as a type. Its values are pointers to objects of any class C <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(and also null) that implements the interface.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;C. The <em>compile-time reference rule</em> determines whether a component reference like p.v or p.m(...)<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is syntactically correct: <a href="files/compiletimeReferenceRule.pdf">pdf file</a>.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;D. The bottom-up or overriding rule determines which method will be called at runtime: <a href="files/overriding.pdf">pdf file</a>.<br />
+            4. Abstract classes and interfaces. Still to come.       </dd>
         </div>
 		  
 		  <div class = "display">
@@ -2745,7 +2752,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
         <div class = "display">
           <dt>shadowing a variable</dt>
           <dd><em>Shadowing</em> refers to declaring two variables with the same name with overlapping scopes. Given a reference to such a variable, the <a class = "linker" title="#insideOut">inside-out rule</a> indicates to which of the declarations the reference refers. For example, suppose a class has a field x and a method m within the class has a parameter x. That parameter, shadows field x ---every reference to x within the method refers to the parameter.<br />
-              1. How to use &quot;this.&quot; to reference a shadowed field: <a href="files/useOfThisDot.pdf">pdf file</a>.</dd>
+              1. How to use &quot;<strong>this</strong>.&quot; to reference a shadowed field: <a href="files/useOfThisDot.pdf">pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt><a name="short" id="boolean3"></a>short</dt>
@@ -2951,6 +2958,14 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt><a name="superclass" id="superclass"></a>superclass</dt>
           <dd>See <a class = "linker" title="#subclass">subclass</a>.</dd>
         </div>
+		  
+	<div class = "display">
+        <dt>superest</dt>
+        <dd>Class Object, defined in package java.lang, is the superclass of all classes that do not
+		explicitly extend another. It is the only class with no superclass, so we call it the
+		<em>superest</em> class of them all.</dd>
+    </div>
+		  
         <div class = "display">
           <dt><a name="switch" id="switch"></a>switch statement</dt>
           <dd>See this <a href="files/switch.pdf">pdf file</a>.</dd>
