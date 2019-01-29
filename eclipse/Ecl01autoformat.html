@@ -216,7 +216,7 @@ In the window that opens, choose <strong>General -&gt; Preferences</strong> and 
 <p >&nbsp;</P>
 <p >4. In the window that pops up, click <strong>Restart</strong>, because otherwise your workbench might be in an inconsistent state.<br />
 <br />
-5. Once Eclipse opens again, use menu item <strong>Eclipse -&gt; Preferences</strong> (Mac Os) or <strong>Window -&gt; Preference</strong>s (WIndows OS)</P>
+5. Once Eclipse opens again, use menu item <strong>Eclipse -&gt; Preferences</strong> (Mac Os) or <strong>Window -&gt; Preference</strong>s (Windows OS)</P>
 <p >6. In the window that opens, choose <strong>Java -&gt; Editor -&gt; Save Actions</strong>.<img src="CS2110EclipseSaveActions.png" alt="" height="300" align="right"/> The window pane will now look as shown to the right. Make sure that these boxes are checked:</P>
 <ol>
     <li>Perform the selected actions on save</li>
@@ -225,22 +225,22 @@ In the window that opens, choose <strong>General -&gt; Preferences</strong> and 
     <li>Organize imports</li>
     <li>Additional actions</li>
 </ol>
-<p>Click button <strong>Apply and Close</strong>.</p>
+<p>Click button <strong>Apply.</strong></p>
+<p>7. There are many more actions for Eclipse to perform when a file is saved.<br />
+    <a href="eclipseSavePrefs.pdf">This pdf file</a> shows you how to change preferences have them performed when a file is saved. It takes about 3 minutes to follow the instructions in that file.</p>
 <ul>
     <li></li>
 </ul>
-<p >&nbsp;</P>
-<p >&nbsp;</P>
 <h3 >Actions performed when a file is saved</h3>
 <ol>
-    <li>A blank line is inserted between adjacent methods.</li>
-    <li>A space is inserted before and after each operator, like +, -, &amp;, ||.</li>
-    <li>Each opening brace { is placed at the end of a line (with a space before it), and never on a line by itself. Why? A scarce resource is the number of lines one can see at any point. Placing a brace on a separate line wastes this resource.</li>
-    <li>Unnecessary parentheses are removed in expressions, thus removing useless clutter.</li>
-    <li>The assignment operator = will have no space before it and one space after it. This makes it look non-symmetric, which is good because assignment is not a symmetric operation. See <a href="../files/robertRecorde.pdf">this pdf file</a> for the history of == versus == and why using = for assignment was a sad choice.</li>
-    <li>Unnecessary uses of &quot;this.&quot; are removed.</li>
-    <li>Unnecessary casts are removed.</li>
-    <li>Format javadoc comments (which begin with &quot;/**&quot;). Lines will be wrapped automatically to fit the standard width. If you want to insert a new line, use &quot;&lt;br&gt;&quot; before it, which is html for &quot;line break&quot;, and hit the return key. We will explain such formatting during the course.</li>
+    <li>Insert a blank line between adjacent methods.</li>
+    <li>Insert a space before and after each operator, like +, -, &amp;, ||.</li>
+    <li>Place each opening brace { at the end of a line (with a space before it), and never on a line by itself. Why? A scarce resource is the number of lines one can see at any point. Placing a brace on a separate line wastes this resource.</li>
+    <li>Remove unnecessary parentheses in expressions, thus removing useless clutter.</li>
+    <li>Remove a space before assignment operator = and put one space after it. This makes it look non-symmetric, which is good because assignment is not a symmetric operation. See <a href="../files/robertRecorde.pdf">this pdf file</a> for the history of == versus == and why using = for assignment was a sad choice.</li>
+    <li>Remove unnecessary uses of &quot;this..</li>
+    <li>Remove unnecessary casts.</li>
+    <li>Format javadoc comments (which begin with &quot;/**&quot;). Lines are wrapped automatically to fit the standard width. If you want to insert a new line, use &quot;&lt;br&gt;&quot; before it, which is html for &quot;line break&quot;, and hit the return key. We will explain such formatting during the course.</li>
 </ol>
   </div>
 </div>
