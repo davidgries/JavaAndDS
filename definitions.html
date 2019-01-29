@@ -901,7 +901,20 @@ BFS</span></a></li>
               &nbsp;&nbsp;&nbsp;&nbsp;C. The <em>compile-time reference rule</em> determines whether a component reference like p.v or p.m(...)<br />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; is syntactically correct: <a href="files/compiletimeReferenceRule.pdf">pdf file</a>.<br />
               &nbsp;&nbsp;&nbsp;&nbsp;D. The bottom-up or overriding rule determines which method will be called at runtime: <a href="files/overriding.pdf">pdf file</a>.<br />
-            4. Abstract classes and interfaces. Still to come.       </dd>
+            4. Abstract class.   Make a class abstract so that it cannot be instantiated —objects of the class cannot<br />
+&nbsp;&nbsp;&nbsp;            created. Make a method in an abstract class abstract so that subclasses <em>must</em> override it.<br />  
+    &nbsp;&nbsp;&nbsp; The first video <a href="abstractInterface/01ai.html">on this page</a>, 3.5-minutes long, explains abstract classes and methods.<br />
+    5. Interfaces.
+          An interface provides a way to ensure syntactically (at compile-time)
+          that a class implements<br />
+&nbsp;&nbsp;&nbsp;          certain methods. The interface defines the
+          methods abstractly (without bodies), and the class definition<br />
+&nbsp;&nbsp;          then
+          includes an <a class = "linker" title="#implementsclause">implements clause</a> to
+          indicate that it will define the methods.<br />
+&nbsp;&nbsp;&nbsp;A. 2.4-minute tutorial that explains interfaces: <a href="abstractInterface/01ai.html">second video on this page</a>.<br />
+&nbsp;&nbsp;&nbsp;B. How an interface defines an abstract data type (ADT):<a href="files/types.pdf"> pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;C. Multiple inheritance and the diamond problem: <a href="abstractInterface/05diamond.pdf">pdf file</a></dd>
         </div>
 		  
 		  <div class = "display">
