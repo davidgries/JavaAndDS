@@ -89,7 +89,7 @@
   var dictionary = {
   	arg: ["actual parameter"],
 	avl: ["trees"],
-	ba: ["escape character"],
+	bac: ["escape character"],
 	bene: ["side effect"],
 	black: ["trees"],
 	buf: ["IO Input-output", "bounded buffer"],
@@ -659,7 +659,7 @@
         </div>
 		  
     <div class = "display">
-        <dt>bag, set</dt>
+        <dt>bag, set, unibag</dt>
         <dd>A <em>bag</em> is a bunch of elements with duplicates allowed. The bag {25, 5, 25, 10} has size 4 because it contains 5, 10, and 25 twice. Think of it as a representation of a bag containing 2 quarters, a dime, and a nickel.<br />
             A <em>set</em> is a bunch of elements with no duplicates allowed. The set {25, 5, 10} has size 3.<br />
             Some people call a bag a <em> multi set </em>or <em>multiset</em>, since an element can occur multiple times in a bag.<br />
@@ -1686,11 +1686,19 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
           <dd>Something of the form {Q} S {R} where Q and R are assertions and S is a statement It has the meaning: Execution of S in a state in which Q is true is guaranteed to terminate, and when it does, R is true.</dd>
         </div>
 		  
-		<div class = "display">
+		  		<div class = "display">
           <dt>IDE --- Integrated Development Environment</dt>
           <dd>A software application that includes many facilities for writing, developing, testing, and running programs.
 			  For Java, we have been using Eclipse and the very simple IDE, DrJava.</dd>
         </div>
+		  
+		  <div class = "display">
+          <dt>Identity</dt>
+          <dd>The identity of a binary operator <em>o</em> is the value such that
+			  x = <em>o</em> + x for all x. See this <a href="files/Identity.pdf">pdf file.</a></dd>
+        </div>
+		  
+
 		  
 		  <div class = "display">
           <dt>iff</dt>
@@ -2491,6 +2499,13 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt><a name="prefix" id="prefix"></a>prefix operator</dt>
           <dd>An operator that is written before its operand. E.g. unary minus is a prefix operator: - (4 + 2). Also, ++ and -- can be used a prefix operators (see this<a href="files/decIncOperators.pdf"> pdf file</a>). See also<a class = "linker" title="#infix"> infix operator</a> and <a class = "linker" title="#postfix">postfix operator</a>.</dd>
         </div>
+		  
+		 
+		  <div class = "display">
+          <dt><a name="preorder" id="preorder"></a>preorder, inorder, postorder</dt>
+          <dd>Explanation of preorder, inorder, and postorder traversals of a binary tree: <a href="files/tree6BTreeTraversal.pdf">pdf file.</a></dd>
+        </div>
+		
 		  <div class = "display">
           <dt><a name="prepend" id="prepend"></a>prepend</dt>
           <dd>To append means to add at the end (of a list). Many moons ago, we coined the word <em>prepend</em> to mean to add at the beginning.</dd>
@@ -2547,10 +2562,17 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
         be omitted if the call appears in a place in which the procedure can be called
         without them.</dd>
         </div>
+		  
         <div class = "display">
           <dt>processing unit</dt>
           <dd>A component on a chip in your computer that can execute a sequence of instructions. See <a href="files/threads1.pdf">pdf file</a>.</dd>
         </div>
+		  
+		  <div class = "display">
+          <dt>product of an empty bag</dt>
+          <dd>The sum of an empty bag of numbers is 0. The product of an empty bag of numbers is 1. See <a href="files/Identity.pdf">pdf file</a>.</dd>
+        </div>
+		  
         <div class = "display">
           <dt>programming assignments</dt>
           <dd>This <a href="files/assignmentDiscipline.pdf">pdf file</a> talks about the process of doing a programming assignment. Please take it seriously.</dd>
@@ -3072,22 +3094,23 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
     <div class = "display">
           <dt><a name="trees" id="trees"></a>trees</dt>
           <dd>0. Poems about trees, including Joyce Kilmers famous poem: <a href="files/treepoems.pdf">pdf file</a>.<br />
-              1. Intro to trees, tree terminology: <a href="files/tree1.pdf">pdf file</a>.<br />
-              2. Examples of trees: <a href="files/tree2examples.pdf">pdf file</a>.<br />
-              3. Binary trees: <a href="files/tree3binary.pdf">pdf file</a>.<br />
-              4. Balanced trees: A tree with n nodes is balanced if its height is O(lg n).<br />
+1. Intro to trees, tree terminology: <a href="files/tree1.pdf">pdf file</a>.<br />
+2. Examples of trees: <a href="files/tree2examples.pdf">pdf file</a>.<br />
+3. Binary trees: <a href="files/tree3binary.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp; Preorder, inorder, and postorder traversals of a binary tree. <a href="files/tree6BTreeTraversal.pdf">pdf file</a>.<br />
+4. Balanced trees: A tree with n nodes is balanced if its height is O(lg n).<br />
 &nbsp;&nbsp;&nbsp;              This pdf file discusses balanced trees in terms of BSTS (item 5): <a href="files/tree3Balanced.pdf">pdf file</a>.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;Proof that the height of a height-balanced tree with n nodes is O(n): <a href="files/tree3binaryTreeHeight.pdf">pdf file</a>.<br />
-              5. Binary search trees (BSTs): <a href="files/tree4BST.pdf">pdf file</a>.<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;5A. Takeoffs on BSTs (AVL tree, 2-3 tree, B-tree, red-black tree): <a href="files/tree5BSTextensions.pdf">pdf file</a>.<br />
-              6. Representing arithmetic expressions as trees: <a href="files/tree6ExpTrees.pdf">pdf file</a>. Java implementation: <a href="files/treeExpressions.zip">treeExpressions.zip</a>.<br />
-              7. Heaps, both min-heaps and max-heaps<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;7A. Definition of a max-heap and min-heap: <a href="files/Trees7Heaps.pdf">pdf file</a>.<br />
-    &nbsp;&nbsp;&nbsp;&nbsp;7B. Java class ArrayHeap, maintaining a bag of ints as a min-heap: <a href="files/heapArray.zip">heapArray.zip</a><br />
-    &nbsp;&nbsp;&nbsp;&nbsp;7C. Implementing a heap in which the values are different from the priorities: <a href="files/Trees7HeapsWithPriorities.pdf">pdf file</a>. <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;7D. Heap sort, an insitu O(n log n) sorting algorithm: <a href="files/Trees7HeapSort.pdf">pdf file</a>. <a href="files/heapSort.zip">JavaHeapSort.zip</a>.<br />
-              8. Spanning tree of a graph: <a href="files/spanningTree1.pdf">pdf file</a>. 
-              See also <a class = "linker" title="#spanning">spanning tree</a>.</dd>
+5. Binary search trees (BSTs): <a href="files/tree4BST.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;5A. Takeoffs on BSTs (AVL tree, 2-3 tree, B-tree, red-black tree): <a href="files/tree5BSTextensions.pdf">pdf file</a>.<br />
+6. Representing arithmetic expressions as trees: <a href="files/tree6ExpTrees.pdf">pdf file</a>. Java implementation: <a href="files/treeExpressions.zip">treeExpressions.zip</a>.<br />
+7. Heaps, both min-heaps and max-heaps<br />
+&nbsp;&nbsp;&nbsp;&nbsp;7A. Definition of a max-heap and min-heap: <a href="files/Trees7Heaps.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;7B. Java class ArrayHeap, maintaining a bag of ints as a min-heap: <a href="files/heapArray.zip">heapArray.zip</a><br />
+&nbsp;&nbsp;&nbsp;&nbsp;7C. Implementing a heap in which the values are different from the priorities: <a href="files/Trees7HeapsWithPriorities.pdf">pdf file</a>. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;7D. Heap sort, an insitu O(n log n) sorting algorithm: <a href="files/Trees7HeapSort.pdf">pdf file</a>. <a href="files/heapSort.zip">JavaHeapSort.zip</a>.<br />
+8. Spanning tree of a graph: <a href="files/spanningTree1.pdf">pdf file</a>. 
+              See also <a class="linker" title="#spanning">spanning tree</a>.</dd>
     </div>
         <div class = "display">
           <dt>try-statement</dt>
@@ -3180,7 +3203,7 @@ object that has a JFrame partition.<br />
 		  
 		  
         <div class = "display">
-          <dt><a name="unary" id="Type"></a>unary operator</dt>
+          <dt><a name="unary" id="unary"></a>unary operator</dt>
           <dd>An operator with one operand. In the following examples, unary minus and factorial each have one operand:<br>
           <span class="java">- (6+2)</span>, <span class="java">6!</span> . Unary prefix operators have highest precedence and are evaluated from right to left. E.g. <span class="java">- +  - 8 + 5</span> is evaluated as <span class="java">(-(+(- 8))) + 5</span>. See also <a class = "linker" title="#ternary">ternary operator</a> and <a class = "linker" title="#binary">binary operator</a>.</dd>
         </div>
