@@ -3076,7 +3076,7 @@ The length of the path is the number of edges, i.e. p. See this <a href="files/g
           <dt>throw-statement</dt>
           <dd>The throw-statement has the form&nbsp; <strong>throw</strong>
           &lt;throwable-object&gt; ;<br>
-		  0. If the throw-statement is not within a try-block, the object is thrown out to where the method (in which the exception was thrown) was called, and it looks like the method call threw the object.
+		  0. Suppose the throw-statement is not within a try-block, and it is in some method m. Suppose m was called in a call m(...). Throw object a0 to that call m(...) and act as if that call threw the object.
 			  Point 3 says what happens if it is within a try-block.<br>
           1. 3.2-minute video on throwable objects: <a href="exceptions/EX2.html">webpage</a>.<br>
           2. 5-minute video on interpreting the output of an uncaught thrown object: <a href="exceptions/EX1.html">webpage</a>.<br>
