@@ -182,32 +182,40 @@
 <h3>Introduction</h3>
 
 
-<p > Sometimes, it is easy to write  code without thoroughly understanding what it does ---your program  worked, but you're not completely sure why. Other times, you might &quot;know&quot; a fact without understanding its implications, leading to misunderstandings and poor programming.</P>
-<p >This page is designed to increase  understanding and remove misunderstandings. It highlights important concepts and allows you to test yourself to make sure you avoid common misconceptions.</P>
-<p >There are two reasons for taking this material seriously. The main reason is that learning this material properly will help you master Java and data structures and increase your programming skill. The second reason is that much of this material is guaranteed to be on prelims and the final.</P>
-<p >Here is a way to study some of this material, be it a definition, an algorithm, a concept, or evaluation/execution of some Java code. It doesn't take long to do this.</P>
-<blockquote>
-<p ><strong>Practice 1</strong>. Get out a blank sheet of paper and write it to the best of your ability. Compare what you wrote to our definition, algorithm, concept, or evaluation/execution. Note any differences. Next day, do the same thing. Continue doing this until you get it right.</P>
-<p >&nbsp;</P>
-</blockquote>
+<p > Sometimes, it is easy to write  code without thoroughly understanding what it does 
+---your program  worked, but you're not completely sure why. Other times, you might &quot;know&quot; 
+a fact without understanding its implications, leading to misunderstandings and poor programming.</p>
+<p >This page is designed to increase  understanding and remove misunderstandings. 
+It highlights important concepts and allows you to test yourself to make sure you avoid common misconceptions.</p>
+
+<p >Here is a way to study some of this material, be it a definition, an algorithm, a concept, or evaluation/execution of some Java code. 
+It doesn't take long to do this.</p>
 <h3>Execution versus evaluation</h3>
-<p >An expresssion like &nbsp;x+2 &nbsp;is <em>evaluated</em>. If variable x contains value 4, evaluation of &nbsp;x+2&nbsp;&nbsp;yields the value 6. A computer could evaluate that expression, but <em>you</em> could too. A function call like &nbsp;&nbsp;max(5, 3) &nbsp;&nbsp;is an expression, and evaluating it yields the value 5.</P>
-<p >A statement, on the other hand, is not evaluated; it is <em>executed</em>. For example, the  statements&nbsp;&nbsp;x= x+2;&nbsp;&nbsp;and (in a recipe) &quot;Stir the batter until smooth&quot; are <em>executed</em>, or <em>carried out </em>by someone or something ---a person, a computer, a chef.</P>
-<p >The Java statement &nbsp;System.out.println(6); &nbsp;is a call on procedure println. Executing the call causes 6 to be printed somewhere; it does not &quot;return&quot; a result. Function calls, which are expressions, are different from procedure calls, which are statements.</P>
-<p >&nbsp;</P>
+<p >An expresssion like &nbsp;x+2 &nbsp;is <em>evaluated</em>. 
+If variable x contains value 4, evaluation of &nbsp;x+2&nbsp;&nbsp;yields the value 6. A computer could evaluate that expression, 
+but <em>you</em> could too. A function call like &nbsp;&nbsp;max(5, 3) &nbsp;&nbsp;is an expression, and evaluating it yields the value 5.</p>
+<p>A statement is not evaluated; it is <em>executed</em>. 
+    For example, the statements&nbsp;&nbsp;x= x+2;&nbsp;&nbsp;and (in a recipe) &quot;Stir the batter until smooth&quot; are <em>executed</em>, 
+    or <em>carried out </em>by someone or something ---a person, a computer, a chef.</p>
+<p >The Java statement &nbsp;System.out.println(6); &nbsp;is a call on procedure println. 
+Executing the call causes 6 to be printed somewhere; it does not &quot;return&quot; a result. Function calls, 
+which are expressions, are different from procedure calls, which are statements.</p>
+
 
 <h3>Syntax versus semantics</h3>
-<p >There are two different issues in defining a programming language:</P>
+<p >There are two different issues in defining a programming language:</p>
 <blockquote>
   <p ><strong>1. Syntax. </strong>What does it mean for a statement to be syntactically correct? For example, you  know that the following if-statement is not correct because it is missing an open parenthesis:</p>
   <blockquote>
     <p > if x &lt; 3) x= x+2;</p>
   </blockquote>
-  <p>You also now know that if x is of type <strong>int</strong>, the Java statement x= 5.3; is syntactically incorrect.</p>
+  <p>Also, if x is of type <strong>int</strong>, the Java statement x= 5.3; is syntactically incorrect.</p>
   <p>If a program is not syntactically correct, it cannot be executed (or run, or carried out). Whether you are using Matlab or Python or Java, your program will not be executed if it contains a syntax error.</p>
   <p>A Java <em>compiler</em> is a program that (1) checks that a Java program is syntactically correct and, if it is, (2) translates the Java program into the Java virtual machine language so it can be executed.</p>
-  <p><strong>2. Semantics.</strong> <em>Semantics</em> has to do with <em>meaning</em>. For a programming language, semantics deals with how a program is executed. This requires knowing how each statement of the language is executed. For example, what does it mean to execute, or carry out, the assignment x= x+2; ? We'll see that next.</p>
-  </blockquote>
+  <p><em>Compile-time</em> refers to the time when the compiler is checking a program to make sure it is syntactically correct and then translating it into the machine language.</p>
+  <p><strong>2. Semantics.</strong> <em>Semantics</em> has to do with <em>meaning</em>. For a programming language, semantics deals with how a program (i.e. the translated-into-machine-language version) is executed. This requires knowing how each statement of the language is executed. For example, what does it mean to execute, or carry out, the assignment x= x+2; ? We'll see that next.</p>
+  <p><em>Runtime</em> refers to the time at which the program is being executed, i.e. when it is running. The program can be run only if it is syntactically correct.</p>
+</blockquote>
   <p>&nbsp;</p>
   <h3>0. Presenting an algorithm in English</h3>
   <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/5DuHOGUdVXM?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>Essentially, an algorithm is a sequence of steps to be executed. Some algorithms are written in English, some in Java, some in Python, some in a mixture of English and a programming language.  In this 2.5-minute video, we explain how English steps in an algorithm should be written, using as our model the cooking recipe. Read it here: <a href="01presentingAlgorithmsB.pdf">01presentingAlgorithmsB.pdf</a></p>
