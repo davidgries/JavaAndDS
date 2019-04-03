@@ -198,15 +198,15 @@
 <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/hKt7ZqCemVg?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We develop the algorithm. As you watch the development, focus on the invariant and see how relatively easily the algorithm is developed from it. It takes only 6 minutes(!) ---allthough we do ask you to stop the video and do some thinking yourself in 4 different places. Read the development here: <a href="04shortestPathDevelop.pdf">04shortestpathDevelop.pdf</a></p>
 <p>&nbsp;</p>
 <p>Here is <a href="1959dijkstra.pdf">Edsger Dijkstra's paper, from 1959</a>. He presents two algorithms; the second one is the shortest-path algorithm: </p>
-<p>Some of you may not be comfortable yet with understanding a presentation like this. Instead, you want to see the algorithm being executed. But you don't need <em>us</em> to show you an execution ---<strong>you</strong> can do it yourself, and you will gain more understanding by doing it yourself. Start with a small graph, like the one used in the problem statement (shown) below, and carefully execute the algorithm, keeping track of what is in the settled and frontier sets and in array d. The algorithm itself is on the second page of the pdf document for this video: <a href="04shortestPathDevelop.pdf">04shortestpathDevelop.pdf</a></p>
-
+<p>Some of you may not be comfortable yet with understanding a presentation like this. Instead, you want to see the algorithm being executed. But you don't need <em>us</em> to show you an execution ---<strong>you</strong> can do it yourself, and you will gain more understanding by doing it yourself. Start with a small graph, like the one used in the problem statement (shown) below, and carefully execute the algorithm, keeping track of what is in the settled and frontier sets and in array d. The algorithm itself is on the second page of the pdf document for this video: <a href="04shortestPathDevelop.pdf">04shortestpathDevelop.pdf</a>. The 
+    answer is given at the end of the pdf file for the second video: <a href="02shortestPathProblem.pdf">02shortestPathProblem.pdf</a>. </p>
 <p><img src="shortestPath_clip_image001.png" alt="a graph" width="151" height="111" align="left" /></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h3>Calculating the shortest paths as well as their lengths using backpointers</strong></h3>
-<p><a href="SP05Bkptrs.pdf">This pdf file</a> extends the algorithm to save not only the distance of all shortest paths with start node v but also the paths themselves, using <em>backpointers</em>.</p>
+<p><a href="SP05Bkptrs.pdf">This pdf file</a> extends the algorithm to save not only the distance of all shortest paths with start node v but also the paths themselves, using <em>backpointers</em>. More information on implementing backpointers in Java can be seen in the pdf file below on implementing the shortest-path algorithm.</p>
 <h3>The runtime complexity of the shortest-path algorithm</h3>
 <p><a href="SP06Time.pdf">This pdf file</a> analyzes the expected-case and worst-case time of the algorithm, giving different results for sparse and dense graphs.
 	The analysis is interesting because for all but one line of the algorithm, we can determine exactly how many times it is executed.</p>
