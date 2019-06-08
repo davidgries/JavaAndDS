@@ -367,6 +367,7 @@
 						  <li>I/O</li>
 						  <li>JUnit testing</li>
 						  <li>types</li>
+						  <li>variables</li>
 					 </ul>
 				 </td>
 				 <td nowrap style="font-size:1em; padding:0"> <ul>
@@ -2063,12 +2064,11 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
 		  
         <div class = "display">
           <dt><a name="localvariable" id="localvariable"></a>local variable</dt>
-          <dd>A <a class = "linker" title="#Variable">variable</a> that is declared within the body
-          of a method. It does not have a default value and must be assigned before it can be referenced. The scope of a local variable is from its declaration to the end of the block in which it is declared.</dd>
-          <dd>The syntax of a local variable declaration is: &lt;type&gt; &lt;variable-name&gt; ;<br />
-              Examples:  <strong>int</strong> k; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JFrame jf;<br>
-              <br>
-              Principle: Place a local variable as close to its first use as possible. Do <em>not</em> simply declare all local variables at the beginning of a method. FOLLOW THIS PRINCIPLE.</dd>
+          <dd>A <a class="linker" title="#Variable">variable</a> that is declared within the body
+          of a method. For a one-page discussion of local variables, including their declaration, scope, when they are allocated space, and the fact that they are uninitialized, see <a href="files/variableLocal.pdf">this pdf file</a>.<br />
+          <br />
+          Principle: Place a local variable as close to its first use as possible. Do not simply declare all local variables at the beginning of a method. FOLLOW THIS PRINCIPLE.<br />
+          </dd>
         </div>
         <div class = "display">
           <dt><a name="logarithm" id="logarithm"></a>logarithm</dt>
@@ -3269,14 +3269,17 @@ object that has a JFrame partition.<br />
           <dd>See <a class = "linker" title="#generics">generics</a>.</dd>
         </div>
         <div class = "display">
-          <dt><a name="Variable" id="Variable"></a>variable</dt>
-          <dd>A name with an associated value. Sometimes viewed as a named box
-          with the value in the box. In  Java, a variable has a <a class = "linker" title="#Type">type</a>,
+          <dt><a name="Variable" id="Variable"></a>variables</dt>
+          <dd>A variable is a name with an associated value. Sometimes viewed as a named box
+          with the value in the box. In  Java, a variable has a <a class="linker" title="#Type">type</a>,
           which defines the set of values that the box can contain. In Java,
-          there are four kinds of variable: <a class = "linker" title="#parameter">parameter</a>, <a class = "linker" title="#localvariable">local
-          variable</a>, <a class = "linker" title="#instancevariable">instance variable</a>            (or
-          field), and class variable (or <a class = "linker" title="#staticvariable">static
-          variable</a>).</dd>
+          there are four kinds of variable:<br />
+1. parameter: a variable declared within the parentheses of a method (i.e. procedure, function, or constructor) header.<br />
+2. local
+          variable: a variable declared in a method body. See <a href="files/variableLocal.pdf">pdf file</a>.<br />
+3. field (or <a class="linker" title="#instancevariable">instance variable</a>). See <a href="files/classDef.pdf">pdf file</a>.<br />
+4. class variable (or <a class="linker" title="#staticvariable">static
+          variable</a>). See <a href="files/static.pdf">pdf file</a>.</dd>
         </div>
 		  
 		  <div class = "display">
