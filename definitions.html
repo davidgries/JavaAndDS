@@ -28,6 +28,12 @@
 	font-size: 12pt;
 }
 </style>
+<style>
+#Gtable td, #Gtable th {
+   padding: 3px;
+   text-align: left;
+}
+</style>
 <style media="screen" type="text/css">
 #back2Top {
     width: 40px;
@@ -532,7 +538,55 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
 Definition of O(...):<a href="files/complexity_O.pdf"> pdf file</a>.<br />
 &nbsp;&nbsp;&nbsp;Some time-complexity classes: <a href="files/complexity_classes.pdf">pdf file</a>.<br />
 &nbsp;&nbsp;&nbsp;Shortcuts in deciding on complexity classes: <a href="files/complexity_Shortcuts.pdf">pdf file</a>.<br />
-&nbsp;&nbsp;&nbsp;Why you should never write f(n) = O(g(n)): <a href="files/complexityNo=.pdf">pdf file</a>.</dd>
+&nbsp;&nbsp;&nbsp;Why you should never write f(n) = O(g(n)): <a href="files/complexityNo=.pdf">pdf file</a>.<br />
+Sorting provides a lot of examples of calculating time and space requirements.
+<br />
+&nbsp;&nbsp;&nbsp;This table gives the basic sorting algorithms and links to pdf files for them:
+
+<table id="Gtable">
+<tr>
+    <th>Algorithm</th>
+    <th>Worst time</th> 
+    <th>Expected time</th>
+    <th>Space</th>
+  </tr>
+  <tr>
+    <td><a href="files/sort1.pdf">insertion sort<br />selection sort</a></td>
+    <td>O(n^2)</td> 
+    <td>O(n^2)</td>
+    <td>O(1)</td> 
+  </tr>
+  <tr>
+    <td><a href="files/Trees7HeapSort.pdf">heap sort</a></td>
+    <td>O(n log n)</td> 
+    <td>O(n log n)</td>
+    <td>O(1)</td> 
+  </tr>
+  <tr>
+    <td><a href="files/sort8merge2.pdf">merge sort</a></td>
+    <td>O(n log n)</td> 
+    <td>O(n log n)</td>
+    <td>O(n)</td> 
+  </tr>
+  <tr>
+    <td><a href="files/sort3Quicksort1.pdf">quick sort</a></td>
+    <td>O(n^2)</td> 
+    <td>O(n log n)</td>
+    <td>O(n)</td> 
+  </tr>
+  <tr>
+    <td><a href="files/sort3Quicksort3.pdf">quick sort<br>improved</a></td>
+    <td>O(n^2)</td> 
+    <td>O(n log n)</td>
+    <td>O(log n)</td> 
+  </tr>
+  <tr>
+    <td><a href="files/comparisonSorting.pdf">comparison sorts</a></td>
+    <td colspan="2">no better than O(n log n)</td>
+    <td></td> 
+  </tr>
+</table>
+          </dd>
         </div>
 
         <div class = "display">
@@ -849,6 +903,12 @@ Definition of O(...):<a href="files/complexity_O.pdf"> pdf file</a>.<br />
         </div>
 		  
 		  <div class = "display">
+          <dt>chaff, eliminating</dt>
+          <dd>You might find this banquet speech on eliminating the chaff entertaining as well as educational:
+          <a href="files/chaff.pdf">pdf file</a>.</dd>
+        </div>
+        
+        <div class = "display">
           <dt>chaining</dt>
           <dd>In <em>hashing</em>, there are essentially two ways to maintain the elements of the set being implemented using hashing. In <em>chaining</em>, each bucket of the hash table is a linked list containing the values that hashed to that  bucket. In <em>open addressing</em>, each bucket is either null or an element of the set begin maintained. See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
         </div>
