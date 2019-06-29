@@ -35,6 +35,21 @@
 	font-style: oblique;
 	font-weight:500;
 }
+hr {
+       display: block;
+       position: relative;
+       padding: 0;
+       margin: 8px auto;
+       height: 0;
+       width: 100%;
+       max-height: 0;
+       font-size: 1px;
+       line-height: 0;
+       clear: both;
+       border: none;
+       border-top: 1px solid #aaaaaa;
+       border-bottom: 1px solid #ffffff;
+    }
 </style>
 <script type="text/javascript" src="../js/fancyBox/source/jquery.fancybox.pack.js"></script> 
 <link href="../menus/103/menu103id24_style.css" rel="stylesheet" type="text/css" />
@@ -181,7 +196,7 @@
 
 <h2 class="colorRed">Introduction to Eclipse</h2>
 
-<p > We use application Eclipse  to edit, test, and run Java programs. It is called an IDE (Integrated Development Environment. In this little module, we introduce you to the basics of Eclipse. You will not completely understand  the Java code we write; just concentrate on how we are using Eclipse. Besides showing you how to use the IDE in a basic fashion, we give instructions on how to set various preferences, e.g. ensuring that line numbers appear in the editing pane.</P>
+<p > We use application Eclipse  to edit, test, and run Java programs. It is called an IDE (Integrated Development Environment. In this little module, we introduce you to the basics of Eclipse. You will not completely understand  the Java code we write; just concentrate on how we are using Eclipse. Besides showing you how to use the IDE in a basic fashion, we give instructions on how to set various preferences, e.g. ensuring that line numbers appear in the editing pane.</p>
 <h3>The Eclipse workspace</h3>
 
 <p>A <em>project</em> is a program that you are writing in Eclipse. Eclipse keeps projects in a <em>workspace</em>. The workspace is just a folder/directory somewhere on your harddrive where Eclipse keeps information about your projects. When you install Eclipse, you can tell Eclipse where to put the workspace. Put it where you can get at it if you have to. On a MAC, you might put it in your user directory in a folder called Eclipse or Workspace. On a Windows machine, you could put it in C:\workspace. Eclipse keeps a file or two in the workspace that contains not only the projects but information about them (called metadata). Don't mess with that file.</p>
@@ -189,15 +204,28 @@
 
 <h3> Basic terminology.</h3>
 
-<p >1. A Java <em>class</em> is a description of <em>objects</em>, which can contain methods (functions, procedures) to be called. You will learn about  Java classes beginning in lecture 2 of CS2110.</P>
-<p >2. A <em>package</em> is a collection of classes. If you are writing them, they will be in a directory or folder on your hard drive.</P>
-<p >3. An Eclipse <em>project</em> is a program that you are writing using Eclipse. It consists of a bunch of classes. Every time you want to start a new program, say for a new assignment, you create a new project for it. We can also say that the project contains a Java <em>program</em>.</P>
-<p >4. A Java <em>application</em> is a Java program (collection of classes) that has a certain method, <em>main</em>, that can be called to run the program.</P>
+<p >1. A Java <em>class</em> is a description of <em>objects</em>, which can contain methods (functions, procedures) to be called. You will learn about  Java classes beginning in lecture 2 of CS2110.</p>
+<p >2. A <em>package</em> is a collection of classes. If you are writing them, they will be in a directory or folder on your hard drive.</p>
+<p >3. An Eclipse <em>project</em> is a program that you are writing using Eclipse. It consists of a bunch of classes. Every time you want to start a new program, say for a new assignment, you create a new project for it. We can also say that the project contains a Java <em>program</em>.</p>
+<p >4. A Java <em>application</em> is a Java program (collection of classes) that has a certain method, <em>main</em>, that can be called to run the program.</p>
 <h3><a name="createProject" id="createProject"></a>0. Creating a project and a class and running it.</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/k5LvMn6wVg4?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>This video introduces you to the Eclipse window. It shows you how to (1) create a project, (2) create a class (within the project) that is an &quot;application&quot;, and (3) run that application. (5:45 minutes) Read it here: <a href="Eclipse01Intro.pdf">eclipseIntro.pdf</a></P>
-<p><br />
-  <br />
-</P>
+	<hr>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/k5LvMn6wVg4?rel=0">
+<img SRC="../imagesActivity/WhiteFill.png"  width="100"  align="left" hspace="5" alt=""></a>
+
+<a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/KMk3hJKtTRs?rel=0">
+<img SRC="../imagesActivity/WhiteFill.png"  width="100"  align="left" hspace="5" alt=""></a>
+
+This video introduces you to the Eclipse window.
+It shows you how to (1) create a project, (2) create a class within the project that is an &quot;application&quot;, and 
+(3) run that application. (~6 minutes). <br>
+Click the left head for Java version 8 or 
+the right head for the newer Java 11. The second one is the first one with a slight modification
+due to some changes in Java 11.<br> 
+Read it here: <a href="Eclipse01Intro.pdf">eclipseIntro.pdf (Java 8)</a> &nbsp; &nbsp;<a href="Eclipse01IntroIntroJava11.pdf">eclipseIntro.pdf (Java 11)</a></p>
+</p>
+
+<hr>
 <h3>About &quot;hello&quot; in 5 languages</h3>
 <p>The previous video printed &quot;hello&quot; in the 5 most popular languages, in order of popularity. They are given below, with their meanings. One reason for showing you this is to show that characters from just about all languages can be used in Java, not just the roman letters and numerals to which we are accustomed.</p>
 <p>Chinese: 你好&nbsp;&nbsp;    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ni hao   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a respectful hello<br />
