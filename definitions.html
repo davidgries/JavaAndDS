@@ -921,8 +921,13 @@ Sorting provides a lot of examples of calculating time and space requirements.
 		  
         <div class = "display">
           <dt><a name="char" id="char"></a>char</dt>
-          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are single characters, like <span class="java">'h'</span>. This  <a href="files/char.pdf">pdf file</a> explains type <strong>char</strong> and the unicode representation of characters.</dd>
+          <dd>A <a class = "linker" title="#PrimitiveType">primitive type</a> whose values are single characters, like <span class="java">'h'</span>. 
+          This  <a href="files/char.pdf">pdf file</a> explains type <strong>char</strong> and the unicode representation of characters.
+          This  <a href="files/codePoint.pdf">pdf file</a> explains more about code points and what to watch out for
+          when characters not in type <strong>char</strong> are used in Strings.
+          </dd>
         </div>
+        
         <div class = "display">
           <dt>Character, class</dt>
           <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#char">char</a>.</dd>
@@ -1058,6 +1063,16 @@ Sorting provides a lot of examples of calculating time and space requirements.
 		  <div class = "display">
           <dt>code coverage</dt>
           <dd>Eclipse JUnit testing to show code coverage: <a href="files/codeCoverage.pdf">pdf file</a>.
+          </dd>
+        </div>
+        
+        <div class = "display">
+          <dt><a name="codepoint" id="codepoint"></a>code point</dt>
+          <dd>An integer that represents a character in the Unicode system. For characters in Java type <strong>char</strong>,
+          it is the integer that is returned when a character is cast to <strong>int</strong>.
+          This  <a href="files/char.pdf">pdf file</a> explains type <strong>char</strong> and the unicode representation of characters.
+          This  <a href="files/codePoint.pdf">pdf file</a> explains more about code points and what to watch out for
+          when characters not in type <strong>char</strong> are used in Strings.
           </dd>
         </div>
 		  
@@ -2690,7 +2705,9 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           <dt><a name="PrimitiveType" id="PrimitiveType"></a>primitive type</dt>
           <dd> A <a class = "linker" title="#Type">type</a> that is fully integrated into Java, i.e.
           one that is not defined by a <a class = "linker" title="#Class">class</a> definition.<br>
-          1. Explanation of primitive type <a class = "linker" title="#char">char</a>: <a href="files/char.pdf">pdf file</a>.<br>
+          1. Explanation of primitive type <a class = "linker" title="#char">char</a>: <a href="files/char.pdf">pdf file</a>.
+          This  <a href="files/codePoint.pdf">pdf file</a> explains what to watch out for
+          when characters not in type <strong>char</strong> are used in Strings.<br>
           2. Explanation of the other primitive number types: <a class = "linker" title="#byte">byte</a>, <a class = "linker" title="#short">short</a>, <a class = "linker" title="#int">int</a>, <a class = "linker" title="#long">long</a>, <a class = "linker" title="#float">float</a>, and <a class = "linker" title="#double">double</a>: <a href="files/primitiveNumberTypes.pdf">pdf file</a>.<br>
           3. Explanation of type boolean: <a href="files/boolean.pdf">pdf file</a>.</dd>
         </div>
@@ -3458,9 +3475,20 @@ object that has a JFrame partition.<br />
           <dt>void</dt>
           <dd>A java keyword used to indicate that a method is a procedure and does not return a result. See <a class = "linker" title="#procedure">procedure</a>.</dd>
         </div>
+        
         <div class = "display">
           <dt><a name="whileLoop" id="whileLoop"></a>while-loop (while-statement)</dt>
           <dd>See this <a href="files/while-loop.pdf">pdf file</a> for an explanation of the while-loop.</dd>
+        </div>
+        
+        <div class = "display">
+          <dt><a name="whitespace" id="whitespace"></a>white space</dt>
+          <dd>The exact meaning of a Java white space character is given at <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isWhitespace(int)">this URL</a>. 
+              The space character ' ', or '\u0020', is white space, and so are the tab '\t', line feed '\n', and carriage return '\r'.<br />
+              Use this function call to test whether a character c is whitespace: Character.isWhitespace(c).<br />
+              The old Java function s.trim() returns a copy of s with leading and trailing characters removed if they are &le; '\u0020'.
+              This includes '\t', '\n', and '\r' but neglects some newer Unicode characters.<br>
+              Function s.strip(), introduced in Java version 11, is similar but removes exactly white space.</dd>
         </div>
 
 		  
