@@ -553,12 +553,19 @@ div.code-broken {
 	  
       <a name="classinvariant" id="classinvariant"></a>
       <div class="subsection">3.3 Class invariant</div>
-      <p>The class invariant is the collection of meanings of and constraints on fields of a class. The class invariant is generally placed in comments on each individual field declaration or placed as a single comment before the fields. Since most fields are private, the user does not know about them and there is no need to use a Javadoc comment for them. Here are examples. Note the appearance of constraints, when necessary, and note how one comment may describe the meaning of two fields.</p>
+      <p>The class invariant is the collection of meanings of and constraints on fields of a class.
+      The class invariant is generally placed in comments on each individual field declaration or placed as a
+      single comment before the fields. Here are examples.
+      Note the appearance of constraints, when necessary, and note how one comment may describe the meaning of two fields.
+      We have made them javadoc comments so the Eclipse feature of showing javadoc can be used.</p>
 	  
-      <div class="codegries">private int hr; //The hour of the day, in 0..23<br />
+      <div class="codegries">/** The hour of the day, in 0..23.*/<br>
+           private int hr;<br />
           <br />
-          private double[] temps; // temps[0..numRecorded-1] are the recorded temperatures<br />
-          private int  numRecorded; // number of temperatures recorded</div><br />
+          /** temps[0..numRecorded-1] are the recorded temperatures */<br />
+          private double[] temps;<br />
+          /** number of temperatures recorded */<br /> 
+          private int  numRecorded; </div><br />
 	  
       <p>The purpose of a constructor is to initialize all fields so that the class invariant is true. Then, when writing a method, you can assume that the class invariant is true when the method is called and write the method body so that it terminates with the class invariant true. Looking often at the class invariant can help prevent mistakes caused by forgetting just what a field means or what its constraints are.</p>
       <a name="methodspecs" id="methodspecs"></a>
