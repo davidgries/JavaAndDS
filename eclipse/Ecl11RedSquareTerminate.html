@@ -11,7 +11,7 @@
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
 
-<title>Testing an instance method</title>
+<title>AssertEquals</title>
 <!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
@@ -179,19 +179,22 @@
 <!-- The content div contains the main content of the page -->
 <!-- InstanceBeginEditable name="content" -->
 <div id="content">
+  <div id="main2">
+      <p ><br />
+      </p>
+  </div>
   <div id="main">
-  
-<h2 class="colorRed">Testing an instance method</h2>
-
-<p >To test an instance method, you have to create an instance of the class so that the method can be called. Further, it might be necessary to create more instances of the class.</P>
-<p >We see this in the image below. In class <span class="java">Time</span> to the left is function <span class="java">IsBefore</span>, which is to be tested. In class <span class="java">TimeTester</span> to the right is procedure <span class="java">testIsBefore</span>. Three different objects of class <span class="java">Time</span> are created and stored in local variables. Then, five <span class="java">assertEquals</span> calls are used to test various function calls. Based on the structure of the return expression in function <span class="java">IsBefore</span>, at least these three calls are needed to give good test coverage.</P>
-<p >There is  absolutely no need to test that the constructor does the right thing in the three new-expressions in procedure <span class="java">testIsBefore</span> because the constructor has already been tested in procedure <span class="java">testConstructor1</span>.</P>
-<p ><img src="Ecl09JUnitTestInstanceFunc.png" width="700" alt="Junit testing" /></P>
+      <h2><strong>10. The red square ---terminating Java programs</strong></h2>
+      <p>Take a look at the Eclipse window below. The red square under the editing pane tells you that a program is running (i.e. is being executed). Notice also that Console pane is showing. It says that Java Application E is running, and four lines have been printed ---the first and second contain "2" and "3".</p>
+      <img src="../images/EclipseRunningProgram.png" width="600"  alt=""/>
+      <p>&nbsp;</p>
+      <b></b>
+      <p>To terminate execution of the program, click the red square. The red square will become gray, and the "x xx" following it will be enabled. The Console is also still there. Click "x" or "xx"; the Console will be deleted and the "x xx" will be disabled.</p>
+      <h4>Watch out! Several Java programs may be running!</h4>
+      <p>You can have one, two, three, or any number of Java programs running at the same time! Usually, you don't want this, and you may not be aware of it. Each one may eating up processor time, and your computer may become sluggish.</p>
+      <p>Suppose two Java programs are running. Click the red square to terminate one of them and then click the "x" to delete its Console. The square will become red again and a Console will appear, for the Java program that is still running. You can now delete this one.</p>
+      <p >&nbsp;</P>
 <p >&nbsp;</P>
-<p >&nbsp;</P>
-<p >&nbsp;</P>
-<p >&nbsp;</P>
-<h3>&nbsp;</h3>
   </div>
 </div>
 <!-- InstanceEndEditable --></div>
