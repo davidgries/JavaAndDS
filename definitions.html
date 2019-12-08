@@ -888,6 +888,17 @@ Sorting provides a lot of examples of calculating time and space requirements. <
           of caches. Here's a use of a cache in software to 
           make a recursive method more efficient: <a href="files/complexityFibonacci1.pdf">pdf file</a>.</dd>
         </div>
+        
+        <div class = "display">
+          <dt>calculate elapsed time</dt>
+          <dd>To calculate the time that any method or operation takes do two things:<br>
+          Place this local declaration just before the code to be timed:<br>
+          &nbsp;&nbsp;&nbsp;long startTime= System.currentTimeMillis();<br>
+          Then, place this code just after the code to be timed:<br>
+          &nbsp;&nbsp;&nbsp;long time= System.currentTimeMillis() - startTime;<br>
+          That gives you the elapsed time in milliseconds.
+          </dd>
+        </div>
 		  
 		  		  
 		  <div class = "display">
