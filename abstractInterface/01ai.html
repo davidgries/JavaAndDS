@@ -195,8 +195,19 @@
   <br />
 </P>
 <h3>What is an interface?</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/uZ_lJBn_5-U?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We explain the concept of a Java interface. You can think of it as an abstract class all of whose methods are public and abstract. (See the end of this page for a short explanation of other possible components of an interface.) A class can extend only one other class, but it can <em>implement</em> many interfaces.  (2.4 minutes) Read about here: <a href="02interface.pdf">interface.pdf</a></p>
-<p>&nbsp;</p>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/uZ_lJBn_5-U?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We explain the concept of a Java interface. You can think of it as an abstract class all of whose methods are public and abstract. (See the end of this page for a short explanation of other possible components of an interface.) A class can extend only one other class, but it can <em>implement</em> many interfaces.  (2.4 minutes) Read about here: <a href="02interface.pdf">interface.pdf<br />
+</a></p>
+<br /><br />
+<h3>Three other components of an interface</h3>
+<p>If this is your first exposure to interfaces, there is no need to read this subsection. Besides abstract methods, interfaces may have three other kinds of component. We advise you not to use the first two until you are more experienced.</P>
+<p>1. A constant: i.e. a public, static, final variable.</P>
+
+<p>2. Starting in Java 8, an interface can have a <em>default</em> <em>implementation</em> of a method. Suppose an interface has this declaration:</P>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default public String noise() { return bzzzzz&quot;; }</P>
+<p>If an implementing class does not override method noise, the default  is used. Note: this method is not abstract.</P>
+<p>3. This item refers to components that Java may insert in certain cirumstances. You need not bother yourself with this item.</p>
+<p> Consider an interface that has no direct superinterface. Suppose superest class Object contains a public instance&nbsp; method m with signature s, return type r, and throws clause t. If this interface does not override m, then a declaration of public <em>abstract</em> method m with signature s, return type r, and throws clause t is inserted into this interface. </p>
+
 <h3>Casting</h3>
 <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/6XKz_4MUbIs?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We show you what an object that includes interfaces looks like and use that object to discuss casting to get different perspectives on the object.  (3.75 minutes) Read about here: <a href="03casting.pdf">casting.pdf</a></p>
 <p>&nbsp;</p>
@@ -204,12 +215,7 @@
 <h3>Interface Comparable</h3>
 <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/jy4MbGKC99A?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We show you why interfaces are so important, using as the example interface java.lang.Comparable. Use of Comparable allows us to have only one procedure to sort arrays of any class as long as the class implements Comparable.  (2.5 minutes) Read about here: <a href="04comparable.pdf">Comparable.pdf</a>&nbsp;&nbsp;Here's class Time and a testing class to demo this stuff: <a href="TimeDemo.zip">TimeDemo.zip</a></p>
 <p>&nbsp;</P>
-<h3>Two other components of an interface</h3>
-<p>Besides abstract methods, interfaces can have two other kinds of component, but we advise you not to use them until you are more experienced.</P>
-<p>1. A constant: i.e. a public, static, final variable. This component was used in early Java programs, but it's not considered good programming. Here's an example: <strong>public static</strong> <strong>final</strong> String GOLD= &quot;Gold&quot;;</P>
-<p>2. Starting in Java 8, an interface can have a <em>default</em> <em>implementation</em> of a method. Suppose an interface has this declaration:</P>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;default public String noise() { return &quot; &quot;; }</P>
-<p>If an implementing class does not override method noise, the default  is used.</P>
+
 <h3>Default methods in interfaces and the diamond problem</h3>
 <p>In Spring 2014, version 8 of Java was introduced. Now, interfaces can have default methods. If a class implements an interface and doesn't implement a method that has a default implementation, the default implementation is used. This brings up issues of &quot;multiple inheritance&quot; ---inheritance of a method from several sources, which has to be resolved. <a href="05diamond.pdf">This pdf file</a> talks about the <em>diamond problem</em> and how it is solved in Java.</P>
 <p>&nbsp;</P>
