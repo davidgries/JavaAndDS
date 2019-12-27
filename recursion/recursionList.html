@@ -10,7 +10,7 @@
 
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Exceptions, checked; throws clause</title>
+<title>Recursion on Lists</title>
 <!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
@@ -21,7 +21,8 @@
 	styles/screen.css.
 -->
 <link rel="stylesheet" type="text/css" media="screen" href="../styles/screen.css" />
-<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
 <script type="text/javascript"  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="../js/fancyBox/source/jquery.fancybox.css" type="text/css" media="screen" />
 <style type="text/css">
@@ -122,14 +123,14 @@
          </ul>
         </li>
    
-        <li class="has-sub "><a href="EX1.html"><span>Exceptions</span></a>
+        <li class="has-sub "><a href="../exceptions/EX1.html"><span>Exceptions</span></a>
            <ul>
-            <li><a href="EX1.html"><span>1. Output of thrown exceptions</span></a></li>
-            <li><a href="EX2.html"><span>2. Throwable objects</span></a></li>
-            <li><a href="EX3.html"><span>3. Try-stmt/propagation</span></a></li>
-            <li><a href="EX4.html"><span>4. Throw-statement</span></a></li>
-            <li><a href="EX5.html"><span>5. Throws-clause</span></a></li>
-            <li><a href="EX6.html"><span>6. Hints</span></a></li>
+            <li><a href="../exceptions/EX1.html"><span>1. Output of thrown exceptions</span></a></li>
+            <li><a href="../exceptions/EX2.html"><span>2. Throwable objects</span></a></li>
+            <li><a href="../exceptions/EX3.html"><span>3. Try-stmt/propagation</span></a></li>
+            <li><a href="../exceptions/EX4.html"><span>4. Throw-statement</span></a></li>
+            <li><a href="../exceptions/EX5.html"><span>5. Throws-clause</span></a></li>
+            <li><a href="../exceptions/EX6.html"><span>6. Hints</span></a></li>
           </ul>
         </li>
 
@@ -154,11 +155,11 @@
 	
         <li><a href="../stepwise/stepwise.html"><span>Stepwise<br />refinement</span></a></li> 
 
-	<li class="has-sub "><a href="../recursion/recursion.html"><span>Recursion</span></a>
+	<li class="has-sub "><a href="recursion.html"><span>Recursion</span></a>
            <ul>
-             <li><a href="../recursion/recursion.html"><span>Intro to recursion</span></a></li>
-	         <li><a href="../recursion/recursionList.html"><span>Recursion on linked lists</span></a></li>
-	         <li><a href="../recursion/recursionTree.html"><span>Recursion on trees</span></a></li>
+             <li><a href="recursion.html"><span>Intro to recursion</span></a></li>
+	         <li><a href="recursionList.html"><span>Recursion on linked lists</span></a></li>
+	         <li><a href="recursionTree.html"><span>Recursion on trees</span></a></li>
           </ul>
        </li>
 
@@ -180,80 +181,28 @@
 <!-- InstanceBeginEditable name="content" -->
 <div id="content">
   <div id="main">
-  <div align="right"> <a href="EX4.html">4. The throw-statement</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="EX6.html">6. Hints on using exceptions</a></div>
-
   
-  
-  <h2 class="colorRed">5. Checked exceptions and the throws clause</h2>
+<h2 class="colorRed">Recursion on Lists</h2>
 
+<p > Generally, one can use either iteration (loops) or recursion to process lists such
+as linked lists. Usually, iteration is preferred because is it faster (not requiring
+so many recursive calls) and simpler. But in the example presented here, a recursive
+function is easier to develop.  </P>
 
-  <h3>Checking that thrown objects are caught</h3>
-
-<p>
-A Java compiler checks to make sure that certain thrown objects are caught by your 
-program; if they are not caught, the compiler 
-issues an error message and refuses to compile the program. For example, consider this 
-method <span class="java">main</span>: </P>
-
-<blockquote>
-<p class="java">
-public static void main(String[] args) {
-<br>      
-&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception(); <br>   
-}</P>
-</blockquote>
-
-
-<p>(This method is useless ---except to illustrate our point.) Upon attempting to compile 
-this method, the compiler issues this error message: </P>
-
-<blockquote>
-<p class="java">Error: Exception java.lang.Exception must be caught or
-<br>it must be declared in the throws clause of this method.</blockquote>
-
-<P>You can get rid of this message by using a try-statement that catches the thrown object 
-(again, this is a useless program except to illustrate our point). But don't do this simply to have an exception ignored! If your program cannot reasonably handle a thrown exception, don't use the following trick to get rid of it.</P>
-
-
-<blockquote>
-<P class="java">public static void main(String[]) {
-<br>      
-&nbsp;&nbsp;&nbsp;try { <br>          
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw new Exception(); <br>      
-&nbsp;&nbsp;&nbsp;} catch {Exception ex) { <br>          
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... <br>      
-&nbsp;&nbsp;&nbsp;} <br>   }</P>
-</blockquote>
-<p>Instead, use a throws-clause, as explained below. But before we explain the throws-clause, we talk about checked and unchecked objects.</p>
-
-<h3>Checked and unchecked objects</h3>
-
-<P>Checking that thrown objects are caught is a good idea, for it forces the programmer to think 
-carefully about how thrown objects should be handled. But the Java compiler does not 
-check ALL thrown objects in this manner. Checking all possible thrown objects would be awkward and cumbersome, for there are <em>many</em> possibilities. For example, there are many possible RuntimeExceptions like divide-by-0, index-out-of-bounds, and null-pointer-exception.</P>
-<P>Java checks all of throwable classes EXCEPT: </P>
-
-<ol><li>Thrown objects of class <span class="java">Error</span> and its subclasses</li>
-<li>Thrown objects of class <span class="java">RuntimeException</span> and its subclasses</li>
-</ol>
-<h3>The throws clause</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/IjDL0tlywkM?rel=0"><IMG SRC=../imagesActivity/throwsClause.jpg width="129" hspace="5" align="left"></a>A method might not WANT to catch a thrown object. Instead, it might want to have it thrown further to the calling method. To 
-eliminate the error mentioned at the beginning of this webpage and have the thrown object thrown further, put a <DFN>throws clause</DFN> 
-  on the method header. Here's the <a href="09throwsClause.pdf">modified script</a>.</P>
+	<h3>Reversing a singly linked list</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/BS7f3yKEJdA?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>Paul Gries 
+develops a recursive function to reverse a linked list (just over 4 minutes).
+Important here is not just the little poem that emerges but the careful use of assertions within
+the function body to keep track of what has been done and what remains to be done.
+Read it here: <a href="RE04RevLinkedList.pdf">ReverseLinkedList.pdf</a>.</P>
 <p>&nbsp;</P>
-<p>The throws clause has the form</p>
+<p>&nbsp;</P>
 
-<blockquote>
-<P>  <span class="java">throws</span> &lt;class-name&gt;, ..., &lt;class-name&gt;
-</P></blockquote>
-
-<P>where each class-name is <span class="java">Throwable</span> or one of its subclasses. 
-Placing a throws clause on a method relieves the method of the responsibility of 
-catching objects of the named classes and places the responsiblity on any method 
-that calls this one.</P>
-<P>Here's a suggestion. Don't worry about putting in throws clauses. Put them out of your mind. But, whenever Javatells you that an exception must be caught, put in the throws clause.</P>
-<p>&copy;This material is from the CD ProgramLive by David Gries and Paul Gries</p>
-
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+    </div>
+</div>
 <!-- InstanceEndEditable --></div>
 
 <hr />
