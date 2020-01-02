@@ -1110,6 +1110,27 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
               More on the four-color theorem later.
           </dd>
         </div>
+        
+        <div class = "display">
+          <dt>comment, javadoc comment</dt>
+          <dd>Java has 3 kinds of comment, shown below. <br><br>
+
+    // 1. This comment starts with two slashes and ends at the end of the line. <br><br>
+   
+    /* 2. This possibly multi-line comment starts with &nbsp;&nbsp;slash star&nbsp;&nbsp; and ends with:  */<br><br>
+   
+    /** 3. This special possibly multi-line comment, called a javadoc comment, starts <br>
+        &nbsp;&nbsp;&nbsp;* with &nbsp;&nbsp;slash star star&nbsp;&nbsp; and ends with: */<br><br>
+        
+        The term, "javadoc" stands for "java documentation". Place a javadoc comment BEFORE each
+          class, method, and field declaration in order to describe or specify that declaration.
+          These comments can be extracted by an app called &nbsp;javadoc&nbsp; in order to provide a
+          specification of a class. Eclipse also makes use of javadoc comments, e.g. hover
+          the mouse over a method call and the spec of the method will pop up.<br><br>
+          In writing javadoc comments, help format them nicely by using
+          the html tag &nbsp;&lt;br&gt&nbsp; to end a line.
+          </dd>
+        </div>
 		  
     <div class = "display">
         <dt>comparison sort</dt>
@@ -2995,6 +3016,28 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           <dt>semantics</dt>
           <dd><a class = "linker" title="#syntax">Syntax</a> has to do with grammatical correctness, semantics with meaning. We cannot talk about the semantics of a part of a sentence of a language that is not syntactically correct. The semantics of a Java expression or statement defines how it is evaluated or executed. For example, the semantics of  the if-statement statement <span class="java"><strong>if</strong> ( &lt;boolean-expression&gt; ) &lt;statement&gt;</span> is: first, evaluate the <span class="java">&lt;boolean-expression&gt;</span>; then, if it is true, execute the <span class="java">&lt;statement&gt;</span>.</dd>
         </div>
+        
+        <div class = "display">
+          <dt>semicolon ;</dt>
+          <dd>In Java, a semicolon must appear at the end of a "basic" statement, as in<br>
+          &nbsp;&nbsp;&nbsp;return;<br>
+          &nbsp;&nbsp;&nbsp;assert x > 0;<br>
+          &nbsp;&nbsp;&nbsp;x= x+1;<br><br>
+          
+          Look up the syntax of a statement, either in JavaHyperText or the Java language spec, and it will show you whether a semicolon is needed at the end.
+          Watch out for the following two common mistakes:<br><br>
+          1. The statement &nbsp;Math.max(3, 4);&nbsp; calls function max and then throws away the value it returns.
+          Execution of this statement does nothing, but it takes time to do that nothing. Never have a statement that
+          consists of a function call followed by a semicolon.<br><br>
+          
+          2. A semicolon by itself is a statement, the "empty statement", which does nothing.
+          Sometimes, a ; is inadvertently put at the end of a loop:&nbsp;&nbsp;
+          while (b &lt c) ;&nbsp;&nbsp;  This means that the repetend is the empty statement, and
+          this can often be a hard-to-find infinite loop.
+          
+          </dd>
+        </div>
+        
         <div class = "display">
           <dt>setter method</dt>
           <dd>A non-static procedure whose purpose is to store a value in a field
