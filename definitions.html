@@ -2554,9 +2554,16 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
         </div>
         <div class = "display">
           <dt>null</dt>
-          <dd>A value that means "the absence of an object name". If a reference
-          like <span class="javakeyword">null</span><span class="java">.b</span> or a method call like <span class="javakeyword">null</span><span class="java">.m(...)</span> is attempted at runtime,
-          a "null pointer exception" happens.</dd>
+          <dd>A value that means "the absence of a pointer to an object". 
+          <span class="javakeyword">null</span> may be stored in any variable of a class type (sometimes called a reference type)
+          to indicate that the variable does not contain a pointer to an object.
+          It may not be stored in a variable of a primitive type, e.g. <span class="javakeyword">int</span>.<br><br>
+          
+          If a reference
+          like <span class="javakeyword">null</span><span class="java">.b</span> or a 
+          method call like <span class="javakeyword">null</span><span class="java">.m(...)</span> is attempted at runtime,
+          a "null pointer exception" is happens.
+          </dd>
         </div>
         <div class = "display">
           <dt>number type</dt>
