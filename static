@@ -3265,9 +3265,9 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         </div>
         <div class = "display">
           <dt>static type, dynamic type</dt>
-          <dd>In Java, <i>static type</i> is synonymous with <i>type</i>. 
+          <dd>In Java, <i>static type</i> is synonymous with <type>. 
           <i>Dynamic type</i> has to do with the type of value in a variable at runtime.
-          Read this <a href="files/staticType.pdf">one-pdf file</a>.  </dd>
+          Read this <a href="files/staticType.pdf">one-pdf file</a.  </dd>
         </div>
         
         <div class = "display">
