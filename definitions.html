@@ -987,19 +987,20 @@ Sorting provides a lot of examples of calculating time and space requirements. <
           <dd>1. Class definition or declaration: a blueprint for objects, describing what is in them.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;A. Format of the class definition and what an object of the class looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;B. Using keyword <strong>extends</strong> to define subclasses (and superclasses); <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;what a subclass object looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;C. Definition of inheritance: see <a class = "linker" title="#inheritance">inheritance</a>.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;D. Class Object, the superest class of them all, and the class hierachy:  <a href="files/classDef.pdf">page 2 of pdf file</a>.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;E. Overriding a method and the use of &quot;<strong>super.</strong>&quot;: <a href="files/overriding.pdf">pdf file</a>.<br />
-&nbsp;&nbsp; &nbsp;F. Keyword<strong> this</strong> eveluates to a pointer to the object in which it occurs; the user of &quot;<strong>this</strong>.&quot;: <a href="files/useOfThisDot.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;C. What a subclass object looks like: <a href="files/classDef.pdf">pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;D. Subclasses and the "is-a" relation: <a href="files/is-a.pdf">one-page pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;E. Definition of inheritance: see <a class = "linker" title="#inheritance">inheritance</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;F. Class Object, the superest class of them all, and the class hierachy:  <a href="files/classDef.pdf">page 2 of pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;G. Overriding a method and the use of &quot;<strong>super.</strong>&quot;: <a href="files/overriding.pdf">pdf file</a>.<br />
+&nbsp;&nbsp; &nbsp;H. Keyword<strong> this</strong> eveluates to a pointer to the object in which it occurs; the user of &quot;<strong>this</strong>.&quot;: <a href="files/useOfThisDot.pdf">pdf file</a>.<br />
               2. Constructor. Purpose: To initialize fields of an object when it is created in order to<br />
          make the class invariant true.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;A. The new-expression. Syntax: <strong>new</strong> &lt;constructor-call&gt; . 2-minute video on this <a href="explainJava/explainJava.html">webpage</a>.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;B.  Rule: initialize superclass fields before subclass fields. <a href="files/constructors.pdf">pdf file</a>.<br />
               &nbsp;&nbsp;&nbsp;&nbsp;C. Syntactic rule: a constructor that you write must start with a call on another constructor;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;              what call is inserted if it is not present.<a href="files/constructors.pdf"> pdf file</a>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  if it doesn't, the call &nbsp;<strong>super</strong>();&nbsp; is inserted. <a href="files/constructors.pdf"> pdf file</a>.<br />
               &nbsp;&nbsp;&nbsp;&nbsp;D. How to call another constructor using <strong>super</strong>(...) or <strong>this</strong>(...). <a href="files/constructors.pdf"> pdf file</a>.<br />
-              &nbsp;&nbsp;&nbsp;&nbsp;E. What constructor is inserted if a class does not have a constructor. <a href="files/constructors.pdf">pdf file</a>.<br />
+              &nbsp;&nbsp;&nbsp;&nbsp;E. If a class C does not have a constructor, this one is inserted: C() {}. <a href="files/constructors.pdf">pdf file</a>.<br />
               3. The class/interface as a type.<br />
               &nbsp;&nbsp;&nbsp;&nbsp;A. A class name can be used as a type. Its values are pointers to objects of that class (and also <strong>null</strong>).<br />
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A variable of some class-type C contains a pointer or reference to an object of type C.<br />
@@ -2116,6 +2117,12 @@ Uses of Fibonacci numbers in computer science: pdf file (to come).<br />
 		called <em>invoking</em> the function.</dd>
           <dd>Note how strange that is. You have an <em>invo<strong>C</strong>ation</em> but then you turn the C into a K and write <em>invo<strong>K</strong>ing</em>. That's as bad as having a picnic but then picnic<strong>K</strong>ing. English is a weird language.</dd>
     </div>
+    
+    <div class = "display">
+          <dt>is-a relation</dt>
+          <dd>A class A should extend a class B only if an A "is a" B.
+			  See this <a href="files/is-a.pdf">one-page pdf file</a>.</dd>
+        </div>
 		  
 		    <div class = "display">
           <dt>iterate, iteration</dt>
