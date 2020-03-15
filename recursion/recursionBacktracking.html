@@ -10,7 +10,7 @@
 
 <head>
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Recursion</title>
+<title>Recursion on Lists</title>
 <!-- InstanceEndEditable -->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
@@ -183,58 +183,20 @@
 <div id="content">
   <div id="main">
   
-<h2 class="colorRed">Recursion</h2>
+<h2 class="colorRed">Backtracking</h2>
 
-<p > A recursive definition is definition that is defined in terms of itself. Here is an example from  English grammar:</P>
-<blockquote>
-    <p >
-        A noun-phrase is either<br />
-        (1) a noun or<br />
-        (2) an adjective followed by a noun-phrase.</P>
-</blockquote>
-<p >Using that definition, these are all noun-phrases:</P>
-<blockquote>
-	<p>dog, big dog, big white dog, big white furry dog, big big big white dog.</p>
-</blockquote>
-	<p >Recursive definitions abound in mathematics. Think, for example of the definition of n! = n*(n-1)*...*1:</P>
-<blockquote>
-	<p >0! = 1<br />
-		n! = n*(n-1)!   for n > 0.		</P>
-</blockquote>
-	<p >In programming, a recursive method is a method that contains a call on itself. It is easy to translate the above definition of n! into a recursive Java function:</P>
+<p> Backtracking is a technique for recursively solving a problem by choosing one possible solution but then removing that choice (this is the backtracking) and trying another if it doesn't work. There are more general definition, but this definition is suitable for us here.</p>
+
+<h3>Developing a recursive function</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/kh7PkJX3n6M?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>We begin by developing a surprisingly short and simple recursive function to determine whether the values in an integer array can be placed into two bags so that the sums of the values in the two bags are equal. Two examples: For the array {2, 2}, put the first 2 in one bag and the second 2 in another; the answer is yes. For the array {1, 1, 1}, the answer is no. <a href="RE05Backtrack1.pdf">DevelopFunctionSplit.pdf</a>.</P>
 	
-	<blockquote>
-	<p >/** Return n!<br />
-	 &nbsp;&nbsp;&nbsp;*  Precondition: n &gt;= 0 */<br />
-	<strong>public static int</strong> factorial(<strong>int</strong> n) {<br />
-	&nbsp;&nbsp;&nbsp;&nbsp;<strong>if</strong> (n == 0) <strong>return</strong> 1;<br />
-		&nbsp;&nbsp;&nbsp;&nbsp;<strong>return</strong> n * factorial(n-1);<br />
-	}</P>
-	</blockquote>
-	<h3>How recursive calls are executed</h3>
-	<p >You may wonder how recursive calls are executed. Once you understand how <em>any </em>call, nonrecursive or recursive, is executed, any confusion will disappear. <a href="../explainJava/03methodCalls.html">These videos</a>  explain execution of method calls.</P>
-	<h3 >How to understand that a recursive method implements its specification</h3>
-	<p >Understanding a recursive method:base cases and recursive cases: <a href="../files/recursion2.pdf">pdf file</a>.<br />
-	    Using a bound function to prove termination of recursion: <a href="../files/recursionbf.pdf">pdf file</a>. </P>
-<h3 >Developing recursive methods</h3>
-		
-	    <p>Developing a recursive function: <a href="../files/recursionDev.pdf">pdf file</a>.<br />
-	        Developing a recursive function to add up the integers in an array of any number of dimensions: <a href="../files/recursionArray.pdf">pdf file</a>. <br />
-	        Recursion may require extra parameters: <a href="../files/recursionExtra.pdf">pdf file</a>. <br />
-	    Tail calls and how to optimize them. <a href="../files/recursionTail.pdf">pdf file</a>.</P>
-	    
-	    <h3>Using recursion to reverse a singly linked list</h3>
-<p>A surprisingly simple method easily arises by using assertions to keep track of
-what has been done and what remains to be done: <a href="recursionList.html">webpage</a>.</P>
+<h3>How execution of this function backtracks</h3>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/kh7PkJX3n6M?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>In developing function split, we did not think at all about how its execution proceeds and how many recursive calls would be made. This video shows how execution does a lot of backtracking, so much so that for an array of size n, the depth of recursion is exactly n but 2^n calls are made! It's an exponential algorithm in the worst case ---when bags with equal sums cannot be constructed. The video is not yet ready.&nbsp;<a href="RE05Backtrack.pdf">Still to come.pdf</a>. Democode:</P>
+<p>&nbsp;</P>
+<p>&nbsp;</P>
 
-
-	<h3>Using recursion to traverse trees</h3>
-<p>Two models for using recursion for traversing trees: <a href="recursionTree.html">webpage</a>.</P>
-<p>Developing a recursive function to determine whether a binary tree is a BST: <a href="../files/recursiveBST.pdf">pdf file</a>.<br />
-    (
-    It uses the Mañana Principle, which you might want to glance at in <a href="../files/manana.pdf">this pdf file</a>.)</P>
-<h3>Using recursion to traverse graphs</h3>
-<p>The simplest depth-first search of a graph is recursive. Watch the first two videos <a href="../dfs/dfs01.html">on this page</a>.</P>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
     </div>
 </div>
