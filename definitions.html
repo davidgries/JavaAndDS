@@ -1242,6 +1242,7 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dt><a name="concurrency" id="concurrency"></a>concurrency</dt>
           <dd>Concurrency refers to having more than one thread of execution in a program, allowing different parts of a program to execute in parallel. <br>
 			1. Cores and processing units, processes and threads: <a href="files/threads1.pdf">pdf file 1</a>.<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;Click here for a definition of <a class = "linker" title="#thread-safe">thread-safe</a>. <br>
           2. Learn about race conditions (<a href="files/raceCondition.pdf">pdf file 2</a>) and deadlock (<a href="files/deadlock.pdf">pdf file 3</a>).<br>
           3. Class Thread and interface Runnable. <a href="files/threadsCreate.pdf">pdf file 4</a>.<br>
           4. Some methods of class Thread. <a href="files/ThreadMethods.pdf">pdf file 5</a>.<br>
@@ -3482,8 +3483,21 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
           <dt><a name="Threads" id="Threads"></a>Threads</dt>
           <dd>See <a class = "linker" title="#concurrency">concurrency</a>.</dd>
         </div>
+        
+        <div class = "display">
+          <dt><a name="thread-safe" id="thread-safe"></a>thread-safe, thread safety</dt>
+          <dd>These terms refer to code that can be used in an environment in which
+              two or more threads are executing at the same time but the code still performs as
+              expected. For example, the assignment <code>c= c + 1;</code> is typically not
+              thread safe because another thread could execute <code>c= c + 2;</code> at the 
+              same time and their interleaved execution could result in a <i>race 
+              condition</i> --possible outcomes are that 1, 2, or 3 are added to <code>c</code>.
+              In Java, usually, the <code>synchronized</code> feature is used to make 
+              code thread-safe, although there are other mechanisms to achieve thread safety.
+               </dd>
+        </div>
 		  
-		   <div class = "display">
+		<div class = "display">
           <dt>throws-clause</dt>
           <dd>A clause of the form &nbsp;<strong>throws&nbsp;</strong>&lt;class-name&gt; that may have to be included in a method header if the method may throw a <a class = "linker" title="#checkedException">checked exception</a>. This <a href="exceptions/EX5.html">webpage</a> contains a video that explains.</dd>
         </div>
