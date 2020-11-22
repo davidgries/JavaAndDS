@@ -756,6 +756,14 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
         </div>
 		  
 		  <div class = "display">
+          <dt>back door</dt>
+          <dd>Refers to referencing a synchronized object without synchronizing. Can lead to efficiencies,
+          but should be used with care and only by someone knowledgeable with concurrency.
+         <a href="files/syncBackDoor.pdf">pdf file</a>. 
+          Demo code: <a href="programs/BackDoor.zip">BackDoor.zip</a></dd>
+        </div>
+        
+        <div class = "display">
           <dt>backpointer</dt>
           <dd>Consider a path (p, p1, p2, ...) in a graph. A backpointer for a node in the path is the previous node. Thus, p1's backpointer is p and p2's backpointer is p1. Backpointers are used in <a class = "linker" title="#shortestPath">Dijkstra's shortest path algorithm</a>.</dd>
         </div>
@@ -981,6 +989,12 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
           <dt>Character, class</dt>
           <dd>A <a class = "linker" title="#wrapperclass">wrapper class</a> for type <a class = "linker" title="#char">char</a>.</dd>
         </div>
+        
+         <div class = "display">
+          <dt>Christmas Halloween</dt>
+          <dd>Why did I receive a Christmas card on Hallowen? <a href="files/XmasHalloween.pdf">pdf file</a></dd>
+        </div>
+        
         <div class = "display">
           <dt><a name="checkedException" id="checkedException"></a>checked exception</dt>
           <dd>Java "checks" all throwable objects except those of class Error and RuntimException. A checked exception has to be handled in one of two ways: (1) catch it in a catch-block or (2) put a throws-clause &nbsp; <strong>throws</strong> &lt;class-name&gt; &nbsp;&nbsp;on the method header in which the exception is thrown. The video on <a href="exceptions/EX5.html">this webpage</a> explains it.</dd>
@@ -1247,6 +1261,8 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           3. Class Thread and interface Runnable. <a href="files/threadsCreate.pdf">pdf file 4</a>.<br>
           4. Some methods of class Thread. <a href="files/ThreadMethods.pdf">pdf file 5</a>.<br>
           5. Intro to synchronized statements and methods. <a href="files/syncIntro.pdf">pdf file 6</a>.<br />
+          &nbsp;&nbsp;&nbsp;  Example of using the back door: <a href="files/syncBackDoor.pdf">pdf file</a>. 
+          Demo code: <a href="programs/BackDoor.zip">BackDoor.zip</a><br />
 &nbsp;&nbsp;&nbsp;          20-sec video of Christopher Caspersen's new outhouse (2018): <a href="images/OuthuseInMesingDenmark.mov">video.mov</a>.<br />
 &nbsp;&nbsp;&nbsp; Warning: Don't know what you're doing?  <br />
 &nbsp;&nbsp;&nbsp; Synchronize <em>all</em> accesses to an object: bottom of page 2 of <a href="files/syncIntro.pdf">pdf file 6</a>.<br>
@@ -1365,7 +1381,11 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
         </div>
         <div class = "display">
           <dt>critical section</dt>
-          <dd>Part of a program that accesses resources shared by two or more threads. To avoid a race condition, have it executed as an atomic action —with no other processing accessing or changing the resources while the critical section is being executed. In Java, this is usually done using a synchronized statement or method. See <a href="files/syncIntro.pdf">this pdf file</a>.</dd>
+          <dd>Part of a program that accesses resources shared by two or more threads. 
+          To avoid a race condition, have it executed as an atomic action —with no other processing accessing or 
+          changing the resources while the critical section is being executed. 
+          In Java, this is usually done using a synchronized statement or method. 
+          See <a href="files/syncIntro.pdf">this pdf file</a>.</dd>
         </div>
         <div class = "display">
           <dt>cycle</dt>
@@ -3434,7 +3454,7 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         </div>
         <div class = "display">
           <dt>synchronized statements and methods</dt>
-          <dd>See this <a href="files/syncIntro.pdf">pdf file</a>. See also <a class = "linker" title="#Threads">Threads</a>.<br />
+          <dd>See this <a href="files/syncIntro.pdf">pdf file</a>. See also <a class = "linker" title="#concurrency">Concurrency</a>.<br />
             20-sec video of Christopher Caspersen's new outhouse (2018): <a href="images/OuthuseInMesingDenmark.mov">video.mov</a>.</dd>
         </div>
 		  <div class = "display">
