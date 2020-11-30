@@ -3319,6 +3319,14 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
 		      3.
 		      Quicksort is inherently unstable because the partition algorithm is inherently unstable.</dd>
         </div>
+        
+         <dt>spinning, busy waiting</dt>
+          <dd>Look at this loop:  <code>while (b) {}</code>. It is in a thread, and it is waiting
+          for another thread to change <code>b</code> so that it can continue with its task. This
+           is <i>spinning</i>, or <i>busy waiting</i>. Don't write such code, because it is eating up
+           execution time doing nothing whenever it gets a slice of time. There are
+           situations where it is useful, but only those who know precisely what they are doing and why should use it.</dd>
+        </div>
 		  
 		  
 		  <div class = "display">
