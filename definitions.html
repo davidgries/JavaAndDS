@@ -870,7 +870,7 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
         </div>
         <div class = "display">
           <dt>bounded buffer</dt>
-          <dd>A place to store items that may be put in and taken out at different rates by different threads. See <a class = "linker" title="#Threads">Threads</a>.</dd>
+          <dd>A place to store items that may be put in and taken out at different rates by different threads. See <a class = "linker" title="#concurrency">Concurrency</a>.</dd>
         </div>
         <div class = "display">
           <dt>bounded wildcard</dt>
@@ -1262,11 +1262,12 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           5. Intro to synchronized statements and methods. <a href="files/syncIntro.pdf">pdf file 6</a>.<br />
           &nbsp;&nbsp;&nbsp;  * Example of using the back door: <a href="files/syncBackDoor.pdf">pdf file</a>. 
           Demo code: <a href="programs/BackDoor.zip">BackDoor.zip</a><br />
-&nbsp;&nbsp;&nbsp;          * 20-sec video of Christopher Caspersen's new outhouse (2018): <a href="images/OuthuseInMesingDenmark.mov">video.mov</a>.<br />
-&nbsp;&nbsp;&nbsp; * Warning: Don't know what you're doing? Synchronize <em>all</em> accesses <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to an object: bottom of page 2 of <a href="files/syncIntro.pdf">pdf file 6</a>.<br>
+          &nbsp;&nbsp;&nbsp;          * 20-sec video of Christopher Caspersen's new outhouse (2018): <a href="images/OuthuseInMesingDenmark.mov">video.mov</a>.<br />
+          &nbsp;&nbsp;&nbsp; * Warning: Don't know what you're doing? Synchronize <em>all</em> accesses <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to an object: bottom of page 2 of <a href="files/syncIntro.pdf">pdf file 6</a>.<br>
           6. Intro to wait(), notify(), and notifyAll(). <a href="files/waitAndNotify.pdf">pdf file 7</a>.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;Warning: Don't know what you're doing?  Don't use notify(). <a href="files/notifyNotifyAll.pdf">pdf file 8</a>.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Warning: Don't know what you're doing?  Don't use notify(). <a href="files/notifyNotifyAll.pdf">pdf file 8</a>.<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;Code that illustrates the above using a dropbox (bounded buffer of size 1). <a href="files/boundedBufferDemo.zip">boundedBufferDemo.zip</a>.<br>
           7. Implementing a bounded queue in an array and a bounded buffer. <a href="files/boundedBuffer.pdf">pdf file 9</a>. <br>
           8. Java classes that provide for concurrency. <a href="files/javasynclasses.pdf">pdf file 10</a>. <br>
           9. What's a daemon thread? <a href="files/ThreadsDaemon.pdf">pdf file 11</a>.</dd>
@@ -1518,6 +1519,12 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
           <dt>diamond problem</dt>
           <dd>A problem that occurs when there is multiple inheritance: a method is inherited from two or more classes
 			  or interfaces, and a decision must be made on which inherited method is used. See <a href="abstractInterface/05diamond.pdf">this pdf file</a>.</dd>
+        </div>
+        
+        <div class = "display">
+          <dt>dropbox</dt>
+          <dd>A bounded buffer of size 1, used to illustrate synchronization among threads. See <a class = "linker" title="#concurrency">Concurrency</a>.<br>
+          Code that uses a dropbox to illustrate use of notify() and notifyAll(). <a href="files/boundedBufferDemo.zip">boundedBufferDemo.zip</a>.</dd>
         </div>
 
 		  
