@@ -191,18 +191,24 @@
 }</P>
 </blockquote>
 <p >With each iteration of the loop, another element of b is stored in s and then &quot;processed&quot; &mdash;whatever that means.</P>
-<p >The use of such a <em>foreach</em> loop is made possible by the use of two interfaces: Iterator and Iterable. That's what we discuss in this module. You can learn about them by watching less than 15 minutes of videos, given below.</P>
+<p >The use of such a <em>foreach</em> loop is made possible by the use of two interfaces: Iterator and Iterable.
+That's what we discuss in this module. You can learn about them by watching less than 15 minutes of videos, given below.</P>
+
 <h3>Interface Iterator</h3>
 <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/dUo-N-5zWIQ?rel=0"><IMG SRC=../imagesActivity/WhiteFill.png  width="100"  align="left" hspace="5"></a>Alex Fusco tells you what we mean by an <em>enumeration</em>. He then introduces you to interface Iterator, describing its four methods and writing a while-loop to enumerate its values.</P>
 <p>Note that we generally use only functions hasNext() and next(). (3.3 minutes) Read it here: <a href="01iterator.pdf">iterator.pdf</a></P>
 <p>&nbsp;</P>
+
 <h3>An Iterator to enumerate the even values in an Integer array</h3>
 <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/3zBRmowFdMY?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>We develop a class that implements interface Iterator. An object of the class can be used to enumerate the even values of an Integer array. This class can be used as a template for writing classes that implement iterators. (3.5 minutes) Read it here: <a href="02evenValuesIterator.pdf">evenValues.pdf</a></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><strong>Be careful!</strong> Once you have an Iterator for some collection. it's best not to change that collection until the Iterator has been used to enumerate all elements. Changing the list at any time before that is quite likely to mess up the Iterator.</p>
+<p><strong>Be careful!</strong> Once you have an Iterator for some collection. it's best not to change that collection until the Iterator has been used to enumerate all elements.
+     Changing the list at any time before that is quite likely to mess up the Iterator.</p>
+
 <h3>A simple implementation of a stack</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/LmPxkFR6HwE?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>Alex Fusco write  a class Stack that implements a stack in an array. The maximum size of the stack is the size of the array. This simple class will be used in the next video. (1.5 minutes) Read it here: <a href="03stack.pdf">classStack.pdf</a></p>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/LmPxkFR6HwE?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>Alex Fusco writes a class Stack that implements a stack in an array.
+  The maximum size of the stack is the size of the array. This simple class will be used in the next video. (1.5 minutes) Read it here: <a href="03stack.pdf">classStack.pdf</a></p>
 
 
 
@@ -211,14 +217,12 @@
 <h3>An iterator as an inner class</h3>
 <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/EKBrHSip7Wg?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>Alex Fusco develops  an iterator for class Stack of the previous video. The iterator enumerates the elements of a stack from the top to the bottom. The interesting point is that the iterator is a private inner class of Stack and that a public method is used to create and return an object of the inner class. (3 minutes) Read it here: <a href="04stackIterator.pdf">iteratorForStack.pdf</a></p>
 
-<p>&nbsp;</p>
-<p><strong>Correction to this video and the next</strong>. The inner-class declaration and the declaration of function iterator should have no generics because the &lt;E&gt; is already on the outer-class declaration. Write the first lines of the inner-class declaration and method iterator like this:</p>
-<blockquote>
-<p><strong>private</strong> <strong>class</strong> StackIterator <strong>implements</strong> Iterator {<br />
-<strong>public</strong> @Override Iterator iterator() {</p>
-</blockquote>
+
 <h3>Making class stack &quot;Iterable&quot;</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/-Ms8uWxl_Ig?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>It is now easy  to fix class Stack so that we can use a foreach loop to enumerate its elements. Just have it implement interface java.lang.Iterable. (1.5 minutes) Read it here: <a href="05Iterable.pdf">Iterable.pdf</a><br />
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/-Ms8uWxl_Ig?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>It is now easy to fix class Stack so that we can use a foreach loop to enumerate its elements.
+Just have it implement interface java.lang.Iterable. (1.5 minutes) Read it here: <a href="05Iterable.pdf">Iterable.pdf</a><br />
+Here is the code Alex developed. Put it into Eclipse: <a href="DemoStackIterator.zip">DemoStackIterator.zip</a>
+
     <br />
     Please note that there is a typo near the end of this video.
 Near the end of the video, an example is given of the use of a foreach statement. 
