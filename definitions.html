@@ -2372,6 +2372,13 @@ See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.
           <dd>In hashing, the load factor is the number of elements in the set implemented using a hash table divided by the size of the
 			  hash table. See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
     </div>
+    
+    <div class = "display">
+		      <dt>locklist</dt>
+          <dd>The locklist of an object is the set of threads that are waiting to synchronize
+               on the object because another thread has synchronized on it and has not released the lock.
+               See <a href="files/waitAndNotify.pdf">pdf file</a>.</dd>
+    </div>
 		  
 		  
         <div class = "display">
@@ -3792,10 +3799,19 @@ object that has a JFrame partition.<br />
           variable</a>, <a class = "linker" title="#instancevariable">instance variable</a>,
           and <a class = "linker" title="#staticvariable">static variable</a>.</dd>
         </div>
+        
         <div class = "display">
           <dt>void</dt>
           <dd>A java keyword used to indicate that a method is a procedure and does not return a result. See <a class = "linker" title="#procedure">procedure</a>.</dd>
         </div>
+        
+         <div class = "display">
+		      <dt>waitlist</dt>
+          <dd>The waitlist of an object is the set of threads that, while synchronized on the object,
+               had executed a <code>call wait();</code>. They stay on the waitlist until execution of a call
+<code>notify();</code> or <code>notifyAll();</code> places them back on the locklist.
+               See <a href="files/waitAndNotify.pdf">pdf file</a>.</dd>
+    </div>
         
         <div class = "display">
           <dt><a name="whileLoop" id="whileLoop"></a>while-loop (while-statement)</dt>
