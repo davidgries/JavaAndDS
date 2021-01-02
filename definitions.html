@@ -1637,6 +1637,7 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
           The basics: <a href="files/enums.pdf">pdf file</a>.<br>
           Adding fields and methods to an enum class: <a href="files/AdvancedEnums.pdf">pdf file</a>.</dd>
         </div>
+        
         <div class = "display">
           <dt>equals</dt>
           <dd>The call b.equals(c) on function equals in class Object returns true iff b == c is true, i.e. b and c evaluate to null or to the same pointer ---they point to the same object.</dd>
@@ -1676,6 +1677,16 @@ See <a href="files/tree1.pdf">this pdf file</a>.</dd>
 		  <div class = "display">
           <dt>exponentiation</dt>
           <dd>Calculating b^n for integer n ≥ 0 in O(log n) time recursively and iteratively: <a href="files/exponentiation.pdf">pdf file</a>.&nbsp; <a href="files/Power.java.zip">Java code</a></dd>
+        </div>
+        
+         <div class = "display">
+          <dt>exclusive OR, XOR</dt>
+          <dd>The exclusive OR of two bits b and c yields 1 if the bits are different and 0 if they are the same:<br>
+              1 XOR 1 = 0, 0 XOR 0 = 1, 1 XOR 0 = 1, 0 XOR 1 = 1.<br>
+              In a similar manner, one defines the XOR of two boolean values:<br>
+              T XOR T = F, F XOR F = F, T XOR F = T, F XOR T = F.<br>
+              Here, one can see that b XOR c is just b ≠ c, and there's no need to introduce XOR.
+         </dd>
         </div>
 		  
         <div class = "display">
@@ -1880,10 +1891,10 @@ Uses of Fibonacci numbers in computer science: pdf file (to come).<br />
     the code difficult to understand and maintain. In 1968, Edsger Dijkstra wrote an article in the <i>Communications of the ACM</i> titled
     <a href="files/DijkstraHarmful68.pdf">Go To Statement Considered Harmful</a>, saying that it should not be used. Some people wrote letters to that journal,
     raking him over
-    the coals for trying to hinder programmers in their innovative work. As usual, Dijkstra was right, and you don't see it in current languages. You do see controlled uses
+    the coals for trying to hinder programmers in their innovative work. As usual, Dijkstra was right, and you don't see
+    the <code>goto</code> in current languages. You do see controlled uses
     of it, for example, the break and continue statements in Java. Java's use of <code>goto</code> as a keyword means that it cannot
-    be used as an identifier.
-    One may have </dd>
+    be used as an identifier.</dd>
         </div>
 		  
     <div class = "display">
