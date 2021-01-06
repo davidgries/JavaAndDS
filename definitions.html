@@ -105,6 +105,7 @@
 	cen: ["CPU"],
 	code: ["JUnit testing"],
 	covera: ["JUnit testing"],
+	data: ["cache"],
 	joy: ["Java language specification"],
 	gosl: ["Java language specification"],
 	ma: ["manana"],
@@ -113,9 +114,11 @@
 	get : ["getter method", "creators, observers, mutators"],
 	pr: ["IO Input-output"],
 	jf: ["IO Input-output"],
+	mem: ["cache"],
 	not: ["Threads"],
 	quo: ["escape character"],
 	red: ["trees"],
+	spac: ["cache"],
 	stee: ["Java language specification"],
 	super: ["super", "constructor"],
 	tern: ["conditional expression", "ternary operator"],
@@ -923,11 +926,18 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
         </div>
 		  
 		<div class = "display">
-          <dt>cache</dt>
+          <dt><a name="cache" id="cache"></a>cache</dt>
           <dd>A <em>memory</em> cache for a CPU (Central Processing Unit) is a small hardware component that contains 
           copies of some main memory locations so that future requests for them can be served faster than retrieving them 
-          from main memory. See <a href="files/cache1.pdf">this pdf file</a> for a longer explanation with more examples 
-          of caches. Here's a use of a cache in software to 
+          from main memory. 
+          The terms <i>spacial locality</i> and <i>data locality</i> refer to 
+          the use of data elements within relatively close storage locations. An algorithm with high spacial locality
+          will have higher
+          <i>cache performance</i> than one with low spacial locality.<br><br> 
+          
+          See <a href="files/cache1.pdf">this pdf file</a> for a longer explanation with more examples 
+          of caches.<br>
+          Here's a use of a cache in software to 
           make a recursive method more efficient: <a href="files/complexityFibonacci1.pdf">pdf file</a>.</dd>
         </div>
         
@@ -1964,8 +1974,10 @@ Java: <a href="files/spanningMaze.zip">spanningMaze.zip</a><br />
           <dt>hashing, hash table, hash function</dt>
         <dd>A <em>hash table</em> is a data structure for maintaining sets or maps that typically offers expected time O(1) for adding and removing elements and for testing whether a value is in the set or map. That's neat!<br />
             Given a value, a <em>hash function</em> is used to obtain an index into the  hash table where the value might be stored.<br />
-            A 2-page discussion of hash functions: <a href="files/hashFunction.pdf">pdf file</a>.<br />
+            2-page discussion of hash functions: <a href="files/hashFunction.pdf">pdf file</a>.<br />
                     Here is a <a href="hashing/01hashing.html">tutorial on hashing</a>.<br />
+            2-page discussion of linear probing, quadratic probing, and double hashing: <a href="files/hashing_collisions.pdf">pdf file</a>.<br />
+            Paper titled <i>How Caching Affects Hashing</i>:  <a href="files/CachingAffectsHashing.pdf">pdf file</a>. <br />
         Two important Java collections classes that implement sets and maps using hashing are java.util.HashSet and 
         java.util.HashMap.</dd>
     </div>
