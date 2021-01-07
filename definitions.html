@@ -987,7 +987,10 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
         
         <div class = "display">
           <dt>chaining</dt>
-          <dd>In <em>hashing</em>, there are essentially two ways to maintain the elements of the set being implemented using hashing. In <em>chaining</em>, each bucket of the hash table is a linked list containing the values that hashed to that  bucket. In <em>open addressing</em>, each bucket is either null or an element of the set begin maintained. See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
+          <dd>In <em>hashing</em>, there are essentially two ways to maintain the elements of the set being implemented using hashing. 
+          In <em>chaining</em>, each bucket of the hash table is a linked list containing the values that hashed to that  bucket. 
+          In <em>open addressing</em>, each bucket is either null or an element of the set begin maintained. 
+          See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
         </div>
 		  
         <div class = "display">
@@ -1166,7 +1169,8 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
 		<div class = "display">
           <dt>collision</dt>
           <dd>In hashing with open addressing, if an element <em>e</em> to be put into the set hashes to a bucket <em>h</em> and
-			  an element is already in bucket <em>h</em>, a <em>collision</em> is said to have occurred. The collision is solved using some form of probing, usually linear or quadratic probing.
+			  an element is already in bucket <em>h</em>, a <em>collision</em> is said to have occurred. 
+			  The collision is solved using some form of probing, usually linear or quadratic probing.
 See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing.</dd>
         </div>
 		  
@@ -1967,18 +1971,20 @@ Java: <a href="files/spanningMaze.zip">spanningMaze.zip</a><br />
 		  <div class = "display">
           <dt><a name="hashCode" id="hashCode"></a>hashCode and equals</dt>
           <dd>Function hashCode in class Object, the superest class of them all, returns the address in memory of the object.<br />
-              If a class overrides function equals and if that class may be used in any Collections class that deals with hashing (e.g. class HashSet and HashMap), then the class must also override function hashCode so that: if b.equals(c), then b.hashCode() == c.hashCode(). <a href="hashing/04equalsHashcode.pdf">This pdf file</a> explains why. Here is a <a href="hashing/01hashing.html">tutorial on hashing</a>.</dd>
+              If a class overrides function equals and if that class may be used in any Collections class that deals with hashing (e.g. class HashSet and HashMap), then the class must also override function hashCode so that: if b.equals(c), then b.hashCode() == c.hashCode(). 
+              <a href="hashing/04equalsHashcode.pdf">This pdf file</a> explains why. Here is a <a href="hashing/01hashing.html">tutorial on hashing</a>.</dd>
         </div>
 		  
     <div class = "display">
           <dt>hashing, hash table, hash function</dt>
-        <dd>A <em>hash table</em> is a data structure for maintaining sets or maps that typically offers expected time O(1) for adding and removing elements and for testing whether a value is in the set or map. That's neat!<br />
+        <dd>A <em>hash table</em> is a data structure for maintaining sets or maps that typically offers expected time O(1) 
+        for adding and removing elements and for testing whether a value is in the set or map. That's neat!<br />
             Given a value, a <em>hash function</em> is used to obtain an index into the  hash table where the value might be stored.<br />
             2-page discussion of hash functions: <a href="files/hashFunction.pdf">pdf file</a>.<br />
-                    Here is a <a href="hashing/01hashing.html">tutorial on hashing</a>.<br />
+            Tutorial on hashing: <a href="hashing/01hashing.html">web page</a>.<br />
             2-page discussion of linear probing, quadratic probing, and double hashing: <a href="files/hashing_collisions.pdf">pdf file</a>.<br />
             Paper titled <i>How Caching Affects Hashing</i>:  <a href="files/CachingAffectsHashing.pdf">pdf file</a>. <br />
-        Two important Java collections classes that implement sets and maps using hashing are java.util.HashSet and 
+        Two important Java collections classes that implement sets and maps using hashing: java.util.HashSet and 
         java.util.HashMap.</dd>
     </div>
 		  
@@ -2370,18 +2376,20 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         </div>
 		  
 	<div class = "display">
-        <dt>linear probing, quadratic probing, probe</dt>
-          <dd>In hashing using chaining, a <em>probe</em> is a test of an element of the linked list in a bucket to see whether it is a particular element.<br />
+        <dt>linear probing, quadratic probing, probe, double hashing</dt>
+          <dd>In hashing using open addressing, a <em>probe</em> is a test of an element of the linked list in a bucket to see whether it is a particular element.<br />
               <br />
               In hashing using open addressing, the elements in the set are stored in buckets of the hash table. Collisions may occur in that several values may hash to the same bucket.<br />
               Suppose element <em>e</em> hashes to bucket number <em>h</em>.<br />
               In <em>linear probing</em>, to see 
 whether <em>e</em> is in the set, buckets <em>h</em>, <em>h</em>+1, <em>h</em>+2, <em>h</em>+3, ... (with wraparound) are probed until <em>e</em> is found or <strong>null</strong> is found, in which case <em>e</em> is not in the set.<br />
-In <em>quadratic probing</em>, the probed buckets are <em>h</em>, <em>h</em>+1*1, <em>h</em>+2*2, <em>h</em>+3*3, ... (with wraparound).<br />
+In <em>quadratic probing</em>, the probed buckets are defined using a polynomial; the simplest such probe sequence is: <em>h</em>, <em>h</em>+1*1, <em>h</em>+2*2, <em>h</em>+3*3, ... (with wraparound).<br />
 In 
-<em>double hashing</em>, two hash functions are used. Suppose hashing <em>e</em> with the two hash functions gives two integers <em>h1</em> and <em>h2</em>. Then the probed buckets are
-			  <em>h1</em>, <em>h1</em> + <em>h2</em>, <em>h1</em> + 2*<em>h2</em>, <em>h1</em> + 3*<em>h2</em>, ... (with wraparound).<br />
-See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing. Look in Wikipedia under <em>double hashing</em> for more information on that topic.</dd>
+<em>double hashing</em>, two hash functions are used. Suppose hashing <em>e</em> with the two hash functions gives two integers <em>h</em> and <em>H</em>.
+Then the probed buckets are
+			  <em>h</em>, <em>h</em> + <em>H</em>, <em>h</em> + 2*<em>H</em>, <em>h</em> + 3*<em>H</em>, ... (with wraparound).<br />
+See <a href="hashing/01hashing.html">this webpage</a> for a tutorial on hashing. <br />
+See <a href="files/hashing_collisions.pdf">this pdf file</a> for more detail on linear probing, quadratic probing, and double hashing.</dd>
     </div>
 		  
 		      <div class = "display">
