@@ -194,7 +194,8 @@
 	
 	<p ><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assert</strong> &lt;boolean-expression&gt; ; </p>
 	
-<p >To execute it, evaluate the &lt;boolean-expression&gt;; if true, do nothing more; if false, throw an AssertionError, which will generally cause the program to abort.</P>
+<p >To execute it, evaluate the &lt;boolean-expression&gt;; if false, throw an AssertionError,
+which will generally cause the program to abort (if true, do nothing more).</P>
 <p >The assert statement is used to help find errors. Here's an example.</P>
 <p >We define a <em>precondition</em> to be a constraint on the parameters of a method. It is up to the user to ensure that method calls satisfy the precondition. If a call does not, the method can do whatever it wants. We can use an assert statement to throw an error if a precondition is not true.</P>
 <p >Here is an example:</P>
@@ -210,12 +211,14 @@
 	By default, assert-statement execution is turned off. You can turn it on for each individual run or execution of a program. We show how to do that below. But in Eclipse, you change the setting so that assert-statement execution is <em>always</em> done. We suggest you change that setting now. Here's how:</P>
 <p >
     1. Use menu item Preferences -&gt; Java -&gt; Installed JREs. You will see a window that looks something like the one shown to the right.</P>
-<p >2. Select Installed JRE Java SE-1.8 (or another one if you like; it should be the one you normally use).</P>
+<p >2. Select the JRE you normally use. Which ones are listed will depend on which ones you have
+installed over time. Here, we use AdopenJDK11..., which includes the JRE.</P>
 <p >3. The Edit button will become available. Click it. A second window will open, the one shown below.</P>
 <p ><img src="installedJREsEdit.png" width="440" align="right" hspace="5" alt=""/>
 	4. In the <em>Default VM arguments field</em>, type</P>
 <p >&nbsp;&nbsp;&nbsp;&nbsp;-ea</P>
-<p >as we have already done. That stands for <em>enable assertions</em>.</P>
+<p >as we have already done. That stands for <em>enable assertions</em>.
+You can use &nbsp;&nbsp;-da&nbsp;&nbsp; to disable them.</P>
 <p >
 5. Click button <em>Finish</em>. The window disappears.</P>
 <p >6. In the window that is still open ---the one above--- click button <em>Apply and Close</em>.</P>
@@ -223,7 +226,9 @@
 <p >To turn assert-statement execution on or off for one run:</P>
 <p >1. Select menu item <em>Run -&gt; Run Configurations</em>.</P>
 <p >2. In the window that opens, click tab <em>Arguments</em>. The <em>arguments </em>pane will open.</P>
-<p >3. In the <em>VM Arguments</em> field, type or delete &nbsp;&nbsp;-ea&nbsp;&nbsp;as you wish.</P>
+<p >3. In the <em>VM Arguments</em> field, type &nbsp;&nbsp;-ea&nbsp;&nbsp; to have the assert statement enabled.
+To disable the assert statement, leave the field blank or type 
+&nbsp;&nbsp;-da&nbsp;&nbsp; .</P>
 <p >4. Click button <em>Run</em> to run the program.</P>
 <p >&nbsp;</P>
 <p >&nbsp;</P>
