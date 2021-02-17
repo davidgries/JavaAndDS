@@ -1914,10 +1914,16 @@ Uses of Fibonacci numbers in computer science: pdf file (to come).<br />
         </div>
         <div class = "display">
           <dt>getter method</dt>
-          <dd>A non-static function whose purpose is to retrieve a value from the
-          object in which the method appears —the value is usually in a field
-          of the object. If the field to be retrieved is named <span class="java">xab</span>,
-          by convention, the name of the getter method is <span class="java">getXab</span>. But the convention need not be followed, and we often don't.</dd>
+          <dd>A non-static function whose purpose is to retrieve a value from the object in which the method appears. 
+          If object <code>ob</code> has a field <code>time</code>, the convention is to have a method <code>ob.getTime()</code>. 
+          Note that a static function <code>getTime(ob)</code> could also be called a <em>getter</em> method, but that is not
+          the convention.<br><br>
+          
+          Do <em>not</em> use this convention! It reveals the <em>state</em> of the object. Instead,
+          if you need this method, call it <code>time()</code> and not <code>getTime()</code>, and in
+          its specification don't mention that <code>time</code> is a field.
+          This pdf file discusses
+          an alternative to the <em>getter/setter</em> terminology: <a href="files/mutator.pdf">pdf file</a></dd>
         </div>
 		  
 		  <div class = "display">
@@ -3324,8 +3330,21 @@ Using the JPD spanning-tree algorithm to construct a maze: <a href="files/spanni
         <div class = "display">
           <dt>setter method</dt>
           <dd>A non-static procedure whose purpose is to store a value in a field
-          of the object in which the method resides. By convention, if the field is named <span class="java">xab</span> the name of the setter procedure is <span class="java">setXab</span>. But you don't have to follow the convention.</dd>
+          of the object in which the method resides. By convention, if the field is named
+          <span class="java">time</span> the name of the setter procedure is <span class="java">setTime(value)</span>. <br><br>
+          
+          Be extremely careful with this convention. Do not wantonly provide a setter method for each
+          field of a class. Further, if method <span class="java">setTime(value)</span> is needed, do <em>not</em>
+          mention the field at all in its specification. The user of this class should in general not know
+          what its fields are. Here's an example, Java class <span class="java">JFrame</span> has a method
+          <span class="java">setTitle(t)</span>, but its spec says nothing about a field and how that is done,
+          it just says to change the title of this <span class="java">JFrame</span> to <span class="java">t</span>.
+          Here's an alternative to the conventional getter/setter terminology: <a href="files/mutator.pdf">pdf file</a>.</dd>
         </div>
+        
+        
+        
+        
         <div class = "display">
           <dt>shadowing a variable</dt>
           <dd><em>Shadowing</em> refers to declaring two variables with the same name with overlapping scopes. Given a reference to such a variable, the <a class = "linker" title="#insideOut">inside-out rule</a> indicates to which of the declarations the reference refers. For example, suppose a class has a field x and a method m within the class has a parameter x. That parameter, shadows field x ---every reference to x within the method refers to the parameter.<br />
