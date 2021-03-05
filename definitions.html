@@ -729,6 +729,25 @@ See also <a href="files/constantTime.pdf">pdf file</a>.<br />
           To execute it, evaluate the &lt;boolean-expression&gt;;  if false, throw an AssertionError, which will generally cause the program to abort. <a href="eclipse/Ecl10Assert.html">Read this</a> to learn about its use and how to turn on its execution.<br />
           </dd>
     </div>
+    
+    <div class = "display">
+          <dt>assertEquals assertFalse assertTrue</dt>
+          <dd>Method  <code>assertEquals(</code>expected-value, computed-value<code>)</code> is used in a JUnit testing class to test whether
+          a computed value is correct. <i> Never</i> use an assert statement for this purpose.<br>
+           One can also use methods <code>assertTrue(</code>computed value<code>)</code> and
+           <code>assertFalse(</code>computed value<code>)</code>. See <a href="eclipse/Ecl06JUnitTesting.html">webpage</a>.
+          </dd>
+    </div>
+    
+    <div class = "display">
+          <dt>assertThrows</dt>
+          <dd>Method <code>assertThrows(<i>exception</i>.class, <i>anonymous-function</i>)</code> is used to tell
+          whether a call of the anonymous function throws the <i>exception</i>. 
+          See <a href="eclipse/Ecl06JUnitTesting.html">webpage</a>.
+          </dd>
+          
+    </div>
+    
         <div class = "display">
           <dt><a name="assertion" id="assertion"></a>assertion</dt>
           <dd>A true-false statement about the variables in a program that is placed
