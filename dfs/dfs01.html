@@ -208,9 +208,15 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h3>Iterative DFS</h3>
-<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/Ba53oitxDLo?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>In just over 4 minutes, we develop a non-recursive version of DFS. It maintains a stack of nodes, akin to the stack of frames for incompleted calls on the recursive DFS procedure. We show two ways of implementing the stack. Read it here: <a href="dfs03dfsloop.pdf">dfs03dfsloop.pdf</a></p>
+<p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/Ba53oitxDLo?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>In just over 4 minutes, 
+we develop a non-recursive version of DFS. It maintains a stack of nodes, akin to the stack of frames 
+for incompleted calls on the recursive DFS procedure. We show two ways of implementing the stack. 
+Read it here: <a href="dfs03dfsloop.pdf">dfs03dfsloop.pdf</a></p>
+
 <p>&nbsp;</p>
-<p>&nbsp;</p>
+<p>Suppose the undirected graph has n nodes. The first version of iterative DFS shown above
+takes space O(n^2) in the worst case, for that could be the depth of recursion. Here, we
+modify the algorithm to take space only O(n) in the worst case: <a href="dfs03dfsloopI.pdf">dfs03dfsloop1.pdf</a></p>
 <h3>Iterative BFS</h3>
 <p><a class="fancybox fancybox.iframe" href="https://www.youtube.com/embed/2lmOve_z1Fw?rel=0"><img src="../imagesActivity/WhiteFill.png" alt=""  width="100"  align="left" hspace="5" /></a>WIn just under 1 minute and 15 seconds, we define breadth-first search (BFS) and show how to change the iterative dfs procedure into an iterative bfs procedure. It's easy --just replace the stack by a queue. Read it here: <a href="dfs04bfs.pdf">dfs04bfs/pdf</a></p>
 <p>Pdf file <a href="dfs04bfs.pdf">dfs04bfs/pdf</a> contains more information that the video. In addition, it shows how to modify the BFS so that the maximum queue size is the number of vertices.&nbsp;</p>
