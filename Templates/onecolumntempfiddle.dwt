@@ -119,7 +119,7 @@
 	-->	
 	<div id="navigation">
 		<ul>
-			<li><a href="../index.html">Home</a></li>
+			<li><a href="../index.html">About</a></li>
 		  <li><a href="../howto.html">Instructions</a></li>
 		  <li><a href="../module1/module1.html">Module 1</a> </li>		
 		  <li><a href="../module2/module2.html">Module 2</a></li>
